@@ -1,5 +1,5 @@
 body {
-  background-color: #3a3e4a;
+  background-color: #4d5461;
   color: #d2d2d2;
   font-weight: 400;
   font-size: 14px;
@@ -683,7 +683,7 @@ hr {
   padding-right: 20px;
 }
 .post-content code {
-  background-color: #28559c;
+  background-color: #677a99;
   border-radius: 3px;
   font-size: 85%;
   margin: 0;

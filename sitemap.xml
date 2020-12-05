@@ -53,7 +53,7 @@
 
   <url>
     <loc>https://theodorecooper.github.io/</loc>
-    <lastmod>2020-12-04</lastmod>
+    <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,35 +61,35 @@
   
   <url>
     <loc>https://theodorecooper.github.io/tags/C-Tutorial/</loc>
-    <lastmod>2020-12-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://theodorecooper.github.io/tags/Github/</loc>
-    <lastmod>2020-12-04</lastmod>
+    <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://theodorecooper.github.io/tags/C-C/</loc>
-    <lastmod>2020-12-04</lastmod>
+    <lastmod>2020-12-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://theodorecooper.github.io/tags/Github/</loc>
+    <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://theodorecooper.github.io/tags/others/</loc>
-    <lastmod>2020-12-04</lastmod>
+    <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://theodorecooper.github.io/tags/Linux/</loc>
-    <lastmod>2020-12-04</lastmod>
+    <lastmod>2020-12-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

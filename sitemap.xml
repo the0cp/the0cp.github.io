@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Pointer/</loc>
+    
+    <lastmod>2020-12-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://theodorecooper.github.io/2020/cat/</loc>
     
     <lastmod>2020-12-03</lastmod>
@@ -74,14 +81,14 @@
   </url>
   
   <url>
-    <loc>https://theodorecooper.github.io/tags/C-C/</loc>
+    <loc>https://theodorecooper.github.io/tags/others/</loc>
     <lastmod>2020-12-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://theodorecooper.github.io/tags/others/</loc>
+    <loc>https://theodorecooper.github.io/tags/C-C/</loc>
     <lastmod>2020-12-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

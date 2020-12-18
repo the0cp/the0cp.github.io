@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Theodore Cooper&#39;s Blog</title>
+  <icon>https://theodorecooper.github.io/favicon.ico</icon>
+  <subtitle>Blog</subtitle>
+  <link href="https://theodorecooper.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://theodorecooper.github.io/"/>
+  <updated>2020-12-18T13:34:34.876Z</updated>
+  <id>https://theodorecooper.github.io/</id>
+  
+  <author>
+    <name>Theodore Cooper</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo | Speed up!</title>
+    <link href="https://theodorecooper.github.io/2020/hexo-speed-up/"/>
+    <id>https://theodorecooper.github.io/2020/hexo-speed-up/</id>
+    <published>2020-12-18T12:53:19.000Z</published>
+    <updated>2020-12-18T13:34:34.876Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Hexo-Speed-up&quot;&gt;&lt;a href=&quot;#Hexo-Speed-up&quot; class=&quot;headerlink&quot; title=&quot;Hexo | Speed up!&quot;&gt;&lt;/a&gt;&lt;center&gt;Hexo | Speed</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Hexo" scheme="https://theodorecooper.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C Tutorial -- Pointer</title>
+    <link href="https://theodorecooper.github.io/2020/C-Tutorial-Pointer/"/>
+    <id>https://theodorecooper.github.io/2020/C-Tutorial-Pointer/</id>
+    <published>2020-12-11T12:45:32.000Z</published>
+    <updated>2020-12-11T13:40:47.898Z</updated>
+    
+    
+    <summary type="html">Welcome! Enter password to read.</summary>
+    
+    
+    
+    
+    <category term="C Tutorial" scheme="https://theodorecooper.github.io/tags/C-Tutorial/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Now, I have a cat--Randir</title>
+    <link href="https://theodorecooper.github.io/2020/cat/"/>
+    <id>https://theodorecooper.github.io/2020/cat/</id>
+    <published>2020-12-03T11:55:18.000Z</published>
+    <updated>2020-12-03T12:08:12.086Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;I-love-not-only-mice-but-also-cats&quot;&gt;&lt;a href=&quot;#I-love-not-only-mice-but-also-cats&quot; class=&quot;headerlink&quot; title=&quot;I love not only mice,</summary>
+        
+      
+    
+    
+    
+    
+    <category term="others" scheme="https://theodorecooper.github.io/tags/others/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux, C | Bing Backgrounds Getter</title>
+    <link href="https://theodorecooper.github.io/2020/linux-bingbg/"/>
+    <id>https://theodorecooper.github.io/2020/linux-bingbg/</id>
+    <published>2020-11-29T04:22:54.000Z</published>
+    <updated>2020-11-29T04:38:59.376Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Linux-Bing…&quot;&gt;&lt;a href=&quot;#Linux-Bing…&quot; class=&quot;headerlink&quot; title=&quot;Linux, Bing…&quot;&gt;&lt;/a&gt;Linux, Bing…&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;​    Have you ever</summary>
+        
+      
+    
+    
+    
+    
+    <category term="C/C++" scheme="https://theodorecooper.github.io/tags/C-C/"/>
+    
+    <category term="Linux" scheme="https://theodorecooper.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows, C++ | Bing Backgrounds Getter</title>
+    <link href="https://theodorecooper.github.io/2020/bing-backgrounds/"/>
+    <id>https://theodorecooper.github.io/2020/bing-backgrounds/</id>
+    <published>2020-11-28T15:01:31.000Z</published>
+    <updated>2020-11-29T04:46:30.494Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Wallpapers-Bing…&quot;&gt;&lt;a href=&quot;#Wallpapers-Bing…&quot; class=&quot;headerlink&quot; title=&quot;Wallpapers, Bing…&quot;&gt;&lt;/a&gt;Wallpapers, Bing…&lt;/h2&gt;&lt;p&gt;​    Have</summary>
+        
+      
+    
+    
+    
+    
+    <category term="C/C++" scheme="https://theodorecooper.github.io/tags/C-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C Tutorial -- Variable</title>
+    <link href="https://theodorecooper.github.io/2020/C-Tutorial-Variable/"/>
+    <id>https://theodorecooper.github.io/2020/C-Tutorial-Variable/</id>
+    <published>2020-11-21T05:49:44.000Z</published>
+    <updated>2020-12-11T13:44:51.396Z</updated>
+    
+    
+    <summary type="html">Welcome! Enter password to read.</summary>
+    
+    
+    
+    
+    <category term="C Tutorial" scheme="https://theodorecooper.github.io/tags/C-Tutorial/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C Tutorial -- Constant</title>
+    <link href="https://theodorecooper.github.io/2020/C-Tutorial-Constant/"/>
+    <id>https://theodorecooper.github.io/2020/C-Tutorial-Constant/</id>
+    <published>2020-11-14T04:58:45.000Z</published>
+    <updated>2020-12-11T13:42:09.664Z</updated>
+    
+    
+    <summary type="html">Welcome! Enter password to read.</summary>
+    
+    
+    
+    
+    <category term="C Tutorial" scheme="https://theodorecooper.github.io/tags/C-Tutorial/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Steps to setup a Github Page</title>
+    <link href="https://theodorecooper.github.io/2020/Steps-to-setup-a-Github-Page/"/>
+    <id>https://theodorecooper.github.io/2020/Steps-to-setup-a-Github-Page/</id>
+    <published>2020-10-31T08:09:09.000Z</published>
+    <updated>2020-11-01T03:37:25.328Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;First-of-course-you-need-a-Github-account&quot;&gt;&lt;a href=&quot;#First-of-course-you-need-a-Github-account&quot; class=&quot;headerlink&quot; title=&quot;First, of</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Github" scheme="https://theodorecooper.github.io/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://theodorecooper.github.io/2020/hello-world/"/>
+    <id>https://theodorecooper.github.io/2020/hello-world/</id>
+    <published>2020-10-31T07:29:48.200Z</published>
+    <updated>2020-12-18T12:52:49.026Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Hexo" scheme="https://theodorecooper.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>

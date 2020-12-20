@@ -6,7 +6,7 @@
   <link href="https://theodorecooper.github.io/atom.xml" rel="self"/>
   
   <link href="https://theodorecooper.github.io/"/>
-  <updated>2020-12-18T13:34:34.876Z</updated>
+  <updated>2020-12-20T05:13:16.600Z</updated>
   <id>https://theodorecooper.github.io/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="https://theodorecooper.github.io/2020/hexo-speed-up/"/>
     <id>https://theodorecooper.github.io/2020/hexo-speed-up/</id>
     <published>2020-12-18T12:53:19.000Z</published>
-    <updated>2020-12-18T13:34:34.876Z</updated>
+    <updated>2020-12-20T05:13:16.600Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Hexo-Speed-up&quot;&gt;&lt;a href=&quot;#Hexo-Speed-up&quot; class=&quot;headerlink&quot; title=&quot;Hexo | Speed up!&quot;&gt;&lt;/a&gt;&lt;center&gt;Hexo | Speed</summary>
-        
-      
+    <summary type="html">Always, we need a high speed blog... So some ways should be taken to make a better website. Now I will talk about Hexo -- Speed up!</summary>
     
     
     
@@ -44,10 +38,10 @@
     <link href="https://theodorecooper.github.io/2020/C-Tutorial-Pointer/"/>
     <id>https://theodorecooper.github.io/2020/C-Tutorial-Pointer/</id>
     <published>2020-12-11T12:45:32.000Z</published>
-    <updated>2020-12-11T13:40:47.898Z</updated>
+    <updated>2020-12-20T05:07:07.832Z</updated>
     
     
-    <summary type="html">Welcome! Enter password to read.</summary>
+    <summary type="html">Pointer? Easy(again...)! Let&#39;s talk about it! What is pointer?</summary>
     
     
     
@@ -61,16 +55,10 @@
     <link href="https://theodorecooper.github.io/2020/cat/"/>
     <id>https://theodorecooper.github.io/2020/cat/</id>
     <published>2020-12-03T11:55:18.000Z</published>
-    <updated>2020-12-03T12:08:12.086Z</updated>
+    <updated>2020-12-20T05:26:01.944Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;I-love-not-only-mice-but-also-cats&quot;&gt;&lt;a href=&quot;#I-love-not-only-mice-but-also-cats&quot; class=&quot;headerlink&quot; title=&quot;I love not only mice,</summary>
-        
-      
+    <summary type="html">I love not only mice, but also cats. The white cat is Randir...</summary>
     
     
     
@@ -84,15 +72,14 @@
     <link href="https://theodorecooper.github.io/2020/linux-bingbg/"/>
     <id>https://theodorecooper.github.io/2020/linux-bingbg/</id>
     <published>2020-11-29T04:22:54.000Z</published>
-    <updated>2020-11-29T04:38:59.376Z</updated>
+    <updated>2020-12-20T05:27:08.462Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Linux-Bing…&quot;&gt;&lt;a href=&quot;#Linux-Bing…&quot; class=&quot;headerlink&quot; title=&quot;Linux, Bing…&quot;&gt;&lt;/a&gt;Linux, Bing…&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;​    Have you ever</summary>
+    <summary type="html">&lt;h1 id=&quot;Linux-C-Bing-Backgrounds-Getter&quot;&gt;&lt;a href=&quot;#Linux-C-Bing-Backgrounds-Getter&quot; class=&quot;headerlink&quot; title=&quot;Linux, C | Bing Backgrounds</summary>
         
       
     
@@ -110,16 +97,10 @@
     <link href="https://theodorecooper.github.io/2020/bing-backgrounds/"/>
     <id>https://theodorecooper.github.io/2020/bing-backgrounds/</id>
     <published>2020-11-28T15:01:31.000Z</published>
-    <updated>2020-11-29T04:46:30.494Z</updated>
+    <updated>2020-12-20T05:24:55.360Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Wallpapers-Bing…&quot;&gt;&lt;a href=&quot;#Wallpapers-Bing…&quot; class=&quot;headerlink&quot; title=&quot;Wallpapers, Bing…&quot;&gt;&lt;/a&gt;Wallpapers, Bing…&lt;/h2&gt;&lt;p&gt;​    Have</summary>
-        
-      
+    <summary type="html">Get Bing Wallpaper. It&#39;s a program written by C++, it will automatically download and set wallpaper for you!</summary>
     
     
     
@@ -133,10 +114,10 @@
     <link href="https://theodorecooper.github.io/2020/C-Tutorial-Variable/"/>
     <id>https://theodorecooper.github.io/2020/C-Tutorial-Variable/</id>
     <published>2020-11-21T05:49:44.000Z</published>
-    <updated>2020-12-11T13:44:51.396Z</updated>
+    <updated>2020-12-20T05:09:31.455Z</updated>
     
     
-    <summary type="html">Welcome! Enter password to read.</summary>
+    <summary type="html">Variable? After *C Tutorial -- Constant*, variable is another interesting thing in C. Let&#39;s talk about it now!</summary>
     
     
     
@@ -150,10 +131,10 @@
     <link href="https://theodorecooper.github.io/2020/C-Tutorial-Constant/"/>
     <id>https://theodorecooper.github.io/2020/C-Tutorial-Constant/</id>
     <published>2020-11-14T04:58:45.000Z</published>
-    <updated>2020-12-11T13:42:09.664Z</updated>
+    <updated>2020-12-20T05:06:04.491Z</updated>
     
     
-    <summary type="html">Welcome! Enter password to read.</summary>
+    <summary type="html">Constant? Easy! Let&#39;s talk about it!</summary>
     
     
     
@@ -167,16 +148,10 @@
     <link href="https://theodorecooper.github.io/2020/Steps-to-setup-a-Github-Page/"/>
     <id>https://theodorecooper.github.io/2020/Steps-to-setup-a-Github-Page/</id>
     <published>2020-10-31T08:09:09.000Z</published>
-    <updated>2020-11-01T03:37:25.328Z</updated>
+    <updated>2020-12-20T05:28:09.698Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;First-of-course-you-need-a-Github-account&quot;&gt;&lt;a href=&quot;#First-of-course-you-need-a-Github-account&quot; class=&quot;headerlink&quot; title=&quot;First, of</summary>
-        
-      
+    <summary type="html">Ways to set up a Blog/Website based on Github Page and Hexo. The whole record of setting up this website.</summary>
     
     
     
@@ -190,14 +165,14 @@
     <link href="https://theodorecooper.github.io/2020/hello-world/"/>
     <id>https://theodorecooper.github.io/2020/hello-world/</id>
     <published>2020-10-31T07:29:48.200Z</published>
-    <updated>2020-12-18T12:52:49.026Z</updated>
+    <updated>2020-12-20T05:26:36.541Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World!!!&quot;&gt;&lt;/a&gt;&lt;center&gt;Hello World!!!&lt;/center&gt;&lt;/h1&gt;&lt;p&gt;Welcome to</summary>
         
       
     

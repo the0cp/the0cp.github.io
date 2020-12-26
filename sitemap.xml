@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://theodorecooper.github.io/2020/seo/</loc>
+    
+    <lastmod>2020-12-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://theodorecooper.github.io/2020/C-Tutorial-arg/</loc>
     
     <lastmod>2020-12-26</lastmod>
@@ -24,13 +31,6 @@
   
   <url>
     <loc>https://theodorecooper.github.io/2020/C-Tutorial-Pointer/</loc>
-    
-    <lastmod>2020-12-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://theodorecooper.github.io/2020/seo/</loc>
     
     <lastmod>2020-12-26</lastmod>
     
@@ -137,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://theodorecooper.github.io/tags/Hexo-SEO-Github/</loc>
+    <loc>https://theodorecooper.github.io/tags/SEO/</loc>
     <lastmod>2020-12-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

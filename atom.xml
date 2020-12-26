@@ -6,7 +6,7 @@
   <link href="https://theodorecooper.github.io/atom.xml" rel="self"/>
   
   <link href="https://theodorecooper.github.io/"/>
-  <updated>2020-12-26T04:15:06.362Z</updated>
+  <updated>2020-12-26T05:07:49.021Z</updated>
   <id>https://theodorecooper.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C Tutorial -- Command Line Arguments</title>
+    <link href="https://theodorecooper.github.io/2020/C-Tutorial-arg/"/>
+    <id>https://theodorecooper.github.io/2020/C-Tutorial-arg/</id>
+    <published>2020-12-26T04:30:07.000Z</published>
+    <updated>2020-12-26T05:07:49.021Z</updated>
+    
+    
+    <summary type="html">When executing the program, you can pass values to the C program from the command line. These values are called command line arguments...</summary>
+    
+    
+    
+    
+    <category term="C-C, C-Tutorial, Linux" scheme="https://theodorecooper.github.io/tags/C-C-C-Tutorial-Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Beginner&#39;s Guide to Search Engine Optimization (SEO)</title>
@@ -55,7 +72,7 @@
     <link href="https://theodorecooper.github.io/2020/C-Tutorial-Pointer/"/>
     <id>https://theodorecooper.github.io/2020/C-Tutorial-Pointer/</id>
     <published>2020-12-11T12:45:32.000Z</published>
-    <updated>2020-12-20T05:07:07.832Z</updated>
+    <updated>2020-12-26T05:04:46.522Z</updated>
     
     
     <summary type="html">Pointer? Easy(again...)! Let&#39;s talk about it! What is pointer?</summary>
@@ -131,7 +148,7 @@
     <link href="https://theodorecooper.github.io/2020/C-Tutorial-Variable/"/>
     <id>https://theodorecooper.github.io/2020/C-Tutorial-Variable/</id>
     <published>2020-11-21T05:49:44.000Z</published>
-    <updated>2020-12-20T05:09:31.455Z</updated>
+    <updated>2020-12-26T05:05:14.696Z</updated>
     
     
     <summary type="html">Variable? After *C Tutorial -- Constant*, variable is another interesting thing in C. Let&#39;s talk about it now!</summary>
@@ -148,7 +165,7 @@
     <link href="https://theodorecooper.github.io/2020/C-Tutorial-Constant/"/>
     <id>https://theodorecooper.github.io/2020/C-Tutorial-Constant/</id>
     <published>2020-11-14T04:58:45.000Z</published>
-    <updated>2020-12-20T05:06:04.491Z</updated>
+    <updated>2020-12-26T05:05:05.169Z</updated>
     
     
     <summary type="html">Constant? Easy! Let&#39;s talk about it!</summary>

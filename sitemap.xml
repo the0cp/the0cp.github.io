@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://theodorecooper.github.io/2020/C-Tutorial-arg/</loc>
+    
+    <lastmod>2020-12-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Variable/</loc>
+    
+    <lastmod>2020-12-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Constant/</loc>
+    
+    <lastmod>2020-12-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Pointer/</loc>
+    
+    <lastmod>2020-12-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://theodorecooper.github.io/2020/seo/</loc>
     
     <lastmod>2020-12-26</lastmod>
@@ -50,27 +78,6 @@
     
   </url>
   
-  <url>
-    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Variable/</loc>
-    
-    <lastmod>2020-12-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Pointer/</loc>
-    
-    <lastmod>2020-12-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Constant/</loc>
-    
-    <lastmod>2020-12-20</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>https://theodorecooper.github.io/</loc>
@@ -82,6 +89,13 @@
   
   <url>
     <loc>https://theodorecooper.github.io/tags/C-Tutorial/</loc>
+    <lastmod>2020-12-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://theodorecooper.github.io/tags/C-C-C-Tutorial-Linux/</loc>
     <lastmod>2020-12-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

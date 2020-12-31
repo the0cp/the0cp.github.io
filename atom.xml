@@ -6,7 +6,7 @@
   <link href="https://theodorecooper.github.io/atom.xml" rel="self"/>
   
   <link href="https://theodorecooper.github.io/"/>
-  <updated>2020-12-26T05:10:53.844Z</updated>
+  <updated>2020-12-31T14:25:21.907Z</updated>
   <id>https://theodorecooper.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Install Android x86 in VMware &amp; Virtualbox</title>
+    <link href="https://theodorecooper.github.io/2020/androidx86/"/>
+    <id>https://theodorecooper.github.io/2020/androidx86/</id>
+    <published>2020-12-31T10:49:41.000Z</published>
+    <updated>2020-12-31T14:25:21.907Z</updated>
+    
+    
+    <summary type="html">Android x86 makes it possible to run Android on your PC. You can install Android x86 in virtual machines to make your debugging easy. Of course, if you really want to play mobile games on computers(Linux, Windows, OSX...).</summary>
+    
+    
+    
+    
+    <category term="Linux" scheme="https://theodorecooper.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>C Tutorial -- Command Line Arguments</title>

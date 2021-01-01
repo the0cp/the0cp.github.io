@@ -6,7 +6,7 @@
   <link href="https://theodorecooper.github.io/atom.xml" rel="self"/>
   
   <link href="https://theodorecooper.github.io/"/>
-  <updated>2020-12-31T14:25:21.907Z</updated>
+  <updated>2021-01-01T05:01:20.466Z</updated>
   <id>https://theodorecooper.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Here’s to 2021!</title>
+    <link href="https://theodorecooper.github.io/2021/coming2021/"/>
+    <id>https://theodorecooper.github.io/2021/coming2021/</id>
+    <published>2021-01-01T04:45:17.000Z</published>
+    <updated>2021-01-01T05:01:20.466Z</updated>
+    
+    
+    <summary type="html">Here’s to 2021! Happy new year!!!</summary>
+    
+    
+    
+    
+    <category term="others" scheme="https://theodorecooper.github.io/tags/others/"/>
+    
+  </entry>
   
   <entry>
     <title>Install Android x86 in VMware &amp; Virtualbox</title>

@@ -1,0 +1,1 @@
+import*as dom from"../../dom/index.js";export const renderFooter=(o,t)=>{const e=dom.getFooter();dom.toggle(e,t.footer),t.footer&&dom.parseHtmlToContainer(t.footer,e),dom.applyCustomClass(e,t,"footer")};

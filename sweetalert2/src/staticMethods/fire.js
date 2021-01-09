@@ -1,0 +1,1 @@
+export function fire(...e){return new this(...e)}

@@ -1,0 +1,1 @@
+import{isNodeEnv}from"../isNodeEnv.js";export const animationEndEvent=(()=>{if(isNodeEnv())return!1;const n=document.createElement("div"),i={WebkitAnimation:"webkitAnimationEnd",OAnimation:"oAnimationEnd oanimationend",animation:"animationend"};for(const t in i)if(Object.prototype.hasOwnProperty.call(i,t)&&void 0!==n.style[t])return i[t];return!1})();

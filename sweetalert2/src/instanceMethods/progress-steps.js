@@ -1,0 +1,1 @@
+import privateProps from"../privateProps.js";export function getProgressSteps(){return privateProps.domCache.get(this).progressSteps}

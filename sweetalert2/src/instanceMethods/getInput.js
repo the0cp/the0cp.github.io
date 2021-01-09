@@ -1,0 +1,1 @@
+import*as dom from"../utils/dom/index.js";import privateProps from"../privateProps.js";export function getInput(t){const r=privateProps.innerParams.get(t||this),o=privateProps.domCache.get(t||this);return o?dom.getInput(o.content,r.input):null}

@@ -6,7 +6,7 @@
   <link href="https://theodorecooper.github.io/atom.xml" rel="self"/>
   
   <link href="https://theodorecooper.github.io/"/>
-  <updated>2021-01-02T04:53:16.065Z</updated>
+  <updated>2021-01-15T14:13:04.502Z</updated>
   <id>https://theodorecooper.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Conky | Awesome system monitor for Linux</title>
+    <link href="https://theodorecooper.github.io/2021/conky/"/>
+    <id>https://theodorecooper.github.io/2021/conky/</id>
+    <published>2021-01-15T11:00:19.000Z</published>
+    <updated>2021-01-15T14:13:04.502Z</updated>
+    
+    
+    <summary type="html">Conky is a free, light-weight system monitor for X, that displays any kind of information on your desktop. We&#39;ll now talk about something on conky, also the troubleshoot with the use of conky.</summary>
+    
+    
+    
+    
+    <category term="Linux" scheme="https://theodorecooper.github.io/tags/Linux/"/>
+    
+    <category term="Beautify" scheme="https://theodorecooper.github.io/tags/Beautify/"/>
+    
+  </entry>
   
   <entry>
     <title>Delete single file &amp; folder from a Github repository</title>

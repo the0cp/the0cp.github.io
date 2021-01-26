@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Variable/</loc>
+    
+    <lastmod>2021-01-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Pointer/</loc>
+    
+    <lastmod>2021-01-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Constant/</loc>
+    
+    <lastmod>2021-01-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://theodorecooper.github.io/2021/conky/</loc>
     
     <lastmod>2021-01-17</lastmod>
@@ -38,27 +59,6 @@
   
   <url>
     <loc>https://theodorecooper.github.io/2020/seo/</loc>
-    
-    <lastmod>2020-12-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Variable/</loc>
-    
-    <lastmod>2020-12-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Constant/</loc>
-    
-    <lastmod>2020-12-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://theodorecooper.github.io/2020/C-Tutorial-Pointer/</loc>
     
     <lastmod>2020-12-26</lastmod>
     
@@ -130,13 +130,6 @@
   </url>
   
   <url>
-    <loc>https://theodorecooper.github.io/tags/C-Tutorial/</loc>
-    <lastmod>2021-01-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://theodorecooper.github.io/tags/Linux/</loc>
     <lastmod>2021-01-26</lastmod>
     <changefreq>daily</changefreq>
@@ -144,14 +137,14 @@
   </url>
   
   <url>
-    <loc>https://theodorecooper.github.io/tags/others/</loc>
+    <loc>https://theodorecooper.github.io/tags/Github/</loc>
     <lastmod>2021-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://theodorecooper.github.io/tags/Github/</loc>
+    <loc>https://theodorecooper.github.io/tags/others/</loc>
     <lastmod>2021-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -99,9 +99,9 @@
     
     
     
-    <category term="C/C++" scheme="https://theodorecooper.github.io/tags/C-C/"/>
-    
     <category term="C-Tutorial" scheme="https://theodorecooper.github.io/tags/C-Tutorial/"/>
+    
+    <category term="C/C++" scheme="https://theodorecooper.github.io/tags/C-C/"/>
     
     <category term="Linux" scheme="https://theodorecooper.github.io/tags/Linux/"/>
     
@@ -150,7 +150,7 @@
     <link href="https://theodorecooper.github.io/2020/C-Tutorial-Pointer/"/>
     <id>https://theodorecooper.github.io/2020/C-Tutorial-Pointer/</id>
     <published>2020-12-11T12:45:32.000Z</published>
-    <updated>2020-12-26T05:04:46.522Z</updated>
+    <updated>2021-01-26T10:18:49.520Z</updated>
     
     
     <summary type="html">Pointer? Easy(again...)! Let&#39;s talk about it! What is pointer?</summary>
@@ -158,7 +158,9 @@
     
     
     
-    <category term="C Tutorial" scheme="https://theodorecooper.github.io/tags/C-Tutorial/"/>
+    <category term="C-Tutorial" scheme="https://theodorecooper.github.io/tags/C-Tutorial/"/>
+    
+    <category term="C/C++" scheme="https://theodorecooper.github.io/tags/C-C/"/>
     
   </entry>
   
@@ -226,7 +228,7 @@
     <link href="https://theodorecooper.github.io/2020/C-Tutorial-Variable/"/>
     <id>https://theodorecooper.github.io/2020/C-Tutorial-Variable/</id>
     <published>2020-11-21T05:49:44.000Z</published>
-    <updated>2020-12-26T05:05:14.696Z</updated>
+    <updated>2021-01-26T10:25:06.512Z</updated>
     
     
     <summary type="html">Variable? After *C Tutorial -- Constant*, variable is another interesting thing in C. Let&#39;s talk about it now!</summary>
@@ -234,7 +236,9 @@
     
     
     
-    <category term="C Tutorial" scheme="https://theodorecooper.github.io/tags/C-Tutorial/"/>
+    <category term="C-Tutorial" scheme="https://theodorecooper.github.io/tags/C-Tutorial/"/>
+    
+    <category term="C/C++" scheme="https://theodorecooper.github.io/tags/C-C/"/>
     
   </entry>
   
@@ -243,7 +247,7 @@
     <link href="https://theodorecooper.github.io/2020/C-Tutorial-Constant/"/>
     <id>https://theodorecooper.github.io/2020/C-Tutorial-Constant/</id>
     <published>2020-11-14T04:58:45.000Z</published>
-    <updated>2020-12-26T05:05:05.169Z</updated>
+    <updated>2021-01-26T10:18:36.572Z</updated>
     
     
     <summary type="html">Constant? Easy! Let&#39;s talk about it!</summary>
@@ -251,7 +255,9 @@
     
     
     
-    <category term="C Tutorial" scheme="https://theodorecooper.github.io/tags/C-Tutorial/"/>
+    <category term="C-Tutorial" scheme="https://theodorecooper.github.io/tags/C-Tutorial/"/>
+    
+    <category term="C/C++" scheme="https://theodorecooper.github.io/tags/C-C/"/>
     
   </entry>
   

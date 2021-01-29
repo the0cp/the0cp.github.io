@@ -6,7 +6,7 @@
   <link href="https://theodorecooper.github.io/atom.xml" rel="self"/>
   
   <link href="https://theodorecooper.github.io/"/>
-  <updated>2021-01-17T05:02:15.458Z</updated>
+  <updated>2021-01-29T01:39:29.939Z</updated>
   <id>https://theodorecooper.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Syntax Error | Conky syntax update</title>
+    <link href="https://theodorecooper.github.io/2021/new-conky/"/>
+    <id>https://theodorecooper.github.io/2021/new-conky/</id>
+    <published>2021-01-28T23:47:30.000Z</published>
+    <updated>2021-01-29T01:39:29.939Z</updated>
+    
+    
+    <summary type="html">Conky has changed its syntax, and new configure file should be written.</summary>
+    
+    
+    
+    
+    <category term="Linux" scheme="https://theodorecooper.github.io/tags/Linux/"/>
+    
+    <category term="Beautify" scheme="https://theodorecooper.github.io/tags/Beautify/"/>
+    
+  </entry>
   
   <entry>
     <title>Conky | Awesome system monitor for Linux</title>

@@ -6,7 +6,7 @@
   <link href="https://theodorecooper.github.io/atom.xml" rel="self"/>
   
   <link href="https://theodorecooper.github.io/"/>
-  <updated>2021-02-11T11:24:08.868Z</updated>
+  <updated>2021-02-11T11:28:35.851Z</updated>
   <id>https://theodorecooper.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Pentestration | ARP Spoofing(Poisoning) in the internal network &amp; How to prevent it</title>
+    <title>Penetration | ARP Spoofing(Poisoning) in the internal network &amp; How to prevent it</title>
     <link href="https://theodorecooper.github.io/2021/arp-spoofing/"/>
     <id>https://theodorecooper.github.io/2021/arp-spoofing/</id>
     <published>2021-02-11T07:40:28.000Z</published>
-    <updated>2021-02-11T11:24:08.868Z</updated>
+    <updated>2021-02-11T11:28:35.851Z</updated>
     
     
     <summary type="html">ARP spoofing is a type of attack in which a malicious actor sends falsified ARP messages over a local area network. We use Kali/Parrot Linux to make a simple ARP Spoofing.</summary>

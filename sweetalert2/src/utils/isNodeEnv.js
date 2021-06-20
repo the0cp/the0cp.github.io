@@ -1,1 +1,0 @@
-export const isNodeEnv=()=>"undefined"==typeof window||"undefined"==typeof document;

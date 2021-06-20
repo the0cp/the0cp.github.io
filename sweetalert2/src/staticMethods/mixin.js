@@ -1,1 +1,0 @@
-export function mixin(n){return class extends(this){_main(e,i){return super._main(e,Object.assign({},i,n))}}}

@@ -1,0 +1,1274 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-06-20T10:11:02+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Penetration Testing | ARP Spoofing(Poisoning) in the internal network &amp;amp; How to prevent it</title><link href="https://theodorecooper.github.io/penetration/linux/2021-arp-spoofing/" rel="alternate" type="text/html" title="Penetration Testing | ARP Spoofing(Poisoning) in the internal network &amp;amp; How to prevent it" /><published>2021-02-11T00:00:00+08:00</published><updated>2021-06-18T22:07:09+08:00</updated><id>https://theodorecooper.github.io/penetration/linux/arp-spoofing</id><content type="html" xml:base="https://theodorecooper.github.io/penetration/linux/2021-arp-spoofing/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;address-resolution-protocol-arp&quot;&gt;Address Resolution Protocol (&lt;strong&gt;ARP&lt;/strong&gt;)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Address Resolution Protocol (&lt;strong&gt;ARP&lt;/strong&gt;) is a procedure for mapping a dynamic Internet Protocol address (IP  address) to a permanent physical machine address in a local area network (LAN). The physical machine address is also known as a Media Access  Control or MAC address.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;how-arp-works&quot;&gt;How ARP works?&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/arp-spoofing/arp.png&quot; alt=&quot;arp&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;​	When a new device is joined into a LAN,  it is assigned a unique IP address to use for identification and communication. When an incoming packet destined for a host machine on a particular LAN arrives at a gateway, the gateway asks the ARP program to find a MAC address that matches the IP address. A table called the ARP cache maintains a record of each IP  address and its corresponding MAC address.&lt;/p&gt;
+
+&lt;p&gt;​	If the MAC address is not present in the ARP cache table then the source device will generate an &lt;strong&gt;&lt;em&gt;ARP Request&lt;/em&gt;&lt;/strong&gt; message. In the request message the source puts its own MAC address,  its IP address, destination IP address and the destination MAC address  is left blank since the source is trying to find this.&lt;/p&gt;
+
+&lt;p&gt;​	In generally,  Address Resolution Protocol is used to obtain the MAC address of the destination host based on its IP address. It converts the IP address of the target host into a MAC address before sending a frame.&lt;/p&gt;
+
+&lt;h2 id=&quot;types-of-arp-spoofing&quot;&gt;Types of ARP Spoofing&lt;/h2&gt;
+
+&lt;p&gt;​	There are two types of ARP Spoofing:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;For instance, there are three hosts &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; wants to communicate with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;, when &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; asks &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt; that whether he is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt; shamelessly says: “YES!!!”. So packages that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; should have sent to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; are sent to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Still that example, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; wants to communicate with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;, this time &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; asks that who is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt; shamelessly says again: “I am &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;!!!” So, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt; sends  packages to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt;, then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt; says to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt;: “I am &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A&lt;/code&gt;!!!” and send the package to him.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;what-can-we-do&quot;&gt;What can we do?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Disconnect other devices’ network connections&lt;/li&gt;
+  &lt;li&gt;Hijack the traffic of other devices and gateways in the LAN to obtain sensitive information like password, browsing images and so on&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/arp-spoofing/spoofing.png&quot; alt=&quot;arpspoofing&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;arp-spoofing-tutorial&quot;&gt;ARP Spoofing Tutorial&lt;/h2&gt;
+
+&lt;p&gt;​	First of all, host and target must be in a same LAN, of course.&lt;/p&gt;
+
+&lt;h3 id=&quot;0-environment&quot;&gt;#0. Environment&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Parrot OS(You can also use Kali Linux)&lt;/li&gt;
+  &lt;li&gt;Wireless Network Card to connect to the WiFi.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;1-get-local-ip&quot;&gt;#1. Get local IP&lt;/h3&gt;
+
+&lt;p&gt;​	Open a terminal:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;ifconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;ip addr show
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-scan-targets-ip&quot;&gt;#2. Scan target’s IP&lt;/h3&gt;
+
+&lt;p&gt;​	Usually we use &lt;strong&gt;&lt;em&gt;Nmap&lt;/em&gt;&lt;/strong&gt; to scan target’s IP:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;nmap &lt;span class=&quot;nt&quot;&gt;-sP&lt;/span&gt; 192.168.1.1/24
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;192.168.1.1&lt;/code&gt; is the default gateway address, it depends your router.)&lt;/p&gt;
+
+&lt;p&gt;​	Another easy way is use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Zenmap&lt;/code&gt;, it’s an official GUI version of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Nmap&lt;/code&gt;. It is a multi-platform (Linux, Windows, Mac OS X, BSD, etc.) free and open source application which aims to make Nmap easy for beginners to use.&lt;/p&gt;
+
+&lt;p&gt;​	The easiest way is – if you have already logged in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;192.168.1.1&lt;/code&gt; – sometimes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;admin&lt;/code&gt; as username and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;admin&lt;/code&gt; as password – you see, quite easy.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-disconnect-targets-connections&quot;&gt;#3. Disconnect target’s connections&lt;/h3&gt;
+
+&lt;h4 id=&quot;use-arpspoof&quot;&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arpspoof&lt;/code&gt;&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;arpspoof &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; interface] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; target_ip] &amp;lt;host_ip&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;interface: Your wireless interface(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ifconfig&lt;/code&gt; to get)&lt;/li&gt;
+  &lt;li&gt;target: Target’s IP address&lt;/li&gt;
+  &lt;li&gt;host: Your IP address.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;​	Because the attacker did not enable port forwarding, the request could not be released, and the target’s network was disconnected. So if we enable port forwarding, we can hijack target’s traffic.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-hijack-targets-traffic&quot;&gt;#4. Hijack target’s traffic&lt;/h3&gt;
+
+&lt;p&gt;​	Enable port forwarding:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo echo &lt;/span&gt;1 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /proc/sys/net/ipv4/ip_forward
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	Then we use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arpspoof&lt;/code&gt; like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;arpspoof &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; interface] &amp;lt;host_ip&amp;gt; &amp;lt;target_ip&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	Because the target machine is connected to WiFi, when performing ARP Spoofing, you need to change the order with the target machine. If you don’t change it, you can see that the MAC address of the gateway is the same as the MAC address of the attacking machine during ARP Spoofing, so that the target machine cannot communicate normally.&lt;/p&gt;
+
+&lt;h4 id=&quot;use-driftnet-to-get-images&quot;&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;driftnet&lt;/code&gt; to get images&lt;/h4&gt;
+
+&lt;p&gt;​	After hijacking the traffic successfully, we can save income images from target with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;driftnet&lt;/code&gt;(HTTP only).&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;driftnet &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; interface]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	Moreover,&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;driftnet &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; directory] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; interface]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	to set directory that images will be saved.&lt;/p&gt;
+
+&lt;h4 id=&quot;use-ettercap-to-get-passwords&quot;&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ettercap&lt;/code&gt; to get passwords&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;ettercap &lt;span class=&quot;nt&quot;&gt;-Tq&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; interface]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;-T: Text mode&lt;/li&gt;
+  &lt;li&gt;-q: Quiet mode&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;​	Also, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Wireshark&lt;/code&gt;, it has a user-friendly GUI and easier for beginners.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-prevent-arp-spoofing&quot;&gt;How to prevent ARP Spoofing?&lt;/h2&gt;
+
+&lt;p&gt;​	To be honest, it’s not hard to prevent ARP Spoofing, but many people don’t do like that.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-rely-on-virtual-private-networksvpn&quot;&gt;#1. Rely on Virtual Private Networks(VPN)&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/arp-spoofing/VPN.jpg&quot; alt=&quot;vpn&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;​	One way to prevent ARP spoofing from happening in the first place is  to rely on Virtual Private Networks(VPN). When you connect to the internet, you typically first connect to an Internet Service Provider(ISP) in order to connect to another website. However, when you use a VPN, you’re using an encrypted tunnel that largely blocks your activity from ARP spoofing hackers. Both the method by which you’re conducting the online activity and the data that goes through it is encrypted.&lt;/p&gt;
+
+&lt;p&gt;​	Moreover, you should consider a VPN if you travel frequently or use public WiFi  hotspots while working with sensitive information or data. You could also consider using a mobile internet device that could help reduce the chances of someone working their way into your system through public WiFi with no login or password requirements. Although VPN can be a safer way to use the internet, it can sometimes slow down your online access due to the encrypting and decrypting processing power.&lt;/p&gt;
+
+&lt;h3 id=&quot;2get-a-detection-tool&quot;&gt;#2.Get a Detection Tool&lt;/h3&gt;
+
+&lt;p&gt;​	Even with ARP knowledge and techniques in place, it’s not always possible to detect a spoofing attack. Hackers are becoming increasingly stealthy at remaining undetected and use new technologies and tools to stay ahead  of their victims. Instead of strictly focusing on prevention, make sure  you have a detection method in place. Using a third-party detection tool can help you see when a spoofing attack is happening so you can work on stopping it in its tracks.&lt;/p&gt;
+
+&lt;p&gt;​	A third-party tool like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XArp&lt;/code&gt; can help detect if you are being attacked by ARP spoofing. However, that’s just the first step to ARP spoofing protection. In addition to using the right tools, you should also consider a robust monitoring tool or service.&lt;/p&gt;
+
+&lt;p&gt;Some third-party tools:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/assets/img/blog/arp-spoofing/http://ee.lbl.gov/&quot;&gt;&lt;strong&gt;&lt;em&gt;Arpwatch&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;: If the cross-platform open-source tool &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Arpwatch&lt;/code&gt; is integrated into a  local IPv4 network, it continuously records all ARP activities in the  LAN. All inbound ARP packets are taken by the program along with  accompanying address information and stored in a central database. If  older entries are found that don’t match the data currently being sent,  the program sends an email warning to the administrator. The procedure  is effective, but is only suitable for networks with static IP  addresses. If LAN IPs are distributed dynamically over a DHCP server,  any change in the IP/MAC mapping results in a false alarm.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/assets/img/blog/arp-spoofing/https://www.isl.de/en/arp-guard/product.html&quot;&gt;&lt;strong&gt;&lt;em&gt;ARP-Guard&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ARP-Guard&lt;/code&gt; from the company ISL also monitors the internal network and relies on two different sensors. The LAN sensor works similarly to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Arpwatch&lt;/code&gt;, analyzing inbound data packets and sounding an alarm in case of any discrepancies. The sensor management architecture of the software also has an SNMP sensor, which uses the Simple Network Management Protocol(SNMP) to access devices connected to the LAN and read out their ARP tables. In this way, not only are ARP attacks localized and warded off; the integrated address management also allows administrators to detect unwanted devices and prevent them from accessing the network.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/assets/img/blog/arp-spoofing/http://www.xarp.net&quot;&gt;&lt;strong&gt;&lt;em&gt;XArp&lt;/em&gt;&lt;/strong&gt;&lt;/a&gt;: The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XArp&lt;/code&gt; software relies on both active and passive modules to protect a network from ARP spoofing. The passive modules analyze ARP packets that are sent on the network, and match the accompanying address assignment with older entries. If discrepancies are noticed, the program alarm sounds. The control mechanism is based on statistical analyses and checks the network traffic on the basis on of various patterns which, according to developers, indicate ARP attacks. The sensitivity of this traffic filter can be adjusted gradually. The active modules of the software send their own packets into the network, in order to validate the ARP tables of the accessible devices and to fill them with valid entries.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3mac-address-binding&quot;&gt;#3.MAC Address Binding&lt;/h3&gt;
+
+&lt;p&gt;​	Binding MAC address is the easiest way the prevent ARP Spoofing, in Linux, just use:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;arp &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &amp;lt;ip&amp;gt; &amp;lt;mac&amp;gt;	&lt;span class=&quot;c&quot;&gt;#Bind MAC address&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;arp &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &amp;lt;ip&amp;gt; &amp;lt;mac&amp;gt;	&lt;span class=&quot;c&quot;&gt;#Disbing MAC address&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ip: Your IP address&lt;/li&gt;
+  &lt;li&gt;mac: Your MAC address&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;​	In Windows, open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cmd&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;arp &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &amp;lt;ip&amp;gt; &amp;lt;mac&amp;gt;	&lt;span class=&quot;c&quot;&gt;#temporary&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	or&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;netsh i i show &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;	&lt;span class=&quot;c&quot;&gt;#show Idx&lt;/span&gt;
+
+netsh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; i i add ne &amp;lt;Idx&amp;gt; &amp;lt;ip&amp;gt; &amp;lt;mac&amp;gt; &lt;span class=&quot;nv&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;active	&lt;span class=&quot;c&quot;&gt;#temporary&lt;/span&gt;
+
+netsh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; i i add ne &amp;lt;Idx&amp;gt; &amp;lt;ip&amp;gt; &amp;lt;mac&amp;gt;
+
+netsh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; i i del ne &amp;lt;Idx&amp;gt;	&lt;span class=&quot;c&quot;&gt;#Disbing MAC address&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	(Some routers have functions to bind MAC address too.)&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Penetration" /><category term="Linux" /><category term="Penetration" /><category term="Linux" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/arp-spoofing/arpspoofing.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/arp-spoofing/arpspoofing.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Syntax Error | Conky syntax update</title><link href="https://theodorecooper.github.io/linux/beautify/2021-new-conky/" rel="alternate" type="text/html" title="Syntax Error | Conky syntax update" /><published>2021-01-29T00:00:00+08:00</published><updated>2021-06-18T20:10:03+08:00</updated><id>https://theodorecooper.github.io/linux/beautify/new-conky</id><content type="html" xml:base="https://theodorecooper.github.io/linux/beautify/2021-new-conky/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;featuresgithub&quot;&gt;Features(Github)&lt;/h2&gt;
+
+&lt;p&gt;Conky can display more than 300 built-in objects, including support for:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A plethora of OS stats (uname, uptime, &lt;strong&gt;CPU usage&lt;/strong&gt;, &lt;strong&gt;mem usage&lt;/strong&gt;, disk usage, &lt;strong&gt;“top”&lt;/strong&gt; like process stats, and &lt;strong&gt;network monitoring&lt;/strong&gt;, just to name a few).&lt;/li&gt;
+  &lt;li&gt;Built-in &lt;strong&gt;IMAP&lt;/strong&gt; and &lt;strong&gt;POP3&lt;/strong&gt; support.&lt;/li&gt;
+  &lt;li&gt;Built-in support for many popular music players (&lt;a href=&quot;https://musicpd.org/&quot;&gt;MPD&lt;/a&gt;, &lt;a href=&quot;https://github.com/xmms2/wiki/wiki&quot;&gt;XMMS2&lt;/a&gt;, &lt;a href=&quot;https://audacious-media-player.org/&quot;&gt;Audacious&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Can be extended using built-in &lt;a href=&quot;https://github.com/brndnmtthws/conky/blob/main/lua&quot;&gt;&lt;strong&gt;Lua&lt;/strong&gt;&lt;/a&gt; support, or any of your own scripts and programs (&lt;a href=&quot;https://github.com/brndnmtthws/conky/wiki#tutorial&quot;&gt;more&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Built-in &lt;a href=&quot;https://docs.enlightenment.org/api/imlib2/html/&quot;&gt;&lt;strong&gt;Imlib2&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;https://www.cairographics.org/&quot;&gt;&lt;strong&gt;Cairo&lt;/strong&gt;&lt;/a&gt; bindings for arbitrary drawing with Lua (&lt;a href=&quot;https://github.com/brndnmtthws/conky/wiki/Lua&quot;&gt;more&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Runs on Linux, FreeBSD, OpenBSD, DragonFlyBSD, NetBSD, Solaris, Haiku, and macOS!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;… and much much more.&lt;/p&gt;
+
+&lt;p&gt;Conky can display information either as text, or using simple progress bars and graph widgets, with different fonts and colours.&lt;/p&gt;
+
+&lt;h2 id=&quot;syntax&quot;&gt;Syntax&lt;/h2&gt;
+
+&lt;p&gt;​	After upgrade the whole system, I found conky doesn’t work well, the terminal pops out &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;syntax error&lt;/code&gt; when running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conky&lt;/code&gt;. Yes, the syntax changed, I have to rewrite the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.conkyrc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;​	Before updating, conky’s syntax is easy, very easy to understand, now, it’s more like… eh… TOML? I don’t know, but as a programmer, a geek, the new syntax seems better to adapt to.&lt;/p&gt;
+
+&lt;p&gt;​	So, let’s take a look at the newest demos:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;
+Conky, a system monitor, based on torsmo
+
+Any original torsmo code is licensed under the BSD license
+
+All code written since the fork of torsmo is licensed under the GPL
+
+Please see COPYING &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;details
+
+Copyright &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 2004, Hannu Saransaari and Lauri Hakkarainen
+Copyright &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 2005-2019 Brenden Matthews, Philip Kovacs, et. al. &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;see AUTHORS&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+All rights reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;at your option&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; any later version.
+
+This program is distributed &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;the hope that it will be useful,
+but WITHOUT ANY WARRANTY&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see &amp;lt;http://www.gnu.org/licenses/&amp;gt;.
+&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+
+conky.config &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    alignment &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'top_left'&lt;/span&gt;,
+    background &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    border_width &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1,
+    cpu_avg_samples &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2,
+    default_color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'white'&lt;/span&gt;,
+    default_outline_color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'white'&lt;/span&gt;,
+    default_shade_color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'white'&lt;/span&gt;,
+    double_buffer &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
+    draw_borders &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    draw_graph_borders &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
+    draw_outline &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    draw_shades &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    extra_newline &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    font &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'DejaVu Sans Mono:size=12'&lt;/span&gt;,
+    gap_x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 60,
+    gap_y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 60,
+    minimum_height &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 5,
+    minimum_width &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 5,
+    net_avg_samples &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2,
+    no_buffers &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
+    out_to_console &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    out_to_ncurses &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    out_to_stderr &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    out_to_x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
+    own_window &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
+    own_window_class &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Conky'&lt;/span&gt;,
+    own_window_type &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'desktop'&lt;/span&gt;,
+    show_graph_range &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    show_graph_scale &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    stippled_borders &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0,
+    update_interval &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1.0,
+    uppercase &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    use_spacer &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'none'&lt;/span&gt;,
+    use_xft &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+conky.text &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Info:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;scroll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 32 Conky &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$conky_version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; - &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sysname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$kernel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$machine&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$hr&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Uptime:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$uptime&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Frequency &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;MHz&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$freq&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Frequency &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;GHz&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$freq_g&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;RAM Usage:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$mem&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$memmax&lt;/span&gt; - &lt;span class=&quot;nv&quot;&gt;$memperc&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;membar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Swap Usage:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$swap&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$swapmax&lt;/span&gt; - &lt;span class=&quot;nv&quot;&gt;$swapperc&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;swapbar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;CPU Usage:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$cpu&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cpubar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Processes:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$processes&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Running:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$running_processes&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$hr&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;File systems:
+ / &lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fs_used&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; /&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fs_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; /&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fs_bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 6 /&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Networking:
+Up:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;upspeed&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; - Down:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;downspeed&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$hr&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Name              PID     CPU%   MEM%
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; lightgrey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; pid 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; lightgrey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; pid 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; lightgrey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; pid 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; lightgrey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; pid 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	It looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/852504/50325033-1089e480-04a8-11e9-8963-f64cb3d0003b.png&quot; alt=&quot;Default configs&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;​	Yes, inside the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--[[&lt;/code&gt;and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;]]&lt;/code&gt; is the comments. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conky.config = {&lt;/code&gt; marks the beginning of the config part and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;}&lt;/code&gt; means the end.&lt;/p&gt;
+
+&lt;p&gt;different types of variable such as “number”, characters(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'char'&lt;/code&gt;), boolean(true &amp;amp; false) will be assigned to the properties which is to the left of the equal sign, just like most program languages. Of course, inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conky.text = [[&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;]]&lt;/code&gt;, you could customize your conky’s appearance and looks, you don’t need to change a lot even though syntax updated.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-conkyrc&quot;&gt;My &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.conkyrc&lt;/code&gt;&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;​	It’s easy to update the own configure file, mine works well now: &lt;a href=&quot;/assets/img/blog/new-conky/updated-conkyrc.zip&quot;&gt;.conkyrc&lt;/a&gt;. Screenshots goes here: [Conky&lt;/td&gt;
+      &lt;td&gt;Awesome system monitor for Linux](https://theodorecooper.github.io/2021-conky/).&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;more--wiki&quot;&gt;More – Wiki&lt;/h2&gt;
+
+&lt;p&gt;​	More options and tutorial here: &lt;a href=&quot;https://github.com/brndnmtthws/conky/wiki/&quot;&gt;Conky Wiki(Github)&lt;/a&gt;.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Beautify" /><category term="Linux" /><category term="Beautify" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://user-images.githubusercontent.com/852504/50325033-1089e480-04a8-11e9-8963-f64cb3d0003b.png" /><media:content medium="image" url="https://user-images.githubusercontent.com/852504/50325033-1089e480-04a8-11e9-8963-f64cb3d0003b.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Conky | Awesome system monitor for Linux</title><link href="https://theodorecooper.github.io/linux/beautify/2021-conky/" rel="alternate" type="text/html" title="Conky | Awesome system monitor for Linux" /><published>2021-01-15T00:00:00+08:00</published><updated>2021-06-18T20:23:33+08:00</updated><id>https://theodorecooper.github.io/linux/beautify/conky</id><content type="html" xml:base="https://theodorecooper.github.io/linux/beautify/2021-conky/">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/conky/conky.jpg&quot; alt=&quot;conky&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;about-conky&quot;&gt;About Conky…&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Conky&lt;/strong&gt; is a free software desktop system monitor for the X Window System. It is available for Linux, FreeBSD, and OpenBSD. Conky is highly configurable and is able to monitor many system variables including the status of the CPU, memory, swap space (&lt;a href=&quot;https://en.wikipedia.org/wiki/Swap_space&quot;&gt;what is swap space?&lt;/a&gt;), disk storage, temperatures, processes, network interfaces, battery power, system messages, e-mail inboxes, Arch Linux updates, many popular music players, weather updates, breaking news, and much more. Unlike system monitors that use high-level widget toolkits to render their information, Conky is drawn directly in an X window.  This allows it to be configured such that it consumes relatively few  system resources.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;​	Are you getting bored with your dull backgrounds? Let’s use &lt;strong&gt;&lt;em&gt;conky&lt;/em&gt;&lt;/strong&gt; to improve that.&lt;/p&gt;
+
+&lt;h2 id=&quot;common-uses&quot;&gt;Common uses&lt;/h2&gt;
+
+&lt;p&gt;​	If you’re using Pinguy OS or CrunchBang Linux(…). Conky is pre-configured in the default installation, but I think most of users are using Debian, Ubuntu, Fedora and so on. Conky is not installed by default in these systems. We should install conky first.&lt;/p&gt;
+
+&lt;h3 id=&quot;get-conky&quot;&gt;Get conky&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open up a terminal window&lt;/li&gt;
+  &lt;li&gt;Type following command and your sudo password&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;conky-all
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;When prompted, accepted the installation by typing &lt;em&gt;y&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;configure-a-theme&quot;&gt;Configure a theme&lt;/h3&gt;
+
+&lt;p&gt;​	What conky does is read the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/conky/conky.config&lt;/code&gt; file (when no &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.conkyrc&lt;/code&gt; file is present) and display as you set. So there are tow solutions to have a good looking conky: either you modify the configure file on your own or you download a conky theme from the Internet and use it directly. There are many websites which could provide with plenty of awesome conky themes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.deviantart.com/&quot;&gt;Deviant Art&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.opendesktop.org/search?projectSearchText=conky&quot;&gt;Open Desktop&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;​	Using these conky themes is similar to installing source code. A good conky theme will come with a README that  tells you what to change in the conky theme files and other important  things about using the conky theme. Most of the time you have to change  the path to image files or Lua script.&lt;/p&gt;
+
+&lt;h3 id=&quot;launch-conky&quot;&gt;Launch conky&lt;/h3&gt;
+
+&lt;p&gt;​	It’s easy to launch conky:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;conky
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;usage-example&quot;&gt;Usage example&lt;/h3&gt;
+
+&lt;p&gt;​	A simple configuration for Conky which displays the time on a user’s desktop is as follows:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;update_interval 30
+
+own_window &lt;span class=&quot;nb&quot;&gt;yes
+&lt;/span&gt;own_window_type desktop
+
+use_xft &lt;span class=&quot;nb&quot;&gt;yes
+&lt;/span&gt;xftfont DejaVu Sans:size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;14
+
+alignment bottom_right
+
+TEXT
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; %H&lt;/span&gt;:%M&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	Here’s my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.conkyrc&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# set to yes if you want Conky to be forked in the background&lt;/span&gt;
+background no
+cpu_avg_samples 2
+net_avg_samples 2
+out_to_console no
+&lt;span class=&quot;c&quot;&gt;# X font when Xft is disabled, you can pick one with program xfontsel&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#font 7x12&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#font 6x10&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#font 7x13&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#font 8x13&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#font 7x12&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#font *mintsmild.se*&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#font -*-*-*-*-*-*-34-*-*-*-*-*-*-*&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#font -artwiz-snap-normal-r-normal-*-*-100-*-*-p-*-iso8859-1&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Use Xft?&lt;/span&gt;
+use_xft &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Xft font when Xft is enabled&lt;/span&gt;
+xftfont Sans:size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;11  
+own_window_argb_visual &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#own_window_colour hotpink&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Text alpha when using Xft&lt;/span&gt;
+xftalpha 0.8
+&lt;span class=&quot;c&quot;&gt;# on_bottom yes&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# mail spool&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# mail_spool $MAIL&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Update interval in seconds&lt;/span&gt;
+update_interval 1
+&lt;span class=&quot;c&quot;&gt;# Create own window instead of using desktop (required in nautilus)&lt;/span&gt;
+own_window &lt;span class=&quot;nb&quot;&gt;yes
+&lt;/span&gt;own_window_transparent &lt;span class=&quot;nb&quot;&gt;yes
+&lt;/span&gt;own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+&lt;span class=&quot;c&quot;&gt;#own_window_type override&lt;/span&gt;
+own_window_type dock
+&lt;span class=&quot;c&quot;&gt;# Use double buffering (reduces flicker, may not work for everyone)&lt;/span&gt;
+double_buffer &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Minimum size of text area&lt;/span&gt;
+minimum_size 260 5
+maximum_width 400
+&lt;span class=&quot;c&quot;&gt;# Draw shades?&lt;/span&gt;
+draw_shades no
+&lt;span class=&quot;c&quot;&gt;# Draw outlines?&lt;/span&gt;
+draw_outline no
+&lt;span class=&quot;c&quot;&gt;# Draw borders around text&lt;/span&gt;
+draw_borders no
+&lt;span class=&quot;c&quot;&gt;# Stippled borders?&lt;/span&gt;
+stippled_borders no
+&lt;span class=&quot;c&quot;&gt;# border margins&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# border_margin 4&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# border width&lt;/span&gt;
+border_width 1
+&lt;span class=&quot;c&quot;&gt;# Default colors and also border colors&lt;/span&gt;
+default_color white
+default_shade_color white
+default_outline_color white
+&lt;span class=&quot;c&quot;&gt;# Text alignment, other possible values are commented&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#alignment top_left&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#minimum_size 10 10&lt;/span&gt;
+gap_x 10
+gap_y 35
+alignment top_right
+&lt;span class=&quot;c&quot;&gt;#alignment bottom_left&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#alignment bottom_right&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Gap between borders of screen and text&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Add spaces to keep things from moving about?  This only affects&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# certain objects.&lt;/span&gt;
+use_spacer none
+&lt;span class=&quot;c&quot;&gt;# Subtract file system buffers from used memory?&lt;/span&gt;
+no_buffers &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# set to yes if you want all text to be in uppercase&lt;/span&gt;
+uppercase no
+&lt;span class=&quot;c&quot;&gt;# none, xmms, bmp, audacious, infopipe (default is none)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# xmms_player bmp&lt;/span&gt;
+
+
+TEXT
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; #006400&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;SYSTEM &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#Time:$alignr${time %Y.%m.%d}$alignc   ${time %H:%M:%S}$alignr   Week:${time %w}&lt;/span&gt;
+Hostname:                Parrot Security
+Kernel: &lt;span class=&quot;nv&quot;&gt;$alignr$kernel&lt;/span&gt;
+Machine:&lt;span class=&quot;nv&quot;&gt;$alignr$machine&lt;/span&gt;
+Temp: &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; sensors | grep &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Core 0'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; | cut -c17-22&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;C
+&lt;span class=&quot;c&quot;&gt;###############&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; #FF8C00&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;MEMORY &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+Ram &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$mem&lt;/span&gt; / &lt;span class=&quot;nv&quot;&gt;$memmax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$memperc&lt;/span&gt;%&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;membar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+Highest MEM &lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt; MEM%
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top_mem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top_mem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top_mem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top_mem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top_mem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top_mem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;##############&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; #BC8F8F&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;CPU &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+Frequency: &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;freq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; dyn&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; MHz
+Processes: &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$processes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$running_processes&lt;/span&gt; running&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Load: &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$loadavg&lt;/span&gt;
+CPU1 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cpu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;%
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cpubar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4 cpu1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+CPU2 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cpu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;%
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cpubar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4 cpu2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+Highest CPU &lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt; CPU%
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;##############&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; #228B22&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;FILE SYSTEM &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+Root: &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fs_free&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; /&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; / &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fs_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; /&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fs_bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4 /&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#############&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; white&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;ETHERNET &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+Down &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;downspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; eth0&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; /s &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Up &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;upspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; eth0&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; /s
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;downspeedgraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; eth0 25,107&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;upspeedgraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; eth0 25,107&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+Total &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;totaldown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; eth0&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Total &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;totalup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; eth0&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#############&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; white&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;WLAN &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+Down &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;downspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; wlx48022a54bc53&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; /s &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Up &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;upspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; wlx48022a54bc53&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; /s
+&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;downspeedgraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; wlx48022a54bc53 25,107&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;upspeedgraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; wlx48022a54bc53 25,107&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+Total &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;totaldown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; wlx48022a54bc53&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Total &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;totalup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; wlx48022a54bc53&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#############&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	It looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/conky/conkyrc.jpg&quot; alt=&quot;conkyrc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;​	You can download here: &lt;a href=&quot;conkyrc.zip&quot;&gt;.conkyrc&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;configure-with-guibeginner&quot;&gt;Configure with GUI[Beginner]&lt;/h3&gt;
+
+&lt;p&gt;​	&lt;strong&gt;&lt;em&gt;Conky Manager&lt;/em&gt;&lt;/strong&gt; is a friendly GUI tool developed to use conky easier.&lt;/p&gt;
+
+&lt;p&gt;​	Use the following commands in terminal to install Conky Manager:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;add-apt-repository ppa:teejee2008/ppa
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;conky-manager
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	Launch the Conky Manager and have fun!&lt;/p&gt;
+
+&lt;h2 id=&quot;advanced-usage--issues&quot;&gt;Advanced Usage &amp;amp; Issues&lt;/h2&gt;
+
+&lt;h3 id=&quot;start-conky-automatically&quot;&gt;Start conky automatically&lt;/h3&gt;
+
+&lt;p&gt;​	You can write a shell script to start conky automatically:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; ’ ’ | &lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-S&lt;/span&gt; pm-powersave
+
+&lt;span class=&quot;nb&quot;&gt;sleep &lt;/span&gt;3
+
+conky &amp;amp; &lt;span class=&quot;nb&quot;&gt;disown
+
+sleep &lt;/span&gt;30
+
+pkill run.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	Then add it to startup applications list.&lt;/p&gt;
+
+&lt;h3 id=&quot;conky-disappears&quot;&gt;Conky disappears…&lt;/h3&gt;
+
+&lt;p&gt;​	If conky disappears on clicking desktop in desktop environments like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mate&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gnome&lt;/code&gt; and so on, this may help you:&lt;/p&gt;
+
+&lt;p&gt;​	change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;own_window_type desktop&lt;/code&gt; to:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;own_window_type dock
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	Or you will prefer to hidden desktop icons, the conky won’t disappear either(but of course you can’t see desktop icons).&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Beautify" /><category term="Linux" /><category term="Beautify" /><summary type="html"></summary></entry><entry><title type="html">Delete single file &amp;amp; folder from a Github repository</title><link href="https://theodorecooper.github.io/github/2021-githubrm/" rel="alternate" type="text/html" title="Delete single file &amp;amp; folder from a Github repository" /><published>2021-01-02T00:00:00+08:00</published><updated>2021-06-18T19:43:02+08:00</updated><id>https://theodorecooper.github.io/github/githubrm</id><content type="html" xml:base="https://theodorecooper.github.io/github/2021-githubrm/">&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sometimes we need to delete single file or folder in a git respository.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;​	First of all, we use Git Bash in Windows (or Terminal in Linux, OSX).&lt;/p&gt;
+
+&lt;h2 id=&quot;clone-repository&quot;&gt;Clone Repository&lt;/h2&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://xxxx/xxx/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;remove-local-file--folder&quot;&gt;Remove local file &amp;amp; folder&lt;/h2&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;xxx/
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;file.file	&lt;span class=&quot;c&quot;&gt;#remove single file&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; folder/	&lt;span class=&quot;c&quot;&gt;#remove folder&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;commit&quot;&gt;Commit&lt;/h2&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;remove some files&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;push&quot;&gt;Push&lt;/h2&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin xxxx	&lt;span class=&quot;c&quot;&gt;#xxxx is your branch&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Github" /><category term="Github" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/githubrm/github.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/githubrm/github.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Install Android x86 in VMware &amp;amp; Virtualbox</title><link href="https://theodorecooper.github.io/2021-androidx86/" rel="alternate" type="text/html" title="Install Android x86 in VMware &amp;amp; Virtualbox" /><published>2021-01-01T00:00:00+08:00</published><updated>2021-06-18T16:14:20+08:00</updated><id>https://theodorecooper.github.io/androidx86</id><content type="html" xml:base="https://theodorecooper.github.io/2021-androidx86/">&lt;blockquote&gt;
+  &lt;p&gt;​	So, finally, I remember to write an article about &lt;strong&gt;&lt;em&gt;Android x86&lt;/em&gt;&lt;/strong&gt;, This time I’ll tell all about Android x86.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#whats-android-x86&quot; id=&quot;markdown-toc-whats-android-x86&quot;&gt;What’s &lt;strong&gt;&lt;em&gt;Android x86&lt;/em&gt;&lt;/strong&gt;?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#first-get-android-x86&quot; id=&quot;markdown-toc-first-get-android-x86&quot;&gt;First, get Android x86&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#installation&quot; id=&quot;markdown-toc-installation&quot;&gt;Installation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#finally--setup-android-x86&quot; id=&quot;markdown-toc-finally--setup-android-x86&quot;&gt;Finally! &amp;amp; Setup Android x86&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#moreover&quot; id=&quot;markdown-toc-moreover&quot;&gt;Moreover…&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;whats-android-x86&quot;&gt;What’s &lt;strong&gt;&lt;em&gt;Android x86&lt;/em&gt;&lt;/strong&gt;?&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;​	Android-x86 is an open source project licensed under Apache Public License 2.0 that makes an unofficial  porting of Google’s Android mobile operating system to run on devices  powered by AMD and Intel x86 processors, rather than RISC-based ARM chips. Developers Chih-Wei Huang and Yi Sun originated the project in 2009.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;​	So, it’s just a common system. Today, let’s install this freak system!&lt;/p&gt;
+
+&lt;p&gt;​	Platform:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Linux (Windows, OSX is also suitable for this article)&lt;/li&gt;
+  &lt;li&gt;VMware 15 (Virtualbox is also suitable)&lt;/li&gt;
+  &lt;li&gt;Android x86 (Here I use Android-x86 6.0)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;first-get-android-x86&quot;&gt;First, get Android x86&lt;/h2&gt;
+
+&lt;p&gt;​	First, we need an image to install Android x86. I suggest downloading from the official website: &lt;a href=&quot;https://www.android-x86.org/&quot;&gt;https://www.android-x86.org/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/officalwebsite.PNG&quot; alt=&quot;The Official Website - Android x86&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;​	You see, click the big blue button &lt;strong&gt;Donwload&lt;/strong&gt;, then choose a mirror (FOSSHUB or OSDN) to download. We need the &lt;strong&gt;&lt;em&gt;android-x86-6.0-r3.iso&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/file.PNG&quot; alt=&quot;android-x86-6.0-r3.iso&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;center&gt;--- A few moments later ---&lt;/center&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;​	Finally we get Android x86.&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create a new virtual machine.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/create.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/create0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use the ISO image that you downloaded from the website.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/create1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/create2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Give it a lovely name?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/name.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We need at least 2GB memory to run Android x86.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/memory.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/other.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/other0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create virtual disk, I recommend 40GB and more.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/other1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/disk.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/disk0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Now, let’s start the vm&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Choose &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Installation - Install Android-x86 to harddisk &lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/boot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/install.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Do not use GPT!!!&lt;/em&gt;&lt;/strong&gt; Don’t ask why…😭&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/gpt.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create new partition&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/par.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Primary&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/par0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/par1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bootable&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/par2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/par3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Write partition table to disk.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/par4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Enter “yes” to write.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/par5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Quit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cfdisk&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/par6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Select the partition.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/par7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Format as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ext4&lt;/code&gt; (recommend)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/par8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/par9.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/par10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Install boot loader.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/loader.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/system&lt;/code&gt; as read-write.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/rw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Installing…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/installing.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;center&gt;--- A few moments later ---&lt;/center&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Reboot (better not choose &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Run Android-x86&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/reboot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Here’s the &lt;strong&gt;&lt;em&gt;Grub&lt;/em&gt;&lt;/strong&gt;!!! Boot &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Android-x86 6.0-r3&lt;/code&gt;!!!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/grub.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;​	&lt;strong&gt;&lt;em&gt;But…&lt;/em&gt;&lt;/strong&gt;, oops!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/oop.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All right, maybe we should &lt;strong&gt;&lt;em&gt;configure this sucky system further&lt;/em&gt;&lt;/strong&gt;. The solution is editing the grub in Debug mode.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/debug.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;After enter the command line, firstly it needs to remount &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/mnt&lt;/code&gt; as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rw&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/debug0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use vim to edit the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/mnt/grub/menu.lst&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/vi.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/vi0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nomodeset&lt;/code&gt; after &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;quiet&lt;/code&gt; like this:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/vi1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Save &amp;amp; Reboot&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;finally--setup-android-x86&quot;&gt;Finally! &amp;amp; Setup Android x86&lt;/h2&gt;
+
+&lt;p&gt;​	Successfully boot Android x86!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/suc.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/suc0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Set date &amp;amp; time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/date.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Your beautiful name:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/user.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Complete!!!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/desktop.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/androidx86/desktop0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;moreover&quot;&gt;Moreover…&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If installed applications crashes easily, please run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;enable_houdini&lt;/code&gt; in terminal.&lt;/li&gt;
+  &lt;li&gt;I recommend to use VMware, the VBox there’s something wrong!!!😡&lt;/li&gt;
+  &lt;li&gt;Have fun!!!&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><summary type="html">​ So, finally, I remember to write an article about Android x86, This time I’ll tell all about Android x86.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/androidx86/androidx86.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/androidx86/androidx86.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Here’s to 2021!</title><link href="https://theodorecooper.github.io/other/2021-coming2021/" rel="alternate" type="text/html" title="Here’s to 2021!" /><published>2021-01-01T00:00:00+08:00</published><updated>2021-06-18T22:08:15+08:00</updated><id>https://theodorecooper.github.io/other/coming2021</id><content type="html" xml:base="https://theodorecooper.github.io/other/2021-coming2021/">&lt;h2 id=&quot;2021&quot;&gt;&lt;strong&gt;&lt;em&gt;2021&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;wishing-you&quot;&gt;Wishing you&lt;/h2&gt;
+
+&lt;h2 id=&quot;peace-health-happiness&quot;&gt;Peace, health, happiness&lt;/h2&gt;
+
+&lt;h2 id=&quot;and-prosperity&quot;&gt;and prosperity&lt;/h2&gt;
+
+&lt;h2 id=&quot;in-coming-year&quot;&gt;in coming year&lt;/h2&gt;
+
+&lt;center&gt;┏━━┓┏━━┓┏━━┓┏━┓ &lt;/center&gt;
+
+&lt;center&gt;┗━┓┃┃┏┓┃┗━┓┃    ┃ ┃&lt;/center&gt;
+
+&lt;center&gt;┏━┛┃┃┃  ┃┃┏━┛┃    ┃ ┃&lt;/center&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;center&gt;Theodore Cooper&lt;/center&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;center&gt;┃┏━┛┃┃  ┃┃┃┏━┃    ┃ ┃&lt;/center&gt;
+
+&lt;center&gt;┃┗━┓┃┗┛┃ ┃┗━┓    ┃ ┃&lt;/center&gt;
+
+&lt;center&gt;┗━━┛┗━━┛ ┗━━┛┗━┛&lt;/center&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/coming2021/2021.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Other" /><category term="Other" /><summary type="html">2021</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/coming2021/2021.png" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/coming2021/2021.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">C Tutorial – Command Line Arguments</title><link href="https://theodorecooper.github.io/c/c++/c%20tutorials/linux/2020-C-Tutorial-arg/" rel="alternate" type="text/html" title="C Tutorial – Command Line Arguments" /><published>2020-12-26T00:00:00+08:00</published><updated>2021-06-18T22:17:37+08:00</updated><id>https://theodorecooper.github.io/c/c++/c%20tutorials/linux/C-Tutorial-arg</id><content type="html" xml:base="https://theodorecooper.github.io/c/c++/c%20tutorials/linux/2020-C-Tutorial-arg/">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/C-Tutorial-arg/c.png&quot; alt=&quot;C&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;what-is-command-line-arguments&quot;&gt;What is Command Line Arguments&lt;/h2&gt;
+
+&lt;p&gt;​	When executing the program, you can pass values to the C program from the command line. These values are called command line arguments, and they are important to the program, especially when you want to control the program from the outside, rather than hard-coding these values in the code. Even all the program in Linux will provide command line arguments.&lt;/p&gt;
+
+&lt;h2 id=&quot;use-command-line-arguments&quot;&gt;Use Command Line Arguments&lt;/h2&gt;
+
+&lt;p&gt;​	Command line arguments are handled using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main()&lt;/code&gt; function arguments, where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argc&lt;/code&gt; refers to the number of arguments passed in, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv[]&lt;/code&gt; is an pointer array which point to each argument passed to the program. The following is a simple example:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The argument supplied is %s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Too many arguments.&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;No argument.&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	It produces the following result:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;No argument&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;/a.out
+No argument.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Single argument&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;/a.out aaarrrggg
+The argument supplied is aaarrrggg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Two arguments &amp;amp; Above&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;/a.out arg1 arg2
+Too many arguments.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;explanation--argv0-argv1&quot;&gt;Explanation — &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv[0]&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv[1]&lt;/code&gt;…&lt;/h2&gt;
+
+&lt;p&gt;​	You should know that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv[0]&lt;/code&gt; holds the name of the program itself and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv[1]&lt;/code&gt;  is a pointer to the first command line argument supplied, and *argv[n]  is the last argument. If no arguments are supplied, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argc&lt;/code&gt; will be 1,  and if you pass one argument then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argc&lt;/code&gt; is set at 2.&lt;/p&gt;
+
+&lt;p&gt;​	You pass all the command line arguments separated by a space, but if  argument itself has a space then you can pass such arguments by putting  them inside double quotes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot; &quot;&lt;/code&gt; or single quotes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;' '&lt;/code&gt;.  So, let’s try this:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;/a.out &lt;span class=&quot;s2&quot;&gt;&quot;arg1 arg2&quot;&lt;/span&gt;
+The argument supplied is aaarrrggg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;getopt--getopt_long&quot;&gt;getopt() &amp;amp; getopt_long()&lt;/h2&gt;
+
+&lt;p&gt;​	In Linux, we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getopt()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getopt_long()&lt;/code&gt; to pass arguments:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;
+
+int main&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;int argc, char &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;argv[]&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    char &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;optstr &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;p:n:m:c:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    struct option opts[] &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;path&quot;&lt;/span&gt;, 1, NULL, &lt;span class=&quot;s1&quot;&gt;'p'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+        &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;, 1, NULL, &lt;span class=&quot;s1&quot;&gt;'n'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+        &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mtime&quot;&lt;/span&gt;, 1, NULL, &lt;span class=&quot;s1&quot;&gt;'m'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+        &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ctime&quot;&lt;/span&gt;, 1, NULL, &lt;span class=&quot;s1&quot;&gt;'c'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+        &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;0, 0, 0, 0&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    int opt&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;opt &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; getopt_long&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;argc, argv, optstr, opts, NULL&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        switch&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;opt&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'p'&lt;/span&gt;:
+                strcpy&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;path, optarg&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;nb&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'n'&lt;/span&gt;:
+                strcpy&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;targetname, optarg&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;nb&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'m'&lt;/span&gt;:
+                modifiedtime &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; atoi&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;optarg&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;nb&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'c'&lt;/span&gt;:
+                changetime &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; atoi&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;optarg&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;nb&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            default:
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;strchr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;optstr, optopt&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; NULL&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+                    fprintf&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stderr, &lt;span class=&quot;s2&quot;&gt;&quot;unknown option '-%c'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;, optopt&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                    fprintf&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stderr, &lt;span class=&quot;s2&quot;&gt;&quot;option requires an argument '-%c'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;, optopt&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;1&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    findInDir&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="C/C++" /><category term="C Tutorials" /><category term="Linux" /><category term="C/C++" /><category term="C Tutorials" /><category term="Linux" /><summary type="html"></summary></entry><entry><title type="html">Beginner’s Guide to Search Engine Optimization (SEO)</title><link href="https://theodorecooper.github.io/hexo/seo/github/2020-seo/" rel="alternate" type="text/html" title="Beginner’s Guide to Search Engine Optimization (SEO)" /><published>2020-12-25T00:00:00+08:00</published><updated>2021-06-18T20:27:08+08:00</updated><id>https://theodorecooper.github.io/hexo/seo/github/seo</id><content type="html" xml:base="https://theodorecooper.github.io/hexo/seo/github/2020-seo/">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/seo/seo.png&quot; alt=&quot;SEO&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;whats-seo&quot;&gt;What’s SEO&lt;/h2&gt;
+
+&lt;p&gt;​	An SEO (“Search Engine Optimization”) expert is someone trained to improve your visibility on search engines. So, it’s important to learn about SEO.&lt;/p&gt;
+
+&lt;h2 id=&quot;title&quot;&gt;Title&lt;/h2&gt;
+
+&lt;p&gt;​	What is a page &lt;strong&gt;title&lt;/strong&gt;? This is the HTML title tag, which we also call the page title. The page title is the most influential place to have your &lt;strong&gt;keyword&lt;/strong&gt; phrase. Must make sure a title is good enough. Here are some recommendations for you:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Length&lt;/em&gt;&lt;/strong&gt;: Between 50 - 60 characters, make it &lt;em&gt;“simple”&lt;/em&gt;, remember do not make it too long.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;DO NOT&lt;/em&gt;&lt;/strong&gt; overdo keywords in title like: “Title TITLE title…”. That’s really not a good idea…&lt;/li&gt;
+  &lt;li&gt;Unique title: don’t use same titles… You know…&lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Separate keywords with “ &lt;strong&gt;-&lt;/strong&gt; “, “ **&lt;/td&gt;
+          &lt;td&gt;** “…&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;keywords-tag&quot;&gt;Keywords Tag&lt;/h2&gt;
+
+&lt;p&gt;​	You can put keywords into a keywords tag in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt; like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;keywords&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Keywords, blog, SEO&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;ALSO&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;DO NOT&lt;/em&gt;&lt;/strong&gt; overdo keywords!!!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;descriptions-tag&quot;&gt;Descriptions Tag&lt;/h2&gt;
+
+&lt;p&gt;​	A &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;description&lt;/code&gt; tag contains the… description😅. All right, search engines may use the description provided in the description tag in the search engine results page (SERP). A well-written description that pertains to the content of the  page and that is relevant to the searcher’s intent can help you increase traffic since it can help improve the click-through rate of your page  in search. Add a description to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt; section of the page source:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'description'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Descriptive, Now we talk about the basics of Search Engine Optimization.'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;heading-tag&quot;&gt;Heading Tag&lt;/h2&gt;
+
+&lt;p&gt;​	Heading is the collective name for the 6 tags: h1, h2, h3, h4, h5, and h6. The weights of the 6 tags are from big to small, that is, h1 is the big heading, h6 is the smallest heading:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Heading 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	The h1 tag can only be used once. If it is used multiple times, it is easy to be regarded as cheating by search engines.&lt;/p&gt;
+
+&lt;h2 id=&quot;no-follow&quot;&gt;No follow&lt;/h2&gt;
+
+&lt;p&gt;​	The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nofollow&lt;/code&gt; tag tells search engines to ignore that link. Because  nofollow links do not pass PageRank they likely don’t impact search  engine rankings. Nofollow links are links with a rel=”nofollow” HTML tag applied to them:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href = &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://theodorecooper.github.io/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel = &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nofollow&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;sitemap&quot;&gt;Sitemap&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;​	A &lt;em&gt;sitemap&lt;/em&gt; is a file where you provide information about the  pages, videos, and other files on your site, and the relationships  between them. Search engines like Google read this file to more  intelligently crawl your site. A sitemap tells Google which pages and  files you think are important in your site, and also provides valuable  information about these files: for example, for pages, when the page was last updated, how often the page is changed, and any alternate language versions of a page.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;sitemaps-xml-look-like-this&quot;&gt;Sitemaps (XML) look like this:&lt;/h3&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;urlset&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;url&amp;gt;&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;&amp;lt;loc&amp;gt;&lt;/span&gt;https://theodorecooper.github.io/&lt;span class=&quot;nt&quot;&gt;&amp;lt;/loc&amp;gt;&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;&amp;lt;lastmod&amp;gt;&lt;/span&gt;2020-10-31T16:12:20+03:00&lt;span class=&quot;nt&quot;&gt;&amp;lt;/lastmod&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/urlset&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	Of course, there are HTML sitemaps, even TXT sitemaps…&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-get-a-sitemap&quot;&gt;How to get a sitemap?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;del&gt;Write it yourself&lt;/del&gt; (if you are a complete fool)&lt;/li&gt;
+  &lt;li&gt;Use plugins (like &lt;em&gt;Yoast&lt;/em&gt;…)&lt;/li&gt;
+  &lt;li&gt;Use sitemap generators:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.xml-sitemaps.com/&quot;&gt;XML - Sitemaps&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.mysitemapgenerator.com/&quot;&gt;My Sitemap Generator&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;robotstxt&quot;&gt;robots.txt&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;​	A robots.txt file tells search engine crawlers which pages or files the crawler can or            can’t request from your site. This is used mainly to avoid overloading your site with            requests.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;robots.txt looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;User-agent:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Allow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Allow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/archives/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Allow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/categories/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Allow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/tags/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Allow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/resources/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Disallow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/vendors/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Disallow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/js/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Disallow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/css/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Disallow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/fonts/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Disallow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/vendors/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Sitemap:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	The value of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Allow&lt;/code&gt; is the content that allows search engines to crawl the area.&lt;/p&gt;
+
+&lt;h2 id=&quot;link-structure&quot;&gt;Link structure&lt;/h2&gt;
+
+&lt;p&gt;​	The distance between the home page and other pages cannot be too large, it means: keep your URL short.&lt;/p&gt;
+
+&lt;p&gt;​	&lt;strong&gt;&lt;em&gt;DO NOT&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://theodorecooper.github.io/blog/2020/12/25/seo/index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	&lt;strong&gt;&lt;em&gt;DO&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://theodorecooper.github.io/2020/seo/index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	In a word: &lt;strong&gt;&lt;em&gt;SIMPLE&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;image-alt&quot;&gt;Image ALT&lt;/h2&gt;
+
+&lt;p&gt;​	When inserting a picture, you will be prompted to enter text. The keywords appearing in the image ALT also have a certain impact on page relevance. Similarly, &lt;strong&gt;&lt;em&gt;DO NOT&lt;/em&gt;&lt;/strong&gt; overdo keywords!!!&lt;/p&gt;
+
+&lt;h2 id=&quot;more&quot;&gt;More…&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://search.google.com/search-console/&quot;&gt;Google Search Console&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.bing.com/webmasters/&quot;&gt;Bing Webmaster Tools&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://analytics.google.com/&quot;&gt;Google Analytics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Do not use hack tools…&lt;/li&gt;
+  &lt;li&gt;Be patient!&lt;/li&gt;
+  &lt;li&gt;Think carefully!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;finally&quot;&gt;Finally&lt;/h2&gt;
+
+&lt;p&gt;​	Always remember: &lt;strong&gt;&lt;em&gt;Content itself is the KING.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Hexo" /><category term="SEO" /><category term="Github" /><category term="Hexo" /><category term="SEO" /><category term="Github" /><summary type="html"></summary></entry><entry><title type="html">Hexo | Speed up!</title><link href="https://theodorecooper.github.io/2020-hexo-speed-up/" rel="alternate" type="text/html" title="Hexo | Speed up!" /><published>2020-12-18T00:00:00+08:00</published><updated>2021-06-18T19:53:05+08:00</updated><id>https://theodorecooper.github.io/hexo-speed-up</id><content type="html" xml:base="https://theodorecooper.github.io/2020-hexo-speed-up/">&lt;blockquote&gt;
+  &lt;p&gt;&lt;del&gt;Sometimes&lt;/del&gt; Always, we need a high speed blog…&lt;/p&gt;
+
+  &lt;p&gt;​																									– Me(Theodore Cooper), just now&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;now-use-plugins&quot;&gt;Now, use plugins&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Compress HTML code:&lt;/p&gt;
+
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;hexo-html-minifier &lt;span class=&quot;nt&quot;&gt;--save&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Compress JavaScript code:&lt;/p&gt;
+
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;hexo-uglify &lt;span class=&quot;nt&quot;&gt;--save&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Compress CSS code:&lt;/p&gt;
+
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;hexo-clean-css &lt;span class=&quot;nt&quot;&gt;--save&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;## As a result…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/hexo-speed-up/speed.PNG&quot; alt=&quot;Speed Up!&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><summary type="html">Sometimes Always, we need a high speed blog… ​ – Me(Theodore Cooper), just now</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/hexo-speed-up/speed.PNG" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/hexo-speed-up/speed.PNG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">C Tutorial – Pointer</title><link href="https://theodorecooper.github.io/c/c++/c%20tutorials/2020-C-Tutorial-Pointer/" rel="alternate" type="text/html" title="C Tutorial – Pointer" /><published>2020-12-11T00:00:00+08:00</published><updated>2021-06-18T22:14:05+08:00</updated><id>https://theodorecooper.github.io/c/c++/c%20tutorials/C-Tutorial-Pointer</id><content type="html" xml:base="https://theodorecooper.github.io/c/c++/c%20tutorials/2020-C-Tutorial-Pointer/">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/C-Tutorial-Pointer/c-program-pointers.png&quot; alt=&quot;C Pointers&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-pointer&quot;&gt;What’s pointer?&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A pointer is a variable whose value is the address of another variable, that is, the direct address of a memory location.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;declare-pointers&quot;&gt;Declare pointers&lt;/h2&gt;
+
+&lt;p&gt;​	So, just like other variables or constants, you must declare pointers before storing the addresses of other variables:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	The asterisk &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt; used to declare pointers is the same as the asterisk used in multiplication. However, in this statement, the asterisk is used to specify that a variable is a pointer.&lt;/p&gt;
+
+&lt;p&gt;​	Examples:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	&lt;em&gt;The only difference between pointers of different data types is that the data types of the variables or constants pointed to by the pointers are different.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-use-pointers&quot;&gt;How to use pointers?&lt;/h2&gt;
+
+&lt;p&gt;​	Talk is cheap, show the code:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt; 
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ 
+   &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ 
+   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;var address: %p&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;p address: %p&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;*p: %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+ 
+   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	results:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;000000000022&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FE44&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;000000000022&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FE44&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;null-pointer-in-c&quot;&gt;NULL pointer in C&lt;/h2&gt;
+
+&lt;p&gt;​	During variable declaration, if there is no exact address to assign, it is a good programming practice to assign a NULL value to the pointer variable. A pointer assigned a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NULL&lt;/code&gt; value is called a &lt;strong&gt;&lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null pointer&lt;/code&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt; 
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ 
+   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;p address: %p&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+ 
+   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	result:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x0&lt;/span&gt;
+    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	On most systems, programs are not allowed to access the memory at address 0, because the memory is reserved by the operating system. However, the memory address 0 has a particularly important meaning, it indicates that the pointer does not point to an accessible memory location. But by convention, if the pointer contains a null value, it is assumed to point to nothing.&lt;/p&gt;
+
+&lt;h2 id=&quot;check-for-null-pointers&quot;&gt;Check for null pointers&lt;/h2&gt;
+
+&lt;p&gt;​	We often use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; to check for pointers:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//if p is null&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//if p is not null&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/C-Tutorial-Pointer/pointer.jpg&quot; alt=&quot;Pointer&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="C/C++" /><category term="C Tutorials" /><category term="C/C++" /><category term="C Tutorials" /><summary type="html"></summary></entry></feed>

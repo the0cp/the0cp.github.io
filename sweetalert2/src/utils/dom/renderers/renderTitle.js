@@ -1,1 +1,0 @@
-import*as dom from"../../dom/index.js";export const renderTitle=(t,e)=>{const o=dom.getTitle();dom.toggle(o,e.title||e.titleText),e.title&&dom.parseHtmlToContainer(e.title,o),e.titleText&&(o.innerText=e.titleText),dom.applyCustomClass(o,e,"title")};

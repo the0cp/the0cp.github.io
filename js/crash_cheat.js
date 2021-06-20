@@ -1,1 +1,0 @@
-var titleTime,OriginTitle=document.title;document.addEventListener("visibilitychange",(function(){document.hidden?(document.title="Page crashed!!!",clearTimeout(titleTime)):(document.title="Bazinga!!!",titleTime=setTimeout((function(){document.title=OriginTitle}),2e3))}));

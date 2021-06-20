@@ -1,16 +1,1 @@
-# welcome to : theodorecoooper.github.io
-
-User-agent: *
-Allow: /
-Allow: /2020
-Allow: /archives/
-Allow: /tags/
-Allow: /About/
-
-Disallow: /js/
-Disallow: /css/
-Disallow: /img/
-Disallow: /lib/
-Disallow: /libs/
-
 Sitemap: https://theodorecooper.github.io/sitemap.xml

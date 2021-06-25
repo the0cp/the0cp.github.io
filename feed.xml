@@ -1,5 +1,501 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-06-20T12:17:44+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
-</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Penetration Testing | ARP Spoofing(Poisoning) in the internal network &amp;amp; How to prevent it</title><link href="https://theodorecooper.github.io/penetration/linux/2021-arp-spoofing/" rel="alternate" type="text/html" title="Penetration Testing | ARP Spoofing(Poisoning) in the internal network &amp;amp; How to prevent it" /><published>2021-02-11T00:00:00+08:00</published><updated>2021-06-18T22:07:09+08:00</updated><id>https://theodorecooper.github.io/penetration/linux/arp-spoofing</id><content type="html" xml:base="https://theodorecooper.github.io/penetration/linux/2021-arp-spoofing/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-06-25T11:06:39+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Run a CMD command in Qt without displaying the CMD window</title><link href="https://theodorecooper.github.io/qt/c/c++/c%20tutorials/2021-qtcmd/" rel="alternate" type="text/html" title="Run a CMD command in Qt without displaying the CMD window" /><published>2021-06-25T00:00:00+08:00</published><updated>2021-06-25T11:06:38+08:00</updated><id>https://theodorecooper.github.io/qt/c/c++/c%20tutorials/qtcmd</id><content type="html" xml:base="https://theodorecooper.github.io/qt/c/c++/c%20tutorials/2021-qtcmd/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;method-1-system&quot;&gt;Method 1: system&lt;/h2&gt;
+
+&lt;p&gt;​	It’s the most basic method not only used in Qt, you should include the library &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stdlib.h&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;​	&lt;em&gt;But, you have to see the ugly black cmd window.&lt;/em&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;stdlib.h&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;syntax&quot;&gt;Syntax&lt;/h3&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;parameters&quot;&gt;Parameters&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;command&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;​	 C-string containing the system command to be executed.&lt;/p&gt;
+
+ 	Or, alternatively, a &lt;em&gt;null pointer&lt;/em&gt;, to check for a command processor.
+
+&lt;h3 id=&quot;return-value&quot;&gt;Return Value&lt;/h3&gt;
+
+&lt;p&gt;​	 If command is a null pointer, the function returns a non-zero value in case a &lt;em&gt;command processor&lt;/em&gt; is available and a zero value if it is not.&lt;/p&gt;
+
+ 	If command is not a null pointer, the value returned depends  on the system and library implementations, but it is generally expected  to be the status code returned by the called command, if supported.
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/******example: ping******/&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;checking processor&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Ok&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    	&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EXIT_FAILURE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;start ping&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ping localhost &amp;gt;&amp;gt; res.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	You can see the ping’s result in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;res.txt&lt;/code&gt; after running these code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Is here some method I can take to avoid displaying the cmd window? The answer is: YES.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;method-2-winexec--without-cmd-window&quot;&gt;Method 2： WinExec – without cmd window&lt;/h2&gt;
+
+&lt;p&gt;​	&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WinExec()&lt;/code&gt; is another way to run a command, the advantage of using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WinExec()&lt;/code&gt; is you don’t need to display the window, it means, you can hide the window. It needs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;winbase.h&lt;/code&gt; &amp;amp; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;windows.h&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;​	&lt;strong&gt;BUT&lt;/strong&gt;, this function is provided only for compatibility with 16-bit Windows. Applications should use the  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CreateProcess()&lt;/code&gt; function(as follows).&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;windows.h&lt;br /&gt;winbase.h&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;syntax-1&quot;&gt;Syntax&lt;/h3&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;UINT&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;WinExec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;LPCSTR&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpCmdLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;UINT&lt;/span&gt;   &lt;span class=&quot;n&quot;&gt;uCmdShow&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;parameters-1&quot;&gt;Parameters&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpCmdLine&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;​	The command line (file name plus optional parameters) for the application to be executed.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;uCmdShow&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;​	The display options.&lt;/p&gt;
+
+&lt;p&gt;​	List of the acceptable values:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Value&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Meaning&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;SW_HIDE&lt;/strong&gt; 0&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Hides the window and activates another window.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;SW_SHOWNORMAL&lt;/strong&gt; &lt;strong&gt;SW_NORMAL&lt;/strong&gt; 1&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Activates and displays a window. If the window is minimized or  maximized, the system restores it to its original size and position. An  application should specify this flag when displaying the window for the  first time.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;SW_SHOWMINIMIZED&lt;/strong&gt; 2&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Activates the window and displays it as a minimized window.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;SW_SHOWMAXIMIZED&lt;/strong&gt; &lt;strong&gt;SW_MAXIMIZE&lt;/strong&gt; 3&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Activates the window and displays it as a maximized window.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;SW_SHOWNOACTIVATE&lt;/strong&gt; 4&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Displays a window in its most recent size and position. This value is similar to &lt;strong&gt;SW_SHOWNORMAL&lt;/strong&gt;, except that the window is not activated.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;SW_SHOW&lt;/strong&gt; 5&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Activates the window and displays it in its current size and position.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;SW_MINIMIZE&lt;/strong&gt; 6&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Minimizes the specified window and activates the next top-level window in the Z order.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;SW_SHOWMINNOACTIVE&lt;/strong&gt; 7&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Displays the window as a minimized window. This value is similar to &lt;strong&gt;SW_SHOWMINIMIZED&lt;/strong&gt;, except the window is not activated.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;SW_SHOWNA&lt;/strong&gt; 8&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Displays the window in its current size and position. This value is similar to &lt;strong&gt;SW_SHOW&lt;/strong&gt;, except that the window is not activated.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;SW_RESTORE&lt;/strong&gt; 9&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Activates and displays the window. If the window is minimized or  maximized, the system restores it to its original size and position. An  application should specify this flag when restoring a minimized window.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;SW_SHOWDEFAULT&lt;/strong&gt; 10&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Sets the show state based on the &lt;strong&gt;SW_&lt;/strong&gt; value specified in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;STARTUPINFO&lt;/code&gt; structure passed to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CreateProcess()&lt;/code&gt; function by the program that started the application.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;strong&gt;SW_FORCEMINIMIZE&lt;/strong&gt; 11&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Minimizes a window, even if the thread that owns the window is not  responding. This flag should only be used when minimizing windows from a different thread.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;return-value-1&quot;&gt;Return value&lt;/h3&gt;
+
+&lt;p&gt;​	If the function succeeds, the return value is greater than 31.&lt;/p&gt;
+
+&lt;p&gt;​	If the function fails, the return value is one of the following error values.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Return code/value&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;The system is out of memory or resources.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;ERROR_BAD_FORMAT&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The .exe file is invalid.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;ERROR_FILE_NOT_FOUND&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The specified file was not found.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;ERROR_PATH_NOT_FOUND&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;The specified path was not found.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;example-1&quot;&gt;Example&lt;/h3&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/******example: ping******/&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;windows.h&amp;gt;
+#include &amp;lt;winbase.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;start ping&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;WinExec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cmd.exe /c ping localhost &amp;gt;&amp;gt; res.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SW_HIDE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;	
+	&lt;span class=&quot;cm&quot;&gt;/*
+	'/c' can't be ignored as you have arguments after 'cmd.exe'
+	*/&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;​	With this function you cannot determine whether the command is completed, because it is executed asynchronously.&lt;/p&gt;
+
+&lt;p&gt;​	You must use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CreateProcess()&lt;/code&gt; to solve the problem.&lt;/p&gt;
+
+&lt;h2 class=&quot;note&quot; id=&quot;method-3-createprocess--without-cmd-window&quot;&gt;Method 3: CreateProcess – without cmd window&lt;/h2&gt;
+
+&lt;p&gt;​	This function is used to run a new program. It creates a new process and its primary thread. The new process executes the specified executable file.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Header&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;windows.h&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;syntax-2&quot;&gt;Syntax&lt;/h3&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;CreateProcess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; 
+	&lt;span class=&quot;n&quot;&gt;LPCWSTR&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpszImageName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+	&lt;span class=&quot;n&quot;&gt;LPCWSTR&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpszCmdLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+	&lt;span class=&quot;n&quot;&gt;LPSECURITY_ATTRIBUTES&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpsaProcess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+	&lt;span class=&quot;n&quot;&gt;LPSECURITY_ATTRIBUTES&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpsaThread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+	&lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fInheritHandles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+	&lt;span class=&quot;n&quot;&gt;DWORD&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fdwCreate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+	&lt;span class=&quot;n&quot;&gt;LPVOID&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpvEnvironment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+	&lt;span class=&quot;n&quot;&gt;LPWSTR&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpszCurDir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+	&lt;span class=&quot;n&quot;&gt;LPSTARTUPINFOW&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lpsiStartInfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+	&lt;span class=&quot;n&quot;&gt;LPPROCESS_INFORMATION&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lppiProcInfo&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;parameters-2&quot;&gt;Parameters&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpszImageName&lt;/code&gt;:
+ 	Pointer to a null-terminated string that specifies the module to execute.&lt;/p&gt;
+
+&lt;p&gt;​	The string can specify the full path and filename of the module to execute or it can specify a partial path and filename.&lt;/p&gt;
+
+&lt;p&gt;​	The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpszImageName&lt;/code&gt; parameter must be non-NULL and must include the module name.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpszCmdLine&lt;/code&gt;:
+ 	Pointer to a null-terminated string that specifies the command line to  execute. The system adds a null character to the command line, trimming  the string if necessary, to indicate which file was actually used.&lt;/p&gt;
+
+&lt;p&gt;​	The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpszCmdLine&lt;/code&gt; parameter can be NULL. In that case, the function uses the string pointed to by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpszImageName&lt;/code&gt; as the command line.&lt;/p&gt;
+
+&lt;p&gt;​	If both &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpszImageName&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpszCmdLine&lt;/code&gt; are non-NULL, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*lpszImageName&lt;/code&gt; specifies the module to execute, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*lpszCmdLine&lt;/code&gt; specifies the command line. C runtime processes can use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argc&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv &lt;/code&gt;arguments.&lt;/p&gt;
+
+&lt;p&gt;​	If the filename does not contain an extension, .EXE is assumed. If  the filename ends in a period (.) with no extension, or the filename  contains a path, .EXE is not appended.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpsaProcess&lt;/code&gt;:
+ 	Process safety attributes&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpsaThread&lt;/code&gt;:
+	 Thread safety attributes&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fInheritHandles&lt;/code&gt;:
+ 	Whether to inherit the attributes of the parent process&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fdwCreate&lt;/code&gt;:
+ 	Specifies additional flags that control the priority class and the  creation of the process. The following creation flags can be specified  in any combination, except as noted:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Value&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CREATE_DEFAULT_ERROR_MODE&lt;/td&gt;
+      &lt;td&gt;Not supported.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CREATE_NEW_CONSOLE&lt;/td&gt;
+      &lt;td&gt;The new process has a new console, instead of inheriting the  parent’s console. This flag cannot be used with the DETACHED_PROCESS  flag.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CREATE_NEW_PROCESS_GROUP&lt;/td&gt;
+      &lt;td&gt;Not supported.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CREATE_SEPARATE_WOW_VDM&lt;/td&gt;
+      &lt;td&gt;Not supported.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CREATE_SHARED_WOW_VDM&lt;/td&gt;
+      &lt;td&gt;Not supported.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CREATE_SUSPENDED&lt;/td&gt;
+      &lt;td&gt;The primary thread of the new process is created in a suspended state, and does not run until the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ResumeThread&lt;/code&gt; function is called.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CREATE_UNICODE_ENVIRONMENT&lt;/td&gt;
+      &lt;td&gt;Not supported.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;DEBUG_PROCESS&lt;/td&gt;
+      &lt;td&gt;If this flag is set, the calling process is treated as a debugger,  and the new process is a process being debugged. Child processes of the  new process are also debugged. The system notifies the debugger of all  debug events that occur in the process being debugged.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;If you create a process with this flag set, only the calling thread (the thread that called CreateProcess) can call the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WaitForDebugEvent&lt;/code&gt; function.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;DEBUG_ONLY_THIS_PROCESS&lt;/td&gt;
+      &lt;td&gt;If this flag is set, the calling process is treated as a debugger,  and the new process is a process being debugged. No child processes of  the new process are debugged. The system notifies the debugger of all  debug events that occur in the process being debugged.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;DETACHED_PROCESS&lt;/td&gt;
+      &lt;td&gt;Not supported.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpvEnvironment&lt;/code&gt;:
+ 	Pointer to current environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpszCurDir&lt;/code&gt;:
+ 	Pointer to current directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpsiStartInfo&lt;/code&gt;:
+ 	Pointer to STARTUPINFO structure&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lppiProcInfo&lt;/code&gt;:
+ 	Pointer to a PROCESS_INFORMATION structure that receives identification information about the new process.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-2&quot;&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;Here’s the Microsoft’s example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-C++&quot;&gt;#include &amp;lt;windows.h&amp;gt;
+#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;tchar.h&amp;gt;
+
+void _tmain( int argc, TCHAR *argv[] )
+{
+    STARTUPINFO si;
+    PROCESS_INFORMATION pi;
+
+    ZeroMemory( &amp;amp;si, sizeof(si) );
+    si.cb = sizeof(si);
+    si.wShowWindow = SW_HIDE;	//hide window
+    ZeroMemory( &amp;amp;pi, sizeof(pi) );
+
+    // Start the child process. 
+    if( !CreateProcess( NULL,   // No module name (use command line)
+        &quot;cmd.exe /c ping localhost &amp;gt;&amp;gt; res.txt&quot;,        // Command line
+        NULL,           // Process handle not inheritable
+        NULL,           // Thread handle not inheritable
+        FALSE,          // Set handle inheritance to FALSE
+        0,              // No creation flags
+        NULL,           // Use parent's environment block
+        NULL,           // Use parent's starting directory 
+        &amp;amp;si,            // Pointer to STARTUPINFO structure
+        &amp;amp;pi )           // Pointer to PROCESS_INFORMATION structure
+    ) 
+    {
+        printf( &quot;CreateProcess failed (%d).\n&quot;, GetLastError() );
+        return;
+    }
+
+    // Wait until child process exits.
+    WaitForSingleObject( pi.hProcess, INFINITE );
+
+    // Close process and thread handles. 
+    CloseHandle( pi.hProcess );
+    CloseHandle( pi.hThread );
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;method-4-qprocess--without-cmd-window&quot;&gt;Method 4： QProcess – without cmd window&lt;/h2&gt;
+
+&lt;p&gt;The QProcess class is used to start external programs and to communicate with them. It’s a modern method to run a command.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Header&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;QProcess&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;qmake&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;QT += core&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;n&quot;&gt;QProcess&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cmd&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QStringList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/c&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ping localhost &amp;gt;&amp;gt; res.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;waitForStarted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;waitForFinished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Another way:&lt;/p&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;QProcess&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;QString&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;cmd.exe&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;QStringList&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/c&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ping&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&amp;gt;&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;res.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;waitForFinished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//p.start(command, args);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//p.waitForStarted();&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//p.waitForFinished();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;full-example&quot;&gt;Full example:&lt;/h3&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//file: &quot;mainwindow.h&quot;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#ifndef MAINWINDOW_H  
+#define MAINWINDOW_H  
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;QtGui&amp;gt;  
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MainWindow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QMainWindow&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;Q_OBJECT&lt;/span&gt;  
+
+&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;MainWindow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;QWidget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
+    
+    &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MainWindow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;  
+
+&lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;slots&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;  
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;openProcess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; 
+    
+    &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;readResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exitCode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
+
+&lt;span class=&quot;nl&quot;&gt;private:&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;QProcess&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;  
+
+&lt;span class=&quot;cp&quot;&gt;#endif // MAINWINDOW_H 
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//file: &quot;mainwindow.cpp&quot;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &quot;mainwindow.h&quot;  
+&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;MainWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MainWindow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;QWidget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+    &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QMainWindow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QProcess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;QPushButton&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QPushButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;execute&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SIGNAL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clicked&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()),&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SLOT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;openProcess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()));&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+ 
+&lt;span class=&quot;n&quot;&gt;MainWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MainWindow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+ 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+ 
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MainWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;openProcess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cmd.exe&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QStringList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;/c&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ping localhost &amp;gt;&amp;gt; res.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SIGNAL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;finished&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SLOT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+ 
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MainWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exitCode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exitCode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+        &lt;span class=&quot;n&quot;&gt;QTextCodec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gbkCodec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;QTextCodec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;codecForName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;GBK&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
+        &lt;span class=&quot;n&quot;&gt;QString&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gbkCodec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toUnicode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;readAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;   
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;at-last&quot;&gt;At last&lt;/h2&gt;
+&lt;p&gt;At last, I recommand QProcess and CreateProcess.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Qt" /><category term="C/C++" /><category term="C Tutorials" /><category term="Qt" /><category term="C/C++" /><category term="C Tutorials" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/qt-cmd/qt-logo.png" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/qt-cmd/qt-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Penetration Testing | ARP Spoofing(Poisoning) in the internal network &amp;amp; How to prevent it</title><link href="https://theodorecooper.github.io/penetration/linux/2021-arp-spoofing/" rel="alternate" type="text/html" title="Penetration Testing | ARP Spoofing(Poisoning) in the internal network &amp;amp; How to prevent it" /><published>2021-02-11T00:00:00+08:00</published><updated>2021-06-18T22:07:09+08:00</updated><id>https://theodorecooper.github.io/penetration/linux/arp-spoofing</id><content type="html" xml:base="https://theodorecooper.github.io/penetration/linux/2021-arp-spoofing/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;address-resolution-protocol-arp&quot;&gt;Address Resolution Protocol (&lt;strong&gt;ARP&lt;/strong&gt;)&lt;/h2&gt;
 
@@ -586,7 +1082,7 @@ pkill run.sh
 &lt;h2 id=&quot;push&quot;&gt;Push&lt;/h2&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin xxxx	&lt;span class=&quot;c&quot;&gt;#xxxx is your branch&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Github" /><category term="Github" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/githubrm/github.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/githubrm/github.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Install Android x86 in VMware &amp;amp; Virtualbox</title><link href="https://theodorecooper.github.io/2021-androidx86/" rel="alternate" type="text/html" title="Install Android x86 in VMware &amp;amp; Virtualbox" /><published>2021-01-01T00:00:00+08:00</published><updated>2021-06-18T16:14:20+08:00</updated><id>https://theodorecooper.github.io/androidx86</id><content type="html" xml:base="https://theodorecooper.github.io/2021-androidx86/">&lt;blockquote&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Github" /><category term="Github" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/githubrm/github.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/githubrm/github.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Install Android x86 in VMware &amp;amp; Virtualbox</title><link href="https://theodorecooper.github.io/linux/2021-androidx86/" rel="alternate" type="text/html" title="Install Android x86 in VMware &amp;amp; Virtualbox" /><published>2021-01-01T00:00:00+08:00</published><updated>2021-06-25T10:01:31+08:00</updated><id>https://theodorecooper.github.io/linux/androidx86</id><content type="html" xml:base="https://theodorecooper.github.io/linux/2021-androidx86/">&lt;blockquote&gt;
   &lt;p&gt;​	So, finally, I remember to write an article about &lt;strong&gt;&lt;em&gt;Android x86&lt;/em&gt;&lt;/strong&gt;, This time I’ll tell all about Android x86.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -847,7 +1343,7 @@ pkill run.sh
   &lt;li&gt;If installed applications crashes easily, please run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;enable_houdini&lt;/code&gt; in terminal.&lt;/li&gt;
   &lt;li&gt;I recommend to use VMware, the VBox there’s something wrong!!!😡&lt;/li&gt;
   &lt;li&gt;Have fun!!!&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><summary type="html">​ So, finally, I remember to write an article about Android x86, This time I’ll tell all about Android x86.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/androidx86/androidx86.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/androidx86/androidx86.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Here’s to 2021!</title><link href="https://theodorecooper.github.io/other/2021-coming2021/" rel="alternate" type="text/html" title="Here’s to 2021!" /><published>2021-01-01T00:00:00+08:00</published><updated>2021-06-18T22:08:15+08:00</updated><id>https://theodorecooper.github.io/other/coming2021</id><content type="html" xml:base="https://theodorecooper.github.io/other/2021-coming2021/">&lt;h2 id=&quot;2021&quot;&gt;&lt;strong&gt;&lt;em&gt;2021&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Linux" /><summary type="html">​ So, finally, I remember to write an article about Android x86, This time I’ll tell all about Android x86.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/androidx86/androidx86.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/androidx86/androidx86.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Here’s to 2021!</title><link href="https://theodorecooper.github.io/other/2021-coming2021/" rel="alternate" type="text/html" title="Here’s to 2021!" /><published>2021-01-01T00:00:00+08:00</published><updated>2021-06-18T22:08:15+08:00</updated><id>https://theodorecooper.github.io/other/coming2021</id><content type="html" xml:base="https://theodorecooper.github.io/other/2021-coming2021/">&lt;h2 id=&quot;2021&quot;&gt;&lt;strong&gt;&lt;em&gt;2021&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;h2 id=&quot;wishing-you&quot;&gt;Wishing you&lt;/h2&gt;
 
@@ -1173,102 +1669,4 @@ int main&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;int argc, char &lt;span cl
 
 &lt;p&gt;## As a result…&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/hexo-speed-up/speed.PNG&quot; alt=&quot;Speed Up!&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><summary type="html">Sometimes Always, we need a high speed blog… ​ – Me(Theodore Cooper), just now</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/hexo-speed-up/speed.PNG" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/hexo-speed-up/speed.PNG" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">C Tutorial – Pointer</title><link href="https://theodorecooper.github.io/c/c++/c%20tutorials/2020-C-Tutorial-Pointer/" rel="alternate" type="text/html" title="C Tutorial – Pointer" /><published>2020-12-11T00:00:00+08:00</published><updated>2021-06-18T22:14:05+08:00</updated><id>https://theodorecooper.github.io/c/c++/c%20tutorials/C-Tutorial-Pointer</id><content type="html" xml:base="https://theodorecooper.github.io/c/c++/c%20tutorials/2020-C-Tutorial-Pointer/">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/C-Tutorial-Pointer/c-program-pointers.png&quot; alt=&quot;C Pointers&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;whats-pointer&quot;&gt;What’s pointer?&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A pointer is a variable whose value is the address of another variable, that is, the direct address of a memory location.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;declare-pointers&quot;&gt;Declare pointers&lt;/h2&gt;
-
-&lt;p&gt;​	So, just like other variables or constants, you must declare pointers before storing the addresses of other variables:&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	The asterisk &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt; used to declare pointers is the same as the asterisk used in multiplication. However, in this statement, the asterisk is used to specify that a variable is a pointer.&lt;/p&gt;
-
-&lt;p&gt;​	Examples:&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	&lt;em&gt;The only difference between pointers of different data types is that the data types of the variables or constants pointed to by the pointers are different.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-use-pointers&quot;&gt;How to use pointers?&lt;/h2&gt;
-
-&lt;p&gt;​	Talk is cheap, show the code:&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt; 
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
- 
-   &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
- 
-   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;var address: %p&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;p address: %p&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;*p: %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
- 
-   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	results:&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;000000000022&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FE44&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;000000000022&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FE44&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-    
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;null-pointer-in-c&quot;&gt;NULL pointer in C&lt;/h2&gt;
-
-&lt;p&gt;​	During variable declaration, if there is no exact address to assign, it is a good programming practice to assign a NULL value to the pointer variable. A pointer assigned a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NULL&lt;/code&gt; value is called a &lt;strong&gt;&lt;em&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null pointer&lt;/code&gt;&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt; 
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
- 
-   &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;p address: %p&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
- 
-   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	result:&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x0&lt;/span&gt;
-    
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	On most systems, programs are not allowed to access the memory at address 0, because the memory is reserved by the operating system. However, the memory address 0 has a particularly important meaning, it indicates that the pointer does not point to an accessible memory location. But by convention, if the pointer contains a null value, it is assumed to point to nothing.&lt;/p&gt;
-
-&lt;h2 id=&quot;check-for-null-pointers&quot;&gt;Check for null pointers&lt;/h2&gt;
-
-&lt;p&gt;​	We often use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; to check for pointers:&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//if p is null&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;or&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;//if p is not null&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/C-Tutorial-Pointer/pointer.jpg&quot; alt=&quot;Pointer&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="C/C++" /><category term="C Tutorials" /><category term="C/C++" /><category term="C Tutorials" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/hexo-speed-up/speed.PNG&quot; alt=&quot;Speed Up!&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><summary type="html">Sometimes Always, we need a high speed blog… ​ – Me(Theodore Cooper), just now</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/hexo-speed-up/speed.PNG" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/hexo-speed-up/speed.PNG" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

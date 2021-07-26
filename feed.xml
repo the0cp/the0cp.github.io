@@ -1,5 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-06-25T11:15:26+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
-</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Run a CMD command in Qt without displaying the CMD window</title><link href="https://theodorecooper.github.io/qt/c/c++/c%20tutorials/2021-qtcmd/" rel="alternate" type="text/html" title="Run a CMD command in Qt without displaying the CMD window" /><published>2021-06-25T00:00:00+08:00</published><updated>2021-06-25T11:15:00+08:00</updated><id>https://theodorecooper.github.io/qt/c/c++/c%20tutorials/qtcmd</id><content type="html" xml:base="https://theodorecooper.github.io/qt/c/c++/c%20tutorials/2021-qtcmd/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-07-26T10:50:26+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Solve Qt: libpng warning: iCCP: known incorrect sRGB profile</title><link href="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/" rel="alternate" type="text/html" title="Solve Qt: libpng warning: iCCP: known incorrect sRGB profile" /><published>2021-07-26T00:00:00+08:00</published><updated>2021-07-26T10:50:23+08:00</updated><id>https://theodorecooper.github.io/qt/qt-libpng-warning</id><content type="html" xml:base="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;why-this-happens&quot;&gt;Why this happens?&lt;/h2&gt;
+
+&lt;p&gt;This warning is mainly related to the format of the PNG image. In fact, to solve this warning, we just need to convert the image to a correct profile. There are many ways to solve this in both Windows and Linux.&lt;/p&gt;
+
+&lt;h2 id=&quot;windows&quot;&gt;Windows&lt;/h2&gt;
+
+&lt;h3 id=&quot;method-1-imagemagick&quot;&gt;Method 1: ImageMagick&lt;/h3&gt;
+
+&lt;p&gt;We use ImageMagick to convert the image: &lt;a href=&quot;http://www.imagemagick.org/script/binary-releases.PHP&quot;&gt;ImageMagick Offical&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Download the corresponding compressed package according to the platform (such as Windows x64)&lt;/li&gt;
+  &lt;li&gt;Unzip the downloaded compressed package to anywhere you want, we suppose your target path is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$PATH&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Create a new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.bat&lt;/code&gt; file in the PNG folder, for example &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;convert.bat&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Edit the content of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;convert.bat&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@echo off
+&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;ImageMagick is fixing libpng warning
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;fn &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;onvert.exe
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; /f &lt;span class=&quot;s2&quot;&gt;&quot;tokens=*&quot;&lt;/span&gt; %%i &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dir/s/b *.png'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%fn%&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%%i&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-strip&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;%%i&quot;&lt;/span&gt;
+pause
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Save the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;convert.bat&lt;/code&gt;, then double click to run it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;method-2-photoshop&quot;&gt;Method 2: Photoshop&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open the image with Photoshop.&lt;/li&gt;
+  &lt;li&gt;Click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Edit&lt;/code&gt; on the tool bar.&lt;/li&gt;
+  &lt;li&gt;Change the image profile to “Adobe RGB (1998)”.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;method-3-qimage&quot;&gt;Method 3: QImage&lt;/h3&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;QImage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1.png&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1.png&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;linux&quot;&gt;Linux&lt;/h2&gt;
+
+&lt;h3 id=&quot;method-1-convert&quot;&gt;Method 1: convert&lt;/h3&gt;
+
+&lt;p&gt;It’s the easiest way to solve the warning in Linux:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;convert input.png output.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you don’t have a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;convert&lt;/code&gt; command, just install it, it is included in ImageMagick:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;imagemagick
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;convert &lt;span class=&quot;nt&quot;&gt;-version&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;convert&lt;/code&gt; also has many more excellent functions, you can resize your image like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;convert &lt;span class=&quot;nt&quot;&gt;-resize&lt;/span&gt; 1024x1024 input.png output.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Rotate the image:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;convert &lt;span class=&quot;nt&quot;&gt;-rotate&lt;/span&gt; 270 input.png output.png    &lt;span class=&quot;c&quot;&gt;#clockwise rotate 270 degrees&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Even add characters:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ convert -fill COLOR -pointsize SIZE -font FONT -draw 'text X,Y &quot;Hello, World!&quot;' input.png output.png 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And many more…&lt;/p&gt;
+
+&lt;h3 id=&quot;method-2-qimage&quot;&gt;Method 2: QImage()&lt;/h3&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;QImage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1.png&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;save&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1.png&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Qt" /><category term="Qt" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/qt-libpng-warning/imagemagick.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/qt-libpng-warning/imagemagick.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Run a CMD command in Qt without displaying the CMD window</title><link href="https://theodorecooper.github.io/qt/c/c++/c%20tutorials/2021-qtcmd/" rel="alternate" type="text/html" title="Run a CMD command in Qt without displaying the CMD window" /><published>2021-06-25T00:00:00+08:00</published><updated>2021-06-25T11:15:00+08:00</updated><id>https://theodorecooper.github.io/qt/c/c++/c%20tutorials/qtcmd</id><content type="html" xml:base="https://theodorecooper.github.io/qt/c/c++/c%20tutorials/2021-qtcmd/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;method-1-system&quot;&gt;Method 1: system&lt;/h2&gt;
 
@@ -1636,37 +1720,4 @@ int main&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;int argc, char &lt;span cl
 
 &lt;h2 id=&quot;finally&quot;&gt;Finally&lt;/h2&gt;
 
-&lt;p&gt;​	Always remember: &lt;strong&gt;&lt;em&gt;Content itself is the KING.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Hexo" /><category term="SEO" /><category term="Github" /><category term="Hexo" /><category term="SEO" /><category term="Github" /><summary type="html"></summary></entry><entry><title type="html">Hexo | Speed up!</title><link href="https://theodorecooper.github.io/2020-hexo-speed-up/" rel="alternate" type="text/html" title="Hexo | Speed up!" /><published>2020-12-18T00:00:00+08:00</published><updated>2021-06-18T19:53:05+08:00</updated><id>https://theodorecooper.github.io/hexo-speed-up</id><content type="html" xml:base="https://theodorecooper.github.io/2020-hexo-speed-up/">&lt;blockquote&gt;
-  &lt;p&gt;&lt;del&gt;Sometimes&lt;/del&gt; Always, we need a high speed blog…&lt;/p&gt;
-
-  &lt;p&gt;​																									– Me(Theodore Cooper), just now&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;now-use-plugins&quot;&gt;Now, use plugins&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Compress HTML code:&lt;/p&gt;
-
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;hexo-html-minifier &lt;span class=&quot;nt&quot;&gt;--save&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Compress JavaScript code:&lt;/p&gt;
-
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;hexo-uglify &lt;span class=&quot;nt&quot;&gt;--save&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Compress CSS code:&lt;/p&gt;
-
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;hexo-clean-css &lt;span class=&quot;nt&quot;&gt;--save&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;## As a result…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/hexo-speed-up/speed.PNG&quot; alt=&quot;Speed Up!&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><summary type="html">Sometimes Always, we need a high speed blog… ​ – Me(Theodore Cooper), just now</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/hexo-speed-up/speed.PNG" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/hexo-speed-up/speed.PNG" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;​	Always remember: &lt;strong&gt;&lt;em&gt;Content itself is the KING.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Hexo" /><category term="SEO" /><category term="Github" /><category term="Hexo" /><category term="SEO" /><category term="Github" /><summary type="html"></summary></entry></feed>

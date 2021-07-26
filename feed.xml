@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-07-26T10:50:26+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
-</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Solve Qt: libpng warning: iCCP: known incorrect sRGB profile</title><link href="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/" rel="alternate" type="text/html" title="Solve Qt: libpng warning: iCCP: known incorrect sRGB profile" /><published>2021-07-26T00:00:00+08:00</published><updated>2021-07-26T10:50:23+08:00</updated><id>https://theodorecooper.github.io/qt/qt-libpng-warning</id><content type="html" xml:base="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-07-26T11:02:33+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Solve Qt: libpng warning: iCCP: known incorrect sRGB profile</title><link href="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/" rel="alternate" type="text/html" title="Solve Qt: libpng warning: iCCP: known incorrect sRGB profile" /><published>2021-07-26T00:00:00+08:00</published><updated>2021-07-26T11:02:20+08:00</updated><id>https://theodorecooper.github.io/qt/qt-libpng-warning</id><content type="html" xml:base="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;why-this-happens&quot;&gt;Why this happens?&lt;/h2&gt;
 
@@ -9,7 +9,7 @@
 
 &lt;h3 id=&quot;method-1-imagemagick&quot;&gt;Method 1: ImageMagick&lt;/h3&gt;
 
-&lt;p&gt;We use ImageMagick to convert the image: &lt;a href=&quot;http://www.imagemagick.org/script/binary-releases.PHP&quot;&gt;ImageMagick Offical&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We use ImageMagick to convert the image: &lt;a href=&quot;http://www.imagemagick.org/&quot;&gt;ImageMagick Official&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Download the corresponding compressed package according to the platform (such as Windows x64)&lt;/li&gt;

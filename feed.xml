@@ -1,5 +1,260 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-07-26T11:13:52+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
-</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Solve Qt: libpng warning: iCCP: known incorrect sRGB profile</title><link href="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/" rel="alternate" type="text/html" title="Solve Qt: libpng warning: iCCP: known incorrect sRGB profile" /><published>2021-07-26T00:00:00+08:00</published><updated>2021-07-26T11:02:20+08:00</updated><id>https://theodorecooper.github.io/qt/qt-libpng-warning</id><content type="html" xml:base="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-08-10T14:38:43+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Collection of the best &amp;amp; most popular DDos-attack tools</title><link href="https://theodorecooper.github.io/penetration/2021-ddos-tools/" rel="alternate" type="text/html" title="Collection of the best &amp;amp; most popular DDos-attack tools" /><published>2021-08-10T00:00:00+08:00</published><updated>2021-08-10T14:38:43+08:00</updated><id>https://theodorecooper.github.io/penetration/ddos-tools</id><content type="html" xml:base="https://theodorecooper.github.io/penetration/2021-ddos-tools/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;what-is-ddos&quot;&gt;What is DDos?&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In computing, a denial-of-service attack is a cyber-attack in which the perpetrator seeks to make a machine or network resource unavailable to its intended users by temporarily or indefinitely disrupting services of a host connected to the Internet.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;how-to-get-the-collection&quot;&gt;How to get the collection?&lt;/h2&gt;
+
+&lt;p&gt;​	All the tools have been pushed to my github repository: &lt;a href=&quot;https://github.com/theodorecooper/DDos-Attack-Tools&quot;&gt;theodorecooper/DDos-Attack-Tools&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The collection will keep updating, adding new tools &amp;amp; tutorials. Please Follow/Watch/Star to get the latest updating.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;more-projects-theodorecooper&quot;&gt;&lt;em&gt;More projects: &lt;a href=&quot;https://github.com/theodorecooper?tab=repositories&quot;&gt;@theodorecooper&lt;/a&gt;&lt;/em&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;reach-me-hi-there-im-theodore&quot;&gt;&lt;em&gt;Reach me: &lt;a href=&quot;https://github.com/theodorecooper/theodorecooper&quot;&gt;Hi there!👋 I’m Theodore!&lt;/a&gt;&lt;/em&gt;&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h2&gt;
+
+&lt;p&gt;All collected tools and scripts come from the Internet and have passed the test, but we are not responsible for any undetected danger of software or scripts that may cause harm to your computer.&lt;/p&gt;
+
+&lt;h2 id=&quot;legal-notice&quot;&gt;LEGAL NOTICE&lt;/h2&gt;
+
+&lt;p&gt;THESE SOFTWARES AND SCRIPTS ARE PROVIDED FOR EDUCATIONAL USE ONLY! IF YOU ENGAGE IN ANY ILLEGAL ACTIVITY WE DO NOT TAKE ANY RESPONSIBILITY FOR IT. BY USING THESE SOFTWARES AND SCRIPTS YOU AGREE WITH THESE TERMS.&lt;/p&gt;
+
+&lt;h2 id=&quot;software--script-info&quot;&gt;Software &amp;amp; Script Info&lt;/h2&gt;
+
+&lt;h3 id=&quot;loic-low-orbit-ion-cannon_windows&quot;&gt;LOIC (Low Orbit Ion Cannon_Windows)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;LOIC is an open-source network stress testing and denial-of-service attack application, written in C#. LOIC was initially developed by Praetox Technologies, but was later released into the public domain, and now is hosted on several open source platforms.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;1-davoset&quot;&gt;1. davoset&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;DDoS attacks via other sites execution tool. It is console (command line) tool for conducting DDoS attacks on the sites via Abuse of Functionality and XML External Entities vulnerabilities at other sites.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;2-ddosim&quot;&gt;2. ddosim&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;DDOSIM is a tool that can be used in a laboratory environment to simulate a distributed denial of service (DDOS) attack against a target server. … It simulates several zombie hosts (having random IP addresses) which create full TCP connections to the target server.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;3-goldeneye&quot;&gt;3. GoldenEye&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;GoldenEye is an python app for security testing.
+GoldenEye is a HTTP DoS Test Tool.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;usage&quot;&gt;Usage&lt;/h4&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; USAGE: ./goldeneye.py &amp;lt;url&amp;gt; [OPTIONS]
+
+ OPTIONS:
+    Flag           Description                     Default
+    -u, --useragents   File with user-agents to use                     (default: randomly generated)
+    -w, --workers      Number of concurrent workers                     (default: 50)
+    -s, --sockets      Number of concurrent sockets                     (default: 30)
+    -m, --method       HTTP Method to use 'get' or 'post'  or 'random'  (default: get)
+    -d, --debug        Enable Debug Mode [more verbose output]          (default: False)
+    -h, --help         Shows this help
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;utilities&quot;&gt;Utilities&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;util/getuas.py - Fetchs user-agent lists from http://www.useragentstring.com/pages/useragentstring.php subpages (ex: ./getuas.py http://www.useragentstring.com/pages/Browserlist/) &lt;em&gt;REQUIRES BEAUTIFULSOUP4&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;res/lists/useragents - Text lists (one per line) of User-Agent strings (from http://www.useragentstring.com)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;license&quot;&gt;License&lt;/h4&gt;
+
+&lt;p&gt;This software is distributed under the GNU General Public License version 3 (GPLv3)&lt;/p&gt;
+
+&lt;h3 id=&quot;4-hoic-high-orbit-ion-cannon&quot;&gt;4. Hoic (High Orbit Ion Cannon)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Hoic is an open-source network stress testing and denial-of-service attack application designed to attack as many as 256 URLs at the same time. It was designed to replace the Low Orbit Ion Cannon which was developed by Praetox Technologies and later released into the public domain.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;5-hulk-https-unbearable-load-king&quot;&gt;5. HULK (HTTPS Unbearable Load King)&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://img.shields.io/badge/python-3.6%20%7C%203.7-blue?style=for-the-badge&quot; alt=&quot;Python Version&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/badge/License-GNU-green?style=for-the-badge&quot; alt=&quot;License&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/badge/platform-Windows--10-lightgrey?style=for-the-badge&quot; alt=&quot;Platform&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/codacy/grade/a5939f58e4c44daebfbe46937686050b?style=for-the-badge&quot; alt=&quot;Codacy grade&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This script is a &lt;em&gt;Distributed Denial of Service&lt;/em&gt; tool that can put heavy load on HTTPS servers,
+in order to bring them to their knees, by exhausting the resource pool.
+Its is meant for research purposes only and any malicious usage of this tool is prohibited.
+&lt;strong&gt;The authors aren’t to be held responsible for any consequence of usage of this tool.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Authors : &lt;strong&gt;Hyperclaw79&lt;/strong&gt;, &lt;em&gt;version 3.0, 2.0&lt;/em&gt;; &lt;strong&gt;Barry Shteiman&lt;/strong&gt; , &lt;em&gt;version 1.0&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;usage-1&quot;&gt;Usage&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install -r requirements.txt&lt;/code&gt; before starting this script.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Launch the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hulk-server.py&lt;/code&gt; with the target website as arg.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python hulk-server.py https://testdummysite.com&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Launch the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hulk-launcher.py&lt;/code&gt; to spawn multiple processes of hulk - one per CPU Core.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python hulk-launcher.py localhost&lt;/code&gt;&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;If it’s a bot on a remote client, replace localhost with the server’s IP.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sit back and sip your coffee while the carnage unleashes! &amp;gt;:D&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;license-1&quot;&gt;License&lt;/h4&gt;
+
+&lt;p&gt;HULK v3 is a Python 3 compatible Asynchronous Distributed Denial of Service Script.
+&lt;a href=&quot;http://www.sectorix.com/2012/05/17/hulk-web-server-dos-tool/&quot;&gt;Original script&lt;/a&gt; was created by Barry Shteiman.
+You can use that one if you have Python 2.&lt;/p&gt;
+
+&lt;p&gt;Using a GNU license cause there was no mention about any license used by Barry.
+Feel free to modify and share it, but leave some credits to us both and don’t hold us liable.&lt;/p&gt;
+
+&lt;h3 id=&quot;6-pyloris&quot;&gt;6. pyloris&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Using HTTPLoris is simple. In its most basic form, HTTPLoris merely needs a copy of Python 2.6.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;usage-2&quot;&gt;Usage&lt;/h4&gt;
+
+&lt;p&gt;On a Linux machine, one must simply invoke the script in a terminal, stating a site to test:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;motoma@rocksalt:/home/motoma&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python pyloris-3.0.py motomastyle.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;On Mac OS X, one invokes PyLoris the same way. Using the Terminal Application:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hotdog:/Users/Motoma/ motoma&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python pyloris-3.0.py motomastyle.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Using HTTPLoris in Windows is a little different. One will need to know the location of the Python installation, and be in the proper directory. Load up a command prompt:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;C:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\M&lt;/span&gt;otoma&lt;span class=&quot;se&quot;&gt;\D&lt;/span&gt;esktop&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;yloris-3.0&amp;gt;C:&lt;span class=&quot;se&quot;&gt;\P&lt;/span&gt;ython26&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ython.exe pyloris-3.0.py motomastyle.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;advanced-options&quot;&gt;Advanced Options&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Invoking HTTPLoris by using the commands above start a limited to 500 connections across 50 threads, each sending at 1 byte/second and waiting until the connection is forced shut by the server. While this behavior will bog down an Apache server with the default settings, it is not a very thorough test. The following are some additionall options that will allow one to customize the way HTTPLoris works:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-a, --attacklimit
+The --attacklimit flag restricts the number of total connections (current + completed) during a single session. Set this to zero to specify no limit.
+
+-c, --connectionlimit
+Adjusting the --connectionlimit flag can drastically change how well HTTPLoris performs. The --connectionlimit flag directly controls the number of concurrent connections held during the session. In a base Apache environment, when this number is above the MaxClients setting, the server is unresponsive.
+
+-t, --threadlimit
+This is the number of attacker threads run during the session.
+
+-b, --connectionspeed
+This is the connection speed for each individual connection in bytes/second. Comparing this with the lenght of the request, and you should have an accurate guess of how long each connection should linger.
+
+-f, --finish
+Specifying the --finish flag will cause HTTPLoris to finish and close connections upon the completion of the request. This will prompt servers to send full responses to the HTTP requests that are made.
+
+-k --keepalive
+Using the --keepalive flag will add the Connection: Keep-Alive header to the HTTP request. On vulnerable servers, this will increase the duration of connections considerably.
+
+-p, --port
+HTTPLoris will connect on port 80 by default. Specifying the --port flag will change this behavior.
+
+-P, --page
+By default, HTTPLoris will make HTTP requests for &quot;/&quot;. Setting the --page flag will allow one to control the page that HTTPLoris requests.
+
+-q, --quit
+Terminate the connection without receiving reply from the server. This will reduce the effectivenes as connections will terminate as soon as the full request buffer has been sent.
+
+-r, --requesttype
+Setting the --requesttype flag will change the HTTP method used. Available options are GET, HEAD, POST, PUT, DELETE, OPTIONS, and TRACE. Certain proxies and load balancers will filter out certain types of requests, and hold them until the requests are complete. POST requests are commonly passed through due to their potential for large sizes, therefore this may cause different behavior.
+
+-R, --referer
+Adds a referring URL to the HTTP request.
+
+-s, --Size
+The --size flag allows one to increase the size of the request made. Increasing the size will in turn increase the duration of connections, leading to a longer sustained test. In situations where servers or firewalls are set to terminate unfinished connections, this can extend the length of the test drastically. This can also be used to test a web server's capability to handle multiple large requests and benchmark memory usage. The additional data is filled in the Cookie-Data field.
+
+-u, --useragent
+By default, HTTPLoris advertizes itself in the User-Agent header. The --useragent flag allows one to override this and masquerade as other web browsers. Useful because some sites will render different pages for different web browsers. 
+
+-z, --gzip
+Specifying the --gzip flag will allow instruct PyLoris to send an &quot;Accept-Encoding: gzip&quot; header. When combined with the --quit and --finish flags, this can test for the CEV-2009-1891 DoS vulnerability (http://www.mail-archive.com/dev@httpd.apache.org/msg44323.html). Also leads to larger CPU usage and smaller bandwidth usage.
+
+-w, --timebetweenthreads
+Setting the --timebetweenthreads flag will adjust the amount of time between threads spawning. Adjusting this in conjunction with the --threadlimit will change the CPU load on your local machine.
+
+-W, --timebetweenconnections
+Setting the --timebetweenconnections flag will adjust the amount of time between socket connections. This will directly affect how quickly the target's connection limit is reached.
+
+Proxy Options 
+HTTPLoris is able to connect through SOCKS4, SOCKS5, and HTTP proxies. This allows HTTPLoris to run through SSH tunnels, as well as TOR. Utilizing TOR should essentially eliminate the mitigating effects of ipchains, mod_antiloris, and mod_noloris.
+
+--socksversion
+Setting the --socksversion flag tells HTTPLoris to connect through a SOCKS proxy. Allowed values are SOCKS4, SOCKS5, and HTTP.
+
+--sockshost
+Set the --sockshost flag to the address of the SOCKS proxy when --socksversion is set. If this is not set, HTTPLoris will default to 127.0.0.1.
+
+--socksport
+Set the --socksport flag to the port number of the SOCKS proxy when --socksversion is set. 
+
+--socksuser and --sockspass
+Optionally, one may set a username and password for the SOCKS proxy using these two flags.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;6-rudy-r-u-dead-yet&quot;&gt;6. Rudy (R U Dead yet)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;‘R U Dead Yet?’ or R.U.D.Y. is a denial-of-service attack tool that aims to keep a web server tied up by submitting form data at an absurdly slow pace. A R.U.D.Y. exploit is categorized as a low-and-slow attack, since it focuses on creating a few drawn-out requests rather than overwhelming a server with a high volume of quick requests. A successful R.U.D.Y. attack will result in the victim’s origin server becoming unavailable to legitimate traffic.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The R.U.D.Y. software includes a user-friendly point-and-click interface, so all an attacker needs to do is point the tool at a vulnerable target. Any web service that accepts form input is vulnerable to a R.U.D.Y. attack, since the tool works by sniffing out form fields and exploiting the form submission process.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;7-torshammer&quot;&gt;7. Torshammer&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;USAGE:
+
+./torshammer.py -t &amp;lt;target&amp;gt; [-r &amp;lt;threads&amp;gt; -p &amp;lt;port&amp;gt; -T -h]
+-t|--target &amp;lt;Hostname|IP&amp;gt;
+-r|--threads &amp;lt;Number of threads&amp;gt; Defaults to 256
+-p|--port &amp;lt;Web Server Port&amp;gt; Defaults to 80
+-T|--tor Enable anonymising through tor on 127.0.0.1:9050
+-h|--help Shows this help
+
+Eg. ./torshammer.py -t 192.168.1.100 -r 256
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;8-slowloris&quot;&gt;8. Slowloris&lt;/h3&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Penetration" /><category term="Penetration" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/ddos-tools/ddos-tools.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/ddos-tools/ddos-tools.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Solve Qt: libpng warning: iCCP: known incorrect sRGB profile</title><link href="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/" rel="alternate" type="text/html" title="Solve Qt: libpng warning: iCCP: known incorrect sRGB profile" /><published>2021-07-26T00:00:00+08:00</published><updated>2021-07-26T11:02:20+08:00</updated><id>https://theodorecooper.github.io/qt/qt-libpng-warning</id><content type="html" xml:base="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;why-this-happens&quot;&gt;Why this happens?&lt;/h2&gt;
 
@@ -1561,163 +1816,4 @@ int main&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;int argc, char &lt;span cl
     findInDir&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="C/C++" /><category term="C Tutorials" /><category term="Linux" /><category term="C/C++" /><category term="C Tutorials" /><category term="Linux" /><summary type="html"></summary></entry><entry><title type="html">Beginner’s Guide to Search Engine Optimization (SEO)</title><link href="https://theodorecooper.github.io/hexo/seo/github/2020-seo/" rel="alternate" type="text/html" title="Beginner’s Guide to Search Engine Optimization (SEO)" /><published>2020-12-25T00:00:00+08:00</published><updated>2021-06-18T20:27:08+08:00</updated><id>https://theodorecooper.github.io/hexo/seo/github/seo</id><content type="html" xml:base="https://theodorecooper.github.io/hexo/seo/github/2020-seo/">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/seo/seo.png&quot; alt=&quot;SEO&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;whats-seo&quot;&gt;What’s SEO&lt;/h2&gt;
-
-&lt;p&gt;​	An SEO (“Search Engine Optimization”) expert is someone trained to improve your visibility on search engines. So, it’s important to learn about SEO.&lt;/p&gt;
-
-&lt;h2 id=&quot;title&quot;&gt;Title&lt;/h2&gt;
-
-&lt;p&gt;​	What is a page &lt;strong&gt;title&lt;/strong&gt;? This is the HTML title tag, which we also call the page title. The page title is the most influential place to have your &lt;strong&gt;keyword&lt;/strong&gt; phrase. Must make sure a title is good enough. Here are some recommendations for you:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;Length&lt;/em&gt;&lt;/strong&gt;: Between 50 - 60 characters, make it &lt;em&gt;“simple”&lt;/em&gt;, remember do not make it too long.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;DO NOT&lt;/em&gt;&lt;/strong&gt; overdo keywords in title like: “Title TITLE title…”. That’s really not a good idea…&lt;/li&gt;
-  &lt;li&gt;Unique title: don’t use same titles… You know…&lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;Separate keywords with “ &lt;strong&gt;-&lt;/strong&gt; “, “ **&lt;/td&gt;
-          &lt;td&gt;** “…&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;keywords-tag&quot;&gt;Keywords Tag&lt;/h2&gt;
-
-&lt;p&gt;​	You can put keywords into a keywords tag in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt; like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;keywords&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Keywords, blog, SEO&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;ALSO&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;DO NOT&lt;/em&gt;&lt;/strong&gt; overdo keywords!!!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;descriptions-tag&quot;&gt;Descriptions Tag&lt;/h2&gt;
-
-&lt;p&gt;​	A &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;description&lt;/code&gt; tag contains the… description😅. All right, search engines may use the description provided in the description tag in the search engine results page (SERP). A well-written description that pertains to the content of the  page and that is relevant to the searcher’s intent can help you increase traffic since it can help improve the click-through rate of your page  in search. Add a description to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt; section of the page source:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'description'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Descriptive, Now we talk about the basics of Search Engine Optimization.'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;heading-tag&quot;&gt;Heading Tag&lt;/h2&gt;
-
-&lt;p&gt;​	Heading is the collective name for the 6 tags: h1, h2, h3, h4, h5, and h6. The weights of the 6 tags are from big to small, that is, h1 is the big heading, h6 is the smallest heading:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Heading 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	The h1 tag can only be used once. If it is used multiple times, it is easy to be regarded as cheating by search engines.&lt;/p&gt;
-
-&lt;h2 id=&quot;no-follow&quot;&gt;No follow&lt;/h2&gt;
-
-&lt;p&gt;​	The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nofollow&lt;/code&gt; tag tells search engines to ignore that link. Because  nofollow links do not pass PageRank they likely don’t impact search  engine rankings. Nofollow links are links with a rel=”nofollow” HTML tag applied to them:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href = &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://theodorecooper.github.io/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel = &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nofollow&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;sitemap&quot;&gt;Sitemap&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;​	A &lt;em&gt;sitemap&lt;/em&gt; is a file where you provide information about the  pages, videos, and other files on your site, and the relationships  between them. Search engines like Google read this file to more  intelligently crawl your site. A sitemap tells Google which pages and  files you think are important in your site, and also provides valuable  information about these files: for example, for pages, when the page was last updated, how often the page is changed, and any alternate language versions of a page.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;sitemaps-xml-look-like-this&quot;&gt;Sitemaps (XML) look like this:&lt;/h3&gt;
-
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;urlset&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;url&amp;gt;&lt;/span&gt;
-		&lt;span class=&quot;nt&quot;&gt;&amp;lt;loc&amp;gt;&lt;/span&gt;https://theodorecooper.github.io/&lt;span class=&quot;nt&quot;&gt;&amp;lt;/loc&amp;gt;&lt;/span&gt;
-		&lt;span class=&quot;nt&quot;&gt;&amp;lt;lastmod&amp;gt;&lt;/span&gt;2020-10-31T16:12:20+03:00&lt;span class=&quot;nt&quot;&gt;&amp;lt;/lastmod&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/urlset&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	Of course, there are HTML sitemaps, even TXT sitemaps…&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-get-a-sitemap&quot;&gt;How to get a sitemap?&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;del&gt;Write it yourself&lt;/del&gt; (if you are a complete fool)&lt;/li&gt;
-  &lt;li&gt;Use plugins (like &lt;em&gt;Yoast&lt;/em&gt;…)&lt;/li&gt;
-  &lt;li&gt;Use sitemap generators:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.xml-sitemaps.com/&quot;&gt;XML - Sitemaps&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.mysitemapgenerator.com/&quot;&gt;My Sitemap Generator&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;robotstxt&quot;&gt;robots.txt&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;​	A robots.txt file tells search engine crawlers which pages or files the crawler can or            can’t request from your site. This is used mainly to avoid overloading your site with            requests.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;robots.txt looks like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;User-agent:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Allow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Allow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/archives/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Allow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/categories/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Allow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/tags/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Allow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/resources/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Disallow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/vendors/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Disallow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/js/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Disallow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/css/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Disallow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/fonts/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Disallow:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/vendors/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Sitemap:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	The value of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Allow&lt;/code&gt; is the content that allows search engines to crawl the area.&lt;/p&gt;
-
-&lt;h2 id=&quot;link-structure&quot;&gt;Link structure&lt;/h2&gt;
-
-&lt;p&gt;​	The distance between the home page and other pages cannot be too large, it means: keep your URL short.&lt;/p&gt;
-
-&lt;p&gt;​	&lt;strong&gt;&lt;em&gt;DO NOT&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://theodorecooper.github.io/blog/2020/12/25/seo/index.html
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	&lt;strong&gt;&lt;em&gt;DO&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://theodorecooper.github.io/2020/seo/index.html
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	In a word: &lt;strong&gt;&lt;em&gt;SIMPLE&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;image-alt&quot;&gt;Image ALT&lt;/h2&gt;
-
-&lt;p&gt;​	When inserting a picture, you will be prompted to enter text. The keywords appearing in the image ALT also have a certain impact on page relevance. Similarly, &lt;strong&gt;&lt;em&gt;DO NOT&lt;/em&gt;&lt;/strong&gt; overdo keywords!!!&lt;/p&gt;
-
-&lt;h2 id=&quot;more&quot;&gt;More…&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://search.google.com/search-console/&quot;&gt;Google Search Console&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.bing.com/webmasters/&quot;&gt;Bing Webmaster Tools&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://analytics.google.com/&quot;&gt;Google Analytics&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Do not use hack tools…&lt;/li&gt;
-  &lt;li&gt;Be patient!&lt;/li&gt;
-  &lt;li&gt;Think carefully!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;finally&quot;&gt;Finally&lt;/h2&gt;
-
-&lt;p&gt;​	Always remember: &lt;strong&gt;&lt;em&gt;Content itself is the KING.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Hexo" /><category term="SEO" /><category term="Github" /><category term="Hexo" /><category term="SEO" /><category term="Github" /><summary type="html"></summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="C/C++" /><category term="C Tutorials" /><category term="Linux" /><category term="C/C++" /><category term="C Tutorials" /><category term="Linux" /><summary type="html"></summary></entry></feed>

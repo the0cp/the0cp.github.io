@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-08-24T10:34:01+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
-</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">[Download]Collection of the best &amp;amp; most popular DDos-attack tools</title><link href="https://theodorecooper.github.io/penetration/2021-ddos-tools/" rel="alternate" type="text/html" title="[Download]Collection of the best &amp;amp; most popular DDos-attack tools" /><published>2021-08-10T00:00:00+08:00</published><updated>2021-08-10T14:43:45+08:00</updated><id>https://theodorecooper.github.io/penetration/ddos-tools</id><content type="html" xml:base="https://theodorecooper.github.io/penetration/2021-ddos-tools/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-09-21T14:28:55+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">[Download]Collection of the best &amp;amp; most popular DDos-attack tools</title><link href="https://theodorecooper.github.io/penetration/2021-ddos-tools/" rel="alternate" type="text/html" title="[Download]Collection of the best &amp;amp; most popular DDos-attack tools" /><published>2021-08-10T00:00:00+08:00</published><updated>2021-09-21T14:28:55+08:00</updated><id>https://theodorecooper.github.io/penetration/ddos-tools</id><content type="html" xml:base="https://theodorecooper.github.io/penetration/2021-ddos-tools/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;what-is-ddos&quot;&gt;What is DDos?&lt;/h2&gt;
 
@@ -31,230 +31,344 @@
 
 &lt;h2 id=&quot;software--script-info&quot;&gt;Software &amp;amp; Script Info&lt;/h2&gt;
 
-&lt;h3 id=&quot;loic-low-orbit-ion-cannon_windows&quot;&gt;LOIC (Low Orbit Ion Cannon_Windows)&lt;/h3&gt;
-
+&lt;h3 id=&quot;1-loic-low-orbit-ion-cannon_windows&quot;&gt;1. LOIC (Low Orbit Ion Cannon_Windows)&lt;/h3&gt;
 &lt;blockquote&gt;
   &lt;p&gt;LOIC is an open-source network stress testing and denial-of-service attack application, written in C#. LOIC was initially developed by Praetox Technologies, but was later released into the public domain, and now is hosted on several open source platforms.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;1-davoset&quot;&gt;1. davoset&lt;/h3&gt;
-
+&lt;h3 id=&quot;2-davoset&quot;&gt;2. davoset&lt;/h3&gt;
 &lt;blockquote&gt;
   &lt;p&gt;DDoS attacks via other sites execution tool. It is console (command line) tool for conducting DDoS attacks on the sites via Abuse of Functionality and XML External Entities vulnerabilities at other sites.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;2-ddosim&quot;&gt;2. ddosim&lt;/h3&gt;
-
+&lt;h3 id=&quot;3-ddosim&quot;&gt;3. ddosim&lt;/h3&gt;
 &lt;blockquote&gt;
   &lt;p&gt;DDOSIM is a tool that can be used in a laboratory environment to simulate a distributed denial of service (DDOS) attack against a target server. … It simulates several zombie hosts (having random IP addresses) which create full TCP connections to the target server.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;3-goldeneye&quot;&gt;3. GoldenEye&lt;/h3&gt;
-
+&lt;h3 id=&quot;4-goldeneye&quot;&gt;4. GoldenEye&lt;/h3&gt;
 &lt;blockquote&gt;
   &lt;p&gt;GoldenEye is an python app for security testing.
 GoldenEye is a HTTP DoS Test Tool.&lt;/p&gt;
+  &lt;h4 id=&quot;usage&quot;&gt;Usage&lt;/h4&gt;
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; USAGE: ./goldeneye.py &amp;lt;url&amp;gt; [OPTIONS]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&quot;usage&quot;&gt;Usage&lt;/h4&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; USAGE: ./goldeneye.py &amp;lt;url&amp;gt; [OPTIONS]
-
- OPTIONS:
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; OPTIONS:
     Flag           Description                     Default
     -u, --useragents   File with user-agents to use                     (default: randomly generated)
     -w, --workers      Number of concurrent workers                     (default: 50)
     -s, --sockets      Number of concurrent sockets                     (default: 30)
     -m, --method       HTTP Method to use 'get' or 'post'  or 'random'  (default: get)
     -d, --debug        Enable Debug Mode [more verbose output]          (default: False)
-    -h, --help         Shows this help
+    -h, --help         Shows this help #### Utilities * util/getuas.py - Fetchs user-agent lists from http://www.useragentstring.com/pages/useragentstring.php subpages (ex: ./getuas.py http://www.useragentstring.com/pages/Browserlist/) *REQUIRES BEAUTIFULSOUP4* * res/lists/useragents - Text lists (one per line) of User-Agent strings (from http://www.useragentstring.com) #### License This software is distributed under the GNU General Public License version 3 (GPLv3)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;utilities&quot;&gt;Utilities&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;util/getuas.py - Fetchs user-agent lists from http://www.useragentstring.com/pages/useragentstring.php subpages (ex: ./getuas.py http://www.useragentstring.com/pages/Browserlist/) &lt;em&gt;REQUIRES BEAUTIFULSOUP4&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;res/lists/useragents - Text lists (one per line) of User-Agent strings (from http://www.useragentstring.com)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;license&quot;&gt;License&lt;/h4&gt;
-
-&lt;p&gt;This software is distributed under the GNU General Public License version 3 (GPLv3)&lt;/p&gt;
-
-&lt;h3 id=&quot;4-hoic-high-orbit-ion-cannon&quot;&gt;4. Hoic (High Orbit Ion Cannon)&lt;/h3&gt;
-
+&lt;h3 id=&quot;5-hoic-high-orbit-ion-cannon&quot;&gt;5. Hoic (High Orbit Ion Cannon)&lt;/h3&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Hoic is an open-source network stress testing and denial-of-service attack application designed to attack as many as 256 URLs at the same time. It was designed to replace the Low Orbit Ion Cannon which was developed by Praetox Technologies and later released into the public domain.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;5-hulk-https-unbearable-load-king&quot;&gt;5. HULK (HTTPS Unbearable Load King)&lt;/h3&gt;
-
+&lt;h3 id=&quot;6-hulk-https-unbearable-load-king&quot;&gt;6. HULK (HTTPS Unbearable Load King)&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;https://img.shields.io/badge/python-3.6%20%7C%203.7-blue?style=for-the-badge&quot; alt=&quot;Python Version&quot; /&gt;
 &lt;img src=&quot;https://img.shields.io/badge/License-GNU-green?style=for-the-badge&quot; alt=&quot;License&quot; /&gt;
 &lt;img src=&quot;https://img.shields.io/badge/platform-Windows--10-lightgrey?style=for-the-badge&quot; alt=&quot;Platform&quot; /&gt;
 &lt;img src=&quot;https://img.shields.io/codacy/grade/a5939f58e4c44daebfbe46937686050b?style=for-the-badge&quot; alt=&quot;Codacy grade&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
-
 &lt;blockquote&gt;
   &lt;p&gt;This script is a &lt;em&gt;Distributed Denial of Service&lt;/em&gt; tool that can put heavy load on HTTPS servers,
 in order to bring them to their knees, by exhausting the resource pool.
 Its is meant for research purposes only and any malicious usage of this tool is prohibited.
-&lt;strong&gt;The authors aren’t to be held responsible for any consequence of usage of this tool.&lt;/strong&gt;&lt;/p&gt;
+&lt;strong&gt;The authors aren’t to be held responsible for any consequence of usage of this tool.&lt;/strong&gt;
+ Authors : &lt;strong&gt;Hyperclaw79&lt;/strong&gt;, &lt;em&gt;version 3.0, 2.0&lt;/em&gt;; &lt;strong&gt;Barry Shteiman&lt;/strong&gt; , &lt;em&gt;version 1.0&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Authors : &lt;strong&gt;Hyperclaw79&lt;/strong&gt;, &lt;em&gt;version 3.0, 2.0&lt;/em&gt;; &lt;strong&gt;Barry Shteiman&lt;/strong&gt; , &lt;em&gt;version 1.0&lt;/em&gt;&lt;/p&gt;
-
 &lt;h4 id=&quot;usage-1&quot;&gt;Usage&lt;/h4&gt;
-
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install -r requirements.txt&lt;/code&gt; before starting this script.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Launch the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hulk-server.py&lt;/code&gt; with the target website as arg.
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python hulk-server.py https://testdummysite.com&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install -r requirements.txt&lt;/code&gt; before starting this script.&lt;/li&gt;
+  &lt;li&gt;Launch the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hulk-server.py&lt;/code&gt; with the target website as arg.
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python hulk-server.py https://testdummysite.com&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Launch the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hulk-launcher.py&lt;/code&gt; to spawn multiple processes of hulk - one per CPU Core.
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python hulk-launcher.py localhost&lt;/code&gt;&lt;/p&gt;
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python hulk-launcher.py localhost&lt;/code&gt;&lt;/p&gt;
 
     &lt;blockquote&gt;
       &lt;p&gt;If it’s a bot on a remote client, replace localhost with the server’s IP.&lt;/p&gt;
     &lt;/blockquote&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sit back and sip your coffee while the carnage unleashes! &amp;gt;:D&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;license-1&quot;&gt;License&lt;/h4&gt;
-
-&lt;p&gt;HULK v3 is a Python 3 compatible Asynchronous Distributed Denial of Service Script.
+  &lt;li&gt;Sit back and sip your coffee while the carnage unleashes! &amp;gt;:D
+    &lt;h4 id=&quot;license&quot;&gt;License&lt;/h4&gt;
+    &lt;p&gt;HULK v3 is a Python 3 compatible Asynchronous Distributed Denial of Service Script.
 &lt;a href=&quot;http://www.sectorix.com/2012/05/17/hulk-web-server-dos-tool/&quot;&gt;Original script&lt;/a&gt; was created by Barry Shteiman.
 You can use that one if you have Python 2.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Using a GNU license cause there was no mention about any license used by Barry.
 Feel free to modify and share it, but leave some credits to us both and don’t hold us liable.&lt;/p&gt;
 
-&lt;h3 id=&quot;6-pyloris&quot;&gt;6. pyloris&lt;/h3&gt;
-
+&lt;h3 id=&quot;7-pyloris&quot;&gt;7. pyloris&lt;/h3&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Using HTTPLoris is simple. In its most basic form, HTTPLoris merely needs a copy of Python 2.6.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h4 id=&quot;usage-2&quot;&gt;Usage&lt;/h4&gt;
-
 &lt;p&gt;On a Linux machine, one must simply invoke the script in a terminal, stating a site to test:&lt;/p&gt;
-
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;motoma@rocksalt:/home/motoma&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python pyloris-3.0.py motomastyle.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;On Mac OS X, one invokes PyLoris the same way. Using the Terminal Application:&lt;/p&gt;
-
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hotdog:/Users/Motoma/ motoma&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python pyloris-3.0.py motomastyle.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;Using HTTPLoris in Windows is a little different. One will need to know the location of the Python installation, and be in the proper directory. Load up a command prompt:&lt;/p&gt;
-
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;C:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\M&lt;/span&gt;otoma&lt;span class=&quot;se&quot;&gt;\D&lt;/span&gt;esktop&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;yloris-3.0&amp;gt;C:&lt;span class=&quot;se&quot;&gt;\P&lt;/span&gt;ython26&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ython.exe pyloris-3.0.py motomastyle.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;h4 id=&quot;advanced-options&quot;&gt;Advanced Options&lt;/h4&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Invoking HTTPLoris by using the commands above start a limited to 500 connections across 50 threads, each sending at 1 byte/second and waiting until the connection is forced shut by the server. While this behavior will bog down an Apache server with the default settings, it is not a very thorough test. The following are some additionall options that will allow one to customize the way HTTPLoris works:&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Invoking HTTPLoris by using the commands above start a limited to 500 connections across 50 threads, each sending at 1 byte/second and waiting until the connection is forced shut by the server. While this behavior will bog down an Apache server with the default settings, it is not a very thorough test. The following are some additionall options that will allow one to customize the way HTTPLoris works:&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-a, --attacklimit
 The --attacklimit flag restricts the number of total connections (current + completed) during a single session. Set this to zero to specify no limit.
-
 -c, --connectionlimit
 Adjusting the --connectionlimit flag can drastically change how well HTTPLoris performs. The --connectionlimit flag directly controls the number of concurrent connections held during the session. In a base Apache environment, when this number is above the MaxClients setting, the server is unresponsive.
-
 -t, --threadlimit
 This is the number of attacker threads run during the session.
-
 -b, --connectionspeed
 This is the connection speed for each individual connection in bytes/second. Comparing this with the lenght of the request, and you should have an accurate guess of how long each connection should linger.
-
 -f, --finish
 Specifying the --finish flag will cause HTTPLoris to finish and close connections upon the completion of the request. This will prompt servers to send full responses to the HTTP requests that are made.
-
 -k --keepalive
 Using the --keepalive flag will add the Connection: Keep-Alive header to the HTTP request. On vulnerable servers, this will increase the duration of connections considerably.
-
 -p, --port
 HTTPLoris will connect on port 80 by default. Specifying the --port flag will change this behavior.
-
 -P, --page
 By default, HTTPLoris will make HTTP requests for &quot;/&quot;. Setting the --page flag will allow one to control the page that HTTPLoris requests.
-
 -q, --quit
 Terminate the connection without receiving reply from the server. This will reduce the effectivenes as connections will terminate as soon as the full request buffer has been sent.
-
 -r, --requesttype
 Setting the --requesttype flag will change the HTTP method used. Available options are GET, HEAD, POST, PUT, DELETE, OPTIONS, and TRACE. Certain proxies and load balancers will filter out certain types of requests, and hold them until the requests are complete. POST requests are commonly passed through due to their potential for large sizes, therefore this may cause different behavior.
-
 -R, --referer
 Adds a referring URL to the HTTP request.
-
 -s, --Size
 The --size flag allows one to increase the size of the request made. Increasing the size will in turn increase the duration of connections, leading to a longer sustained test. In situations where servers or firewalls are set to terminate unfinished connections, this can extend the length of the test drastically. This can also be used to test a web server's capability to handle multiple large requests and benchmark memory usage. The additional data is filled in the Cookie-Data field.
-
 -u, --useragent
 By default, HTTPLoris advertizes itself in the User-Agent header. The --useragent flag allows one to override this and masquerade as other web browsers. Useful because some sites will render different pages for different web browsers. 
-
 -z, --gzip
 Specifying the --gzip flag will allow instruct PyLoris to send an &quot;Accept-Encoding: gzip&quot; header. When combined with the --quit and --finish flags, this can test for the CEV-2009-1891 DoS vulnerability (http://www.mail-archive.com/dev@httpd.apache.org/msg44323.html). Also leads to larger CPU usage and smaller bandwidth usage.
-
 -w, --timebetweenthreads
 Setting the --timebetweenthreads flag will adjust the amount of time between threads spawning. Adjusting this in conjunction with the --threadlimit will change the CPU load on your local machine.
-
 -W, --timebetweenconnections
 Setting the --timebetweenconnections flag will adjust the amount of time between socket connections. This will directly affect how quickly the target's connection limit is reached.
-
 Proxy Options 
 HTTPLoris is able to connect through SOCKS4, SOCKS5, and HTTP proxies. This allows HTTPLoris to run through SSH tunnels, as well as TOR. Utilizing TOR should essentially eliminate the mitigating effects of ipchains, mod_antiloris, and mod_noloris.
-
 --socksversion
 Setting the --socksversion flag tells HTTPLoris to connect through a SOCKS proxy. Allowed values are SOCKS4, SOCKS5, and HTTP.
-
 --sockshost
 Set the --sockshost flag to the address of the SOCKS proxy when --socksversion is set. If this is not set, HTTPLoris will default to 127.0.0.1.
-
 --socksport
 Set the --socksport flag to the port number of the SOCKS proxy when --socksversion is set. 
-
 --socksuser and --sockspass
 Optionally, one may set a username and password for the SOCKS proxy using these two flags.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;6-rudy-r-u-dead-yet&quot;&gt;6. Rudy (R U Dead yet)&lt;/h3&gt;
-
+&lt;h3 id=&quot;8-rudy-r-u-dead-yet&quot;&gt;8. Rudy (R U Dead yet)&lt;/h3&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;‘R U Dead Yet?’ or R.U.D.Y. is a denial-of-service attack tool that aims to keep a web server tied up by submitting form data at an absurdly slow pace. A R.U.D.Y. exploit is categorized as a low-and-slow attack, since it focuses on creating a few drawn-out requests rather than overwhelming a server with a high volume of quick requests. A successful R.U.D.Y. attack will result in the victim’s origin server becoming unavailable to legitimate traffic.&lt;/p&gt;
+  &lt;p&gt;‘R U Dead Yet?’ or R.U.D.Y. is a denial-of-service attack tool that aims to keep a web server tied up by submitting form data at an absurdly slow pace. A R.U.D.Y. exploit is categorized as a low-and-slow attack, since it focuses on creating a few drawn-out requests rather than overwhelming a server with a high volume of quick requests. A successful R.U.D.Y. attack will result in the victim’s origin server becoming unavailable to legitimate traffic.&lt;br /&gt;
+The R.U.D.Y. software includes a user-friendly point-and-click interface, so all an attacker needs to do is point the tool at a vulnerable target. Any web service that accepts form input is vulnerable to a R.U.D.Y. attack, since the tool works by sniffing out form fields and exploiting the form submission process.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;The R.U.D.Y. software includes a user-friendly point-and-click interface, so all an attacker needs to do is point the tool at a vulnerable target. Any web service that accepts form input is vulnerable to a R.U.D.Y. attack, since the tool works by sniffing out form fields and exploiting the form submission process.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;7-torshammer&quot;&gt;7. Torshammer&lt;/h3&gt;
-
+&lt;h3 id=&quot;9-torshammer&quot;&gt;9. Torshammer&lt;/h3&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;USAGE:
-
 ./torshammer.py -t &amp;lt;target&amp;gt; [-r &amp;lt;threads&amp;gt; -p &amp;lt;port&amp;gt; -T -h]
 -t|--target &amp;lt;Hostname|IP&amp;gt;
 -r|--threads &amp;lt;Number of threads&amp;gt; Defaults to 256
 -p|--port &amp;lt;Web Server Port&amp;gt; Defaults to 80
 -T|--tor Enable anonymising through tor on 127.0.0.1:9050
 -h|--help Shows this help
-
 Eg. ./torshammer.py -t 192.168.1.100 -r 256
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;8-slowloris&quot;&gt;8. Slowloris&lt;/h3&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Penetration" /><category term="Penetration" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/ddos-tools/ddos-tools.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/ddos-tools/ddos-tools.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Solve Qt: libpng warning: iCCP: known incorrect sRGB profile</title><link href="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/" rel="alternate" type="text/html" title="Solve Qt: libpng warning: iCCP: known incorrect sRGB profile" /><published>2021-07-26T00:00:00+08:00</published><updated>2021-07-26T11:02:20+08:00</updated><id>https://theodorecooper.github.io/qt/qt-libpng-warning</id><content type="html" xml:base="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/">&lt;hr /&gt;
+&lt;h3 id=&quot;10-hping&quot;&gt;10. hping&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DESCRIPTION
+	hping3 is a network tool able to send custom TCP/IP
+	packets and to display target replies like ping do with
+	ICMP replies. hping3 can handle fragmentation, and
+	almost arbitrary packet size and content, using the
+	command line interface.
+	Since version 3, hping implements scripting capabilties,
+	read the API.txt file under the /docs directory to know
+	more about it.
+	As a command line utility, hping is useful to test at
+	many kind of networking devices like firewalls, routers,
+	and so. It can be used as a traceroute alike program over all
+	the supported protocols, firewalk usage, OS fingerprinting,
+	port-scanner (see the --scan option introduced with hping3),
+	TCP/IP stack auditing.
+	It's also really a good didactic tool to learn TCP/IP.
+	Using Tcl/Tk scripting much more can be done, because
+	while the hping3 packet generation code is actually the
+	hping2 put there mainly for compatibility with the command
+	line interface, all the real news are about scripting.
+	See the libs directory for example scripts. To run
+	the example scripts type:
+		hping3 exec ScriptName.htcl &amp;lt;arguments, if required&amp;gt;
+	hping3 is developed and manteined by antirez@invece.org
+	with the help of other hackers, and comes under GPL version
+	2 of license. Development is open so you can send me
+	patches/suggestions/affronts without inhibitions.
+	Please check the AUTHORS file for a list of people that
+	contribued with code, ideas, bug reports.
+	Also vim developer, ee.lbl.gov for tcpdump and GNU in general.
+DOCUMENTATION
+	For the hping3 API check docs/API.txt
+	You can find documentation about hping3 specific functions
+	at http://wiki.hping.org
+	Make sure to check the page at http://wiki.hping.org/34
+REQUIREMENTS
+	A supported unix-like OS, gcc, root access.
+	Libpcap.
+	Tcl/Tk is optional but strongly suggested.
+INSTALLATION
+	see INSTALL file.
+have fun,
+antirez
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;11-refref&quot;&gt;11. #Refref&lt;/h3&gt;
+&lt;p&gt;#Refref - An SQLi injection DDOS tool&lt;/p&gt;
+
+&lt;h3 id=&quot;12-hyenae&quot;&gt;12. Hyenae&lt;/h3&gt;
+&lt;h4 id=&quot;features&quot;&gt;Features&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;ARP-Request flooding&lt;/li&gt;
+  &lt;li&gt;ARP-Cache poisoning&lt;/li&gt;
+  &lt;li&gt;PPPoE session initiation flooding&lt;/li&gt;
+  &lt;li&gt;Blind PPPoE session termination&lt;/li&gt;
+  &lt;li&gt;ICMP-Echo flooding&lt;/li&gt;
+  &lt;li&gt;ICMP-Smurf attack&lt;/li&gt;
+  &lt;li&gt;ICMP based TCP-Connection reset&lt;/li&gt;
+  &lt;li&gt;TCP-SYN flooding&lt;/li&gt;
+  &lt;li&gt;TCP-Land attack&lt;/li&gt;
+  &lt;li&gt;Blind TCP-Connection reset&lt;/li&gt;
+  &lt;li&gt;UDP flooding&lt;/li&gt;
+  &lt;li&gt;DNS-Query flooding&lt;/li&gt;
+  &lt;li&gt;DHCP-Discover flooding&lt;/li&gt;
+  &lt;li&gt;DHCP starvation attack&lt;/li&gt;
+  &lt;li&gt;DHCP-Release forcing&lt;/li&gt;
+  &lt;li&gt;Cisco HSRP active router hijacking&lt;/li&gt;
+  &lt;li&gt;Pattern based packet address configuration&lt;/li&gt;
+  &lt;li&gt;Intelligent address and address protocol detection&lt;/li&gt;
+  &lt;li&gt;Smart wildcard-based randomization&lt;/li&gt;
+  &lt;li&gt;Daemon for setting up remote attack networks - HyenaeFE QT-Frontend support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;13-boompython&quot;&gt;13. Boom(Python)&lt;/h3&gt;
+
+&lt;h3 id=&quot;14-rcpnet&quot;&gt;14. RCPnet&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A multi-tool for network pen-testing written in python. It contains effective ping functions, hostname traceroute, and cloudflare detection. This is a modification from the FoxNuke Project, which only intended to be a DOS tool for network pen testing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;15-maddstress&quot;&gt;15. MaddStress&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;MaddStress is a simple denial-of-service (DDoS) attack tool that refers to attempts to burden a network or server with requests, making it unavailable to users.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;features-1&quot;&gt;Features&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Strongest &amp;amp; Best DDoS Tools&lt;/li&gt;
+  &lt;li&gt;UDP Configuration&lt;/li&gt;
+  &lt;li&gt;TCP Configuration&lt;/li&gt;
+  &lt;li&gt;SYN Configuration&lt;/li&gt;
+  &lt;li&gt;Proxy Configuration&lt;/li&gt;
+  &lt;li&gt;URL Grabber&lt;/li&gt;
+  &lt;li&gt;Port Scanner&lt;/li&gt;
+  &lt;li&gt;CloudFlare Resolver&lt;/li&gt;
+  &lt;li&gt;Multi CloudFlare Resolver&lt;/li&gt;
+  &lt;li&gt;Proxy Attack &amp;amp; Generator&lt;/li&gt;
+  &lt;li&gt;Always Updates &amp;amp; Current News&lt;/li&gt;
+  &lt;li&gt;System Information&lt;/li&gt;
+  &lt;li&gt;Network Information&lt;/li&gt;
+  &lt;li&gt;Simple Design UI&lt;/li&gt;
+  &lt;li&gt;User friendly GUI&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;16-dequiem&quot;&gt;16. Dequiem&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Dequiem is a DDoS tool written in python 2.7&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;features-2&quot;&gt;Features&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;DDoS&lt;/li&gt;
+  &lt;li&gt;Find a website’s IP&lt;/li&gt;
+  &lt;li&gt;Port Scanning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;17-nemesis&quot;&gt;17. NEMESIS&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;NEMESIS is tool like torshammer or pyloic, used to Distributed Denial of Service attacks, writen in C#&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;18-chihulk&quot;&gt;18. ChiHULK&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Written in python 2.7&lt;br /&gt;
+Edited version of the DDoS / DoS tool called HULK(.py).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;19-pentados&quot;&gt;19. PentaDos&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Written in python 2.7&lt;br /&gt;
+A tool designed by members of PentagonCrew to help
+you easily take down websites. &lt;em&gt;Ethical uses only&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;20-moihack-dos-attack-tool-reloaded&quot;&gt;20. Moihack DoS Attack Tool Reloaded&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A simple TCP/UDP Port Flooder written in Python.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;21-slowloris&quot;&gt;21. Slowloris&lt;/h3&gt;
+
+&lt;h3 id=&quot;22-anddos&quot;&gt;22. AnDDoS&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Stealth Anonymous Kill-The-Server&lt;/p&gt;
+
+  &lt;p&gt;The classic DDoS! Overload the server.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;23-torddos&quot;&gt;23. torDDos&lt;/h3&gt;
+&lt;h4 id=&quot;author-r3nt0n&quot;&gt;Author: &lt;a href=&quot;https://github.com/r3nt0n&quot;&gt;r3nt0n&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.shields.io/badge/version-v1.0-orange.svg&quot; alt=&quot;[Version 1.0](https://github.com/R3nt0n)&quot; /&gt;
+&lt;img src=&quot;http://img.shields.io/badge/python-2.7-blue.svg&quot; alt=&quot;[Python 2.7](https://github.com/R3nt0n)&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/badge/license-GPL%203.0-brightgreen.svg&quot; alt=&quot;[GPL-3.0 License](https://github.com/R3nt0n)&quot; /&gt;
+&lt;img src=&quot;http://img.shields.io/badge/date-14/07/2019-yellow.svg&quot; alt=&quot;[Date](https://github.com/R3nt0n)&quot; /&gt;  &lt;br /&gt;
+TorDDos is a Python tool to automatize DDos attacks to a website from the Tor network.&lt;/p&gt;
+
+&lt;p align=&quot;left&quot;&gt;&lt;img src=&quot;https://github.com/R3nt0n/torDDos/blob/master/img/torddos.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;usage-3&quot;&gt;Usage&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  -h, --help        show this help message and exit
+  -t , --target     server to kick-out
+  -n , --attempts   number of attempts of attack (default: 5)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;how-it-works&quot;&gt;How it works&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Creates a new Tor session.&lt;/li&gt;
+  &lt;li&gt;Makes a request to the website you choose as a target.&lt;/li&gt;
+  &lt;li&gt;Releases the Tor session, then creates another and request data again to the website.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;requirements&quot;&gt;Requirements&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Linux system&lt;/li&gt;
+  &lt;li&gt;Python 2.7&lt;/li&gt;
+  &lt;li&gt;Tor service&lt;/li&gt;
+  &lt;li&gt;requests&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;legal-disclaimer&quot;&gt;Legal disclaimer&lt;/h4&gt;
+&lt;p&gt;This tool is created for the sole purpose of security awareness and education, it should not be used against systems that you do not have permission to test/attack. The author is not responsible for misuse or for any damage that you may cause. You agree that you use this software at your own risk.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Penetration" /><category term="Penetration" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/ddos-tools/ddos-tools.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/ddos-tools/ddos-tools.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Solve Qt: libpng warning: iCCP: known incorrect sRGB profile</title><link href="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/" rel="alternate" type="text/html" title="Solve Qt: libpng warning: iCCP: known incorrect sRGB profile" /><published>2021-07-26T00:00:00+08:00</published><updated>2021-07-26T11:02:20+08:00</updated><id>https://theodorecooper.github.io/qt/qt-libpng-warning</id><content type="html" xml:base="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;why-this-happens&quot;&gt;Why this happens?&lt;/h2&gt;
 

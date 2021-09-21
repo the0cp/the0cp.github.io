@@ -1,5 +1,219 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-09-21T14:28:55+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
-</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">[Download]Collection of the best &amp;amp; most popular DDos-attack tools</title><link href="https://theodorecooper.github.io/penetration/2021-ddos-tools/" rel="alternate" type="text/html" title="[Download]Collection of the best &amp;amp; most popular DDos-attack tools" /><published>2021-08-10T00:00:00+08:00</published><updated>2021-09-21T14:28:55+08:00</updated><id>https://theodorecooper.github.io/penetration/ddos-tools</id><content type="html" xml:base="https://theodorecooper.github.io/penetration/2021-ddos-tools/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-09-21T17:20:01+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Is Telegram really anonymous &amp;amp; “focus on privacy” as it advertises? IM software comparison</title><link href="https://theodorecooper.github.io/others/pentest/2021-telegram/" rel="alternate" type="text/html" title="Is Telegram really anonymous &amp;amp; “focus on privacy” as it advertises? IM software comparison" /><published>2021-09-21T00:00:00+08:00</published><updated>2021-09-21T17:20:01+08:00</updated><id>https://theodorecooper.github.io/others/pentest/telegram</id><content type="html" xml:base="https://theodorecooper.github.io/others/pentest/2021-telegram/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Now, more and more people wants to be &lt;strong&gt;anonymous&lt;/strong&gt;. The anonymity in everyday life enables people to be free to do many worthwhile things without feeling inhibited. Telegram, an IM known as &lt;em&gt;“focus on security and privacy”&lt;/em&gt;, is chosen. 
+But, does Telegram really &lt;em&gt;“focus on security and privacy”&lt;/em&gt; as it advertises? 
+Today, we’ll compare Telegram with other IM software. I’ll show you different softwares’ advantage and disadvantage, and help you decide which one to choose.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-im&quot;&gt;What is IM?&lt;/h2&gt;
+&lt;p&gt;Instant messaging (&lt;strong&gt;IM&lt;/strong&gt;) technology is a type of online chat allowing real-time text transmission over the Internet or another computer network. 
+Some example of IM:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;WhatsApp&lt;/li&gt;
+  &lt;li&gt;Slack&lt;/li&gt;
+  &lt;li&gt;Jabber&lt;/li&gt;
+  &lt;li&gt;Spark&lt;/li&gt;
+  &lt;li&gt;Telegram&lt;/li&gt;
+  &lt;li&gt;Signal&lt;/li&gt;
+  &lt;li&gt;. . .&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;about-telegram&quot;&gt;About Telegram&lt;/h2&gt;
+
+&lt;h3 id=&quot;what-is-telegram&quot;&gt;What is Telegram?&lt;/h3&gt;
+&lt;p&gt;Copied from Wikipedia😝:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Telegram is a free and open source, cross-platform, cloud-based instant messaging (IM) software. This service also provides end-to-end encrypted video calling, VoIP, file sharing and several other features.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;advantages-of-telegram&quot;&gt;Advantages of Telegram&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Telegram provides end-to-end encrypted voice and video calls and optional end-to-end encrypted “secret” chats. Cloud chats and groups are encrypted between the app and the server, so that ISPs and other third-parties on the network can’t access data, but the Telegram server can. Users can send text and voice messages, make voice and video calls, and share an unlimited number of images, documents (2 GB per file), user locations, animated stickers, contacts, and audio files.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Easy to use, user-friendly&lt;/li&gt;
+  &lt;li&gt;Nice User Interface&lt;/li&gt;
+  &lt;li&gt;Cross-platform(Windows, Android, iOS, OSX, Linux…)&lt;/li&gt;
+  &lt;li&gt;Support setting chat records to be destroyed regularly&lt;/li&gt;
+  &lt;li&gt;Support  deleting account, after deleting the account, all related information will be destroyed at the same time&lt;/li&gt;
+  &lt;li&gt;Free, non-profit, never sell advertisements, never accept external investment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;disadvantages-of-telegram&quot;&gt;Disadvantages of Telegram&lt;/h3&gt;
+&lt;p&gt;Well, no data will be collected while using Telegram, end-to-end encryption is one hundred percent safe, but it doesn’t mean that &lt;em&gt;Telegram&lt;/em&gt; is anoymous.
+In fact, Telegram has no &lt;strong&gt;anonymity&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;1-bind-phone-number&quot;&gt;1. Bind phone number&lt;/h4&gt;
+&lt;p&gt;Any network tool that needs to be bound to a mobile phone (whether it is IM or email) will greatly reduce your invisibility.
+AnyoneGet contacts automatically once owns the phone number has the complete control over the Telegram account. I will talk about the issue of mobile phone number and anonymity below.
+Anyway, &lt;em&gt;be sure to have control over the bound mobile phone number!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;2-get-contactscan-be-solved&quot;&gt;2. Get contacts[can be solved]&lt;/h4&gt;
+&lt;p&gt;Telegram will scan your phone coanonymityntact and import numbers from it.
+&lt;strong&gt;Your can disable this function however.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-last-seen-timecan-be-solved&quot;&gt;3. Last seen time[can be solved]&lt;/h4&gt;
+&lt;p&gt;Telegram will show your “Last seen time” defaultly, it may affect anonymity.
+So, it’s neccessary to set “Do not show last seen time” in Telegram. In some groups, Telegram will show accounts which is typing, there’s also a way to avoid this. Put your full name into line editor “Last Name” and leave a space in “FIrst Name”. Then your typing state won’t be shown.&lt;/p&gt;
+
+&lt;h2 id=&quot;about-phone-numbers&quot;&gt;About phone numbers&lt;/h2&gt;
+
+&lt;h3 id=&quot;physical-sim-cards&quot;&gt;Physical SIM cards&lt;/h3&gt;
+&lt;p&gt;In some countries, you’ll need to offer your true identity to get a SIM card. Obviously, it’s quite hard to keep anonymous with a physical SIM card.&lt;/p&gt;
+
+&lt;h3 id=&quot;voip&quot;&gt;VoIP&lt;/h3&gt;
+&lt;p&gt;Free VoIPs are hard to get, and many of them have short avalible time. 
+Moreover, using VoIP will have the risk of being deleted in Telegram(Deleted Account).&lt;/p&gt;
+
+&lt;h2 id=&quot;other-ims&quot;&gt;Other IMs&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/whatsapp.jpeg&quot; alt=&quot;WhatsApp&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;whatsapp&quot;&gt;WhatsApp:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;[✔️] User-friendly&lt;/li&gt;
+  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[❓] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/signal.png&quot; alt=&quot;Signal&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;signal&quot;&gt;Signal:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
+  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/element.png&quot; alt=&quot;Element&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;elementriot&quot;&gt;Element(Riot):&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[✔️] User-friendly&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/wire.jpeg&quot; alt=&quot;Wire&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;wire&quot;&gt;Wire:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/discord.png&quot; alt=&quot;Discord&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;discord&quot;&gt;Discord:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[✔️] User-friendly&lt;/li&gt;
+  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[❓] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/wechat.jpeg&quot; alt=&quot;Wechat&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;wechat&quot;&gt;Wechat:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❓] User-friendly&lt;/li&gt;
+  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[❌] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/messenger.png&quot; alt=&quot;Messenger&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;messenger&quot;&gt;Messenger:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❓] User-friendly&lt;/li&gt;
+  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[❌] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/tox.png&quot; alt=&quot;Tox&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;tox&quot;&gt;Tox:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind email.&lt;/li&gt;
+  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
+  &lt;li&gt;[✔️] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bitmessage&quot;&gt;BitMessage:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind email.&lt;/li&gt;
+  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
+  &lt;li&gt;[✔️] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/bridgefy.png&quot; alt=&quot;Bridgefy&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;bridgefy&quot;&gt;Bridgefy:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind email.&lt;/li&gt;
+  &lt;li&gt;[❌] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
+  &lt;li&gt;[✔️] Offline messaging.&lt;/li&gt;
+  &lt;li&gt;[❌ Only iOS &amp;amp; Android]Cross-platform&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ideal-im&quot;&gt;Ideal IM…&lt;/h2&gt;
+
+&lt;p&gt;All the mentioned IMs have their own advantages and disadvantages, so what is the best one? My answer is: neither of them. Which one to choose depends on your own ideas. For me, Telegram is safe enough and user-friendly.&lt;/p&gt;
+
+&lt;h2 id=&quot;ps-tips-while-using-telegram&quot;&gt;PS: Tips while using Telegram&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-set-passcode--face-id&quot;&gt;1. Set Passcode &amp;amp; Face ID&lt;/h3&gt;
+&lt;p&gt;To prevent others from peeking at the messages when the phone isn’t around.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-two-step-verification&quot;&gt;2. Two-step verification&lt;/h3&gt;
+
+&lt;h3 id=&quot;3-privacy-settings&quot;&gt;3. Privacy Settings&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;No one can see my numbers&lt;/li&gt;
+  &lt;li&gt;No one can see my last seen time&lt;/li&gt;
+  &lt;li&gt;Only contact can see profile photos&lt;/li&gt;
+  &lt;li&gt;Only contact can call me&lt;/li&gt;
+  &lt;li&gt;Only contact can add me in a group&lt;/li&gt;
+  &lt;li&gt;Avoid using true numbers, use a VoIP instead&lt;/li&gt;
+  &lt;li&gt;Use proxy&lt;/li&gt;
+  &lt;li&gt;. . .&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Others" /><category term="Pentest" /><category term="Others" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/telegram/telegram-cover.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/telegram/telegram-cover.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[Download]Collection of the best &amp;amp; most popular DDos-attack tools</title><link href="https://theodorecooper.github.io/pentest/2021-ddos-tools/" rel="alternate" type="text/html" title="[Download]Collection of the best &amp;amp; most popular DDos-attack tools" /><published>2021-08-10T00:00:00+08:00</published><updated>2021-09-21T17:00:03+08:00</updated><id>https://theodorecooper.github.io/pentest/ddos-tools</id><content type="html" xml:base="https://theodorecooper.github.io/pentest/2021-ddos-tools/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;what-is-ddos&quot;&gt;What is DDos?&lt;/h2&gt;
 
@@ -368,7 +582,7 @@ TorDDos is a Python tool to automatize DDos attacks to a website from the Tor ne
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;legal-disclaimer&quot;&gt;Legal disclaimer&lt;/h4&gt;
-&lt;p&gt;This tool is created for the sole purpose of security awareness and education, it should not be used against systems that you do not have permission to test/attack. The author is not responsible for misuse or for any damage that you may cause. You agree that you use this software at your own risk.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Penetration" /><category term="Penetration" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/ddos-tools/ddos-tools.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/ddos-tools/ddos-tools.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Solve Qt: libpng warning: iCCP: known incorrect sRGB profile</title><link href="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/" rel="alternate" type="text/html" title="Solve Qt: libpng warning: iCCP: known incorrect sRGB profile" /><published>2021-07-26T00:00:00+08:00</published><updated>2021-07-26T11:02:20+08:00</updated><id>https://theodorecooper.github.io/qt/qt-libpng-warning</id><content type="html" xml:base="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/">&lt;hr /&gt;
+&lt;p&gt;This tool is created for the sole purpose of security awareness and education, it should not be used against systems that you do not have permission to test/attack. The author is not responsible for misuse or for any damage that you may cause. You agree that you use this software at your own risk.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Pentest" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/ddos-tools/ddos-tools.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/ddos-tools/ddos-tools.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Solve Qt: libpng warning: iCCP: known incorrect sRGB profile</title><link href="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/" rel="alternate" type="text/html" title="Solve Qt: libpng warning: iCCP: known incorrect sRGB profile" /><published>2021-07-26T00:00:00+08:00</published><updated>2021-07-26T11:02:20+08:00</updated><id>https://theodorecooper.github.io/qt/qt-libpng-warning</id><content type="html" xml:base="https://theodorecooper.github.io/qt/2021-qt-libpng-warning/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;why-this-happens&quot;&gt;Why this happens?&lt;/h2&gt;
 
@@ -948,7 +1162,7 @@ pause
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h2 id=&quot;at-last&quot;&gt;At last&lt;/h2&gt;
-&lt;p&gt;At last, I recommand QProcess and CreateProcess.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Qt" /><category term="C/C++" /><category term="C Tutorials" /><category term="Qt" /><category term="C/C++" /><category term="C Tutorials" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/qt-cmd/qt-logo.png" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/qt-cmd/qt-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Penetration Testing | ARP Spoofing(Poisoning) in the internal network &amp;amp; How to prevent it</title><link href="https://theodorecooper.github.io/penetration/linux/2021-arp-spoofing/" rel="alternate" type="text/html" title="Penetration Testing | ARP Spoofing(Poisoning) in the internal network &amp;amp; How to prevent it" /><published>2021-02-11T00:00:00+08:00</published><updated>2021-06-18T22:07:09+08:00</updated><id>https://theodorecooper.github.io/penetration/linux/arp-spoofing</id><content type="html" xml:base="https://theodorecooper.github.io/penetration/linux/2021-arp-spoofing/">&lt;hr /&gt;
+&lt;p&gt;At last, I recommand QProcess and CreateProcess.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Qt" /><category term="C/C++" /><category term="C Tutorials" /><category term="Qt" /><category term="C/C++" /><category term="C Tutorials" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/qt-cmd/qt-logo.png" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/qt-cmd/qt-logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Penetration Testing | ARP Spoofing(Poisoning) in the internal network &amp;amp; How to prevent it</title><link href="https://theodorecooper.github.io/pentest/linux/2021-arp-spoofing/" rel="alternate" type="text/html" title="Penetration Testing | ARP Spoofing(Poisoning) in the internal network &amp;amp; How to prevent it" /><published>2021-02-11T00:00:00+08:00</published><updated>2021-09-21T17:00:39+08:00</updated><id>https://theodorecooper.github.io/pentest/linux/arp-spoofing</id><content type="html" xml:base="https://theodorecooper.github.io/pentest/linux/2021-arp-spoofing/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;address-resolution-protocol-arp&quot;&gt;Address Resolution Protocol (&lt;strong&gt;ARP&lt;/strong&gt;)&lt;/h2&gt;
 
@@ -1135,7 +1349,7 @@ netsh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; i i add ne &amp;lt;Idx&am
 netsh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; i i del ne &amp;lt;Idx&amp;gt;	&lt;span class=&quot;c&quot;&gt;#Disbing MAC address&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;​	(Some routers have functions to bind MAC address too.)&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Penetration" /><category term="Linux" /><category term="Penetration" /><category term="Linux" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/arp-spoofing/arpspoofing.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/arp-spoofing/arpspoofing.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Syntax Error | Conky syntax update</title><link href="https://theodorecooper.github.io/linux/beautify/2021-new-conky/" rel="alternate" type="text/html" title="Syntax Error | Conky syntax update" /><published>2021-01-29T00:00:00+08:00</published><updated>2021-06-18T20:10:03+08:00</updated><id>https://theodorecooper.github.io/linux/beautify/new-conky</id><content type="html" xml:base="https://theodorecooper.github.io/linux/beautify/2021-new-conky/">&lt;hr /&gt;
+&lt;p&gt;​	(Some routers have functions to bind MAC address too.)&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Pentest" /><category term="Linux" /><category term="Pentest" /><category term="Linux" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/arp-spoofing/arpspoofing.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/arp-spoofing/arpspoofing.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Syntax Error | Conky syntax update</title><link href="https://theodorecooper.github.io/linux/beautify/2021-new-conky/" rel="alternate" type="text/html" title="Syntax Error | Conky syntax update" /><published>2021-01-29T00:00:00+08:00</published><updated>2021-06-18T20:10:03+08:00</updated><id>https://theodorecooper.github.io/linux/beautify/new-conky</id><content type="html" xml:base="https://theodorecooper.github.io/linux/beautify/2021-new-conky/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;featuresgithub&quot;&gt;Features(Github)&lt;/h2&gt;
 
@@ -1820,114 +2034,4 @@ pkill run.sh
 
 &lt;center&gt;┗━━┛┗━━┛ ┗━━┛┗━┛&lt;/center&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/coming2021/2021.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Other" /><category term="Other" /><summary type="html">2021</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/coming2021/2021.png" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/coming2021/2021.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">C Tutorial – Command Line Arguments</title><link href="https://theodorecooper.github.io/c/c++/c%20tutorials/linux/2020-C-Tutorial-arg/" rel="alternate" type="text/html" title="C Tutorial – Command Line Arguments" /><published>2020-12-26T00:00:00+08:00</published><updated>2021-06-18T22:17:37+08:00</updated><id>https://theodorecooper.github.io/c/c++/c%20tutorials/linux/C-Tutorial-arg</id><content type="html" xml:base="https://theodorecooper.github.io/c/c++/c%20tutorials/linux/2020-C-Tutorial-arg/">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/C-Tutorial-arg/c.png&quot; alt=&quot;C&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;what-is-command-line-arguments&quot;&gt;What is Command Line Arguments&lt;/h2&gt;
-
-&lt;p&gt;​	When executing the program, you can pass values to the C program from the command line. These values are called command line arguments, and they are important to the program, especially when you want to control the program from the outside, rather than hard-coding these values in the code. Even all the program in Linux will provide command line arguments.&lt;/p&gt;
-
-&lt;h2 id=&quot;use-command-line-arguments&quot;&gt;Use Command Line Arguments&lt;/h2&gt;
-
-&lt;p&gt;​	Command line arguments are handled using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main()&lt;/code&gt; function arguments, where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argc&lt;/code&gt; refers to the number of arguments passed in, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv[]&lt;/code&gt; is an pointer array which point to each argument passed to the program. The following is a simple example:&lt;/p&gt;
-
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The argument supplied is %s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Too many arguments.&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-   &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;No argument.&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	It produces the following result:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;No argument&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;/a.out
-No argument.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Single argument&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;/a.out aaarrrggg
-The argument supplied is aaarrrggg
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Two arguments &amp;amp; Above&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;/a.out arg1 arg2
-Too many arguments.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;explanation--argv0-argv1&quot;&gt;Explanation — &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv[0]&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv[1]&lt;/code&gt;…&lt;/h2&gt;
-
-&lt;p&gt;​	You should know that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv[0]&lt;/code&gt; holds the name of the program itself and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv[1]&lt;/code&gt;  is a pointer to the first command line argument supplied, and *argv[n]  is the last argument. If no arguments are supplied, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argc&lt;/code&gt; will be 1,  and if you pass one argument then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argc&lt;/code&gt; is set at 2.&lt;/p&gt;
-
-&lt;p&gt;​	You pass all the command line arguments separated by a space, but if  argument itself has a space then you can pass such arguments by putting  them inside double quotes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot; &quot;&lt;/code&gt; or single quotes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;' '&lt;/code&gt;.  So, let’s try this:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;/a.out &lt;span class=&quot;s2&quot;&gt;&quot;arg1 arg2&quot;&lt;/span&gt;
-The argument supplied is aaarrrggg
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;getopt--getopt_long&quot;&gt;getopt() &amp;amp; getopt_long()&lt;/h2&gt;
-
-&lt;p&gt;​	In Linux, we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getopt()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getopt_long()&lt;/code&gt; to pass arguments:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#include&amp;lt;stdio.h&amp;gt;&lt;/span&gt;
-
-int main&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;int argc, char &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;argv[]&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    char &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;optstr &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;p:n:m:c:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    struct option opts[] &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;path&quot;&lt;/span&gt;, 1, NULL, &lt;span class=&quot;s1&quot;&gt;'p'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
-        &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;, 1, NULL, &lt;span class=&quot;s1&quot;&gt;'n'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
-        &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mtime&quot;&lt;/span&gt;, 1, NULL, &lt;span class=&quot;s1&quot;&gt;'m'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
-        &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ctime&quot;&lt;/span&gt;, 1, NULL, &lt;span class=&quot;s1&quot;&gt;'c'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
-        &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;0, 0, 0, 0&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    int opt&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;opt &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; getopt_long&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;argc, argv, optstr, opts, NULL&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-        switch&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;opt&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'p'&lt;/span&gt;:
-                strcpy&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;path, optarg&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;nb&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'n'&lt;/span&gt;:
-                strcpy&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;targetname, optarg&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;nb&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'m'&lt;/span&gt;:
-                modifiedtime &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; atoi&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;optarg&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;nb&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'c'&lt;/span&gt;:
-                changetime &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; atoi&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;optarg&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;nb&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            default:
-                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;strchr&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;optstr, optopt&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; NULL&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-                    fprintf&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stderr, &lt;span class=&quot;s2&quot;&gt;&quot;unknown option '-%c'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;, optopt&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                    fprintf&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;stderr, &lt;span class=&quot;s2&quot;&gt;&quot;option requires an argument '-%c'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;, optopt&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;1&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    findInDir&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;path&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="C/C++" /><category term="C Tutorials" /><category term="Linux" /><category term="C/C++" /><category term="C Tutorials" /><category term="Linux" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/coming2021/2021.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Other" /><category term="Other" /><summary type="html">2021</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/coming2021/2021.png" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/coming2021/2021.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

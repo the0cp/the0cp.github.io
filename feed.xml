@@ -1,5 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2022-03-26T18:33:33+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site. Theodore Cooper.
-</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Advanced way to hack with AutoRun.inf | Virus carried by USB sticks</title><link href="https://theodorecooper.github.io/pentest/2022-autorun/" rel="alternate" type="text/html" title="Advanced way to hack with AutoRun.inf | Virus carried by USB sticks" /><published>2022-03-20T00:00:00+08:00</published><updated>2022-03-26T18:33:33+08:00</updated><id>https://theodorecooper.github.io/pentest/autorun</id><content type="html" xml:base="https://theodorecooper.github.io/pentest/2022-autorun/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2022-04-30T19:53:08+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site. Theodore Cooper.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Want to use Lambda Functions in C? Lambda for C</title><link href="https://theodorecooper.github.io/c/c++/c%20tutorials/2022-clambda/" rel="alternate" type="text/html" title="Want to use Lambda Functions in C? Lambda for C" /><published>2022-04-30T00:00:00+08:00</published><updated>2022-04-30T19:53:08+08:00</updated><id>https://theodorecooper.github.io/c/c++/c%20tutorials/clambda</id><content type="html" xml:base="https://theodorecooper.github.io/c/c++/c%20tutorials/2022-clambda/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Some programming languages featrue &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Lamda Functions&lt;/code&gt;, that means you can call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;small anonymous functions&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;“Lambda” function comes from mathematics, where it is called &lt;em&gt;lambda calculus&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A lambda function can take any number of arguments, but can only have
+one expression. Why Use Lambda Functions? The power of lambda is better
+shown when you use them as an anonymous function inside another
+function.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For example, in Python, Lambda Functions is supported.&lt;/p&gt;
+
+&lt;p&gt;A simple function expressed with a standard Python function definition using the keyword &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;def&lt;/code&gt; as follows:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In contrast, we can use Lambda:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Keyword: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lambda&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Bound variable: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Body: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x+1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Modern C++ also has lambda expressions:&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;capture&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clause&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parameters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;   
+   &lt;span class=&quot;n&quot;&gt;definition&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;   
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;lambda--c&quot;&gt;Lambda &amp;amp; C&lt;/h2&gt;
+
+&lt;p&gt;In C, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lambda&lt;/code&gt; is not naturely supported, so you have to define a function by name and pass a pointer. However, it’s not a big problem — if you use &lt;strong&gt;gcc&lt;/strong&gt;, there are some nonstandard features you can use to get what you want out of the lambda functions.&lt;/p&gt;
+
+&lt;p&gt;So let’s see how it works.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#define lambda(lambda$_ret, lambda$_args, lambda$_body)\
+({\
+lambda$_ret lambda$__anon$ lambda$_args\
+lambda$_body\
+&amp;amp;lambda$__anon$;\
+})
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This takes advantage of the gcc and the fact that gcc will let you use dollar signs in identifiers. You meed to pass &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--std=gnu99&lt;/code&gt; on the gcc command line to make this work properly, for example:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gcc &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; lambda &lt;span class=&quot;nt&quot;&gt;--std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;gnu99 lambda.c
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s a full example:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define lambda(lambda$_ret, lambda$_args, lambda$_body)\
+  ({\
+    lambda$_ret lambda$__anon$ lambda$_args\
+      lambda$_body\
+    &amp;amp;lambda$__anon$;\
+  })
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Sum = %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lambda&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Result:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;In fact, you really don’t have to have lambda with C. they are not very portable. If lambda was a useful feature K&amp;amp;R would have included it. Just for fun.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="C/C++" /><category term="C Tutorials" /><category term="C/C++" /><category term="C Tutorials" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/clambda/lambda.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/clambda/lambda.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Advanced way to hack with AutoRun.inf | Virus carried by USB sticks</title><link href="https://theodorecooper.github.io/pentest/2022-autorun/" rel="alternate" type="text/html" title="Advanced way to hack with AutoRun.inf | Virus carried by USB sticks" /><published>2022-03-20T00:00:00+08:00</published><updated>2022-03-26T18:33:33+08:00</updated><id>https://theodorecooper.github.io/pentest/autorun</id><content type="html" xml:base="https://theodorecooper.github.io/pentest/2022-autorun/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
@@ -1862,241 +1948,4 @@ Up:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;k&q
 
 &lt;h2 id=&quot;more--wiki&quot;&gt;More – Wiki&lt;/h2&gt;
 
-&lt;p&gt;​	More options and tutorial here: &lt;a href=&quot;https://github.com/brndnmtthws/conky/wiki/&quot;&gt;Conky Wiki(Github)&lt;/a&gt;.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Beautify" /><category term="Linux" /><category term="Beautify" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://user-images.githubusercontent.com/852504/50325033-1089e480-04a8-11e9-8963-f64cb3d0003b.png" /><media:content medium="image" url="https://user-images.githubusercontent.com/852504/50325033-1089e480-04a8-11e9-8963-f64cb3d0003b.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Conky | Awesome system monitor for Linux</title><link href="https://theodorecooper.github.io/linux/beautify/2021-conky/" rel="alternate" type="text/html" title="Conky | Awesome system monitor for Linux" /><published>2021-01-15T00:00:00+08:00</published><updated>2021-06-18T20:23:33+08:00</updated><id>https://theodorecooper.github.io/linux/beautify/conky</id><content type="html" xml:base="https://theodorecooper.github.io/linux/beautify/2021-conky/">&lt;p&gt;&lt;img src=&quot;/assets/img/blog/conky/conky.jpg&quot; alt=&quot;conky&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;about-conky&quot;&gt;About Conky…&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Conky&lt;/strong&gt; is a free software desktop system monitor for the X Window System. It is available for Linux, FreeBSD, and OpenBSD. Conky is highly configurable and is able to monitor many system variables including the status of the CPU, memory, swap space (&lt;a href=&quot;https://en.wikipedia.org/wiki/Swap_space&quot;&gt;what is swap space?&lt;/a&gt;), disk storage, temperatures, processes, network interfaces, battery power, system messages, e-mail inboxes, Arch Linux updates, many popular music players, weather updates, breaking news, and much more. Unlike system monitors that use high-level widget toolkits to render their information, Conky is drawn directly in an X window.  This allows it to be configured such that it consumes relatively few  system resources.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;​	Are you getting bored with your dull backgrounds? Let’s use &lt;strong&gt;&lt;em&gt;conky&lt;/em&gt;&lt;/strong&gt; to improve that.&lt;/p&gt;
-
-&lt;h2 id=&quot;common-uses&quot;&gt;Common uses&lt;/h2&gt;
-
-&lt;p&gt;​	If you’re using Pinguy OS or CrunchBang Linux(…). Conky is pre-configured in the default installation, but I think most of users are using Debian, Ubuntu, Fedora and so on. Conky is not installed by default in these systems. We should install conky first.&lt;/p&gt;
-
-&lt;h3 id=&quot;get-conky&quot;&gt;Get conky&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Open up a terminal window&lt;/li&gt;
-  &lt;li&gt;Type following command and your sudo password&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;conky-all
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;When prompted, accepted the installation by typing &lt;em&gt;y&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;configure-a-theme&quot;&gt;Configure a theme&lt;/h3&gt;
-
-&lt;p&gt;​	What conky does is read the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/conky/conky.config&lt;/code&gt; file (when no &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.conkyrc&lt;/code&gt; file is present) and display as you set. So there are tow solutions to have a good looking conky: either you modify the configure file on your own or you download a conky theme from the Internet and use it directly. There are many websites which could provide with plenty of awesome conky themes:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.deviantart.com/&quot;&gt;Deviant Art&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.opendesktop.org/search?projectSearchText=conky&quot;&gt;Open Desktop&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;​	Using these conky themes is similar to installing source code. A good conky theme will come with a README that  tells you what to change in the conky theme files and other important  things about using the conky theme. Most of the time you have to change  the path to image files or Lua script.&lt;/p&gt;
-
-&lt;h3 id=&quot;launch-conky&quot;&gt;Launch conky&lt;/h3&gt;
-
-&lt;p&gt;​	It’s easy to launch conky:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;conky
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;usage-example&quot;&gt;Usage example&lt;/h3&gt;
-
-&lt;p&gt;​	A simple configuration for Conky which displays the time on a user’s desktop is as follows:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;update_interval 30
-
-own_window &lt;span class=&quot;nb&quot;&gt;yes
-&lt;/span&gt;own_window_type desktop
-
-use_xft &lt;span class=&quot;nb&quot;&gt;yes
-&lt;/span&gt;xftfont DejaVu Sans:size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;14
-
-alignment bottom_right
-
-TEXT
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; %H&lt;/span&gt;:%M&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	Here’s my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.conkyrc&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# set to yes if you want Conky to be forked in the background&lt;/span&gt;
-background no
-cpu_avg_samples 2
-net_avg_samples 2
-out_to_console no
-&lt;span class=&quot;c&quot;&gt;# X font when Xft is disabled, you can pick one with program xfontsel&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#font 7x12&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#font 6x10&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#font 7x13&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#font 8x13&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#font 7x12&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#font *mintsmild.se*&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#font -*-*-*-*-*-*-34-*-*-*-*-*-*-*&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#font -artwiz-snap-normal-r-normal-*-*-100-*-*-p-*-iso8859-1&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Use Xft?&lt;/span&gt;
-use_xft &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Xft font when Xft is enabled&lt;/span&gt;
-xftfont Sans:size&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;11  
-own_window_argb_visual &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#own_window_colour hotpink&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Text alpha when using Xft&lt;/span&gt;
-xftalpha 0.8
-&lt;span class=&quot;c&quot;&gt;# on_bottom yes&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# mail spool&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# mail_spool $MAIL&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Update interval in seconds&lt;/span&gt;
-update_interval 1
-&lt;span class=&quot;c&quot;&gt;# Create own window instead of using desktop (required in nautilus)&lt;/span&gt;
-own_window &lt;span class=&quot;nb&quot;&gt;yes
-&lt;/span&gt;own_window_transparent &lt;span class=&quot;nb&quot;&gt;yes
-&lt;/span&gt;own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-&lt;span class=&quot;c&quot;&gt;#own_window_type override&lt;/span&gt;
-own_window_type dock
-&lt;span class=&quot;c&quot;&gt;# Use double buffering (reduces flicker, may not work for everyone)&lt;/span&gt;
-double_buffer &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Minimum size of text area&lt;/span&gt;
-minimum_size 260 5
-maximum_width 400
-&lt;span class=&quot;c&quot;&gt;# Draw shades?&lt;/span&gt;
-draw_shades no
-&lt;span class=&quot;c&quot;&gt;# Draw outlines?&lt;/span&gt;
-draw_outline no
-&lt;span class=&quot;c&quot;&gt;# Draw borders around text&lt;/span&gt;
-draw_borders no
-&lt;span class=&quot;c&quot;&gt;# Stippled borders?&lt;/span&gt;
-stippled_borders no
-&lt;span class=&quot;c&quot;&gt;# border margins&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# border_margin 4&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# border width&lt;/span&gt;
-border_width 1
-&lt;span class=&quot;c&quot;&gt;# Default colors and also border colors&lt;/span&gt;
-default_color white
-default_shade_color white
-default_outline_color white
-&lt;span class=&quot;c&quot;&gt;# Text alignment, other possible values are commented&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#alignment top_left&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#minimum_size 10 10&lt;/span&gt;
-gap_x 10
-gap_y 35
-alignment top_right
-&lt;span class=&quot;c&quot;&gt;#alignment bottom_left&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#alignment bottom_right&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Gap between borders of screen and text&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Add spaces to keep things from moving about?  This only affects&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# certain objects.&lt;/span&gt;
-use_spacer none
-&lt;span class=&quot;c&quot;&gt;# Subtract file system buffers from used memory?&lt;/span&gt;
-no_buffers &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# set to yes if you want all text to be in uppercase&lt;/span&gt;
-uppercase no
-&lt;span class=&quot;c&quot;&gt;# none, xmms, bmp, audacious, infopipe (default is none)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# xmms_player bmp&lt;/span&gt;
-
-
-TEXT
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; #006400&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;SYSTEM &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#Time:$alignr${time %Y.%m.%d}$alignc   ${time %H:%M:%S}$alignr   Week:${time %w}&lt;/span&gt;
-Hostname:                Parrot Security
-Kernel: &lt;span class=&quot;nv&quot;&gt;$alignr$kernel&lt;/span&gt;
-Machine:&lt;span class=&quot;nv&quot;&gt;$alignr$machine&lt;/span&gt;
-Temp: &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; sensors | grep &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Core 0'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; | cut -c17-22&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;C
-&lt;span class=&quot;c&quot;&gt;###############&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; #FF8C00&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;MEMORY &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-Ram &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$mem&lt;/span&gt; / &lt;span class=&quot;nv&quot;&gt;$memmax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$memperc&lt;/span&gt;%&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;membar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-Highest MEM &lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt; MEM%
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top_mem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top_mem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top_mem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top_mem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top_mem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top_mem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;##############&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; #BC8F8F&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;CPU &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-Frequency: &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;freq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; dyn&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; MHz
-Processes: &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$processes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$running_processes&lt;/span&gt; running&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-Load: &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$loadavg&lt;/span&gt;
-CPU1 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cpu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;%
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cpubar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4 cpu1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-CPU2 &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cpu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;%
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cpubar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4 cpu2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-Highest CPU &lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt; CPU%
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;##############&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; #228B22&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;FILE SYSTEM &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-Root: &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fs_free&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; /&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; / &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fs_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; /&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fs_bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4 /&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#############&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; white&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;ETHERNET &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-Down &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;downspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; eth0&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; /s &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Up &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;upspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; eth0&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; /s
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;downspeedgraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; eth0 25,107&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;upspeedgraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; eth0 25,107&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-Total &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;totaldown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; eth0&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Total &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;totalup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; eth0&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#############&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; white&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;WLAN &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;hr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-Down &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;downspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; wlx48022a54bc53&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; /s &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Up &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;upspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; wlx48022a54bc53&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; /s
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;downspeedgraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; wlx48022a54bc53 25,107&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;upspeedgraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; wlx48022a54bc53 25,107&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-Total &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;totaldown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; wlx48022a54bc53&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignr&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Total &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;totalup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; wlx48022a54bc53&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#############&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	It looks like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/conky/conkyrc.jpg&quot; alt=&quot;conkyrc&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;​	You can download here: &lt;a href=&quot;conkyrc.zip&quot;&gt;.conkyrc&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;configure-with-guibeginner&quot;&gt;Configure with GUI[Beginner]&lt;/h3&gt;
-
-&lt;p&gt;​	&lt;strong&gt;&lt;em&gt;Conky Manager&lt;/em&gt;&lt;/strong&gt; is a friendly GUI tool developed to use conky easier.&lt;/p&gt;
-
-&lt;p&gt;​	Use the following commands in terminal to install Conky Manager:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;add-apt-repository ppa:teejee2008/ppa
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
-&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;conky-manager
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	Launch the Conky Manager and have fun!&lt;/p&gt;
-
-&lt;h2 id=&quot;advanced-usage--issues&quot;&gt;Advanced Usage &amp;amp; Issues&lt;/h2&gt;
-
-&lt;h3 id=&quot;start-conky-automatically&quot;&gt;Start conky automatically&lt;/h3&gt;
-
-&lt;p&gt;​	You can write a shell script to start conky automatically:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
-
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; ’ ’ | &lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-S&lt;/span&gt; pm-powersave
-
-&lt;span class=&quot;nb&quot;&gt;sleep &lt;/span&gt;3
-
-conky &amp;amp; &lt;span class=&quot;nb&quot;&gt;disown
-
-sleep &lt;/span&gt;30
-
-pkill run.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	Then add it to startup applications list.&lt;/p&gt;
-
-&lt;h3 id=&quot;conky-disappears&quot;&gt;Conky disappears…&lt;/h3&gt;
-
-&lt;p&gt;​	If conky disappears on clicking desktop in desktop environments like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mate&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gnome&lt;/code&gt; and so on, this may help you:&lt;/p&gt;
-
-&lt;p&gt;​	change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;own_window_type desktop&lt;/code&gt; to:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;own_window_type dock
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	Or you will prefer to hidden desktop icons, the conky won’t disappear either(but of course you can’t see desktop icons).&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Beautify" /><category term="Linux" /><category term="Beautify" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;​	More options and tutorial here: &lt;a href=&quot;https://github.com/brndnmtthws/conky/wiki/&quot;&gt;Conky Wiki(Github)&lt;/a&gt;.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Beautify" /><category term="Linux" /><category term="Beautify" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://user-images.githubusercontent.com/852504/50325033-1089e480-04a8-11e9-8963-f64cb3d0003b.png" /><media:content medium="image" url="https://user-images.githubusercontent.com/852504/50325033-1089e480-04a8-11e9-8963-f64cb3d0003b.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

@@ -1,5 +1,417 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2022-04-30T19:53:08+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site. Theodore Cooper.
-</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Want to use Lambda Functions in C? Lambda for C</title><link href="https://theodorecooper.github.io/c/c++/c%20tutorials/2022-clambda/" rel="alternate" type="text/html" title="Want to use Lambda Functions in C? Lambda for C" /><published>2022-04-30T00:00:00+08:00</published><updated>2022-04-30T19:53:08+08:00</updated><id>https://theodorecooper.github.io/c/c++/c%20tutorials/clambda</id><content type="html" xml:base="https://theodorecooper.github.io/c/c++/c%20tutorials/2022-clambda/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2022-05-02T20:53:01+08:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site. Theodore Cooper.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Hack with a 1.99$ cheap BadUSB — Digispark(ATTINY85)</title><link href="https://theodorecooper.github.io/pentest/2022-badusb/" rel="alternate" type="text/html" title="Hack with a 1.99$ cheap BadUSB — Digispark(ATTINY85)" /><published>2022-05-02T00:00:00+08:00</published><updated>2022-05-02T20:53:01+08:00</updated><id>https://theodorecooper.github.io/pentest/badusb</id><content type="html" xml:base="https://theodorecooper.github.io/pentest/2022-badusb/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;about-badusb&quot;&gt;About BadUSB&lt;/h2&gt;
+
+&lt;p&gt;What is &lt;em&gt;BadUSB&lt;/em&gt;? In short, &lt;em&gt;BadUSB&lt;/em&gt; disguises itself as a human interface device(HID) such as keyboards or mice and covertly executes malicious commands or opens virus payloads on the target computer. One of the terrible things is which takes control over the system using low-level debugging on a certain type of BIOSes.&lt;/p&gt;
+
+&lt;h2 id=&quot;possible-badusb-devices&quot;&gt;Possible BadUSB Devices&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Keyboard;&lt;/li&gt;
+  &lt;li&gt;Network card;&lt;/li&gt;
+  &lt;li&gt;Mouse;&lt;/li&gt;
+  &lt;li&gt;USB charging cables&lt;/li&gt;
+  &lt;li&gt;USB sticks&lt;/li&gt;
+  &lt;li&gt;Anything can be inserted which can be miniaturized into a USB stick form factor.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-we-need&quot;&gt;What we need…&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Digispark(ATTINY85) Default - 16.5mhz&lt;/li&gt;
+  &lt;li&gt;Arduino IDE&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;why-use-digispark&quot;&gt;Why use Digispark?&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/badusb/digispark.jpg&quot; alt=&quot;digispark&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;digispark-the-micro-sized-affordable-arduino-enabled-usb-development-board&quot;&gt;Digispark: The micro-sized, affordable, Arduino enabled, USB development board!&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cheap, very cheap(1~2$)&lt;/li&gt;
+  &lt;li&gt;Tiny enough
+    &lt;ul&gt;
+      &lt;li&gt;Item Weight: 3.53 ounces&lt;/li&gt;
+      &lt;li&gt;The size of a coin&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Easy to program, support Arduino&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The Digispark is an ATtiny85 based microcontroller development board similar to the Arduino line, only cheaper, smaller, and a bit less powerful. With a whole host of shields to extend its functionality and the ability to use the familiar Arduino IDE the Digispark is a great way to jump into electronics, or perfect for when an Arduino is too big or too much.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;step-1-configure-bootloaderwindows&quot;&gt;Step 1: Configure bootloader(Windows)&lt;/h2&gt;
+
+&lt;p&gt;The bootloader is the code that is pre-programmed on your Digispark and allows it to act as a USB device so that it can be programmed by the Arduino IDE.&lt;/p&gt;
+
+&lt;p&gt;You can download bootloader for Windows here(Github):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/digistump/DigistumpArduino/releases/download/1.6.7/Digistump.Drivers.zip&quot; target=&quot;_blank&quot;&gt;https://github.com/digistump/DigistumpArduino/releases/download/1.6.7/Digistump.Drivers.zip&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/badusb/driver.png&quot; alt=&quot;driver&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Double-click either DPinst64.exe on a 64-bit Windows computer, or DPinst.exe on a 32-bit Windows computer to install the Digispark drivers.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-setup-arduino&quot;&gt;Step 2: Setup Arduino&lt;/h2&gt;
+
+&lt;p&gt;Go to &lt;a href=&quot;https://www.arduino.cc/en/Main/Software&quot; target=&quot;_blank&quot;&gt;https://www.arduino.cc/en/Main/Software&lt;/a&gt; download installer. If you are using Linux, there are some more steps:&lt;/p&gt;
+
+&lt;h3 id=&quot;install-arduino-in-linux&quot;&gt;Install Arduino in Linux&lt;/h3&gt;
+
+&lt;p&gt;Download the Linux 64 bits file for 64-bit Linux Intel systems or the Linux 32 bits file for Linux 32-bit Intel systems. Unzip the downloaded file, and extract the folder found in the zipped file to a convenient location. To run the Arduino IDE application, open the extracted folder and double-click the Arduino executable file. To install, run command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sh install.sh&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;add-linux-user-name-to-the-dialout-group&quot;&gt;Add Linux User Name to the Dialout Group&lt;/h3&gt;
+
+&lt;p&gt;In order to be able to program any board from the Arduino IDE, the Linux user must be added to the dialout group.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;adduser &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt; dialout
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Enter your Linux password when prompted.&lt;/p&gt;
+
+&lt;p&gt;You will need to log out and then log back in, or reboot, for the changes to take effect.&lt;/p&gt;
+
+&lt;h3 id=&quot;add-udev-rules-to-the-system&quot;&gt;Add udev Rules to the System&lt;/h3&gt;
+
+&lt;p&gt;To be able to program the Digispark board from the Arduino IDE in Linux, udev rules must be added to the system. This is done by creating a file in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/udev/rules.d/&lt;/code&gt; that contains the rules.&lt;/p&gt;
+
+&lt;p&gt;Create a text file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;49-micronucleus.rules&lt;/code&gt; in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/udev/rules.d/&lt;/code&gt; and add the following rules to it(&lt;strong&gt;you will need root permission&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# UDEV Rules for Micronucleus boards including the Digispark.
+# This file must be placed at:
+#
+# /etc/udev/rules.d/49-micronucleus.rules    (preferred location)
+#   or
+# /lib/udev/rules.d/49-micronucleus.rules    (req'd on some broken systems)
+#
+# After this file is copied, physically unplug and reconnect the board.
+#
+SUBSYSTEMS==&quot;usb&quot;, ATTRS{idVendor}==&quot;16d0&quot;, ATTRS{idProduct}==&quot;0753&quot;, MODE:=&quot;0666&quot;
+KERNEL==&quot;ttyACM*&quot;, ATTRS{idVendor}==&quot;16d0&quot;, ATTRS{idProduct}==&quot;0753&quot;, MODE:=&quot;0666&quot;, ENV{ID_MM_DEVICE_IGNORE}=&quot;1&quot;
+#
+# If you share your linux system with other users, or just don't like the
+# idea of write permission for everybody, you can replace MODE:=&quot;0666&quot; with
+# OWNER:=&quot;yourusername&quot; to create the device owned by you, or with
+# GROUP:=&quot;somegroupname&quot; and mange access using standard unix groups.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;step-3-add-digispark-package&quot;&gt;Step 3: Add Digispark Package&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run the Arduino application.&lt;/li&gt;
+  &lt;li&gt;In the Arduino application go to the “File” menu and select “Preferences”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/badusb/perf.png&quot; alt=&quot;perf.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In the box labeled “Additional Boards Manager URLs” enter:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http://digistump.com/package_digistump_index.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/badusb/perf_1.png&quot; alt=&quot;perf_1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Click OK&lt;/li&gt;
+  &lt;li&gt;Go to the “Tools” menu and then the “Board” submenu - select “Boards Manager” and then from the type drop down select “Contributed”&lt;/li&gt;
+  &lt;li&gt;Select the “Digistump AVR Boards” package and click the “Install” button.&lt;/li&gt;
+  &lt;li&gt;With the install complete, close the “Boards Manager” window and select the Digispark from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Tools→Boards&lt;/code&gt; menu. Select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Digispark (Default - 16.5mhz)&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-4-programming-the-badusb&quot;&gt;Step 4: Programming the BadUSB&lt;/h2&gt;
+
+&lt;p&gt;We should first program a sketch first, here’s a simple example:&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//This DigiKeyboard Script opens a cmd window and echo 'Hello World!'&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#include &quot;DigiKeyboard.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;DigiKeyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendKeyStroke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KEY_R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MOD_GUI_LEFT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;DigiKeyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;DigiKeyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cmd&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;DigiKeyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;DigiKeyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;echo Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//empty&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Upload&lt;/code&gt; and insert the Digispark. Wait for the script to finish uploading. When the “Micronucleus done. Thank you!” message appears, it means that the script has finished uploading and you can unplug your BadUSB.&lt;/p&gt;
+
+&lt;h2 id=&quot;some-scripts-you-may-need&quot;&gt;Some Scripts You may Need:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/theodorecooper/awesome-badusb&quot; target=&quot;_blank&quot;&gt;https://github.com/theodorecooper/awesome-badusb&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/MTK911/Attiny85/tree/master/payloads&quot; target=&quot;_blank&quot;&gt;https://github.com/MTK911/Attiny85/tree/master/payloads&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-to-defense&quot;&gt;How to Defense?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Egress filtering in Firewalls.&lt;/li&gt;
+  &lt;li&gt;Physically block USB Ports.&lt;/li&gt;
+  &lt;li&gt;Disable automatic installation of new USB devices.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;more-you-may-wanna-know&quot;&gt;More You may Wanna Know…&lt;/h2&gt;
+
+&lt;h3 id=&quot;digispark-pin-usage-guide&quot;&gt;Digispark Pin Usage Guide&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Pin Number&lt;/th&gt;
+      &lt;th&gt;Output Voltage&lt;/th&gt;
+      &lt;th&gt;Analogue Port Number analogRead()&lt;/th&gt;
+      &lt;th&gt;PWM&lt;/th&gt;
+      &lt;th&gt;USB&lt;/th&gt;
+      &lt;th&gt;Test LED&lt;/th&gt;
+      &lt;th&gt;I2C&lt;/th&gt;
+      &lt;th&gt;SPI*&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;5V&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y - 504 Hz&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Rev 1&lt;/td&gt;
+      &lt;td&gt;SDA&lt;/td&gt;
+      &lt;td&gt;MISO&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;5V&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y - 504 Hz&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Rev 2 / 4&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;MISO&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;5V&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;SCL&lt;/td&gt;
+      &lt;td&gt;SCK&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3.6V&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y - 1.5k Ohm to 5 V&lt;br /&gt;Zener diode (3.6 V maximum in- &amp;amp; output)&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;3.6V&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Y - 1007 Hz&lt;/td&gt;
+      &lt;td&gt;Y Zener diode (3.6 V maximum in- &amp;amp; output)&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;3V&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;*Note that the labeling of the pins for SPI is somewhat misleading. The table above is correct, as MISO is actually DI and MOSI is DO, but for use with ISP MISO and MOSI are swapped.&lt;/p&gt;
+
+&lt;h3 id=&quot;digispark-pro-pin-usage-guide&quot;&gt;Digispark Pro Pin Usage Guide&lt;/h3&gt;
+
+&lt;p&gt;This table details the function of each pin on the Digispark Pro and any notes the are relevant.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Pin Number&lt;/th&gt;
+      &lt;th&gt;Output Voltage&lt;/th&gt;
+      &lt;th&gt;ADC&lt;/th&gt;
+      &lt;th&gt;PWM&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;VCC&lt;/td&gt;
+      &lt;td&gt;VCC&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SDA&lt;/td&gt;
+      &lt;td&gt;0   SDA&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LED&lt;/td&gt;
+      &lt;td&gt;1   LED&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SCL&lt;/td&gt;
+      &lt;td&gt;2   SCL&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;USB+&lt;/td&gt;
+      &lt;td&gt;3   USB+&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A3&lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;USB-&lt;/td&gt;
+      &lt;td&gt;4   USB-&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pin 5&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A5&lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;GND&lt;/td&gt;
+      &lt;td&gt;GND&lt;/td&gt;
+      &lt;td&gt;0v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;VIN&lt;/td&gt;
+      &lt;td&gt;VIN(6-16v)&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;RX&lt;/td&gt;
+      &lt;td&gt;6   RX&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A6&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;TX&lt;/td&gt;
+      &lt;td&gt;7   TX&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A7&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MISO&lt;/td&gt;
+      &lt;td&gt;8   MISO&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A8&lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;INT1&lt;/td&gt;
+      &lt;td&gt;9   INT1&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A9&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MOSI&lt;/td&gt;
+      &lt;td&gt;10  MOSI&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A10&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SCK&lt;/td&gt;
+      &lt;td&gt;11  SCK&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A11&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SS&lt;/td&gt;
+      &lt;td&gt;12  SS&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A12&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;RST&lt;/td&gt;
+      &lt;td&gt;RST&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;VIN&lt;/td&gt;
+      &lt;td&gt;VIN(6-16v)&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;GND&lt;/td&gt;
+      &lt;td&gt;GND&lt;/td&gt;
+      &lt;td&gt;0v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;VCC&lt;/td&gt;
+      &lt;td&gt;VCC&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;pwm&quot;&gt;PWM&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://digistump.com/wiki/digispark/tutorials/propwm&quot; target=&quot;_blank&quot;&gt;https://digistump.com/wiki/digispark/tutorials/propwm&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;legal-notice&quot;&gt;LEGAL NOTICE&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;THESE SOFTWARES AND SCRIPTS ARE PROVIDED FOR EDUCATIONAL USE ONLY! IF YOU ENGAGE IN ANY ILLEGAL ACTIVITY WE DO NOT TAKE ANY RESPONSIBILITY FOR IT. BY USING THESE SOFTWARES AND SCRIPTS YOU AGREE WITH THESE TERMS.&lt;/strong&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Pentest" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/badusb/cover.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/badusb/cover.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Want to use Lambda Functions in C? Lambda for C</title><link href="https://theodorecooper.github.io/c/c++/c%20tutorials/2022-clambda/" rel="alternate" type="text/html" title="Want to use Lambda Functions in C? Lambda for C" /><published>2022-04-30T00:00:00+08:00</published><updated>2022-04-30T19:53:08+08:00</updated><id>https://theodorecooper.github.io/c/c++/c%20tutorials/clambda</id><content type="html" xml:base="https://theodorecooper.github.io/c/c++/c%20tutorials/2022-clambda/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
@@ -1813,139 +2225,4 @@ netsh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; i i add ne &amp;lt;Idx&am
 netsh &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; i i del ne &amp;lt;Idx&amp;gt;	&lt;span class=&quot;c&quot;&gt;#Disbing MAC address&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;​	(Some routers have functions to bind MAC address too.)&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Pentest" /><category term="Linux" /><category term="Pentest" /><category term="Linux" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/arp-spoofing/arpspoofing.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/arp-spoofing/arpspoofing.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Syntax Error | Conky syntax update</title><link href="https://theodorecooper.github.io/linux/beautify/2021-new-conky/" rel="alternate" type="text/html" title="Syntax Error | Conky syntax update" /><published>2021-01-29T00:00:00+08:00</published><updated>2021-06-18T20:10:03+08:00</updated><id>https://theodorecooper.github.io/linux/beautify/new-conky</id><content type="html" xml:base="https://theodorecooper.github.io/linux/beautify/2021-new-conky/">&lt;hr /&gt;
-
-&lt;h2 id=&quot;featuresgithub&quot;&gt;Features(Github)&lt;/h2&gt;
-
-&lt;p&gt;Conky can display more than 300 built-in objects, including support for:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A plethora of OS stats (uname, uptime, &lt;strong&gt;CPU usage&lt;/strong&gt;, &lt;strong&gt;mem usage&lt;/strong&gt;, disk usage, &lt;strong&gt;“top”&lt;/strong&gt; like process stats, and &lt;strong&gt;network monitoring&lt;/strong&gt;, just to name a few).&lt;/li&gt;
-  &lt;li&gt;Built-in &lt;strong&gt;IMAP&lt;/strong&gt; and &lt;strong&gt;POP3&lt;/strong&gt; support.&lt;/li&gt;
-  &lt;li&gt;Built-in support for many popular music players (&lt;a href=&quot;https://musicpd.org/&quot;&gt;MPD&lt;/a&gt;, &lt;a href=&quot;https://github.com/xmms2/wiki/wiki&quot;&gt;XMMS2&lt;/a&gt;, &lt;a href=&quot;https://audacious-media-player.org/&quot;&gt;Audacious&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Can be extended using built-in &lt;a href=&quot;https://github.com/brndnmtthws/conky/blob/main/lua&quot;&gt;&lt;strong&gt;Lua&lt;/strong&gt;&lt;/a&gt; support, or any of your own scripts and programs (&lt;a href=&quot;https://github.com/brndnmtthws/conky/wiki#tutorial&quot;&gt;more&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Built-in &lt;a href=&quot;https://docs.enlightenment.org/api/imlib2/html/&quot;&gt;&lt;strong&gt;Imlib2&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&quot;https://www.cairographics.org/&quot;&gt;&lt;strong&gt;Cairo&lt;/strong&gt;&lt;/a&gt; bindings for arbitrary drawing with Lua (&lt;a href=&quot;https://github.com/brndnmtthws/conky/wiki/Lua&quot;&gt;more&lt;/a&gt;).&lt;/li&gt;
-  &lt;li&gt;Runs on Linux, FreeBSD, OpenBSD, DragonFlyBSD, NetBSD, Solaris, Haiku, and macOS!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;… and much much more.&lt;/p&gt;
-
-&lt;p&gt;Conky can display information either as text, or using simple progress bars and graph widgets, with different fonts and colours.&lt;/p&gt;
-
-&lt;h2 id=&quot;syntax&quot;&gt;Syntax&lt;/h2&gt;
-
-&lt;p&gt;​	After upgrade the whole system, I found conky doesn’t work well, the terminal pops out &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;syntax error&lt;/code&gt; when running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conky&lt;/code&gt;. Yes, the syntax changed, I have to rewrite the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.conkyrc&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;​	Before updating, conky’s syntax is easy, very easy to understand, now, it’s more like… eh… TOML? I don’t know, but as a programmer, a geek, the new syntax seems better to adapt to.&lt;/p&gt;
-
-&lt;p&gt;​	So, let’s take a look at the newest demos:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;
-Conky, a system monitor, based on torsmo
-
-Any original torsmo code is licensed under the BSD license
-
-All code written since the fork of torsmo is licensed under the GPL
-
-Please see COPYING &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;details
-
-Copyright &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 2004, Hannu Saransaari and Lauri Hakkarainen
-Copyright &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 2005-2019 Brenden Matthews, Philip Kovacs, et. al. &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;see AUTHORS&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-All rights reserved.
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;at your option&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; any later version.
-
-This program is distributed &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;the hope that it will be useful,
-but WITHOUT ANY WARRANTY&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;more details.
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see &amp;lt;http://www.gnu.org/licenses/&amp;gt;.
-&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
-
-conky.config &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    alignment &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'top_left'&lt;/span&gt;,
-    background &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
-    border_width &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1,
-    cpu_avg_samples &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2,
-    default_color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'white'&lt;/span&gt;,
-    default_outline_color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'white'&lt;/span&gt;,
-    default_shade_color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'white'&lt;/span&gt;,
-    double_buffer &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
-    draw_borders &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
-    draw_graph_borders &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
-    draw_outline &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
-    draw_shades &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
-    extra_newline &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
-    font &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'DejaVu Sans Mono:size=12'&lt;/span&gt;,
-    gap_x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 60,
-    gap_y &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 60,
-    minimum_height &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 5,
-    minimum_width &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 5,
-    net_avg_samples &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 2,
-    no_buffers &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
-    out_to_console &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
-    out_to_ncurses &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
-    out_to_stderr &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
-    out_to_x &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
-    own_window &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
-    own_window_class &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Conky'&lt;/span&gt;,
-    own_window_type &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'desktop'&lt;/span&gt;,
-    show_graph_range &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
-    show_graph_scale &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
-    stippled_borders &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 0,
-    update_interval &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 1.0,
-    uppercase &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
-    use_spacer &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'none'&lt;/span&gt;,
-    use_xft &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;,
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-conky.text &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Info:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;scroll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 32 Conky &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$conky_version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; - &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sysname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$nodename&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$kernel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$machine&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$hr&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Uptime:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$uptime&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Frequency &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;MHz&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$freq&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Frequency &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;GHz&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$freq_g&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;RAM Usage:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$mem&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$memmax&lt;/span&gt; - &lt;span class=&quot;nv&quot;&gt;$memperc&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;membar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Swap Usage:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$swap&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$swapmax&lt;/span&gt; - &lt;span class=&quot;nv&quot;&gt;$swapperc&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;swapbar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;CPU Usage:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$cpu&lt;/span&gt;% &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;cpubar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Processes:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$processes&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Running:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$running_processes&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$hr&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;File systems:
- / &lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fs_used&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; /&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fs_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; /&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fs_bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; 6 /&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Networking:
-Up:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;upspeed&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; - Down:&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;downspeed&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;$hr&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; grey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;Name              PID     CPU%   MEM%
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; lightgrey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; pid 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; lightgrey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; pid 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 2&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; lightgrey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; pid 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 3&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; lightgrey&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; name 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; pid 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; cpu 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt; mem 4&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;​	It looks like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/852504/50325033-1089e480-04a8-11e9-8963-f64cb3d0003b.png&quot; alt=&quot;Default configs&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;​	Yes, inside the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--[[&lt;/code&gt;and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;]]&lt;/code&gt; is the comments. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conky.config = {&lt;/code&gt; marks the beginning of the config part and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;}&lt;/code&gt; means the end.&lt;/p&gt;
-
-&lt;p&gt;different types of variable such as “number”, characters(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'char'&lt;/code&gt;), boolean(true &amp;amp; false) will be assigned to the properties which is to the left of the equal sign, just like most program languages. Of course, inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conky.text = [[&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;]]&lt;/code&gt;, you could customize your conky’s appearance and looks, you don’t need to change a lot even though syntax updated.&lt;/p&gt;
-
-&lt;h2 id=&quot;my-conkyrc&quot;&gt;My &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.conkyrc&lt;/code&gt;&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;​	It’s easy to update the own configure file, mine works well now: &lt;a href=&quot;/assets/img/blog/new-conky/updated-conkyrc.zip&quot;&gt;.conkyrc&lt;/a&gt;. Screenshots goes here: [Conky&lt;/td&gt;
-      &lt;td&gt;Awesome system monitor for Linux](https://theodorecooper.github.io/2021-conky/).&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;more--wiki&quot;&gt;More – Wiki&lt;/h2&gt;
-
-&lt;p&gt;​	More options and tutorial here: &lt;a href=&quot;https://github.com/brndnmtthws/conky/wiki/&quot;&gt;Conky Wiki(Github)&lt;/a&gt;.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Beautify" /><category term="Linux" /><category term="Beautify" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://user-images.githubusercontent.com/852504/50325033-1089e480-04a8-11e9-8963-f64cb3d0003b.png" /><media:content medium="image" url="https://user-images.githubusercontent.com/852504/50325033-1089e480-04a8-11e9-8963-f64cb3d0003b.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;​	(Some routers have functions to bind MAC address too.)&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Pentest" /><category term="Linux" /><category term="Pentest" /><category term="Linux" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/arp-spoofing/arpspoofing.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/arp-spoofing/arpspoofing.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

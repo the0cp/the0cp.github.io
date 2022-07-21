@@ -1,0 +1,12 @@
+{
+  "lang": "en-us",
+  "name": "Theodore Cooper",
+  "short_name": "Theodore Cooper",
+  "description": "It’s a freak geek’s silly site. Theodore Cooper.",
+  "start_url": "/?utm_source=homescreen",
+  "theme_color": "rgb(8,46,57)",
+  "background_color": "#fff",
+  "orientation": "portrait",
+  "display": "minimal-ui",
+  "scope": "/"
+}

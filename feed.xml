@@ -1,5 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://the0cp.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://the0cp.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2023-03-07T20:47:23-05:00</updated><id>https://the0cp.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site. Theodore Cooper.
-</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">How to set a proxy for CMD/Powershell/Terminal/Git</title><link href="https://the0cp.github.io/other/2022-cmd-proxy/" rel="alternate" type="text/html" title="How to set a proxy for CMD/Powershell/Terminal/Git" /><published>2022-07-22T00:00:00-04:00</published><updated>2023-03-07T18:22:11-05:00</updated><id>https://the0cp.github.io/other/cmd-proxy</id><content type="html" xml:base="https://the0cp.github.io/other/2022-cmd-proxy/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-us"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://the0cp.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://the0cp.github.io/" rel="alternate" type="text/html" hreflang="en-us" /><updated>2023-04-15T15:27:01-04:00</updated><id>https://the0cp.github.io/feed.xml</id><title type="html">Theodore Cooper</title><subtitle>It's a freak geek's silly site. Theodore Cooper.
+</subtitle><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><entry><title type="html">How to Fix an ERR_NAME_NOT_RESOLVED Error in Google Chrome</title><link href="https://the0cp.github.io/other/2023-chrome-dns/" rel="alternate" type="text/html" title="How to Fix an ERR_NAME_NOT_RESOLVED Error in Google Chrome" /><published>2023-04-15T00:00:00-04:00</published><updated>2023-04-15T15:24:55-04:00</updated><id>https://the0cp.github.io/other/chrome-dns</id><content type="html" xml:base="https://the0cp.github.io/other/2023-chrome-dns/">&lt;hr /&gt;
+
+&lt;p&gt;When trying to open a website, I got an error &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ERR_NAME_NOT_RESOLVED&lt;/code&gt; in the browser and thus having no access to the web page. This error can happen for several reasons.
+If the browser cannot resolve the domain name, you’ll get a DNS domain name resolution error. In Google Chrome, you’ll see an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ERR_NAME_NOT_RESOLVED&lt;/code&gt; error message displayed on your screen when that happens.&lt;/p&gt;
+
+&lt;h2 id=&quot;solutions&quot;&gt;Solutions&lt;/h2&gt;
+
+&lt;h3 id=&quot;clear-browsing-data&quot;&gt;Clear Browsing Data&lt;/h3&gt;
+
+&lt;p&gt;Cookies may block your Internet DNS, then leads to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ERR_NAME_NOT_RESOLVED&lt;/code&gt; error. Use the shortcut &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + Shift + Delete&lt;/code&gt; or visit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chrome://settings/clearBrowserData&lt;/code&gt; and then clear the data.&lt;/p&gt;
+
+&lt;h3 id=&quot;clear-dns-cache&quot;&gt;Clear DNS Cache&lt;/h3&gt;
+
+&lt;p&gt;Visit &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chrome://net-internals/#dns&lt;/code&gt; and clear the Chrome DNS cache.&lt;/p&gt;
+
+&lt;p&gt;Use following commands to flush system DNS.&lt;/p&gt;
+
+&lt;h4 id=&quot;flush-dns---windows&quot;&gt;Flush DNS - Windows&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pconfig /flushdns
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If it doesn’t work, try these:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ipconfig /renew
+ipconfig /registerdns
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;flush-dns---linux&quot;&gt;Flush DNS - Linux&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;resolvectl flush-caches
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Check the DNS cache statistics:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;resolvectl statistics
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;flush-dns---macos&quot;&gt;Flush DNS - MacOS&lt;/h4&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;dscacheutil &lt;span class=&quot;nt&quot;&gt;-flushcache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;killall &lt;span class=&quot;nt&quot;&gt;-HUP&lt;/span&gt; mDNSResponder   &lt;span class=&quot;c&quot;&gt;# El Capitan and newer&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;killall &lt;span class=&quot;nt&quot;&gt;-HUP&lt;/span&gt; mDNSResponder    &lt;span class=&quot;c&quot;&gt;# Yosemite&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;dscacheutil &lt;span class=&quot;nt&quot;&gt;-flushcache&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# Lion, Mountain Lion, and Mavericks&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;lookupd &lt;span class=&quot;nt&quot;&gt;-flushcache&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# Snow Leopard&lt;/span&gt;
+lookupd &lt;span class=&quot;nt&quot;&gt;-flushcache&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# Tiger&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;check-net-firewalls&quot;&gt;Check Net Firewalls&lt;/h3&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Other" /><category term="Other" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://the0cp.github.io/assets/img/blog/chrome-dns/cover.png" /><media:content medium="image" url="https://the0cp.github.io/assets/img/blog/chrome-dns/cover.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to set a proxy for CMD/Powershell/Terminal/Git</title><link href="https://the0cp.github.io/other/2022-cmd-proxy/" rel="alternate" type="text/html" title="How to set a proxy for CMD/Powershell/Terminal/Git" /><published>2022-07-22T00:00:00-04:00</published><updated>2023-03-07T18:22:11-05:00</updated><id>https://the0cp.github.io/other/cmd-proxy</id><content type="html" xml:base="https://the0cp.github.io/other/2022-cmd-proxy/">&lt;hr /&gt;
 
 &lt;h2 id=&quot;set-for-cmd&quot;&gt;Set for CMD&lt;/h2&gt;
 
@@ -1057,217 +1104,4 @@ Too much clients freeze or reset some APs.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$sudo&lt;/span&gt; mdk3 wlan0mon d &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; 11 	&lt;span class=&quot;c&quot;&gt;#launch an attack against channel 11&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Pentest" /><category term="Linux" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://the0cp.github.io/assets/img/blog/mdk3/mdk3-cover.jpeg" /><media:content medium="image" url="https://the0cp.github.io/assets/img/blog/mdk3/mdk3-cover.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Is Telegram really anonymous &amp;amp; “focus on privacy” as it advertises? IM software comparison</title><link href="https://the0cp.github.io/others/pentest/2021-telegram/" rel="alternate" type="text/html" title="Is Telegram really anonymous &amp;amp; “focus on privacy” as it advertises? IM software comparison" /><published>2021-09-21T00:00:00-04:00</published><updated>2021-11-20T04:06:52-05:00</updated><id>https://the0cp.github.io/others/pentest/telegram</id><content type="html" xml:base="https://the0cp.github.io/others/pentest/2021-telegram/">&lt;hr /&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Now, more and more people wants to be &lt;strong&gt;anonymous&lt;/strong&gt;. The anonymity in everyday life enables people to be free to do many worthwhile things without feeling inhibited. Telegram, an IM known as &lt;em&gt;“focus on security and privacy”&lt;/em&gt;, is chosen. 
-But, does Telegram really &lt;em&gt;“focus on security and privacy”&lt;/em&gt; as it advertises? 
-Today, we’ll compare Telegram with other IM software. I’ll show you different softwares’ advantage and disadvantage, and help you decide which one to choose.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-im&quot;&gt;What is IM?&lt;/h2&gt;
-&lt;p&gt;Instant messaging (&lt;strong&gt;IM&lt;/strong&gt;) technology is a type of online chat allowing real-time text transmission over the Internet or another computer network. 
-Some example of IM:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;WhatsApp&lt;/li&gt;
-  &lt;li&gt;Slack&lt;/li&gt;
-  &lt;li&gt;Jabber&lt;/li&gt;
-  &lt;li&gt;Spark&lt;/li&gt;
-  &lt;li&gt;Telegram&lt;/li&gt;
-  &lt;li&gt;Signal&lt;/li&gt;
-  &lt;li&gt;. . .&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;about-telegram&quot;&gt;About Telegram&lt;/h2&gt;
-
-&lt;h3 id=&quot;what-is-telegram&quot;&gt;What is Telegram?&lt;/h3&gt;
-&lt;p&gt;Copied from Wikipedia😝:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Telegram is a free and open source, cross-platform, cloud-based instant messaging (IM) software. This service also provides end-to-end encrypted video calling, VoIP, file sharing and several other features.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;advantages-of-telegram&quot;&gt;Advantages of Telegram&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Telegram provides end-to-end encrypted voice and video calls and optional end-to-end encrypted “secret” chats. Cloud chats and groups are encrypted between the app and the server, so that ISPs and other third-parties on the network can’t access data, but the Telegram server can. Users can send text and voice messages, make voice and video calls, and share an unlimited number of images, documents (2 GB per file), user locations, animated stickers, contacts, and audio files.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Easy to use, user-friendly&lt;/li&gt;
-  &lt;li&gt;Nice User Interface&lt;/li&gt;
-  &lt;li&gt;Cross-platform(Windows, Android, iOS, OSX, Linux…)&lt;/li&gt;
-  &lt;li&gt;Support setting chat records to be destroyed regularly&lt;/li&gt;
-  &lt;li&gt;Support  deleting account, after deleting the account, all related information will be destroyed at the same time&lt;/li&gt;
-  &lt;li&gt;Free, non-profit, never sell advertisements, never accept external investment&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;disadvantages-of-telegram&quot;&gt;Disadvantages of Telegram&lt;/h3&gt;
-&lt;p&gt;Well, no data will be collected while using Telegram, end-to-end encryption is one hundred percent safe, but it doesn’t mean that &lt;em&gt;Telegram&lt;/em&gt; is anoymous.
-In fact, Telegram has no &lt;strong&gt;anonymity&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;1-bind-phone-number&quot;&gt;1. Bind phone number&lt;/h4&gt;
-&lt;p&gt;Any network tool that needs to be bound to a mobile phone (whether it is IM or email) will greatly reduce your invisibility.
-AnyoneGet contacts automatically once owns the phone number has the complete control over the Telegram account. I will talk about the issue of mobile phone number and anonymity below.
-Anyway, &lt;em&gt;be sure to have control over the bound mobile phone number!&lt;/em&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;2-get-contactscan-be-solved&quot;&gt;2. Get contacts[can be solved]&lt;/h4&gt;
-&lt;p&gt;Telegram will scan your phone coanonymityntact and import numbers from it.
-&lt;strong&gt;Your can disable this function however.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;3-last-seen-timecan-be-solved&quot;&gt;3. Last seen time[can be solved]&lt;/h4&gt;
-&lt;p&gt;Telegram will show your “Last seen time” defaultly, it may affect anonymity.
-So, it’s neccessary to set “Do not show last seen time” in Telegram. In some groups, Telegram will show accounts which is typing, there’s also a way to avoid this. Put your full name into line editor “Last Name” and leave a space in “FIrst Name”. Then your typing state won’t be shown.&lt;/p&gt;
-
-&lt;h2 id=&quot;about-phone-numbers&quot;&gt;About phone numbers&lt;/h2&gt;
-
-&lt;h3 id=&quot;physical-sim-cards&quot;&gt;Physical SIM cards&lt;/h3&gt;
-&lt;p&gt;In some countries, you’ll need to offer your true identity to get a SIM card. Obviously, it’s quite hard to keep anonymous with a physical SIM card.&lt;/p&gt;
-
-&lt;h3 id=&quot;voip&quot;&gt;VoIP&lt;/h3&gt;
-&lt;p&gt;Free VoIPs are hard to get, and many of them have short avalible time. 
-Moreover, using VoIP will have the risk of being deleted in Telegram(Deleted Account).&lt;/p&gt;
-
-&lt;h2 id=&quot;other-ims&quot;&gt;Other IMs&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/whatsapp.jpeg&quot; alt=&quot;WhatsApp&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;whatsapp&quot;&gt;WhatsApp:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;[✔️] User-friendly&lt;/li&gt;
-  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
-  &lt;li&gt;[❓] Safety.&lt;/li&gt;
-  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
-  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/signal.png&quot; alt=&quot;Signal&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;signal&quot;&gt;Signal:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
-  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
-  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
-  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
-  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/element.png&quot; alt=&quot;Element&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;elementriot&quot;&gt;Element(Riot):&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;[✔️] User-friendly&lt;/li&gt;
-  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
-  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
-  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
-  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/wire.jpeg&quot; alt=&quot;Wire&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;wire&quot;&gt;Wire:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
-  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
-  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
-  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
-  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/discord.png&quot; alt=&quot;Discord&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;discord&quot;&gt;Discord:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;[✔️] User-friendly&lt;/li&gt;
-  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
-  &lt;li&gt;[❓] Safety.&lt;/li&gt;
-  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
-  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/wechat.jpeg&quot; alt=&quot;Wechat&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;wechat&quot;&gt;Wechat:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;[❓] User-friendly&lt;/li&gt;
-  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
-  &lt;li&gt;[❌] Safety.&lt;/li&gt;
-  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
-  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/messenger.png&quot; alt=&quot;Messenger&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;messenger&quot;&gt;Messenger:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;[❓] User-friendly&lt;/li&gt;
-  &lt;li&gt;[❌] Do not need to bind phone numbers.&lt;/li&gt;
-  &lt;li&gt;[❌] Safety.&lt;/li&gt;
-  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
-  &lt;li&gt;[✔️] Is it popular?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/tox.png&quot; alt=&quot;Tox&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;tox&quot;&gt;Tox:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
-  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
-  &lt;li&gt;[✔️] Do not need to bind email.&lt;/li&gt;
-  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
-  &lt;li&gt;[✔️] Anonymity.&lt;/li&gt;
-  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;bitmessage&quot;&gt;BitMessage:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
-  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
-  &lt;li&gt;[✔️] Do not need to bind email.&lt;/li&gt;
-  &lt;li&gt;[✔️] Safety.&lt;/li&gt;
-  &lt;li&gt;[✔️] Anonymity.&lt;/li&gt;
-  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/blog/telegram/bridgefy.png&quot; alt=&quot;Bridgefy&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;bridgefy&quot;&gt;Bridgefy:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;[❌] User-friendly&lt;/li&gt;
-  &lt;li&gt;[✔️] Do not need to bind phone numbers.&lt;/li&gt;
-  &lt;li&gt;[✔️] Do not need to bind email.&lt;/li&gt;
-  &lt;li&gt;[❌] Safety.&lt;/li&gt;
-  &lt;li&gt;[❌] Anonymity.&lt;/li&gt;
-  &lt;li&gt;[❌] Is it popular?&lt;/li&gt;
-  &lt;li&gt;[✔️] Offline messaging.&lt;/li&gt;
-  &lt;li&gt;[❌ Only iOS &amp;amp; Android]Cross-platform&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;ideal-im&quot;&gt;Ideal IM…&lt;/h2&gt;
-
-&lt;p&gt;All the mentioned IMs have their own advantages and disadvantages, so what is the best one? My answer is: neither of them. Which one to choose depends on your own ideas. For me, Telegram is safe enough and user-friendly.&lt;/p&gt;
-
-&lt;h2 id=&quot;ps-tips-while-using-telegram&quot;&gt;PS: Tips while using Telegram&lt;/h2&gt;
-
-&lt;h3 id=&quot;1-set-passcode--face-id&quot;&gt;1. Set Passcode &amp;amp; Face ID&lt;/h3&gt;
-&lt;p&gt;To prevent others from peeking at the messages when the phone isn’t around.&lt;/p&gt;
-
-&lt;h3 id=&quot;2-two-step-verification&quot;&gt;2. Two-step verification&lt;/h3&gt;
-
-&lt;h3 id=&quot;3-privacy-settings&quot;&gt;3. Privacy Settings&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;No one can see my numbers&lt;/li&gt;
-  &lt;li&gt;No one can see my last seen time&lt;/li&gt;
-  &lt;li&gt;Only contact can see profile photos&lt;/li&gt;
-  &lt;li&gt;Only contact can call me&lt;/li&gt;
-  &lt;li&gt;Only contact can add me in a group&lt;/li&gt;
-  &lt;li&gt;Avoid using true numbers, use a VoIP instead&lt;/li&gt;
-  &lt;li&gt;Use proxy&lt;/li&gt;
-  &lt;li&gt;. . .&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Others" /><category term="Pentest" /><category term="Others" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://the0cp.github.io/assets/img/blog/telegram/telegram-cover.jpg" /><media:content medium="image" url="https://the0cp.github.io/assets/img/blog/telegram/telegram-cover.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Theodore Cooper</name><email>ccooperr2005@gmail.com</email></author><category term="Linux" /><category term="Pentest" /><category term="Linux" /><category term="Pentest" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://the0cp.github.io/assets/img/blog/mdk3/mdk3-cover.jpeg" /><media:content medium="image" url="https://the0cp.github.io/assets/img/blog/mdk3/mdk3-cover.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

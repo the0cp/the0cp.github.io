@@ -1,0 +1,149 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://the0cp.github.io/</id>
+  <title>Blog | the0cp</title>
+  <subtitle>It's a freak geek's silly site.</subtitle>
+  <updated>2024-11-08T23:47:34+08:00</updated>
+  <author>
+    <name>Theodore Cooper</name>
+    <uri>https://the0cp.github.io/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="https://the0cp.github.io/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="https://the0cp.github.io/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
+  <rights> © 2024 Theodore Cooper </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Perform selective jamming of Wi-Fi networks and clients with mdk3(DoS attack on APs/clients)</title>
+    <link href="https://the0cp.github.io/posts/mdk3/" rel="alternate" type="text/html" title="Perform selective jamming of Wi-Fi networks and clients with mdk3(DoS attack on APs/clients)" />
+    <published>2021-11-20T00:00:00+08:00</published>
+  
+    <updated>2021-11-20T00:00:00+08:00</updated>
+  
+    <id>https://the0cp.github.io/posts/mdk3/</id>
+    <content type="text/html" src="https://the0cp.github.io/posts/mdk3/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Linux" />
+    
+    <category term="Pentest" />
+    
+  
+
+  <summary>*mdk3* is used for **stress testing 802.11 networks(wifi)**. It consists of various methods by which we can perform tests. Some of major method sare beacon flooding, deauthentication, WPA-dos etc...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Is Telegram really anonymous &amp; "focus on privacy" as it advertises? IM software comparison</title>
+    <link href="https://the0cp.github.io/posts/telegram/" rel="alternate" type="text/html" title="Is Telegram really anonymous &amp;amp; &amp;quot;focus on privacy&amp;quot; as it advertises? IM software comparison" />
+    <published>2021-09-21T00:00:00+08:00</published>
+  
+    <updated>2021-09-21T00:00:00+08:00</updated>
+  
+    <id>https://the0cp.github.io/posts/telegram/</id>
+    <content type="text/html" src="https://the0cp.github.io/posts/telegram/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Others" />
+    
+    <category term="Pentest" />
+    
+  
+
+  <summary>Now, more and more people wants to be anonymous. Telegram, an IM known as *&amp;quot;focus on security and privacy&amp;quot;*, is chosen. But, does Telegram really &amp;quot;focus on security and privacy&amp;quot; as it advertises? After comparing Telegram with other IM software. I&amp;#39;ll show you different softwares&amp;#39; advantages and disadvantages, and help you decide which one to choose.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Collection of the best &amp; most popular DDos-attack tools</title>
+    <link href="https://the0cp.github.io/posts/ddos-tools/" rel="alternate" type="text/html" title="Collection of the best &amp;amp; most popular DDos-attack tools" />
+    <published>2021-08-10T00:00:00+08:00</published>
+  
+    <updated>2021-08-10T00:00:00+08:00</updated>
+  
+    <id>https://the0cp.github.io/posts/ddos-tools/</id>
+    <content type="text/html" src="https://the0cp.github.io/posts/ddos-tools/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Pentest" />
+    
+  
+
+  <summary>We collected several best or most popular DDos Tools for DDos testings.The collection will keep updating, adding new tools &amp;amp; tutorials. Please Follow/Watch/Star to get the latest updating.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Solve Qt: libpng warning: iCCP: known incorrect sRGB profile</title>
+    <link href="https://the0cp.github.io/posts/qt-libpng-warning/" rel="alternate" type="text/html" title="Solve Qt: libpng warning: iCCP: known incorrect sRGB profile" />
+    <published>2021-07-26T00:00:00+08:00</published>
+  
+    <updated>2021-07-26T00:00:00+08:00</updated>
+  
+    <id>https://the0cp.github.io/posts/qt-libpng-warning/</id>
+    <content type="text/html" src="https://the0cp.github.io/posts/qt-libpng-warning/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Qt" />
+    
+  
+
+  <summary>libpng is more stringent about checking ICC profiles than previous versions. In Qt, if you use certain formats of PNG images, you may get a warning &amp;#39;libpng warning: iCCP: known incorrect sRGB profile&amp;#39;, though this will not affect the compilation.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Run a CMD command in Qt without displaying the CMD window</title>
+    <link href="https://the0cp.github.io/posts/qtcmd/" rel="alternate" type="text/html" title="Run a CMD command in Qt without displaying the CMD window" />
+    <published>2021-06-25T00:00:00+08:00</published>
+  
+    <updated>2021-06-25T00:00:00+08:00</updated>
+  
+    <id>https://the0cp.github.io/posts/qtcmd/</id>
+    <content type="text/html" src="https://the0cp.github.io/posts/qtcmd/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Qt" />
+    
+    <category term="C/C++" />
+    
+  
+
+  <summary>It&amp;#39;s necessary to execute system commands sometime. system() is the most basic, it&amp;#39;s easy but cannot hide the black command line window, its options are not much enough. Here&amp;#39;re some better ways.</summary>
+
+  </entry>
+
+</feed>
+
+

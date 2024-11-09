@@ -4,7 +4,7 @@
   <id>https://the0cp.github.io/</id>
   <title>Blog | the0cp</title>
   <subtitle>It's a freak geek's silly site.</subtitle>
-  <updated>2024-11-09T11:28:50+09:00</updated>
+  <updated>2024-11-09T13:23:41+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.github.io/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Bypass the Network Authentication with DNS Tunnelling</title>
+    <link href="https://the0cp.github.io/posts/dns/" rel="alternate" type="text/html" title="Bypass the Network Authentication with DNS Tunnelling" />
+    <published>2024-11-09T00:00:00+09:00</published>
+  
+    <updated>2024-11-09T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.github.io/posts/dns/</id>
+    <content type="text/html" src="https://the0cp.github.io/posts/dns/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Linux" />
+    
+    <category term="Pentest" />
+    
+  
+
+  <summary>Data through port *53* is not intercepted, and the authentication system can be bypassed using the DNS channel.</summary>
+
+  </entry>
 
   
   <entry>
@@ -115,32 +141,6 @@
   
 
   <summary>libpng is more stringent about checking ICC profiles than previous versions. In Qt, if you use certain formats of PNG images, you may get a warning &amp;#39;libpng warning: iCCP: known incorrect sRGB profile&amp;#39;, though this will not affect the compilation.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Run a CMD command in Qt without displaying the CMD window</title>
-    <link href="https://the0cp.github.io/posts/qtcmd/" rel="alternate" type="text/html" title="Run a CMD command in Qt without displaying the CMD window" />
-    <published>2021-06-25T00:00:00+09:00</published>
-  
-    <updated>2021-06-25T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.github.io/posts/qtcmd/</id>
-    <content type="text/html" src="https://the0cp.github.io/posts/qtcmd/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Qt" />
-    
-    <category term="C/C++" />
-    
-  
-
-  <summary>It&amp;#39;s necessary to execute system commands sometime. system() is the most basic, it&amp;#39;s easy but cannot hide the black command line window, its options are not much enough. Here&amp;#39;re some better ways.</summary>
 
   </entry>
 

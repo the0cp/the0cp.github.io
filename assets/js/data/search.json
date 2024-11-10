@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "Create Virtual Serial Port in Linux",
+    "url": "/posts/vserial/",
+    "categories": "Linux, Python",
+    "tags": "Linux, Python",
+    "date": "2024-11-10 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Virtual serial ports are a logical representation of physical serial ports. These ports do not connect with the serial port. A virtual serial port allows us to emulate a physical serial port, there...",
+    "content": "Virtual serial ports are a logical representation of physical serial ports. These ports do not connect with the serial port. A virtual serial port allows us to emulate a physical serial port, thereby removing the requirements of cable and physical communication interface.Additionally, a virtual port allows software packages to communicate with internal memory using the null modem emulator. The null modem emulator is a virtual driver for Linux that enables virtual serial port communication.There are several ways to create a virtual serial port in Linux to test and debug serial communication protocols.socatInstallsocat is usually available by default, but we can still install it manually with apt-get or yum.#Debian-basedsudo apt-get install -y socat# RHEL-basedsudo yum install -y socatCreate Virtual Serial PortFor instance, to create two pseudo terminals with the debug mode on:$ socat -d -d pty,rawer,echo=0 pty,rawer,echo=0The -d -d option prints errors, fatals, warnings and notices. The two pty,rawer,echo=0 create two pseudo terminals under /dev/pts.PythonA python script can create virtual serial ports.Here’s a simple example:import ptyimport osimport select def mkpty():    master1, slave = pty.openpty()    slaveName1 = os.ttyname(slave)    master2, slave = pty.openpty()    slaveName2 = os.ttyname(slave)    print(\"\\ndevice names: \", slaveName1, slaveName2)    return master1, master2 if __name__ == \"__main__\":    master1, master2 = mkpty()    while True:        rl, wl, el = select.select([master1, master2], [], [], 1)        for master in rl:            data = os.read(master, 128)            print(\"read %d data.\" %len(data))            if master == master1:                os.write(master2, data)            else:                os.write(master1, data)"
+  },
+  
+  {
     "title": "Automatically build Aseprite with Github Actions",
     "url": "/posts/aseprite/",
     "categories": "Github, YAML",

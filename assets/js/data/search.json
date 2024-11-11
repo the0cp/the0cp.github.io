@@ -3,7 +3,7 @@
   {
     "title": "Create Virtual Serial Port in Linux",
     "url": "/posts/vserial/",
-    "categories": "Linux, Python",
+    "categories": "Linux",
     "tags": "Linux, Python",
     "date": "2024-11-10 00:00:00 +0900",
     
@@ -20,7 +20,7 @@
   {
     "title": "Automatically build Aseprite with Github Actions",
     "url": "/posts/aseprite/",
-    "categories": "Github, YAML",
+    "categories": "Github",
     "tags": "Github, YAML",
     "date": "2024-11-10 00:00:00 +0900",
     
@@ -37,7 +37,7 @@
   {
     "title": "Bypass the Network Authentication with DNS Tunnelling",
     "url": "/posts/dns/",
-    "categories": "Linux, Pentest",
+    "categories": "Pentest",
     "tags": "Linux, Pentest",
     "date": "2024-11-09 00:00:00 +0900",
     
@@ -54,7 +54,7 @@
   {
     "title": "Perform selective jamming of Wi-Fi networks and clients with mdk3(DoS attack on APs/clients)",
     "url": "/posts/mdk3/",
-    "categories": "Linux, Pentest",
+    "categories": "Pentest",
     "tags": "Linux, Pentest",
     "date": "2021-11-20 00:00:00 +0900",
     
@@ -71,7 +71,7 @@
   {
     "title": "Is Telegram really anonymous & \"focus on privacy\" as it advertises? IM software comparison",
     "url": "/posts/telegram/",
-    "categories": "Others, Pentest",
+    "categories": "Others",
     "tags": "Others, Pentest",
     "date": "2021-09-21 00:00:00 +0900",
     
@@ -122,7 +122,7 @@
   {
     "title": "Run a CMD command in Qt without displaying the CMD window",
     "url": "/posts/qtcmd/",
-    "categories": "Qt, C/C++",
+    "categories": "Qt",
     "tags": "Qt, C/C++",
     "date": "2021-06-25 00:00:00 +0900",
     
@@ -139,7 +139,7 @@
   {
     "title": "Penetration Testing | ARP Spoofing(Poisoning) in the internal network & How to prevent it",
     "url": "/posts/arp-spoofing/",
-    "categories": "Pentest, Linux",
+    "categories": "Pentest",
     "tags": "Pentest, Linux",
     "date": "2021-02-11 00:00:00 +0900",
     
@@ -156,7 +156,7 @@
   {
     "title": "Syntax Error | Conky syntax update",
     "url": "/posts/new-conky/",
-    "categories": "Linux, Beautify",
+    "categories": "Linux",
     "tags": "Linux, Beautify",
     "date": "2021-01-29 00:00:00 +0900",
     
@@ -173,7 +173,7 @@
   {
     "title": "Conky | Awesome system monitor for Linux",
     "url": "/posts/conky/",
-    "categories": "Linux, Beautify",
+    "categories": "Linux",
     "tags": "Linux, Beautify",
     "date": "2021-01-15 00:00:00 +0900",
     
@@ -241,7 +241,7 @@
   {
     "title": "C Tutorial -- Command Line Arguments",
     "url": "/posts/C-Tutorial-arg/",
-    "categories": "C/C++, Linux",
+    "categories": "C/C++",
     "tags": "C/C++, Linux",
     "date": "2020-12-26 00:00:00 +0900",
     
@@ -259,7 +259,7 @@
     "title": "Beginner's Guide to Search Engine Optimization (SEO)",
     "url": "/posts/seo/",
     "categories": "Blogging",
-    "tags": "blogging, hexo, seo",
+    "tags": "blogging, Hexo, SEO",
     "date": "2020-12-25 00:00:00 +0900",
     
 
@@ -275,8 +275,8 @@
   {
     "title": "Hexo | Speed up",
     "url": "/posts/hexo-speed-up/",
-    "categories": "",
-    "tags": "",
+    "categories": "Blogging",
+    "tags": "Blogging, Hexo",
     "date": "2020-12-18 00:00:00 +0900",
     
 
@@ -292,7 +292,7 @@
   {
     "title": "Linux, C | Bing Backgrounds Getter",
     "url": "/posts/linux-bingbg/",
-    "categories": "C/C++, Linux",
+    "categories": "C/C++",
     "tags": "C/C++, Linux",
     "date": "2020-11-29 00:00:00 +0900",
     
@@ -309,8 +309,8 @@
   {
     "title": "Windows, C++ | Bing Backgrounds Getter",
     "url": "/posts/bing-backgrounds/",
-    "categories": "C/C++, Qt",
-    "tags": "c, c++, qt, windows",
+    "categories": "Qt",
+    "tags": "C, C++, Qt, Windows",
     "date": "2020-11-28 20:33:00 +0900",
     
 

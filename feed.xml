@@ -4,7 +4,7 @@
   <id>https://the0cp.github.io/</id>
   <title>Blog | the0cp</title>
   <subtitle>It's a freak geek's silly site.</subtitle>
-  <updated>2024-11-11T20:56:45+09:00</updated>
+  <updated>2024-11-12T14:33:13+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.github.io/</uri>
@@ -92,8 +92,32 @@
 
   
   <entry>
-    <title>Perform selective jamming of Wi-Fi networks and clients with mdk3(DoS attack on APs/clients)</title>
-    <link href="https://the0cp.github.io/posts/mdk3/" rel="alternate" type="text/html" title="Perform selective jamming of Wi-Fi networks and clients with mdk3(DoS attack on APs/clients)" />
+    <title>Set proxy for CMD/Powershell/Terminal/Git</title>
+    <link href="https://the0cp.github.io/posts/proxy/" rel="alternate" type="text/html" title="Set proxy for CMD/Powershell/Terminal/Git" />
+    <published>2022-07-22T00:00:00+09:00</published>
+  
+    <updated>2022-07-22T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.github.io/posts/proxy/</id>
+    <content type="text/html" src="https://the0cp.github.io/posts/proxy/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Terminal" />
+    
+  
+
+  <summary>Set proxy for CMD/Powershell/Terminal/Git</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Perform selective jamming of Wi-Fi and clients with mdk3(DoS attack)</title>
+    <link href="https://the0cp.github.io/posts/mdk3/" rel="alternate" type="text/html" title="Perform selective jamming of Wi-Fi and clients with mdk3(DoS attack)" />
     <published>2021-11-20T00:00:00+09:00</published>
   
     <updated>2021-11-20T00:00:00+09:00</updated>
@@ -111,30 +135,6 @@
   
 
   <summary>*mdk3* is used for **stress testing 802.11 networks(wifi)**. It consists of various methods by which we can perform tests. Some of major method sare beacon flooding, deauthentication, WPA-dos etc...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Is Telegram really anonymous &amp; "focus on privacy" as it advertises? IM software comparison</title>
-    <link href="https://the0cp.github.io/posts/telegram/" rel="alternate" type="text/html" title="Is Telegram really anonymous &amp;amp; &amp;quot;focus on privacy&amp;quot; as it advertises? IM software comparison" />
-    <published>2021-09-21T00:00:00+09:00</published>
-  
-    <updated>2021-09-21T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.github.io/posts/telegram/</id>
-    <content type="text/html" src="https://the0cp.github.io/posts/telegram/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Others" />
-    
-  
-
-  <summary>Now, more and more people wants to be anonymous. Telegram, an IM known as *&amp;quot;focus on security and privacy&amp;quot;*, is chosen. But, does Telegram really &amp;quot;focus on security and privacy&amp;quot; as it advertises? After comparing Telegram with other IM software. I&amp;#39;ll show you different softwares&amp;#39; advantages and disadvantages, and help you decide which one to choose.</summary>
 
   </entry>
 

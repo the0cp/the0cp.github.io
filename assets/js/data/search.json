@@ -52,7 +52,24 @@
   },
   
   {
-    "title": "Perform selective jamming of Wi-Fi networks and clients with mdk3(DoS attack on APs/clients)",
+    "title": "Set proxy for CMD/Powershell/Terminal/Git",
+    "url": "/posts/proxy/",
+    "categories": "Terminal",
+    "tags": "Linux, Windows, Terminal, Powershell, git, cmd",
+    "date": "2022-07-22 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "CMDproxy_type=&lt;protcol&gt;://&lt;username&gt;:&lt;password&gt;@&lt;server&gt;:&lt;port&gt;For examples:set http_proxy=http://127.0.0.1:PORTset https_proxy=http://127.0.0.1:PORTset http_proxy=soc...",
+    "content": "CMDproxy_type=&lt;protcol&gt;://&lt;username&gt;:&lt;password&gt;@&lt;server&gt;:&lt;port&gt;For examples:set http_proxy=http://127.0.0.1:PORTset https_proxy=http://127.0.0.1:PORTset http_proxy=socks5://127.0.0.1:PORTset https_proxy=socks5://127.0.0.1:PORT# -v verbose (print errors/warnings while in event loop)# -vv very verbose (also print client commands/reponses)# -vvv extremely verbose (also print internal state transitions)# -k ignore the certificate checkTo clear the proxy:set http_proxy=set https_proxy=PowershellVery similar to cmd, here’s the examples:$Env:http_proxy=\"http://127.0.0.1:PORT\";$Env:https_proxy=\"http://127.0.0.1:PORT\";  Additionally, you can add these lines of command to the Powershell’s profile, the follow command will create and open a new profile. The commands in the profile file will run automatically when Powershell starts.if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }notepad $PROFILETerminalExamples:export http_proxy=\"http://127.0.0.1:PORT/\"export https_proxy=\"https://127.0.0.1:PORT/\"export http_proxy=\"socks5://127.0.0.1:PORT/\"export https_proxy=\"socks5://127.0.0.1:PORT/\"export all_proxy=\"socks5://127.0.0.1:PORT/\"  You can edit your ~./bashrc or ~/.zshrc to easily set proxy in terminals, as an example below:alias setproxy=\"export http_proxy=http://127.0.0.1:PORT/; export https_proxy=http://127.0.0.1:PORT/; echo 'Set proxy successfully'\"alias unsetproxy=\"unset http_proxy; unset https_proxy; echo 'Unset proxy successfully'\"source ~/.bashrc to take effect.Proxychains  Proxychains is a tool that forces any TCP connection made by any given application to follow through proxy like TOR or any other SOCKS4, SOCKS5 or HTTP(S) proxy.Proxychains-ng, the ng standing for next generation, is an enhanced iteration of the defunct proxychains project. It offers improved functionality and enhanced compatibility.Except in cases where proxychains is more suitable due to limitations, proxychains-ng is generally advised.InstallationProxychains-ng already comes pre-installed in most distributions. You can check by entering the command:proxychains4However Proxychains-ng isn’t installed on distributions like Ubuntu. You can install it with apt.sudo apt updatesudo apt install proxychains4You can install proxychains on Mac OS X with an homebrew. You have to download unofficial brew formula for proxychains4: https://gist.github.com/allenhuang/3792521.git clone git://gist.github.com/3792521.git gist-3792521brew install --HEAD gist-3792521/proxychains4_formula.rb# The default config file will be located in /usr/local/etc/proxychains.confbrew install proxychainsTo run current source code version:git clone https://github.com/haad/proxychains.gitcd proxychains# needs a working C compiler, preferably gcc./configuremakesudo make installConfigure ProxychainsOpen the proxychains configuration file using a text editor.sudo vi /etc/proxychains4.confAdd proxies to the bottom of the file (under [ProxyList]). Ensuring they are in the format of   . If you are using authentication, add these next  .  You can also configure how proxychains uses the list of proxies you’ve provided. These can be dynamic, strict, round-robin, or random chains.      Dynamic Chain: Attempt to use the proxies in the listed order. However, if one fails, it’ll skip it and move on to the next one.        Strict Chain: Every proxy is used in the listed order, from the first to the second, third, and so on. If one proxy fails, the entire connection fails.        Round-Robin Chain: The chained proxies are used circularly to distribute the connection amongst the provided proxies. Each connection request goes to the next one in the list, and once it reaches the end, it starts over again at the beginning.        Random Chain: Selects proxies for each connection in a random order. It does not use the proxies in order and provides a unique path through each listed proxy.  Use ProxychainsFor example, to use proxy with curl, you just need to enter the following command:proxychains4 curlGitSet globally:git config --global http.proxy http://127.0.0.1:PORTgit config --global https.proxy https://127.0.0.1:PORTgit config --global http.https://github.com.proxy socks5://127.0.0.1:PORTgit config --global https.https://github.com.proxy socks5://127.0.0.1:PORTOnly set for Github:git config --global http.https://github.com.proxy https://127.0.0.1:PORTgit config --global https.https://github.com.proxy https://127.0.0.1:PORTUnset proxy:git config --global --unset http.proxygit config --global --unset https.proxyCheck current proxy:git config --global -lYou can write your configurations into .gitconfig:vi ~/.gitconfig[http]proxy = socks5://127.0.0.1:PORTproxy = http://127.0.0.1:PORT [https]proxy = socks5://127.0.0.1:PORTproxy = https://127.0.0.1:PORTTo take effect:git config -l --global"
+  },
+  
+  {
+    "title": "Perform selective jamming of Wi-Fi and clients with mdk3(DoS attack)",
     "url": "/posts/mdk3/",
     "categories": "Pentest",
     "tags": "Linux, Pentest",
@@ -137,7 +154,7 @@
   },
   
   {
-    "title": "Penetration Testing | ARP Spoofing(Poisoning) in the internal network & How to prevent it",
+    "title": "Penetration Testing | ARP Spoofing(Poisoning) in the internal network",
     "url": "/posts/arp-spoofing/",
     "categories": "Pentest",
     "tags": "Pentest, Linux",
@@ -259,7 +276,7 @@
     "title": "Beginner's Guide to Search Engine Optimization (SEO)",
     "url": "/posts/seo/",
     "categories": "Blogging",
-    "tags": "blogging, Hexo, SEO",
+    "tags": "Blogging, Hexo, SEO",
     "date": "2020-12-25 00:00:00 +0900",
     
 
@@ -310,7 +327,7 @@
     "title": "Windows, C++ | Bing Backgrounds Getter",
     "url": "/posts/bing-backgrounds/",
     "categories": "Qt",
-    "tags": "C, C++, Qt, Windows",
+    "tags": "C/C++, Qt, Windows",
     "date": "2020-11-28 20:33:00 +0900",
     
 

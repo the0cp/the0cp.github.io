@@ -4,7 +4,7 @@
   <id>https://the0cp.github.io/</id>
   <title>Blog | the0cp</title>
   <subtitle>It's a freak geek's silly site.</subtitle>
-  <updated>2024-11-12T14:36:50+09:00</updated>
+  <updated>2024-11-15T16:28:40+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.github.io/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Auto Objection! Android Ace Attorney Simulator</title>
+    <link href="https://the0cp.github.io/posts/ace/" rel="alternate" type="text/html" title="Auto Objection! Android Ace Attorney Simulator" />
+    <published>2024-11-15T00:00:00+09:00</published>
+  
+    <updated>2024-11-15T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.github.io/posts/ace/</id>
+    <content type="text/html" src="https://the0cp.github.io/posts/ace/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Kotlin" />
+    
+  
+
+  <summary>Auto Objection! An Android Ace Attorney simulator. Place the phone flat on the table and knock the desktop.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Set proxy for CMD/Powershell/Terminal/Git</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Perform selective jamming of Wi-Fi and clients with mdk3(DoS attack)</title>
-    <link href="https://the0cp.github.io/posts/mdk3/" rel="alternate" type="text/html" title="Perform selective jamming of Wi-Fi and clients with mdk3(DoS attack)" />
-    <published>2021-11-20T00:00:00+09:00</published>
-  
-    <updated>2021-11-20T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.github.io/posts/mdk3/</id>
-    <content type="text/html" src="https://the0cp.github.io/posts/mdk3/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Pentest" />
-    
-  
-
-  <summary>*mdk3* is used for **stress testing 802.11 networks(wifi)**. It consists of various methods by which we can perform tests. Some of major method sare beacon flooding, deauthentication, WPA-dos etc...</summary>
 
   </entry>
 

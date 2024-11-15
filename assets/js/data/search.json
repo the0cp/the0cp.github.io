@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "Auto Objection! Android Ace Attorney Simulator",
+    "url": "/posts/ace/",
+    "categories": "Kotlin",
+    "tags": "Kotlin, Android",
+    "date": "2024-11-15 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Source Code: https://github.com/the0cp/objectionDownloadDownload the latest version(apk): https://github.com/the0cp/objection/releasesUsagePlace the phone flat on the table and knock the desktop, t...",
+    "content": "Source Code: https://github.com/the0cp/objectionDownloadDownload the latest version(apk): https://github.com/the0cp/objection/releasesUsagePlace the phone flat on the table and knock the desktop, the App will automatically pop-up the “Objection!” banner.Support Characters  Phoenix Wright  Apollo Justice  Miles Edgeworth  Dhurke Sahdmadhi  Ga’ran Sigatar Khura’in  Godot  Manfred von Karma  Franziska von Karma  Nahyuta Sahdmadhi  Mia Fey  Klavier Gavin  Athena Cykes  Simon Blackquill  Winston PayneSupport Languages  English  Japanese"
+  },
+  
+  {
     "title": "Create Virtual Serial Port in Linux",
     "url": "/posts/vserial/",
     "categories": "Linux",

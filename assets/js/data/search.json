@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "Open-source Thermal Control for Dell G-series",
+    "url": "/posts/dell/",
+    "categories": "Windows",
+    "tags": "Windows, Qt, Python",
+    "date": "2024-11-22 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "IntroductionAuthor: Alexander BlkThermal Control Center is an open-source alternative to AWCC for Dell G-series. It has a PyQt-based GUI for the WMI Dell thermal control interface.AWCC - “Alienware...",
+    "content": "IntroductionAuthor: Alexander BlkThermal Control Center is an open-source alternative to AWCC for Dell G-series. It has a PyQt-based GUI for the WMI Dell thermal control interface.AWCC - “Alienware Control Center” is an app for thermal control that Dell ships with their G-series notebooks.Target PlatformOS: Windows 10/11.Supported models:  Dell G15: 5511, 5515, 5520, 5525, 5530, 5535  Dell Alienware m16 R1  Dell G3 3590May also work on other Dell G15 / Alienware laptops.DownloadSource code: https://github.com/the0cp/tcc-g15Release(.exe): https://github.com/AlexIII/tcc-g15/releases  Liked the app? Don’t forget to leave the project a star ⭐What It Can Do  ✔️ Switch thermal mode between G-mode, Balanced, and Custom  ✔️ Show GPU/CPU temperature and fan speed  ✔️ Semi-manual fan speed control  ✔️ Option to automatically enable G-mode when GPU/CPU temperature reaches critical  ✔️ Support for keyboard G-mode hotkeyWhy AWCC is BAD  ❌ AWCC has no in-program option to enable/disable G-mode  ❌ AWCC manual fan control is broken at this moment  ❌ AWCC is a bulky, slow, and visually noisy app that can’t even handle basic functions  ❌ AWCC is spying on you  ❌ AWCC sometimes randomly crashes and throws crash reportsIf this alternative works out for you, you can safely remove from your PC:  Alieanware CC Components  Alieanware Command Center Suite  Alieanware OC ControlsRun from the Sourcepython3 -m pip install -r ./requirements.txtpython3 src\\tcc-g15.pyContributeOpen Pull Requests: https://github.com/the0cp/tcc-g15/pullsReport the problem by opening an issue"
+  },
+  
+  {
     "title": "Auto Objection! Android Ace Attorney Simulator",
     "url": "/posts/ace/",
     "categories": "Kotlin",

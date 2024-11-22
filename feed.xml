@@ -4,7 +4,7 @@
   <id>https://the0cp.github.io/</id>
   <title>Blog | the0cp</title>
   <subtitle>It's a freak geek's silly site.</subtitle>
-  <updated>2024-11-17T13:04:52+09:00</updated>
+  <updated>2024-11-22T22:27:06+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.github.io/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Open-source Thermal Control for Dell G-series</title>
+    <link href="https://the0cp.github.io/posts/dell/" rel="alternate" type="text/html" title="Open-source Thermal Control for Dell G-series" />
+    <published>2024-11-22T00:00:00+09:00</published>
+  
+    <updated>2024-11-22T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.github.io/posts/dell/</id>
+    <content type="text/html" src="https://the0cp.github.io/posts/dell/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Windows" />
+    
+  
+
+  <summary>Open-source alternative to AWCC for Dell G-series servers.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Data through port *53* is not intercepted, and the authentication system can be bypassed using the DNS channel.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Set proxy for CMD/Powershell/Terminal/Git</title>
-    <link href="https://the0cp.github.io/posts/proxy/" rel="alternate" type="text/html" title="Set proxy for CMD/Powershell/Terminal/Git" />
-    <published>2022-07-22T00:00:00+09:00</published>
-  
-    <updated>2022-07-22T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.github.io/posts/proxy/</id>
-    <content type="text/html" src="https://the0cp.github.io/posts/proxy/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Terminal" />
-    
-  
-
-  <summary>Set proxy for CMD/Powershell/Terminal/Git</summary>
 
   </entry>
 

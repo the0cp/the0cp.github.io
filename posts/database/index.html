@@ -750,6 +750,69 @@
     <!-- combine -->
     
   
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
 
   
 
@@ -955,6 +1018,17 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -962,6 +1036,49 @@
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -1072,9 +1189,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="3964 words"
+  title="4235 words"
 >
-  <em>22 min</em> read</span>
+  <em>23 min</em> read</span>
 
         </div>
       </div>
@@ -1199,7 +1316,9 @@ Maintains an <code class="language-plaintext highlighter-rouge">internal_t</code
 22
 23
 24
-</pre></td><td class="rouge-code"><pre><span class="kt">void</span> <span class="n">BPlusTree</span><span class="o">::</span><span class="n">initEmpty</span><span class="p">(){</span>
+25
+</pre></td><td class="rouge-code"><pre><span class="c1">// bplus.cpp</span>
+<span class="kt">void</span> <span class="n">BPlusTree</span><span class="o">::</span><span class="n">initEmpty</span><span class="p">(){</span>
     <span class="c1">// init meta</span>
     <span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">meta</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">meta_t</span><span class="p">));</span>
     <span class="n">meta</span><span class="p">.</span><span class="n">order</span> <span class="o">=</span> <span class="n">BPLUS_ORDER</span><span class="p">;</span>
@@ -1317,7 +1436,9 @@ Maintains an <code class="language-plaintext highlighter-rouge">internal_t</code
 81
 82
 83
-</pre></td><td class="rouge-code"><pre><span class="kt">off_t</span> <span class="n">BPlusTree</span><span class="o">::</span><span class="n">searchIndex</span><span class="p">(</span><span class="k">const</span> <span class="n">key_t</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">)</span> <span class="k">const</span><span class="p">{</span>
+84
+</pre></td><td class="rouge-code"><pre><span class="c1">// bplus.cpp</span>
+<span class="kt">off_t</span> <span class="n">BPlusTree</span><span class="o">::</span><span class="n">searchIndex</span><span class="p">(</span><span class="k">const</span> <span class="n">key_t</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">)</span> <span class="k">const</span><span class="p">{</span>
     <span class="kt">off_t</span> <span class="n">index</span> <span class="o">=</span> <span class="n">meta</span><span class="p">.</span><span class="n">root_offset</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">height</span> <span class="o">=</span> <span class="n">meta</span><span class="p">.</span><span class="n">height</span><span class="p">;</span>
     <span class="k">while</span><span class="p">(</span><span class="n">height</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">){</span>
@@ -1416,7 +1537,9 @@ Map the searched <code class="language-plaintext highlighter-rouge">index</code>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="kt">off_t</span> <span class="nf">searchLeaf</span><span class="p">(</span><span class="k">const</span> <span class="n">key_t</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">)</span> <span class="k">const</span><span class="p">{</span>
+4
+</pre></td><td class="rouge-code"><pre><span class="c1">// include/bplus.h</span>
+<span class="kt">off_t</span> <span class="nf">searchLeaf</span><span class="p">(</span><span class="k">const</span> <span class="n">key_t</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">)</span> <span class="k">const</span><span class="p">{</span>
     <span class="k">return</span> <span class="n">searchLeaf</span><span class="p">(</span><span class="n">searchIndex</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">key</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
@@ -1554,7 +1677,9 @@ Map the searched <code class="language-plaintext highlighter-rouge">index</code>
 112
 113
 114
-</pre></td><td class="rouge-code"><pre><span class="kt">void</span> <span class="n">BPlusTree</span><span class="o">::</span><span class="n">insertRecNoSplit</span><span class="p">(</span><span class="n">leaf_t</span> <span class="o">*</span><span class="n">leaf</span><span class="p">,</span> <span class="k">const</span> <span class="n">key_t</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">value_t</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">){</span>
+115
+</pre></td><td class="rouge-code"><pre><span class="c1">// bplus.cpp</span>
+<span class="kt">void</span> <span class="n">BPlusTree</span><span class="o">::</span><span class="n">insertRecNoSplit</span><span class="p">(</span><span class="n">leaf_t</span> <span class="o">*</span><span class="n">leaf</span><span class="p">,</span> <span class="k">const</span> <span class="n">key_t</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="k">const</span> <span class="n">value_t</span><span class="o">&amp;</span> <span class="n">value</span><span class="p">){</span>
     <span class="n">record_t</span> <span class="o">*</span><span class="n">where</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">upper_bound</span><span class="p">(</span><span class="n">begin</span><span class="p">(</span><span class="o">*</span><span class="n">leaf</span><span class="p">),</span> <span class="n">end</span><span class="p">(</span><span class="o">*</span><span class="n">leaf</span><span class="p">),</span> <span class="n">key</span><span class="p">);</span>
     <span class="n">std</span><span class="o">::</span><span class="n">copy_backward</span><span class="p">(</span><span class="n">where</span><span class="p">,</span> <span class="n">end</span><span class="p">(</span><span class="o">*</span><span class="n">leaf</span><span class="p">),</span> <span class="n">end</span><span class="p">(</span><span class="o">*</span><span class="n">leaf</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
     <span class="n">where</span> <span class="o">-&gt;</span> <span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;</span>
@@ -1813,7 +1938,9 @@ Map the searched <code class="language-plaintext highlighter-rouge">index</code>
 120
 121
 122
-</pre></td><td class="rouge-code"><pre><span class="kt">void</span> <span class="n">BPlusTree</span><span class="o">::</span><span class="n">removeNode</span><span class="p">(</span><span class="n">T</span> <span class="o">*</span><span class="n">prev</span><span class="p">,</span> <span class="n">T</span> <span class="o">*</span><span class="n">node</span><span class="p">){</span>
+123
+</pre></td><td class="rouge-code"><pre><span class="c1">// bplus.cpp</span>
+<span class="kt">void</span> <span class="n">BPlusTree</span><span class="o">::</span><span class="n">removeNode</span><span class="p">(</span><span class="n">T</span> <span class="o">*</span><span class="n">prev</span><span class="p">,</span> <span class="n">T</span> <span class="o">*</span><span class="n">node</span><span class="p">){</span>
     <span class="n">unalloc</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">prev</span> <span class="o">-&gt;</span> <span class="n">next</span><span class="p">);</span>
     <span class="n">prev</span> <span class="o">-&gt;</span> <span class="n">next</span> <span class="o">=</span> <span class="n">node</span> <span class="o">-&gt;</span> <span class="n">next</span><span class="p">;</span>
     <span class="k">if</span><span class="p">(</span><span class="n">node</span> <span class="o">-&gt;</span> <span class="n">next</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">){</span>
@@ -1965,7 +2092,9 @@ Map the searched <code class="language-plaintext highlighter-rouge">index</code>
 16
 17
 18
-</pre></td><td class="rouge-code"><pre><span class="kt">int</span> <span class="n">BPlusTree</span><span class="o">::</span><span class="n">update</span><span class="p">(</span><span class="k">const</span> <span class="n">key_t</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="n">value_t</span> <span class="n">value</span><span class="p">){</span>
+19
+</pre></td><td class="rouge-code"><pre><span class="c1">// bplus.cpp</span>
+<span class="kt">int</span> <span class="n">BPlusTree</span><span class="o">::</span><span class="n">update</span><span class="p">(</span><span class="k">const</span> <span class="n">key_t</span><span class="o">&amp;</span> <span class="n">key</span><span class="p">,</span> <span class="n">value_t</span> <span class="n">value</span><span class="p">){</span>
     <span class="kt">off_t</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">searchLeaf</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
     <span class="n">leaf_t</span> <span class="n">leaf</span><span class="p">;</span>
     <span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="n">leaf</span><span class="p">,</span> <span class="n">offset</span><span class="p">);</span>
@@ -2000,7 +2129,9 @@ Map the searched <code class="language-plaintext highlighter-rouge">index</code>
         <span data-label-text="Cpp"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre><span class="k">using</span> <span class="n">CommandHandler</span> <span class="o">=</span> <span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">arg</span><span class="p">);</span>
+3
+</pre></td><td class="rouge-code"><pre><span class="c1">// main.cpp</span>
+<span class="k">using</span> <span class="n">CommandHandler</span> <span class="o">=</span> <span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">arg</span><span class="p">);</span>
 <span class="k">using</span> <span class="n">OptionHandler</span> <span class="o">=</span> <span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">arg</span><span class="p">);</span>
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -2010,7 +2141,9 @@ Map the searched <code class="language-plaintext highlighter-rouge">index</code>
         <span data-label-text="Cpp"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre></td><td class="rouge-code"><pre><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">OptionHandler</span><span class="o">&gt;</span> <span class="n">optionMap</span> <span class="o">=</span> <span class="p">{........};</span>
+3
+</pre></td><td class="rouge-code"><pre><span class="c1">// main.cpp</span>
+<span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">OptionHandler</span><span class="o">&gt;</span> <span class="n">optionMap</span> <span class="o">=</span> <span class="p">{........};</span>
 <span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">CommandHandler</span><span class="o">&gt;</span> <span class="n">commandMap</span> <span class="o">=</span> <span class="p">{........};</span>
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -2147,7 +2280,17 @@ drop {name}                                   drop database
 
 <p><a href="/assets/img/blog/db/interface.png" class="popup img-link  shimmer"><img src="/assets/img/blog/db/interface.png" alt="interface" loading="lazy"></a></p>
 
-<h3 id="test"><span class="me-2">Test</span><a href="#test" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="build-on-windows"><span class="me-2">Build on Windows</span><a href="#build-on-windows" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>On Windows, we should first setup the Mingw64. For example, we could use <a href="https://github.com/skeeto/w64devkit"><strong>w64devkit-x64</strong></a>. Don’t forget to set the environment variable <code class="language-plaintext highlighter-rouge">PATH</code> to the path of <code class="language-plaintext highlighter-rouge">w64devkit-x64</code>’s bin folder.</p>
+
+<p>After successfully installing Mingw64, use cmake-gui to configure and generate the <code class="language-plaintext highlighter-rouge">Makefile</code> and then use <code class="language-plaintext highlighter-rouge">make</code> to compile the program. This will generate a executable file named <code class="language-plaintext highlighter-rouge">easydb.exe</code>.</p>
+
+<p><a href="/assets/img/blog/db/win-interface.png" class="popup img-link  shimmer"><img src="/assets/img/blog/db/win-interface.png" alt="win-interface" loading="lazy"></a></p>
+
+<h3 id="test-insertion"><span class="me-2">Test Insertion</span><a href="#test-insertion" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<h4 id="c"><span class="me-2">C++</span><a href="#c" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <p>We can write a simple test script with shell or python to test the program, here’s an example in C++ running on Linux:</p>
 
@@ -2216,7 +2359,9 @@ drop {name}                                   drop database
 61
 62
 63
-</pre></td><td class="rouge-code"><pre><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+64
+</pre></td><td class="rouge-code"><pre><span class="c1">// test.cpp</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;thread&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;chrono&gt;</span><span class="cp">
@@ -2300,6 +2445,124 @@ drop {name}                                   drop database
 </pre></td></tr></tbody></table></code></div></div>
 
 <p><a href="/assets/img/blog/db/test.png" class="popup img-link  shimmer"><img src="/assets/img/blog/db/test.png" alt="test" loading="lazy"></a></p>
+
+<h4 id="shell"><span class="me-2">Shell</span><a href="#shell" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<p>A simple Shell script as an example:</p>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre><span class="c">#!/bin/bash</span>
+<span class="nv">easydb_path</span><span class="o">=</span><span class="s2">"./easydb"</span>
+<span class="nv">num_inserts</span><span class="o">=</span>10000
+<span class="nb">mkfifo </span>pipe
+<span class="nv">$easydb_path</span> &lt; pipe &amp;
+
+<span class="nv">start_time</span><span class="o">=</span><span class="si">$(</span><span class="nb">date</span> +%s<span class="si">)</span>
+
+<span class="nb">echo</span> <span class="s2">"use db"</span> <span class="o">&gt;&gt;</span> pipe
+
+<span class="k">for </span>i <span class="k">in</span> <span class="si">$(</span><span class="nb">seq </span>1 <span class="nv">$num_inserts</span><span class="si">)</span><span class="p">;</span> <span class="k">do
+  </span><span class="nb">echo</span> <span class="s2">"insert </span><span class="nv">$i</span><span class="s2"> name</span><span class="nv">$i</span><span class="s2"> </span><span class="nv">$i</span><span class="s2"> item</span><span class="nv">$i</span><span class="s2">@data"</span> <span class="o">&gt;&gt;</span> pipe
+<span class="k">done
+
+</span><span class="nb">echo</span> <span class="s2">"exit"</span> <span class="o">&gt;&gt;</span> pipe
+<span class="nb">echo</span> <span class="s2">"exit"</span> <span class="o">&gt;&gt;</span> pipe
+<span class="nb">wait
+
+</span><span class="nv">end_time</span><span class="o">=</span><span class="si">$(</span><span class="nb">date</span> +%s<span class="si">)</span>
+<span class="nv">elapsed_time</span><span class="o">=</span><span class="k">$((</span>end_time <span class="o">-</span> start_time<span class="k">))</span>
+
+<span class="nb">echo</span> <span class="s2">"Insert 100000 records, time: </span><span class="nv">$elapsed_time</span><span class="s2"> s"</span>
+
+<span class="nb">exec </span>9&gt;&amp;-
+<span class="nb">rm </span>pipe
+</pre></td></tr></tbody></table></code></div></div>
+
+<h4 id="python"><span class="me-2">Python</span><a href="#python" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<p>A simple Python script as an example:</p>
+
+<div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">subprocess</span>
+<span class="kn">import</span> <span class="n">time</span>
+<span class="kn">import</span> <span class="n">os</span>
+
+<span class="n">easydb_path</span> <span class="o">=</span> <span class="sh">"</span><span class="s">./easydb</span><span class="sh">"</span>
+<span class="n">num_inserts</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">os</span><span class="p">.</span><span class="nf">mkfifo</span><span class="p">(</span><span class="sh">"</span><span class="s">pipe</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">easydb_process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="p">.</span><span class="nc">Popen</span><span class="p">([</span><span class="n">easydb_path</span><span class="p">],</span> <span class="n">stdin</span><span class="o">=</span><span class="nf">open</span><span class="p">(</span><span class="sh">"</span><span class="s">pipe</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">w</span><span class="sh">"</span><span class="p">))</span>
+
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
+
+<span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="sh">"</span><span class="s">pipe</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">w</span><span class="sh">"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="sh">"</span><span class="s">use db</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_inserts</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">insert </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s"> name</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s"> item</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s">@data</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="sh">"</span><span class="s">exit</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="sh">"</span><span class="s">exit</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">easydb_process</span><span class="p">.</span><span class="nf">wait</span><span class="p">()</span>
+
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="nf">time</span><span class="p">()</span>
+<span class="n">elapsed_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Insert </span><span class="si">{</span><span class="n">num_inserts</span><span class="si">}</span><span class="s"> records, time: </span><span class="si">{</span><span class="n">elapsed_time</span><span class="si">:</span><span class="p">.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s"> s</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">os</span><span class="p">.</span><span class="nf">unlink</span><span class="p">(</span><span class="sh">"</span><span class="s">pipe</span><span class="sh">"</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
 
 <h2 id="source-code"><span class="me-2">Source Code</span><a href="#source-code" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 

@@ -4,7 +4,7 @@
   <id>https://the0cp.github.io/</id>
   <title>Blog | the0cp</title>
   <subtitle>It's a freak geek's silly site.</subtitle>
-  <updated>2024-12-08T13:28:52+09:00</updated>
+  <updated>2024-12-26T17:19:37+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.github.io/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Simple Thread-safe Logger in C++</title>
+    <link href="https://the0cp.github.io/posts/logger/" rel="alternate" type="text/html" title="Simple Thread-safe Logger in C++" />
+    <published>2024-12-26T00:00:00+09:00</published>
+  
+    <updated>2024-12-26T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.github.io/posts/logger/</id>
+    <content type="text/html" src="https://the0cp.github.io/posts/logger/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="C/C++" />
+    
+  
+
+  <summary>A very simple, small, thread-safe and stream-styled logger written in C++.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Create Virtual Serial Port with socat &amp;amp; Python in Linux.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Automatically build Aseprite with Github Actions</title>
-    <link href="https://the0cp.github.io/posts/aseprite/" rel="alternate" type="text/html" title="Automatically build Aseprite with Github Actions" />
-    <published>2024-11-10T00:00:00+09:00</published>
-  
-    <updated>2024-11-10T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.github.io/posts/aseprite/</id>
-    <content type="text/html" src="https://the0cp.github.io/posts/aseprite/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Github" />
-    
-  
-
-  <summary>Automatically fetch and compile Aseprite source code with Github Actions.</summary>
 
   </entry>
 

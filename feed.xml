@@ -2,9 +2,9 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://the0cp.cc/</id>
-  <title>Blog | the0cp</title>
+  <title>Blog - the0cp</title>
   <subtitle>It's a freak geek's silly site.</subtitle>
-  <updated>2024-12-27T00:33:13+09:00</updated>
+  <updated>2025-01-01T16:46:04+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -13,7 +13,7 @@
   <link rel="alternate" type="text/html" hreflang="en"
     href="https://the0cp.cc/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
-  <rights> © 2024 Theodore Cooper </rights>
+  <rights> © 2025 Theodore Cooper </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 

@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "Some Simple Equivalent Infinitesimals",
+    "url": "/posts/infinitesimals/",
+    "categories": "Math",
+    "tags": "Math",
+    "date": "2025-01-02 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "When $x \\to 0$:\\[x \\sim \\sin x \\sim \\arcsin x \\sim \\tan x \\sim \\arctan x\\]\\[x \\sim (e^x - 1) \\sim \\ln(1+x)\\]\\[x \\sim \\ln(x+\\sqrt{1+x^2})\\]\\[(1-\\cos x) \\sim \\frac{1}{2}x^2\\]\\[\\log_a(1+x) \\sim \\frac{...",
+    "content": "When $x \\to 0$:\\[x \\sim \\sin x \\sim \\arcsin x \\sim \\tan x \\sim \\arctan x\\]\\[x \\sim (e^x - 1) \\sim \\ln(1+x)\\]\\[x \\sim \\ln(x+\\sqrt{1+x^2})\\]\\[(1-\\cos x) \\sim \\frac{1}{2}x^2\\]\\[\\log_a(1+x) \\sim \\frac{x}{\\ln a}\\]\\[(x-\\sin x) \\sim \\frac{1}{6}x^3 \\sim (\\arcsin x - x)\\]\\[(\\tan x - x) \\sim \\frac{1}{3}x^3 \\sim (x-\\arctan x)\\]\\[(\\tan x - \\sin x) \\sim \\frac{1}{2}x^3\\]\\[a^x-1 \\sim x\\ln a\\]\\[(1+ax)^b - 1 \\sim abx\\]\\[\\left(\\sqrt[n]{1+x}-1\\right) \\sim \\frac{x}{n}\\]"
+  },
+  
+  {
     "title": "Simple Thread-safe Logger in C++",
     "url": "/posts/logger/",
     "categories": "C/C++",

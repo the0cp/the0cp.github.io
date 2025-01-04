@@ -46,7 +46,7 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Run a CMD command in Qt without displaying the CMD window" />
+<meta property="og:title" content="Run a command in Qt without displaying the CMD window" />
 <meta name="author" content="Theodore Cooper" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="It’s necessary to execute system commands sometime. system() is the most basic, it’s easy but cannot hide the black command line window, its options are not much enough. Here’re some better ways." />
@@ -59,15 +59,15 @@
 <meta property="article:published_time" content="2021-06-25T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://the0cp.cc/assets/img/blog/qt-cmd/qt-logo.png" />
-<meta property="twitter:title" content="Run a CMD command in Qt without displaying the CMD window" />
+<meta property="twitter:title" content="Run a command in Qt without displaying the CMD window" />
 <meta name="twitter:site" content="@T_Ccooper" />
 <meta name="twitter:creator" content="@T_Ccooper" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Theodore Cooper","url":"https://github.com/the0cp/"},"dateModified":"2021-06-25T00:00:00+09:00","datePublished":"2021-06-25T00:00:00+09:00","description":"It’s necessary to execute system commands sometime. system() is the most basic, it’s easy but cannot hide the black command line window, its options are not much enough. Here’re some better ways.","headline":"Run a CMD command in Qt without displaying the CMD window","image":"https://the0cp.cc/assets/img/blog/qt-cmd/qt-logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://the0cp.cc/posts/qtcmd/"},"url":"https://the0cp.cc/posts/qtcmd/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Theodore Cooper","url":"https://github.com/the0cp/"},"dateModified":"2021-06-25T00:00:00+09:00","datePublished":"2021-06-25T00:00:00+09:00","description":"It’s necessary to execute system commands sometime. system() is the most basic, it’s easy but cannot hide the black command line window, its options are not much enough. Here’re some better ways.","headline":"Run a command in Qt without displaying the CMD window","image":"https://the0cp.cc/assets/img/blog/qt-cmd/qt-logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://the0cp.cc/posts/qtcmd/"},"url":"https://the0cp.cc/posts/qtcmd/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Run a CMD command in Qt without displaying the CMD window | Blog - the0cp
+  <title>Run a command in Qt without displaying the CMD window | Blog - the0cp
   </title>
 
   <!--
@@ -335,7 +335,7 @@
         
           
             
-              <span>Run a CMD command in Qt without displaying the CMD window</span>
+              <span>Run a command in Qt without displaying the CMD window</span>
             
 
           
@@ -754,7 +754,7 @@
 
 <article class="px-1" data-toc="true">
   <header>
-    <h1 data-toc-skip>Run a CMD command in Qt without displaying the CMD window</h1>
+    <h1 data-toc-skip>Run a command in Qt without displaying the CMD window</h1>
     
       <p class="post-desc fw-light mb-4">It's necessary to execute system commands sometime. system() is the most basic, it's easy but cannot hide the black command line window, its options are not much enough. Here're some better ways.
 </p>
@@ -841,7 +841,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1645 words"
+  title="1644 words"
 >
   <em>9 min</em> read</span>
 
@@ -852,7 +852,7 @@
 
   
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">Run a CMD command in Qt without displaying the CMD window</span>
+      <span class="label text-truncate">Run a command in Qt without displaying the CMD window</span>
       <button type="button" class="toc-trigger btn me-1">
         <i class="fa-solid fa-list-ul fa-fw"></i>
       </button>
@@ -865,7 +865,7 @@
 
     <dialog id="toc-popup" class="p-0">
       <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">Run a CMD command in Qt without displaying the CMD window</div>
+        <div class="label text-truncate py-2 ms-4">Run a command in Qt without displaying the CMD window</div>
         <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
           <i class="fas fa-close"></i>
         </button>
@@ -877,9 +877,9 @@
   <div class="content">
     <h2 id="method-1-system"><span class="me-2">Method 1: system</span><a href="#method-1-system" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>​	It’s the most basic method not only used in Qt, you should include the library <code class="language-plaintext highlighter-rouge">stdlib.h</code>.</p>
+<p>​ It’s the most basic method not only used in Qt, you should include the library <code class="language-plaintext highlighter-rouge">stdlib.h</code>.</p>
 
-<p>​	<em>But, you have to see the ugly black cmd window.</em></p>
+<p>​ <em>But, you have to see the ugly black cmd window.</em></p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -906,15 +906,15 @@
 
 <p><code class="language-plaintext highlighter-rouge">command</code>:</p>
 
-<p>​	 C-string containing the system command to be executed.</p>
+<p>​  C-string containing the system command to be executed.</p>
 
- 	Or, alternatively, a <em>null pointer</em>, to check for a command processor.
+<p>Or, alternatively, a <em>null pointer</em>, to check for a command processor.</p>
 
 <h3 id="return-value"><span class="me-2">Return Value</span><a href="#return-value" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>​	 If command is a null pointer, the function returns a non-zero value in case a <em>command processor</em> is available and a zero value if it is not.</p>
+<p>​  If command is a null pointer, the function returns a non-zero value in case a <em>command processor</em> is available and a zero value if it is not.</p>
 
- 	If command is not a null pointer, the value returned depends  on the system and library implementations, but it is generally expected  to be the status code returned by the called command, if supported.
+<p>If command is not a null pointer, the value returned depends  on the system and library implementations, but it is generally expected  to be the status code returned by the called command, if supported.</p>
 
 <h3 id="example"><span class="me-2">Example</span><a href="#example" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -939,24 +939,24 @@
 </span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-	<span class="n">printf</span><span class="p">(</span><span class="s">"checking processor</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-	<span class="k">if</span> <span class="p">(</span><span class="n">system</span><span class="p">(</span><span class="nb">NULL</span><span class="p">))</span> <span class="n">puts</span> <span class="p">(</span><span class="s">"Ok"</span><span class="p">);</span>
-    	<span class="k">else</span> <span class="n">exit</span> <span class="p">(</span><span class="n">EXIT_FAILURE</span><span class="p">);</span>
-	<span class="n">printf</span><span class="p">(</span><span class="s">"start ping</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-	<span class="n">system</span><span class="p">(</span><span class="s">"ping localhost &gt;&gt; res.txt"</span><span class="p">);</span>
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+ <span class="n">printf</span><span class="p">(</span><span class="s">"checking processor</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+ <span class="k">if</span> <span class="p">(</span><span class="n">system</span><span class="p">(</span><span class="nb">NULL</span><span class="p">))</span> <span class="n">puts</span> <span class="p">(</span><span class="s">"Ok"</span><span class="p">);</span>
+     <span class="k">else</span> <span class="n">exit</span> <span class="p">(</span><span class="n">EXIT_FAILURE</span><span class="p">);</span>
+ <span class="n">printf</span><span class="p">(</span><span class="s">"start ping</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+ <span class="n">system</span><span class="p">(</span><span class="s">"ping localhost &gt;&gt; res.txt"</span><span class="p">);</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>​	You can see the ping’s result in <code class="language-plaintext highlighter-rouge">res.txt</code> after running these code.</p>
+<p>​ You can see the ping’s result in <code class="language-plaintext highlighter-rouge">res.txt</code> after running these code.</p>
 
 <p><strong><em>Is here some method I can take to avoid displaying the cmd window? The answer is: YES.</em></strong></p>
 
 <h2 id="method-2-winexec--without-cmd-window"><span class="me-2">Method 2： WinExec – without cmd window</span><a href="#method-2-winexec--without-cmd-window" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>​	<code class="language-plaintext highlighter-rouge">WinExec()</code> is another way to run a command, the advantage of using <code class="language-plaintext highlighter-rouge">WinExec()</code> is you don’t need to display the window, it means, you can hide the window. It needs <code class="language-plaintext highlighter-rouge">winbase.h</code> &amp; <code class="language-plaintext highlighter-rouge">windows.h</code>.</p>
+<p>​ <code class="language-plaintext highlighter-rouge">WinExec()</code> is another way to run a command, the advantage of using <code class="language-plaintext highlighter-rouge">WinExec()</code> is you don’t need to display the window, it means, you can hide the window. It needs <code class="language-plaintext highlighter-rouge">winbase.h</code> &amp; <code class="language-plaintext highlighter-rouge">windows.h</code>.</p>
 
-<p>​	<strong>BUT</strong>, this function is provided only for compatibility with 16-bit Windows. Applications should use the  <code class="language-plaintext highlighter-rouge">CreateProcess()</code> function(as follows).</p>
+<p>​ <strong>BUT</strong>, this function is provided only for compatibility with 16-bit Windows. Applications should use the  <code class="language-plaintext highlighter-rouge">CreateProcess()</code> function(as follows).</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -989,13 +989,13 @@
 
 <p><code class="language-plaintext highlighter-rouge">lpCmdLine</code>:</p>
 
-<p>​	The command line (file name plus optional parameters) for the application to be executed.</p>
+<p>​ The command line (file name plus optional parameters) for the application to be executed.</p>
 
 <p><code class="language-plaintext highlighter-rouge">uCmdShow</code>:</p>
 
-<p>​	The display options.</p>
+<p>​ The display options.</p>
 
-<p>​	List of the acceptable values:</p>
+<p>​ List of the acceptable values:</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -1058,9 +1058,9 @@
 
 <h3 id="return-value-1"><span class="me-2">Return value</span><a href="#return-value-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>​	If the function succeeds, the return value is greater than 31.</p>
+<p>​ If the function succeeds, the return value is greater than 31.</p>
 
-<p>​	If the function fails, the return value is one of the following error values.</p>
+<p>​ If the function fails, the return value is one of the following error values.</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -1114,22 +1114,22 @@
 </span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-	<span class="n">printf</span><span class="p">(</span><span class="s">"start ping</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-	<span class="n">WinExec</span><span class="p">(</span><span class="s">"cmd.exe /c ping localhost &gt;&gt; res.txt"</span><span class="p">,</span> <span class="n">SW_HIDE</span><span class="p">);</span>	
-	<span class="cm">/*
-	'/c' can't be ignored as you have arguments after 'cmd.exe'
-	*/</span>
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+ <span class="n">printf</span><span class="p">(</span><span class="s">"start ping</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+ <span class="n">WinExec</span><span class="p">(</span><span class="s">"cmd.exe /c ping localhost &gt;&gt; res.txt"</span><span class="p">,</span> <span class="n">SW_HIDE</span><span class="p">);</span> 
+ <span class="cm">/*
+ '/c' can't be ignored as you have arguments after 'cmd.exe'
+ */</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>​	With this function you cannot determine whether the command is completed, because it is executed asynchronously.</p>
+<p>​ With this function you cannot determine whether the command is completed, because it is executed asynchronously.</p>
 
-<p>​	You must use <code class="language-plaintext highlighter-rouge">CreateProcess()</code> to solve the problem.</p>
+<p>​ You must use <code class="language-plaintext highlighter-rouge">CreateProcess()</code> to solve the problem.</p>
 
 <h2 class="note" id="method-3-createprocess--without-cmd-window">Method 3: CreateProcess – without cmd window</h2>
 
-<p>​	This function is used to run a new program. It creates a new process and its primary thread. The new process executes the specified executable file.</p>
+<p>​ This function is used to run a new program. It creates a new process and its primary thread. The new process executes the specified executable file.</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -1161,48 +1161,48 @@
 11
 12
 </pre></td><td class="rouge-code"><pre><span class="n">BOOL</span> <span class="nf">CreateProcess</span><span class="p">(</span> 
-	<span class="n">LPCWSTR</span> <span class="n">lpszImageName</span><span class="p">,</span> 
-	<span class="n">LPCWSTR</span> <span class="n">lpszCmdLine</span><span class="p">,</span> 
-	<span class="n">LPSECURITY_ATTRIBUTES</span> <span class="n">lpsaProcess</span><span class="p">,</span> 
-	<span class="n">LPSECURITY_ATTRIBUTES</span> <span class="n">lpsaThread</span><span class="p">,</span> 
-	<span class="n">BOOL</span> <span class="n">fInheritHandles</span><span class="p">,</span> 
-	<span class="n">DWORD</span> <span class="n">fdwCreate</span><span class="p">,</span> 
-	<span class="n">LPVOID</span> <span class="n">lpvEnvironment</span><span class="p">,</span> 
-	<span class="n">LPWSTR</span> <span class="n">lpszCurDir</span><span class="p">,</span> 
-	<span class="n">LPSTARTUPINFOW</span> <span class="n">lpsiStartInfo</span><span class="p">,</span> 
-	<span class="n">LPPROCESS_INFORMATION</span> <span class="n">lppiProcInfo</span>
+ <span class="n">LPCWSTR</span> <span class="n">lpszImageName</span><span class="p">,</span> 
+ <span class="n">LPCWSTR</span> <span class="n">lpszCmdLine</span><span class="p">,</span> 
+ <span class="n">LPSECURITY_ATTRIBUTES</span> <span class="n">lpsaProcess</span><span class="p">,</span> 
+ <span class="n">LPSECURITY_ATTRIBUTES</span> <span class="n">lpsaThread</span><span class="p">,</span> 
+ <span class="n">BOOL</span> <span class="n">fInheritHandles</span><span class="p">,</span> 
+ <span class="n">DWORD</span> <span class="n">fdwCreate</span><span class="p">,</span> 
+ <span class="n">LPVOID</span> <span class="n">lpvEnvironment</span><span class="p">,</span> 
+ <span class="n">LPWSTR</span> <span class="n">lpszCurDir</span><span class="p">,</span> 
+ <span class="n">LPSTARTUPINFOW</span> <span class="n">lpsiStartInfo</span><span class="p">,</span> 
+ <span class="n">LPPROCESS_INFORMATION</span> <span class="n">lppiProcInfo</span>
 <span class="p">);</span> 
 </pre></td></tr></tbody></table></code></div></div>
 
 <h3 id="parameters-2"><span class="me-2">Parameters</span><a href="#parameters-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p><code class="language-plaintext highlighter-rouge">lpszImageName</code>:
- 	Pointer to a null-terminated string that specifies the module to execute.</p>
+  Pointer to a null-terminated string that specifies the module to execute.</p>
 
-<p>​	The string can specify the full path and filename of the module to execute or it can specify a partial path and filename.</p>
+<p>​ The string can specify the full path and filename of the module to execute or it can specify a partial path and filename.</p>
 
-<p>​	The <code class="language-plaintext highlighter-rouge">lpszImageName</code> parameter must be non-NULL and must include the module name.</p>
+<p>​ The <code class="language-plaintext highlighter-rouge">lpszImageName</code> parameter must be non-NULL and must include the module name.</p>
 
 <p><code class="language-plaintext highlighter-rouge">lpszCmdLine</code>:
- 	Pointer to a null-terminated string that specifies the command line to  execute. The system adds a null character to the command line, trimming  the string if necessary, to indicate which file was actually used.</p>
+  Pointer to a null-terminated string that specifies the command line to  execute. The system adds a null character to the command line, trimming  the string if necessary, to indicate which file was actually used.</p>
 
-<p>​	The <code class="language-plaintext highlighter-rouge">lpszCmdLine</code> parameter can be NULL. In that case, the function uses the string pointed to by <code class="language-plaintext highlighter-rouge">lpszImageName</code> as the command line.</p>
+<p>​ The <code class="language-plaintext highlighter-rouge">lpszCmdLine</code> parameter can be NULL. In that case, the function uses the string pointed to by <code class="language-plaintext highlighter-rouge">lpszImageName</code> as the command line.</p>
 
-<p>​	If both <code class="language-plaintext highlighter-rouge">lpszImageName</code> and <code class="language-plaintext highlighter-rouge">lpszCmdLine</code> are non-NULL, <code class="language-plaintext highlighter-rouge">*lpszImageName</code> specifies the module to execute, and <code class="language-plaintext highlighter-rouge">*lpszCmdLine</code> specifies the command line. C runtime processes can use the <code class="language-plaintext highlighter-rouge">argc</code> and <code class="language-plaintext highlighter-rouge">argv </code>arguments.</p>
+<p>​ If both <code class="language-plaintext highlighter-rouge">lpszImageName</code> and <code class="language-plaintext highlighter-rouge">lpszCmdLine</code> are non-NULL, <code class="language-plaintext highlighter-rouge">*lpszImageName</code> specifies the module to execute, and <code class="language-plaintext highlighter-rouge">*lpszCmdLine</code> specifies the command line. C runtime processes can use the <code class="language-plaintext highlighter-rouge">argc</code> and <code class="language-plaintext highlighter-rouge">argv</code>arguments.</p>
 
-<p>​	If the filename does not contain an extension, .EXE is assumed. If  the filename ends in a period (.) with no extension, or the filename  contains a path, .EXE is not appended.</p>
+<p>​ If the filename does not contain an extension, .EXE is assumed. If  the filename ends in a period (.) with no extension, or the filename  contains a path, .EXE is not appended.</p>
 
 <p><code class="language-plaintext highlighter-rouge">lpsaProcess</code>:
- 	Process safety attributes</p>
+  Process safety attributes</p>
 
 <p><code class="language-plaintext highlighter-rouge">lpsaThread</code>:
-	 Thread safety attributes</p>
+  Thread safety attributes</p>
 
 <p><code class="language-plaintext highlighter-rouge">fInheritHandles</code>:
- 	Whether to inherit the attributes of the parent process</p>
+  Whether to inherit the attributes of the parent process</p>
 
 <p><code class="language-plaintext highlighter-rouge">fdwCreate</code>:
- 	Specifies additional flags that control the priority class and the  creation of the process. The following creation flags can be specified  in any combination, except as noted:</p>
+  Specifies additional flags that control the priority class and the  creation of the process. The following creation flags can be specified  in any combination, except as noted:</p>
 
 <div class="table-wrapper"><table>
   <thead>
@@ -1260,16 +1260,16 @@
 </table></div>
 
 <p><code class="language-plaintext highlighter-rouge">lpvEnvironment</code>:
- 	Pointer to current environment.</p>
+  Pointer to current environment.</p>
 
 <p><code class="language-plaintext highlighter-rouge">lpszCurDir</code>:
- 	Pointer to current directory.</p>
+  Pointer to current directory.</p>
 
 <p><code class="language-plaintext highlighter-rouge">lpsiStartInfo</code>:
- 	Pointer to STARTUPINFO structure</p>
+  Pointer to STARTUPINFO structure</p>
 
 <p><code class="language-plaintext highlighter-rouge">lppiProcInfo</code>:
- 	Pointer to a PROCESS_INFORMATION structure that receives identification information about the new process.</p>
+  Pointer to a PROCESS_INFORMATION structure that receives identification information about the new process.</p>
 
 <h3 id="example-2"><span class="me-2">Example</span><a href="#example-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1326,7 +1326,7 @@
 
     <span class="n">ZeroMemory</span><span class="p">(</span> <span class="o">&amp;</span><span class="n">si</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">si</span><span class="p">)</span> <span class="p">);</span>
     <span class="n">si</span><span class="p">.</span><span class="n">cb</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">si</span><span class="p">);</span>
-    <span class="n">si</span><span class="p">.</span><span class="n">wShowWindow</span> <span class="o">=</span> <span class="n">SW_HIDE</span><span class="p">;</span>	<span class="c1">//hide window</span>
+    <span class="n">si</span><span class="p">.</span><span class="n">wShowWindow</span> <span class="o">=</span> <span class="n">SW_HIDE</span><span class="p">;</span> <span class="c1">//hide window</span>
     <span class="n">ZeroMemory</span><span class="p">(</span> <span class="o">&amp;</span><span class="n">pi</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span> <span class="p">);</span>
 
     <span class="c1">// Start the child process. </span>
@@ -1424,7 +1424,7 @@
 <span class="c1">//p.waitForFinished();</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="full-example"><span class="me-2">Full example:</span><a href="#full-example" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="full-example"><span class="me-2">Full example</span><a href="#full-example" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <div class="language-c++ highlighter-rouge"><div class="code-header">
         <span data-label-text="C++"><i class="fas fa-code fa-fw small"></i></span>
@@ -1545,7 +1545,9 @@
 <span class="p">}</span>  
 
 </pre></td></tr></tbody></table></code></div></div>
+
 <h2 id="at-last"><span class="me-2">At last</span><a href="#at-last" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
 <p>At last, I recommand QProcess and CreateProcess.</p>
 
   </div>
@@ -1609,28 +1611,28 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Run%20a%20CMD%20command%20in%20Qt%20without%20displaying%20the%20CMD%20window%20-%20Blog%20-%20the0cp&url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Fqtcmd%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Run%20a%20command%20in%20Qt%20without%20displaying%20the%20CMD%20window%20-%20Blog%20-%20the0cp&url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Fqtcmd%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Run%20a%20CMD%20command%20in%20Qt%20without%20displaying%20the%20CMD%20window%20-%20Blog%20-%20the0cp&u=https%3A%2F%2Fthe0cp.cc%2Fposts%2Fqtcmd%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Run%20a%20command%20in%20Qt%20without%20displaying%20the%20CMD%20window%20-%20Blog%20-%20the0cp&u=https%3A%2F%2Fthe0cp.cc%2Fposts%2Fqtcmd%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Fqtcmd%2F&text=Run%20a%20CMD%20command%20in%20Qt%20without%20displaying%20the%20CMD%20window%20-%20Blog%20-%20the0cp" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Fqtcmd%2F&text=Run%20a%20command%20in%20Qt%20without%20displaying%20the%20CMD%20window%20-%20Blog%20-%20the0cp" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
 
       
 
-      <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Fqtcmd%2F&title=Run%20a%20CMD%20command%20in%20Qt%20without%20displaying%20the%20CMD%20window%20-%20Blog%20-%20the0cp" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Reddit" aria-label="Reddit">
+      <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Fqtcmd%2F&title=Run%20a%20command%20in%20Qt%20without%20displaying%20the%20CMD%20window%20-%20Blog%20-%20the0cp" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Reddit" aria-label="Reddit">
         <i class="fa-fw fa-brands fa-square-reddit"></i>
       </a>
     
@@ -2657,7 +2659,7 @@
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Penetration Testing | ARP Spoofing(Poisoning) in the internal network</p>
+      <p>ARP Spoofing in the internal network</p>
     </a>
   
 

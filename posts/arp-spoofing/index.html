@@ -46,7 +46,7 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Penetration Testing ARP Spoofing(Poisoning) in the internal network" />
+<meta property="og:title" content="ARP Spoofing in the internal network" />
 <meta name="author" content="Theodore Cooper" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="ARP spoofing is a type of attack in which a malicious actor sends falsified ARP messages over a local area network. We use Kali/Parrot Linux to make a simple ARP Spoofing." />
@@ -59,15 +59,15 @@
 <meta property="article:published_time" content="2021-02-11T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://the0cp.cc/assets/img/blog/arp-spoofing/arpspoofing.jpg" />
-<meta property="twitter:title" content="Penetration Testing ARP Spoofing(Poisoning) in the internal network" />
+<meta property="twitter:title" content="ARP Spoofing in the internal network" />
 <meta name="twitter:site" content="@T_Ccooper" />
 <meta name="twitter:creator" content="@T_Ccooper" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Theodore Cooper","url":"https://github.com/the0cp/"},"dateModified":"2021-02-11T00:00:00+09:00","datePublished":"2021-02-11T00:00:00+09:00","description":"ARP spoofing is a type of attack in which a malicious actor sends falsified ARP messages over a local area network. We use Kali/Parrot Linux to make a simple ARP Spoofing.","headline":"Penetration Testing ARP Spoofing(Poisoning) in the internal network","image":"https://the0cp.cc/assets/img/blog/arp-spoofing/arpspoofing.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://the0cp.cc/posts/arp-spoofing/"},"url":"https://the0cp.cc/posts/arp-spoofing/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Theodore Cooper","url":"https://github.com/the0cp/"},"dateModified":"2021-02-11T00:00:00+09:00","datePublished":"2021-02-11T00:00:00+09:00","description":"ARP spoofing is a type of attack in which a malicious actor sends falsified ARP messages over a local area network. We use Kali/Parrot Linux to make a simple ARP Spoofing.","headline":"ARP Spoofing in the internal network","image":"https://the0cp.cc/assets/img/blog/arp-spoofing/arpspoofing.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://the0cp.cc/posts/arp-spoofing/"},"url":"https://the0cp.cc/posts/arp-spoofing/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Penetration Testing | ARP Spoofing(Poisoning) in the internal network | Blog - the0cp
+  <title>ARP Spoofing in the internal network | Blog - the0cp
   </title>
 
   <!--
@@ -335,7 +335,7 @@
         
           
             
-              <span>Penetration Testing | ARP Spoofing(Poisoning) in the internal network</span>
+              <span>ARP Spoofing in the internal network</span>
             
 
           
@@ -953,7 +953,7 @@
 
 <article class="px-1" data-toc="true">
   <header>
-    <h1 data-toc-skip>Penetration Testing | ARP Spoofing(Poisoning) in the internal network</h1>
+    <h1 data-toc-skip>ARP Spoofing in the internal network</h1>
     
       <p class="post-desc fw-light mb-4">ARP spoofing is a type of attack in which a malicious actor sends falsified ARP messages over a local area network. We use Kali/Parrot Linux to make a simple ARP Spoofing.
 </p>
@@ -1040,9 +1040,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1476 words"
+  title="1439 words"
 >
-  <em>8 min</em> read</span>
+  <em>7 min</em> read</span>
 
         </div>
       </div>
@@ -1051,7 +1051,7 @@
 
   
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">Penetration Testing | ARP Spoofing(Poisoning) in the internal network</span>
+      <span class="label text-truncate">ARP Spoofing in the internal network</span>
       <button type="button" class="toc-trigger btn me-1">
         <i class="fa-solid fa-list-ul fa-fw"></i>
       </button>
@@ -1064,7 +1064,7 @@
 
     <dialog id="toc-popup" class="p-0">
       <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">Penetration Testing | ARP Spoofing(Poisoning) in the internal network</div>
+        <div class="label text-truncate py-2 ms-4">ARP Spoofing in the internal network</div>
         <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
           <i class="fas fa-close"></i>
         </button>
@@ -1084,15 +1084,15 @@
 
 <p><a href="/assets/img/blog/arp-spoofing/arp.png" class="popup img-link  shimmer"><img src="/assets/img/blog/arp-spoofing/arp.png" alt="arp" loading="lazy"></a></p>
 
-<p>​	When a new device is joined into a LAN,  it is assigned a unique IP address to use for identification and communication. When an incoming packet destined for a host machine on a particular LAN arrives at a gateway, the gateway asks the ARP program to find a MAC address that matches the IP address. A table called the ARP cache maintains a record of each IP  address and its corresponding MAC address.</p>
+<p>When a new device is joined into a LAN,  it is assigned a unique IP address to use for identification and communication. When an incoming packet destined for a host machine on a particular LAN arrives at a gateway, the gateway asks the ARP program to find a MAC address that matches the IP address. A table called the ARP cache maintains a record of each IP  address and its corresponding MAC address.</p>
 
-<p>​	If the MAC address is not present in the ARP cache table then the source device will generate an <strong><em>ARP Request</em></strong> message. In the request message the source puts its own MAC address,  its IP address, destination IP address and the destination MAC address  is left blank since the source is trying to find this.</p>
+<p>If the MAC address is not present in the ARP cache table then the source device will generate an <strong><em>ARP Request</em></strong> message. In the request message the source puts its own MAC address,  its IP address, destination IP address and the destination MAC address  is left blank since the source is trying to find this.</p>
 
-<p>​	In generally,  Address Resolution Protocol is used to obtain the MAC address of the destination host based on its IP address. It converts the IP address of the target host into a MAC address before sending a frame.</p>
+<p>In generally,  Address Resolution Protocol is used to obtain the MAC address of the destination host based on its IP address. It converts the IP address of the target host into a MAC address before sending a frame.</p>
 
 <h2 id="types-of-arp-spoofing"><span class="me-2">Types of ARP Spoofing</span><a href="#types-of-arp-spoofing" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>​	There are two types of ARP Spoofing:</p>
+<p>There are two types of ARP Spoofing:</p>
 
 <ol>
   <li>
@@ -1114,7 +1114,7 @@
 
 <h2 id="arp-spoofing-tutorial"><span class="me-2">ARP Spoofing Tutorial</span><a href="#arp-spoofing-tutorial" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>​	First of all, host and target must be in a same LAN, of course.</p>
+<p>First of all, host and target must be in a same LAN, of course.</p>
 
 <h3 id="0-environment"><span class="me-2">#0. Environment</span><a href="#0-environment" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1125,12 +1125,12 @@
 
 <h3 id="1-get-local-ip"><span class="me-2">#1. Get local IP</span><a href="#1-get-local-ip" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>​	Open a terminal:</p>
+<p>Open a terminal:</p>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>ifconfig
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>ifconfig
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>or</p>
@@ -1138,24 +1138,24 @@
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>ip addr show
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>ip addr show
 </pre></td></tr></tbody></table></code></div></div>
 
 <h3 id="2-scan-targets-ip"><span class="me-2">#2. Scan target’s IP</span><a href="#2-scan-targets-ip" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>​	Usually we use <strong><em>Nmap</em></strong> to scan target’s IP:</p>
+<p>Usually we use <strong><em>Nmap</em></strong> to scan target’s IP:</p>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>nmap <span class="nt">-sP</span> 192.168.1.1/24
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nmap <span class="nt">-sP</span> 192.168.1.1/24
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>(<code class="language-plaintext highlighter-rouge">192.168.1.1</code> is the default gateway address, it depends your router.)</p>
 
-<p>​	Another easy way is use <code class="language-plaintext highlighter-rouge">Zenmap</code>, it’s an official GUI version of <code class="language-plaintext highlighter-rouge">Nmap</code>. It is a multi-platform (Linux, Windows, Mac OS X, BSD, etc.) free and open source application which aims to make Nmap easy for beginners to use.</p>
+<p>Another easy way is use <code class="language-plaintext highlighter-rouge">Zenmap</code>, it’s an official GUI version of <code class="language-plaintext highlighter-rouge">Nmap</code>. It is a multi-platform (Linux, Windows, Mac OS X, BSD, etc.) free and open source application which aims to make Nmap easy for beginners to use.</p>
 
-<p>​	The easiest way is – if you have already logged in the <code class="language-plaintext highlighter-rouge">192.168.1.1</code> – sometimes <code class="language-plaintext highlighter-rouge">admin</code> as username and <code class="language-plaintext highlighter-rouge">admin</code> as password – you see, quite easy.</p>
+<p>The easiest way is – if you have already logged in the <code class="language-plaintext highlighter-rouge">192.168.1.1</code> – sometimes <code class="language-plaintext highlighter-rouge">admin</code> as username and <code class="language-plaintext highlighter-rouge">admin</code> as password – you see, quite easy.</p>
 
 <h3 id="3-disconnect-targets-connections"><span class="me-2">#3. Disconnect target’s connections</span><a href="#3-disconnect-targets-connections" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -1164,7 +1164,7 @@
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>arpspoof <span class="o">[</span><span class="nt">-i</span> interface] <span class="o">[</span><span class="nt">-t</span> target_ip] &lt;host_ip&gt;
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>arpspoof <span class="o">[</span><span class="nt">-i</span> interface] <span class="o">[</span><span class="nt">-t</span> target_ip] &lt;host_ip&gt;
 </pre></td></tr></tbody></table></code></div></div>
 
 <ul>
@@ -1173,54 +1173,54 @@
   <li>host: Your IP address.</li>
 </ul>
 
-<p>​	Because the attacker did not enable port forwarding, the request could not be released, and the target’s network was disconnected. So if we enable port forwarding, we can hijack target’s traffic.</p>
+<p>Because the attacker did not enable port forwarding, the request could not be released, and the target’s network was disconnected. So if we enable port forwarding, we can hijack target’s traffic.</p>
 
 <h3 id="4-hijack-targets-traffic"><span class="me-2">#4. Hijack target’s traffic</span><a href="#4-hijack-targets-traffic" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>​	Enable port forwarding:</p>
+<p>Enable port forwarding:</p>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo echo </span>1 <span class="o">&gt;</span> /proc/sys/net/ipv4/ip_forward
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo echo </span>1 <span class="o">&gt;</span> /proc/sys/net/ipv4/ip_forward
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>​	Then we use <code class="language-plaintext highlighter-rouge">arpspoof</code> like this:</p>
+<p>Then we use <code class="language-plaintext highlighter-rouge">arpspoof</code> like this:</p>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>arpspoof <span class="o">[</span><span class="nt">-i</span> interface] &lt;host_ip&gt; &lt;target_ip&gt;
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>arpspoof <span class="o">[</span><span class="nt">-i</span> interface] &lt;host_ip&gt; &lt;target_ip&gt;
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>​	Because the target machine is connected to WiFi, when performing ARP Spoofing, you need to change the order with the target machine. If you don’t change it, you can see that the MAC address of the gateway is the same as the MAC address of the attacking machine during ARP Spoofing, so that the target machine cannot communicate normally.</p>
+<p>Because the target machine is connected to WiFi, when performing ARP Spoofing, you need to change the order with the target machine. If you don’t change it, you can see that the MAC address of the gateway is the same as the MAC address of the attacking machine during ARP Spoofing, so that the target machine cannot communicate normally.</p>
 
 <h4 id="use-driftnet-to-get-images"><span class="me-2">Use <code class="language-plaintext highlighter-rouge">driftnet</code> to get images</span><a href="#use-driftnet-to-get-images" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
-<p>​	After hijacking the traffic successfully, we can save income images from target with <code class="language-plaintext highlighter-rouge">driftnet</code>(HTTP only).</p>
+<p>After hijacking the traffic successfully, we can save income images from target with <code class="language-plaintext highlighter-rouge">driftnet</code>(HTTP only).</p>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>driftnet <span class="o">[</span><span class="nt">-i</span> interface]
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>driftnet <span class="o">[</span><span class="nt">-i</span> interface]
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>​	Moreover,</p>
+<p>Moreover,</p>
 
 <div class="language-sh highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>driftnet <span class="o">[</span><span class="nt">-d</span> directory] <span class="o">[</span><span class="nt">-i</span> interface]
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>driftnet <span class="o">[</span><span class="nt">-d</span> directory] <span class="o">[</span><span class="nt">-i</span> interface]
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>​	to set directory that images will be saved.</p>
+<p>to set directory that images will be saved.</p>
 
 <h4 id="use-ettercap-to-get-passwords"><span class="me-2">Use <code class="language-plaintext highlighter-rouge">Ettercap</code> to get passwords</span><a href="#use-ettercap-to-get-passwords" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>ettercap <span class="nt">-Tq</span> <span class="o">[</span><span class="nt">-i</span> interface]
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>ettercap <span class="nt">-Tq</span> <span class="o">[</span><span class="nt">-i</span> interface]
 </pre></td></tr></tbody></table></code></div></div>
 
 <ul>
@@ -1228,25 +1228,25 @@
   <li>-q: Quiet mode</li>
 </ul>
 
-<p>​	Also, you can use <code class="language-plaintext highlighter-rouge">Wireshark</code>, it has a user-friendly GUI and easier for beginners.</p>
+<p>Also, you can use <code class="language-plaintext highlighter-rouge">Wireshark</code>, it has a user-friendly GUI and easier for beginners.</p>
 
 <h2 id="how-to-prevent-arp-spoofing"><span class="me-2">How to prevent ARP Spoofing?</span><a href="#how-to-prevent-arp-spoofing" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>​	To be honest, it’s not hard to prevent ARP Spoofing, but many people don’t do like that.</p>
+<p>To be honest, it’s not hard to prevent ARP Spoofing, but many people don’t do like that.</p>
 
 <h3 id="1-rely-on-virtual-private-networksvpn"><span class="me-2">#1. Rely on Virtual Private Networks(VPN)</span><a href="#1-rely-on-virtual-private-networksvpn" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p><a href="/assets/img/blog/arp-spoofing/VPN.jpg" class="popup img-link  shimmer"><img src="/assets/img/blog/arp-spoofing/VPN.jpg" alt="vpn" loading="lazy"></a></p>
 
-<p>​	One way to prevent ARP spoofing from happening in the first place is  to rely on Virtual Private Networks(VPN). When you connect to the internet, you typically first connect to an Internet Service Provider(ISP) in order to connect to another website. However, when you use a VPN, you’re using an encrypted tunnel that largely blocks your activity from ARP spoofing hackers. Both the method by which you’re conducting the online activity and the data that goes through it is encrypted.</p>
+<p>One way to prevent ARP spoofing from happening in the first place is  to rely on Virtual Private Networks(VPN). When you connect to the internet, you typically first connect to an Internet Service Provider(ISP) in order to connect to another website. However, when you use a VPN, you’re using an encrypted tunnel that largely blocks your activity from ARP spoofing hackers. Both the method by which you’re conducting the online activity and the data that goes through it is encrypted.</p>
 
-<p>​	Moreover, you should consider a VPN if you travel frequently or use public WiFi  hotspots while working with sensitive information or data. You could also consider using a mobile internet device that could help reduce the chances of someone working their way into your system through public WiFi with no login or password requirements. Although VPN can be a safer way to use the internet, it can sometimes slow down your online access due to the encrypting and decrypting processing power.</p>
+<p>Moreover, you should consider a VPN if you travel frequently or use public WiFi  hotspots while working with sensitive information or data. You could also consider using a mobile internet device that could help reduce the chances of someone working their way into your system through public WiFi with no login or password requirements. Although VPN can be a safer way to use the internet, it can sometimes slow down your online access due to the encrypting and decrypting processing power.</p>
 
 <h3 id="2get-a-detection-tool"><span class="me-2">#2.Get a Detection Tool</span><a href="#2get-a-detection-tool" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>​	Even with ARP knowledge and techniques in place, it’s not always possible to detect a spoofing attack. Hackers are becoming increasingly stealthy at remaining undetected and use new technologies and tools to stay ahead  of their victims. Instead of strictly focusing on prevention, make sure  you have a detection method in place. Using a third-party detection tool can help you see when a spoofing attack is happening so you can work on stopping it in its tracks.</p>
+<p>Even with ARP knowledge and techniques in place, it’s not always possible to detect a spoofing attack. Hackers are becoming increasingly stealthy at remaining undetected and use new technologies and tools to stay ahead  of their victims. Instead of strictly focusing on prevention, make sure  you have a detection method in place. Using a third-party detection tool can help you see when a spoofing attack is happening so you can work on stopping it in its tracks.</p>
 
-<p>​	A third-party tool like <code class="language-plaintext highlighter-rouge">XArp</code> can help detect if you are being attacked by ARP spoofing. However, that’s just the first step to ARP spoofing protection. In addition to using the right tools, you should also consider a robust monitoring tool or service.</p>
+<p>A third-party tool like <code class="language-plaintext highlighter-rouge">XArp</code> can help detect if you are being attacked by ARP spoofing. However, that’s just the first step to ARP spoofing protection. In addition to using the right tools, you should also consider a robust monitoring tool or service.</p>
 
 <p>Some third-party tools:</p>
 
@@ -1258,16 +1258,16 @@
 
 <h3 id="3mac-address-binding"><span class="me-2">#3.MAC Address Binding</span><a href="#3mac-address-binding" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>​	Binding MAC address is the easiest way the prevent ARP Spoofing, in Linux, just use:</p>
+<p>Binding MAC address is the easiest way the prevent ARP Spoofing, in Linux, just use:</p>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>arp <span class="nt">-s</span> &lt;ip&gt; &lt;mac&gt;	<span class="c">#Bind MAC address</span>
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>arp <span class="nt">-s</span> &lt;ip&gt; &lt;mac&gt; <span class="c">#Bind MAC address</span>
 
-<span class="nv">$ </span><span class="nb">sudo </span>arp <span class="nt">-d</span> &lt;ip&gt; &lt;mac&gt;	<span class="c">#Disbing MAC address</span>
+<span class="nb">sudo </span>arp <span class="nt">-d</span> &lt;ip&gt; &lt;mac&gt; <span class="c">#Disbing MAC address</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <ul>
@@ -1275,15 +1275,15 @@
   <li>mac: Your MAC address</li>
 </ul>
 
-<p>​	In Windows, open <code class="language-plaintext highlighter-rouge">cmd</code>:</p>
+<p>In Windows, open <code class="language-plaintext highlighter-rouge">cmd</code>:</p>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>arp <span class="nt">-s</span> &lt;ip&gt; &lt;mac&gt;	<span class="c">#temporary</span>
+</pre></td><td class="rouge-code"><pre>arp <span class="nt">-s</span> &lt;ip&gt; &lt;mac&gt; <span class="c">#temporary</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>​	or</p>
+<p>or</p>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -1294,17 +1294,16 @@
 5
 6
 7
-</pre></td><td class="rouge-code"><pre>netsh i i show <span class="k">in</span>	<span class="c">#show Idx</span>
+</pre></td><td class="rouge-code"><pre>netsh i i show <span class="k">in</span> <span class="c">#show Idx</span>
 
-netsh <span class="nt">-c</span> i i add ne &lt;Idx&gt; &lt;ip&gt; &lt;mac&gt; <span class="nv">store</span><span class="o">=</span>active	<span class="c">#temporary</span>
+netsh <span class="nt">-c</span> i i add ne &lt;Idx&gt; &lt;ip&gt; &lt;mac&gt; <span class="nv">store</span><span class="o">=</span>active <span class="c">#temporary</span>
 
 netsh <span class="nt">-c</span> i i add ne &lt;Idx&gt; &lt;ip&gt; &lt;mac&gt;
 
-netsh <span class="nt">-c</span> i i del ne &lt;Idx&gt;	<span class="c">#Disbing MAC address</span>
+netsh <span class="nt">-c</span> i i del ne &lt;Idx&gt; <span class="c">#Disbing MAC address</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>​	(Some routers have functions to bind MAC address too.)</p>
-
+<p>(Some routers have functions to bind MAC address too.)</p>
 
   </div>
 
@@ -1367,28 +1366,28 @@ netsh <span class="nt">-c</span> i i del ne &lt;Idx&gt;	<span class="c">#Disbing
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Penetration%20Testing%20%7C%20ARP%20Spoofing(Poisoning)%20in%20the%20internal%20network%20-%20Blog%20-%20the0cp&url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Farp-spoofing%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=ARP%20Spoofing%20in%20the%20internal%20network%20-%20Blog%20-%20the0cp&url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Farp-spoofing%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Penetration%20Testing%20%7C%20ARP%20Spoofing(Poisoning)%20in%20the%20internal%20network%20-%20Blog%20-%20the0cp&u=https%3A%2F%2Fthe0cp.cc%2Fposts%2Farp-spoofing%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=ARP%20Spoofing%20in%20the%20internal%20network%20-%20Blog%20-%20the0cp&u=https%3A%2F%2Fthe0cp.cc%2Fposts%2Farp-spoofing%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Farp-spoofing%2F&text=Penetration%20Testing%20%7C%20ARP%20Spoofing(Poisoning)%20in%20the%20internal%20network%20-%20Blog%20-%20the0cp" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Farp-spoofing%2F&text=ARP%20Spoofing%20in%20the%20internal%20network%20-%20Blog%20-%20the0cp" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
 
       
 
-      <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Farp-spoofing%2F&title=Penetration%20Testing%20%7C%20ARP%20Spoofing(Poisoning)%20in%20the%20internal%20network%20-%20Blog%20-%20the0cp" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Reddit" aria-label="Reddit">
+      <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Farp-spoofing%2F&title=ARP%20Spoofing%20in%20the%20internal%20network%20-%20Blog%20-%20the0cp" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Reddit" aria-label="Reddit">
         <i class="fa-fw fa-brands fa-square-reddit"></i>
       </a>
     
@@ -2432,7 +2431,7 @@ netsh <span class="nt">-c</span> i i del ne &lt;Idx&gt;	<span class="c">#Disbing
   Nov 20, 2021
 </time>
 
-              <h4 class="pt-0 my-2">Perform selective jamming of Wi-Fi and clients with mdk3(DoS attack)</h4>
+              <h4 class="pt-0 my-2">Selective jamming attack with mdk3</h4>
               <div class="text-muted">
                 <p>*mdk3* is used for **stress testing 802.11 networks(wifi)**. It consists of various methods by which we can perform tests. Some of major method sare beacon flooding, deauthentication, WPA-dos etc...</p>
               </div>
@@ -2460,7 +2459,7 @@ netsh <span class="nt">-c</span> i i del ne &lt;Idx&gt;	<span class="c">#Disbing
   Sep 21, 2021
 </time>
 
-              <h4 class="pt-0 my-2">Is Telegram really anonymous & "focus on privacy" as it advertises? IM software comparison</h4>
+              <h4 class="pt-0 my-2">Is Telegram really anonymous - IM softwares</h4>
               <div class="text-muted">
                 <p>Now, more and more people wants to be anonymous. Telegram, an IM known as *&quot;focus on security and privacy&quot;*, is chosen. But, does Telegram really &quot;focus on security and privacy&quot; as it advertises? A...</p>
               </div>
@@ -2487,7 +2486,7 @@ netsh <span class="nt">-c</span> i i del ne &lt;Idx&gt;	<span class="c">#Disbing
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Syntax Error | Conky syntax update</p>
+      <p>Fix Syntax Error conky syntax update</p>
     </a>
   
 
@@ -2497,7 +2496,7 @@ netsh <span class="nt">-c</span> i i del ne &lt;Idx&gt;	<span class="c">#Disbing
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Run a CMD command in Qt without displaying the CMD window</p>
+      <p>Run a command in Qt without displaying the CMD window</p>
     </a>
   
 </nav>

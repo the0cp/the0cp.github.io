@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "How do QR Codes Work? Explanation of the QR Code",
+    "url": "/posts/qrcode/",
+    "categories": "CS",
+    "tags": "QR-codes, CS",
+    "date": "2025-01-25 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "About QR codeA QR code, quick-response code, is a type of two-dimensional matrix barcode invented in 1994 by Masahiro Hara of Japanese company Denso Wave for labelling automobile parts. It features...",
+    "content": "About QR codeA QR code, quick-response code, is a type of two-dimensional matrix barcode invented in 1994 by Masahiro Hara of Japanese company Denso Wave for labelling automobile parts. It features black squares on a white background with fiducial markers, readable by imaging devices like cameras, and processed using Reed-Solomon error correction until the image can be appropriately interpreted. The required data is then extracted from patterns that are present in both the horizontal and the vertical components of the QR image.version 40 qrcode: Bobmath and authors of wiki:QRcodeSimply put, QR codes are essentially encoded forms for strings, which are ultimately converted into binary code. Various auxiliary and error correction information is added to this code.There are a total of 40 verisons of QR codes, each version corresponds to a different size. Version 1 is a 21x21 matrix. As the version number increases by one, the length and width of the matrix becomes larger by 4.\\[(Version - 1) \\times 4 + 21\\]Structurefrom Bobmath and authors of wiki:QRcodeThere are 3 finder patterns (also called Position Markers) in total, which are used to determine the position of the QR code, so that no matter what direction we scan the code, scanners can locate and recognize which side should face up accurately, also at high speed. It is a fixed size pattern.There are always a white bar of width 1 around the finder patterns called separator, which helps the scanner distinguish between finder patterns and the actual data.from Fast Adaptive Binarization of QR Code Images for Automatic Sorting in Logistics SystemsThe alignment patterns are smaller than finder patterns. They help the scanner determine the orientation of the QR Code. This makes it possible to scan a QR Code at any angle.Different versions have different numbers of alignment patterns and their locations are also different.Timing patterns are a series of alternating black and white blocks that run through the QR code’s rows and columns. These patterns help in determining the scanning speed and facilitate the correct interpretation of the QR code data.Format information patterns contain information about the error correction and the data mask pattern and make it easier to scan the code.Format information stores error correction level and mask patternVersion information patterns are only available in versions &gt;= 7 and represents the version number.Data and error correction keys refers to the section that stores the actual data intended to be read, alongside additional encoded information used to correct errors if parts of the code are damaged or unreadable, allowing the scanner to still decode the data even with partial information missing; essentially, it’s the primary area where both the data itself and its error correction mechanisms are embedded together.QR codes allow users to choose different levels of error correction (L, M, Q, H) depending on how much damage is expected, with higher levels providing more redundancy but potentially requiring a larger code area.            Levels      Capability                  L(Low)      Recovers 7% of data              M(Medium)      Recovers 15% of data              Q(Quartile)      Recovers 25% of data              H(High)      Recovers 30% of data      Input ModeQR code input mode is the storage type that determines how much data a QR code can hold. The mode is indicated in the QR code’s version information field. Generally, it can be either numeric, alphanumeric, binary, or kanji. A second kanji mode called Extended Channel Interpretation (ECI) mode can specify the kanji character set UTF-8. However, some newer QR code readers will not be able to read this character set.Numeric modeStores numbers from 0-9. This mode is the most efficient and can store up to 7,089 characters.Alphanumeric modeStores numbers from 0-9, uppercase letters A-Z, and symbols like $, %, *, +, -, ., /, and :. This mode can store up to 4,296 characters.Byte modeStores characters from the ISO-8859-1 character set. This mode can store up to 2,953 characters.Kanji modeStores double-byte characters from the Shift JIS character set. This is the original mode developed by Denso Wave. However, it has since become the least effective, with only 1,817 characters available for storage.  There are two additional modes which are modifications of the other types:      Structured Append mode encodes data across multiple QR codes, allowing up to 16 QR codes at once.    FNC1 mode allows QR codes to incorporate GS1 barcode functionality.  Upper LimitThere is an upper limit on the data capacity of QR codes. A Version-40 QR code has the highest capacity.            Input Mode      Max. characters      Bits/char.                  Numeric      7089 characters      10/3              Alphanumeric      4296 characters      11/2              Binary      2953 characters      8              Kanji      1817 characters      13      Mode IndicatorEach input mode has a 4-bit mode indicator that identifies it. The encoded data must start with the appropriate mode indicator that specifies the mode being used for the bits that come after it.            Input Mode      Indicator                  Numeric      0001              Alphanumeric      0010              Byte      0100              Kanji      1000/0111(for ECI)              FNC1 in first position      0101(first)/1001(second position)              Structured append      0011              End of message (Terminator)      0000      Input modes can be mixed as needed within a QR code:[Mode Indicator][bitstream] --&gt; [Mode Indicator][bitstream] --&gt; etc... --&gt; [0000(Terminator)]Character Count IndicatorCharacter count indicator represents the number of characters that are encoded. It must be placed after the mode indicator.Character count indicator has a specific bit length, depending on the QR code version and encoding mode:            Input Mode      Versions 1~9      Versions 10~26      Versions 27~40                  Numeric      10 bits      12 bits      14 bits              Alphanumeric      9 bits      11 bits      13 bits              Byte      8 bits      16 bits      16 bits              Kanji      8 bits      10 bits      12 bits      EncodeingNumeric encodingTo encode a numeric string in numeric mode, first split the string into groups of three. If the length of the string is not a multiple of 3, the last set of numbers will only be one or two digits. Add zeroes in front to form a group of three digits.20250126 –&gt; 202 501 026Convert each group of numbers to binary:202 –&gt; 0011 0010 10501 –&gt; 0111 1101 01026 –&gt; 0011 010Three-digit number is converted into 10 binary bits. The group starting with one zero should be converted into 7 binary bits, and if there are two zeroes at the beginning of a group, it should be converted into 4 binary bits.Together with the mode and character count indicators, the final result is:0001 0000001000 0011001010 0111110101 0011010Alphanumeric encodingUnlike the numeric encoding, the character encoding groups characters into pairs.HE, LL, O , WO, RL, DEach alphanumeric character is represented by a number according to the Alphanumeric Table:            0 0      A 10      K 20      U 30      + 40              1 1      B 11      L 21      V 31      - 41              2 2      C 12      M 22      W 32      . 42              3 3      D 13      N 23      X 33      / 43              4 4      E 14      O 24      Y 34      : 44              5 5      F 15      P 25      Z 35                     6 6      G 16      Q 26      (space)  36                     7 7      H 17      R 27      $ 37                     8 8      I 18      S 28      % 38                     9 9      J 19      T 29      * 39             For each pair of characters, get the number representation of the first character and multiply it by 45. Then add it to the number representation of the second character. Convert the result number into an 11-bit binary string. The representation of the final character will be converted into a 6-bit binary string.H –&gt; 17E –&gt; 14\\[17 \\times 45 + 14 = 779\\]779 –&gt; 01100001011Together with the mode and character count indicators, the final result is:0010 000001011 01100001011 01111000110 10001011100 10110111000 10011010100 001101Byte encodingThe default character set for byte mode is ISO 8859-1, firstly, the text should be converted to this character set. If the text has characters that cannot be encoded in ISO 8859-1, you can use UTF-8 encoding, as some QR code readers are able to detect and display UTF-8 encoding correctly in byte mode.After converting the text string to ISO 8859-1 or UTF-8, the string needs to be split into 8-bit bytes. Then, convert the byte into an 8-bit binary string.H –&gt; 0x48 –&gt; 01001000e –&gt; 0x65 –&gt; 01100101l –&gt; 0x6c –&gt; 01101100l –&gt; 0x6c –&gt; 01101100o –&gt; 0x6f –&gt; 01101111, –&gt; 0x2c –&gt; 00101100–&gt; 0x20 –&gt; 00100000w –&gt; 0x77 –&gt; 01110111o –&gt; 0x6f –&gt; 01101111r –&gt; 0x72 –&gt; 01110010l –&gt; 0x6c –&gt; 01101100d –&gt; 0x64 –&gt; 01100100! –&gt; 0x21 –&gt; 00100001Together with the mode and character count indicators, the final result is:0100 00001101 01001000 01100101 01101100 01101100 01101111 00101100 00100000 01110111 01101111 01110010 01101100 01100100 00100001Add Pad BytesAfter obtaining a string of bits that consists of the mode indicator, the character count indicator, and the data bits, it may be necessary to add 0s and pad bytes to fill the total capacity of the QR code. After adding the terminator(0000), if the number of bits in the string is not a multiple of 8, pad the string with 0s to make the length a multiple of 8.If the string is still too short, add the following pad bytes repeatedly until the string reaches the maximum lenght:11101100 00010001The encoding result of HELLO WORLD consists of the following parts:0010  // mode indicator     000001011  // character count indicator     01100001011 01111000110 10001011100 10110111000 10011010100 001101  // data bits     0000  // terminator     00  // pad 0s     11101100 00010001 11101100  // pad bytesError CorrectionThe error correction code contains two groups, and each group contains at most two blocks. The data encoding result must be divided into up to two groups, and each group also needs to be further divided into blocks.The error correction code can be calculated based on the data encoding result, using the Reed-Solomon error correction algorithm. This algorithm is used widely, in QR codes, to resist scanning errors, in disks, to resist loss. In advanced storage systems such as Google’s GFS and BigTable, it resists data loss and reduces read latency. The finite field $\\mathbb{F}_{256}$ or $GF(2^8)$ can be implemented efficiently on computers, which means that we can implement the system based on mathematical theorems without worrying about overflowing that are usually encountered when modeling.For a given version, the total length of the data encoding and the total length of the error correction code is fixed, for example, Version-5 has 134 bytes.Regardless of data code or error correction code, take out the first byte of each block and arrange it in order, then take the second byte of each block, and so on.If the result is not enough to fill the entire data area and the error correction code area, you need to add 0s at the end.Data MaskingUneven distribution of black and white will result in large areas of white or black, making scanning and recognition difficult.To solve this problem, the QR code provides mask patterns. Before QR code is finally generated, the data bits must be XOR-ed with mask pattern. There are 8 mask pattern that available in QR code, namely mask pattern 0 to 7 (or 000 to 111 in binary). This process have a purpose of making QR code more readable by QR scanner.Eight mask patternsAfter a mask pattern has been applied to the QR matrix, it is given a penalty score based on four evaluation conditions. A QR code encoder must apply all eight mask patterns and evaluate each one. Whichever mask pattern results in the lowest penalty score is the mask pattern that must be used for the final output.ZXing-cppZXing-C++ (“zebra crossing”) is an open-source, multi-format linear/matrix barcode image processing library implemented in C++.It was originally ported from the Java ZXing Library but has been developed further and now includes many improvements in terms of runtime and detection performance. It can both read and write barcodes in a number of formats.Github Source: https://github.com/zxing-cpp/zxing-cppA very simple example looks like this:#include \"ZXing/ReadBarcode.h\"#include &lt;iostream&gt;int main(int argc, char** argv){    int width, height;    unsigned char* data;    // load your image data from somewhere. ImageFormat::Lum assumes grey scale image data.    auto image = ZXing::ImageView(data, width, height, ZXing::ImageFormat::Lum);    auto options = ZXing::ReaderOptions().setFormats(ZXing::BarcodeFormat::Any);    auto barcodes = ZXing::ReadBarcodes(image, options);    for(const auto&amp; b : barcodes){        std::cout &lt;&lt; ZXing::ToString(b.format()) &lt;&lt; \": \" &lt;&lt; b.text() &lt;&lt; \"\\n\";    }    return 0;}It also has wrappers/bindings for Android, C, iOS, Kotlin/Native, .NET, Python, Rust, WebAssembly, WinRT, Flutter (external project).Web Demos:  Read barcodes  Write barcodes  Read barcodes from camera"
+  },
+  
+  {
     "title": "Some Simple Equivalent Infinitesimals",
     "url": "/posts/infinitesimals/",
     "categories": "Math",
@@ -69,7 +86,7 @@
   },
   
   {
-    "title": "Auto Objection! Android Ace Attorney Simulator",
+    "title": "Auto Objection - Android Ace Attorney Simulator",
     "url": "/posts/ace/",
     "categories": "Kotlin",
     "tags": "Kotlin, Android",
@@ -188,7 +205,7 @@
   },
   
   {
-    "title": "Collection of the best & most popular DDos-attack tools",
+    "title": "Collection of the best and most popular DDos-attack tools",
     "url": "/posts/ddos-tools/",
     "categories": "Pentest",
     "tags": "Pentest",
@@ -273,7 +290,7 @@
   },
   
   {
-    "title": "Conky | Awesome system monitor for Linux",
+    "title": "Conky - Awesome system monitor for Linux",
     "url": "/posts/conky/",
     "categories": "Linux",
     "tags": "Linux, Beautify",
@@ -290,7 +307,7 @@
   },
   
   {
-    "title": "Delete single file & folder from a Github repository",
+    "title": "Delete single file or folder from a Github repository",
     "url": "/posts/githubrm/",
     "categories": "Github",
     "tags": "Github",
@@ -307,24 +324,7 @@
   },
   
   {
-    "title": "Here’s to 2021!",
-    "url": "/posts/coming2021/",
-    "categories": "Other",
-    "tags": "Other",
-    "date": "2021-01-01 00:00:00 +0900",
-    
-
-
-
-
-
-    
-    "snippet": "Here's to 2021!2021Wishing youPeace, health, happinessand prosperityin coming year┏━━┓┏━━┓┏━━┓┏━┓ ┗━┓┃┃┏┓┃┗━┓┃    ┃ ┃┏━┛┃┃┃  ┃┃┏━┛┃    ┃ ┃Theodore Cooper┃┏━┛┃┃  ┃┃┃┏━┃    ┃ ┃┃┗━┓┃┗┛┃ ┃┗━┓    ┃ ┃┗━━...",
-    "content": "Here's to 2021!2021Wishing youPeace, health, happinessand prosperityin coming year┏━━┓┏━━┓┏━━┓┏━┓ ┗━┓┃┃┏┓┃┗━┓┃    ┃ ┃┏━┛┃┃┃  ┃┃┏━┛┃    ┃ ┃Theodore Cooper┃┏━┛┃┃  ┃┃┃┏━┃    ┃ ┃┃┗━┓┃┗┛┃ ┃┗━┓    ┃ ┃┗━━┛┗━━┛ ┗━━┛┗━┛"
-  },
-  
-  {
-    "title": "Install Android x86 in VMware & Virtualbox",
+    "title": "Install Android x86 in VMware and Virtualbox",
     "url": "/posts/androidx86/",
     "categories": "Linux",
     "tags": "Linux",
@@ -375,7 +375,7 @@
   },
   
   {
-    "title": "Hexo | Speed up",
+    "title": "Hexo - Speed up",
     "url": "/posts/hexo-speed-up/",
     "categories": "Blogging",
     "tags": "Blogging, Hexo",
@@ -409,7 +409,7 @@
   },
   
   {
-    "title": "Windows, C++ | Bing Backgrounds Getter",
+    "title": "Windows, C++ - Bing Backgrounds Getter",
     "url": "/posts/bing-backgrounds/",
     "categories": "Qt",
     "tags": "C/C++, Qt, Windows",

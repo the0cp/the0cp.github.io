@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>Blog - the0cp</title>
   <subtitle>It's a freak geek's silly site.</subtitle>
-  <updated>2025-01-04T21:41:26+09:00</updated>
+  <updated>2025-01-27T02:24:30+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>How do QR Codes Work? Explanation of the QR Code</title>
+    <link href="https://the0cp.cc/posts/qrcode/" rel="alternate" type="text/html" title="How do QR Codes Work? Explanation of the QR Code" />
+    <published>2025-01-25T00:00:00+09:00</published>
+  
+    <updated>2025-01-25T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/qrcode/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/qrcode/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="CS" />
+    
+  
+
+  <summary>Comprehensive overview of QR codes, structure, including their input modes, character encoding processes, ZXing-cpp library for QR code and etc.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Open-source alternative to AWCC for Dell G-series servers.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Auto Objection! Android Ace Attorney Simulator</title>
-    <link href="https://the0cp.cc/posts/ace/" rel="alternate" type="text/html" title="Auto Objection! Android Ace Attorney Simulator" />
-    <published>2024-11-15T00:00:00+09:00</published>
-  
-    <updated>2024-11-15T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/ace/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/ace/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Kotlin" />
-    
-  
-
-  <summary>Auto Objection! An Android Ace Attorney simulator. Place the phone flat on the table and knock the desktop.</summary>
 
   </entry>
 

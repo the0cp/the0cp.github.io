@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>Blog - the0cp</title>
   <subtitle>It's a freak geek's silly site.</subtitle>
-  <updated>2025-02-23T15:31:22+09:00</updated>
+  <updated>2025-02-23T18:13:54+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,39 +17,6 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
-
-  
-  <entry>
-    <title></title>
-    <link href="https://the0cp.cc/posts/2021-07-26-qt-libpng-warning/" rel="alternate" type="text/html" title="" />
-    <published>2025-02-23T15:31:22+09:00</published>
-  
-    <updated>2025-02-23T15:31:22+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/2021-07-26-qt-libpng-warning/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/2021-07-26-qt-libpng-warning/" />
-    <author>
-      <name>Theodore Cooper</name>
-    </author>
-
-  
-    
-  
-
-  <summary>Why this happens?
-
-This warning is mainly related to the format of the PNG image. In fact, to solve this warning, we just need to convert the image to a correct profile. There are many ways to solve this in both Windows and Linux.
-
-Windows
-
-Method 1: ImageMagick
-
-We use ImageMagick to convert the image: ImageMagick Official
-
-
-  Download the corresponding compressed package according to the plat...</summary>
-
-  </entry>
 
   
   <entry>
@@ -144,6 +111,30 @@ We use ImageMagick to convert the image: ImageMagick Official
   
 
   <summary>A very simple, small, thread-safe and stream-styled logger written in C++.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>B+ Tree Database in Modern C++</title>
+    <link href="https://the0cp.cc/posts/database/" rel="alternate" type="text/html" title="B+ Tree Database in Modern C++" />
+    <published>2024-12-05T00:00:00+09:00</published>
+  
+    <updated>2024-12-05T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/database/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/database/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="C/C++" />
+    
+  
+
+  <summary>A B+ Tree based local database in Modern C++.</summary>
 
   </entry>
 

@@ -64,7 +64,7 @@
 <meta name="twitter:creator" content="@T_Ccooper" />
 <meta name="yandex-verification" content="41dbd09c93221b0e" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Theodore Cooper","url":"https://github.com/the0cp/"},"dateModified":"2020-12-25T00:00:00+09:00","datePublished":"2020-12-25T00:00:00+09:00","description":"An SEO (“Search Engine Optimization”) expert is someone trained to improve your visibility on search engines. Now we talk about the basics of Search Engine Optimization.","headline":"Beginner’s Guide to Search Engine Optimization (SEO)","image":"https://the0cp.cc/assets/img/blog/seo/seo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://the0cp.cc/posts/seo/"},"url":"https://the0cp.cc/posts/seo/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Theodore Cooper","url":"https://github.com/the0cp/"},"dateModified":"2020-12-25T00:00:00+09:00","datePublished":"2020-12-25T00:00:00+09:00","description":"An SEO (“Search Engine Optimization”) expert is someone trained to improve your visibility on search engines. Now we talk about the basics of Search Engine Optimization.","headline":"Beginner’s Guide to Search Engine Optimization (SEO)","image":{"lqip":"/assets/img/placeholder.webp","url":"https://the0cp.cc/assets/img/blog/seo/seo.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://the0cp.cc/posts/seo/"},"url":"https://the0cp.cc/posts/seo/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -466,6 +466,14 @@
 
       
     
+      
+
+      
+      
+      
+
+      
+    
 
     <!-- take out classes -->
     
@@ -477,6 +485,13 @@
 
     
       
+      
+
+      
+
+      <!-- add image placeholder -->
+      
+
     
 
     <!-- lazy-load images -->
@@ -713,8 +728,7 @@
   <header>
     <h1 data-toc-skip>Beginner's Guide to Search Engine Optimization (SEO)</h1>
     
-      <p class="post-desc fw-light mb-4">An SEO ("Search Engine Optimization") expert is someone trained to improve your visibility on search engines. Now we talk about the basics of Search Engine Optimization.
-</p>
+      <p class="post-desc fw-light mb-4">An SEO ("Search Engine Optimization") expert is someone trained to improve your visibility on search engines. Now we talk about the basics of Search Engine Optimization.</p>
     
 
     <div class="post-meta text-muted">
@@ -753,7 +767,7 @@
         
 
         <div class="mt-3 mb-3">
-          <a href="/assets/img/blog/seo/seo.png" class="popup img-link preview-img shimmer"><img src="/assets/img/blog/seo/seo.png"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
+          <a href="/assets/img/blog/seo/seo.png" class="popup img-link preview-img blur"><img data-src="/assets/img/blog/seo/seo.png"  alt="Preview Image" width="1200" height="630" data-lqip="true" src="/assets/img/placeholder.webp"></a></div>
       
 
       <div class="d-flex justify-content-between">
@@ -962,8 +976,8 @@
 
 <p>robots.txt looks like this:</p>
 
-<div class="language-json highlighter-rouge"><div class="code-header">
-        <span data-label-text="JSON"><i class="fas fa-code fa-fw small"></i></span>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -977,20 +991,20 @@
 11
 12
 13
-</pre></td><td class="rouge-code"><pre><span class="err">User-agent:</span><span class="w"> </span><span class="err">*</span><span class="w">
-</span><span class="err">Allow:</span><span class="w"> </span><span class="err">/</span><span class="w">
-</span><span class="err">Allow:</span><span class="w"> </span><span class="err">/archives/</span><span class="w">
-</span><span class="err">Allow:</span><span class="w"> </span><span class="err">/categories/</span><span class="w">
-</span><span class="err">Allow:</span><span class="w"> </span><span class="err">/tags/</span><span class="w"> 
-</span><span class="err">Allow:</span><span class="w"> </span><span class="err">/resources/</span><span class="w"> 
-</span><span class="err">Disallow:</span><span class="w"> </span><span class="err">/vendors/</span><span class="w">
-</span><span class="err">Disallow:</span><span class="w"> </span><span class="err">/js/</span><span class="w">
-</span><span class="err">Disallow:</span><span class="w"> </span><span class="err">/css/</span><span class="w">
-</span><span class="err">Disallow:</span><span class="w"> </span><span class="err">/fonts/</span><span class="w">
-</span><span class="err">Disallow:</span><span class="w"> </span><span class="err">/vendors/</span><span class="w">
+</pre></td><td class="rouge-code"><pre>User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/ 
+Allow: /resources/ 
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
 
-</span><span class="err">Sitemap:</span><span class="w"> </span><span class="err">...</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
+Sitemap: ...
+</pre></td></tr></tbody></table></code></div></div>
 
 <p>​	The value of <code class="language-plaintext highlighter-rouge">Allow</code> is the content that allows search engines to crawl the area.</p>
 
@@ -1174,6 +1188,13 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/2021-07-26-qt-libpng-warning/"></a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/mathjax/">MathJax Cheat Sheet in LaTeX</a>
         </li>
       
@@ -1196,13 +1217,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/logger/">Simple Thread-safe Logger in C++</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/database/">B+ Tree Database in Modern C++</a>
         </li>
       
     </ul>
@@ -1637,6 +1651,8 @@
     
     
     
+      
+    
   
     
     
@@ -2038,7 +2054,7 @@
 
               <h4 class="pt-0 my-2">Hexo - Speed up</h4>
               <div class="text-muted">
-                <p>Always, we need a high speed blog... So some ways should be taken to make a better website. Now I will talk about Hexo -- Speed up!</p>
+                <p>Ways to speed up a Hexo website</p>
               </div>
             </div>
           </a>
@@ -2548,6 +2564,8 @@
     
     
     
+    
+      
     
   
     

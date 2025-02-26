@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>KMP Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .input-section {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .visualization {
+            margin-top: 20px;
+            font-family: monospace;
+            font-size: 20px;
+        }
+
+        .char-box {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 30px;
+            margin: 2px;
+        }
+
+        .current {
+            background-color: #ffeb3b;
+        }
+
+        .match {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .mismatch {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .next-array {
+            margin-top: 20px;
+        }
+
+        .explanation {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 4px;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .speed-control {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>KMP Pattern Searching Demo</h1>
+        
+        <div class="input-section">
+            <div>
+                <label>Target</label>
+                <input type="text" id="text" value="ABABCABABABC">
+            </div>
+            <div style="margin-top: 10px;">
+                <label>Pattern</label>
+                <input type="text" id="pattern" value="ABABC">
+                <button onclick="startVisualization()">Start</button>
+            </div>
+        </div>
+
+        <div class="visualization">
+            <div id="text-display"></div>
+            <div id="pattern-display"></div>
+        </div>
+
+        <div class="next-array">
+            <h3>next Array</h3>
+            <div id="next-array-display"></div>
+        </div>
+
+        <div class="controls">
+            <button onclick="pause()">Pause/Continue</button>
+            <button onclick="reset()">Reset</button>
+            <div class="speed-control">
+                <label>Speed</label>
+                <input type="range" id="speed" min="1" max="10" value="5">
+            </div>
+        </div>
+
+        <div class="explanation" id="explanation">
+            
+        </div>
+    </div>
+
+    <script>
+        let isPaused = false;
+        let currentAnimation = null;
+        let nextArray = [];
+        let currentStep = 0;
+
+        function createCharBox(char, className = '') {
+            return `<div class="char-box ${className}">${char}</div>`;
+        }
+
+        function buildNext(pattern) {
+            const len = pattern.length;
+            nextArray = new Array(len).fill(0);
+            nextArray[0] = -1;
+            let j = -1;
+
+            for (let i = 1; i < len; i++) {
+                while (j !== -1 && pattern[j + 1] !== pattern[i]) {
+                    j = nextArray[j];
+                }
+                if (pattern[j + 1] === pattern[i]) {
+                    j++;
+                }
+                nextArray[i] = j;
+            }
+            return nextArray;
+        }
+
+        async function visualizeKMP(text, pattern) {
+            const next = buildNext(pattern);
+            let j = -1;
+            
+            displayNextArray(next);
+
+            for (let i = 0; i < text.length; i++) {
+                if (isPaused) {
+                    await new Promise(resolve => {
+                        currentAnimation = resolve;
+                    });
+                }
+
+                while (j !== -1 && pattern[j + 1] !== text[i]) {
+                    updateVisualization(text, pattern, i, j);
+                    await sleep();
+                    j = next[j];
+                }
+
+                if (pattern[j + 1] === text[i]) {
+                    j++;
+                    updateVisualization(text, pattern, i, j, true);
+                } else {
+                    updateVisualization(text, pattern, i, j, false);
+                }
+
+                await sleep();
+
+                if (j === pattern.length - 1) {
+                    document.getElementById('explanation').innerHTML = 
+                        `Find Pos: ${i - pattern.length + 1}`;
+                    j = next[j];
+                }
+            }
+        }
+
+        function updateVisualization(text, pattern, textPos, patternPos, isMatch = false) {
+            let textHtml = '';
+            let patternHtml = '';
+
+            for (let i = 0; i < text.length; i++) {
+                let className = '';
+                if (i === textPos) className = 'current';
+                if (i <= textPos && i > textPos - patternPos - 1 && patternPos >= 0) {
+                    className = isMatch ? 'match' : 'mismatch';
+                }
+                textHtml += createCharBox(text[i], className);
+            }
+
+            const offset = Math.max(0, textPos - patternPos);
+            for (let i = 0; i < offset; i++) {
+                patternHtml += createCharBox('', '');
+            }
+            
+            for (let i = 0; i < pattern.length; i++) {
+                let className = '';
+                if (i === patternPos + 1) className = 'current';
+                patternHtml += createCharBox(pattern[i], className);
+            }
+
+            document.getElementById('text-display').innerHTML = textHtml;
+            document.getElementById('pattern-display').innerHTML = patternHtml;
+        }
+
+        function displayNextArray(next) {
+            let html = 'Index';
+            for (let i = 0; i < next.length; i++) {
+                html += createCharBox(i);
+            }
+            html += '<br>Value';
+            for (let i = 0; i < next.length; i++) {
+                html += createCharBox(next[i]);
+            }
+            document.getElementById('next-array-display').innerHTML = html;
+        }
+
+        function sleep() {
+            const speed = 1000 / document.getElementById('speed').value;
+            return new Promise(resolve => setTimeout(resolve, speed));
+        }
+
+        function startVisualization() {
+            const text = document.getElementById('text').value;
+            const pattern = document.getElementById('pattern').value;
+            isPaused = false;
+            currentStep = 0;
+            visualizeKMP(text, pattern);
+        }
+
+        function pause() {
+            isPaused = !isPaused;
+            if (!isPaused && currentAnimation) {
+                currentAnimation();
+                currentAnimation = null;
+            }
+        }
+
+        function reset() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>

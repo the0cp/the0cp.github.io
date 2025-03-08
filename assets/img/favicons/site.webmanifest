@@ -1,9 +1,9 @@
 
 
 {
-  "name": "Blog - the0cp",
-  "short_name": "Blog - the0cp",
-  "description": "It's a freak geek's silly site.",
+  "name": "the0cp",
+  "short_name": "the0cp",
+  "description": "Jigsaw falling into place. So there is nothing to explain.",
   "icons": [
     {
       "src": "/assets/img/favicons/android-chrome-192x192.png",

@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "KMP Pattern Searching Demo",
+    "url": "/posts/kmp/",
+    "categories": "HTML",
+    "tags": "HTML, CS",
+    "date": "2025-03-08 00:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Knuth-Morris-Pratt or KMP is a linear string matching algorithm with low time complexity of O(n+m), where n is the string length and m is the pattern length.",
+    "content": "Knuth-Morris-Pratt or KMP is a linear string matching algorithm with low time complexity of O(n+m), where n is the string length and m is the pattern length."
+  },
+  
+  {
     "title": "MathJax Cheat Sheet in LaTeX",
     "url": "/posts/mathjax/",
     "categories": "Math",

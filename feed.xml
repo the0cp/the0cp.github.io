@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>https://the0cp.cc/</id>
-  <title>Blog - the0cp</title>
-  <subtitle>It's a freak geek's silly site.</subtitle>
-  <updated>2025-02-26T18:25:38+09:00</updated>
+  <id>http://localhost:4000/</id>
+  <title>the0cp</title>
+  <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
+  <updated>2025-03-08T13:55:11+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
-    <uri>https://the0cp.cc/</uri>
+    <uri>http://localhost:4000/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="https://the0cp.cc/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="https://the0cp.cc/"/>
+    href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
   <rights> © 2025 Theodore Cooper </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -20,14 +20,38 @@
 
   
   <entry>
+    <title>KMP Pattern Searching Demo</title>
+    <link href="http://localhost:4000/posts/kmp/" rel="alternate" type="text/html" title="KMP Pattern Searching Demo" />
+    <published>2025-03-08T00:00:00+09:00</published>
+  
+    <updated>2025-03-08T00:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/kmp/</id>
+    <content type="text/html" src="http://localhost:4000/posts/kmp/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="HTML" />
+    
+  
+
+  <summary>The Knuth–Morris–Pratt algorithm (or KMP algorithm) is a string-searching algorithm that searches for occurrences of a &amp;quot;word&amp;quot; W within a main &amp;quot;text string&amp;quot; S</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>MathJax Cheat Sheet in LaTeX</title>
-    <link href="https://the0cp.cc/posts/mathjax/" rel="alternate" type="text/html" title="MathJax Cheat Sheet in LaTeX" />
+    <link href="http://localhost:4000/posts/mathjax/" rel="alternate" type="text/html" title="MathJax Cheat Sheet in LaTeX" />
     <published>2025-01-27T00:00:00+09:00</published>
   
     <updated>2025-01-27T00:00:00+09:00</updated>
   
-    <id>https://the0cp.cc/posts/mathjax/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/mathjax/" />
+    <id>http://localhost:4000/posts/mathjax/</id>
+    <content type="text/html" src="http://localhost:4000/posts/mathjax/" />
     <author>
       <name>the0cp</name>
     </author>
@@ -45,13 +69,13 @@
   
   <entry>
     <title>How do QR Codes Work - Overview of the QR Code</title>
-    <link href="https://the0cp.cc/posts/qrcode/" rel="alternate" type="text/html" title="How do QR Codes Work - Overview of the QR Code" />
+    <link href="http://localhost:4000/posts/qrcode/" rel="alternate" type="text/html" title="How do QR Codes Work - Overview of the QR Code" />
     <published>2025-01-25T00:00:00+09:00</published>
   
     <updated>2025-01-25T00:00:00+09:00</updated>
   
-    <id>https://the0cp.cc/posts/qrcode/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/qrcode/" />
+    <id>http://localhost:4000/posts/qrcode/</id>
+    <content type="text/html" src="http://localhost:4000/posts/qrcode/" />
     <author>
       <name>the0cp</name>
     </author>
@@ -69,13 +93,13 @@
   
   <entry>
     <title>Some Simple Equivalent Infinitesimals</title>
-    <link href="https://the0cp.cc/posts/infinitesimals/" rel="alternate" type="text/html" title="Some Simple Equivalent Infinitesimals" />
+    <link href="http://localhost:4000/posts/infinitesimals/" rel="alternate" type="text/html" title="Some Simple Equivalent Infinitesimals" />
     <published>2025-01-02T00:00:00+09:00</published>
   
     <updated>2025-01-02T00:00:00+09:00</updated>
   
-    <id>https://the0cp.cc/posts/infinitesimals/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/infinitesimals/" />
+    <id>http://localhost:4000/posts/infinitesimals/</id>
+    <content type="text/html" src="http://localhost:4000/posts/infinitesimals/" />
     <author>
       <name>the0cp</name>
     </author>
@@ -93,13 +117,13 @@
   
   <entry>
     <title>Simple Thread-safe Logger in C++</title>
-    <link href="https://the0cp.cc/posts/logger/" rel="alternate" type="text/html" title="Simple Thread-safe Logger in C++" />
+    <link href="http://localhost:4000/posts/logger/" rel="alternate" type="text/html" title="Simple Thread-safe Logger in C++" />
     <published>2024-12-26T00:00:00+09:00</published>
   
     <updated>2024-12-26T00:00:00+09:00</updated>
   
-    <id>https://the0cp.cc/posts/logger/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/logger/" />
+    <id>http://localhost:4000/posts/logger/</id>
+    <content type="text/html" src="http://localhost:4000/posts/logger/" />
     <author>
       <name>the0cp</name>
     </author>
@@ -111,30 +135,6 @@
   
 
   <summary>A very simple, small, thread-safe and stream-styled logger written in C++.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>B+ Tree Database in Modern C++</title>
-    <link href="https://the0cp.cc/posts/database/" rel="alternate" type="text/html" title="B+ Tree Database in Modern C++" />
-    <published>2024-12-05T00:00:00+09:00</published>
-  
-    <updated>2024-12-05T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/database/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/database/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="C/C++" />
-    
-  
-
-  <summary>A B+ Tree based local database in Modern C++.</summary>
 
   </entry>
 

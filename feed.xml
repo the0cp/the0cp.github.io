@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2025-04-11T11:17:39+09:00</updated>
+  <updated>2025-07-06T19:06:40+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>A Comprehensive Guide to the Takagi-Sugeno (T-S) Fuzzy Inference Model</title>
+    <link href="https://the0cp.cc/posts/ts-fuzzy/" rel="alternate" type="text/html" title="A Comprehensive Guide to the Takagi-Sugeno (T-S) Fuzzy Inference Model" />
+    <published>2025-07-06T00:00:00+09:00</published>
+  
+    <updated>2025-07-06T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/ts-fuzzy/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/ts-fuzzy/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="AI" />
+    
+  
+
+  <summary>Explore the Takagi-Sugeno (T-S) fuzzy inference model, a powerful tool for modeling and controlling complex nonlinear systems. This guide covers the structure, mathematical principles, step-by-step implementation, code examples in MATLAB and Python, and real-world applications across industries.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Comprehensive overview of QR codes, structure, including their input modes, character encoding processes, ZXing-cpp library for QR code and etc.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Some Simple Equivalent Infinitesimals</title>
-    <link href="https://the0cp.cc/posts/infinitesimals/" rel="alternate" type="text/html" title="Some Simple Equivalent Infinitesimals" />
-    <published>2025-01-02T00:00:00+09:00</published>
-  
-    <updated>2025-01-02T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/infinitesimals/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/infinitesimals/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Math" />
-    
-  
-
-  <summary>Some Simple Equivalent Infinitesimals</summary>
 
   </entry>
 

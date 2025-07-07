@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2025-07-06T19:06:40+09:00</updated>
+  <updated>2025-07-07T20:37:14+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Mamdani Fuzzy Neural Network - Architecture &amp; Learning Algorithm</title>
+    <link href="https://the0cp.cc/posts/mamdani/" rel="alternate" type="text/html" title="Mamdani Fuzzy Neural Network - Architecture &amp;amp; Learning Algorithm" />
+    <published>2025-07-07T00:00:00+09:00</published>
+  
+    <updated>2025-07-07T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/mamdani/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/mamdani/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="AI" />
+    
+  
+
+  <summary>A comprehensive guide to the Mamdani-based Fuzzy Neural Network (FNN). Learn its 5-layer architecture, step-by-step fuzzy inference process, and how to train it using the error backpropagation algorithm. Discover how this model blends the interpretability of fuzzy logic with the adaptive power of neural networks.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>The basic usage of MathJax using LaTeX syntax. A MathJax Cheat Sheet</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>How do QR Codes Work - Overview of the QR Code</title>
-    <link href="https://the0cp.cc/posts/qrcode/" rel="alternate" type="text/html" title="How do QR Codes Work - Overview of the QR Code" />
-    <published>2025-01-25T00:00:00+09:00</published>
-  
-    <updated>2025-01-25T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/qrcode/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/qrcode/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="CS" />
-    
-  
-
-  <summary>Comprehensive overview of QR codes, structure, including their input modes, character encoding processes, ZXing-cpp library for QR code and etc.</summary>
 
   </entry>
 

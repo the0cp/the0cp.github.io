@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2025-07-07T20:37:14+09:00</updated>
+  <updated>2025-07-08T23:08:36+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Fuzzy C-Means (FCM) Clustering &amp; Subtractive Clustering Overview</title>
+    <link href="https://the0cp.cc/posts/fcm/" rel="alternate" type="text/html" title="Fuzzy C-Means (FCM) Clustering &amp;amp; Subtractive Clustering Overview" />
+    <published>2025-07-08T00:00:00+09:00</published>
+  
+    <updated>2025-07-08T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/fcm/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/fcm/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="AI" />
+    
+  
+
+  <summary>Learn the theory and implementation of Fuzzy C-Means (FCM) and Subtractive Clustering. Clustering is a fundamental task in unsupervised machine learning, and Fuzzy C-Means (FCM) clustering stands out as a powerful soft clustering algorithm. Unlike K-Means, which assigns each data point to only one cluster, FCM allows each point to belong to multiple clusters with different degrees of membership...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>The Knuth–Morris–Pratt algorithm (or KMP algorithm) is a string-searching algorithm that searches for occurrences of a &amp;quot;word&amp;quot; W within a main &amp;quot;text string&amp;quot; S</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>MathJax Cheat Sheet in LaTeX</title>
-    <link href="https://the0cp.cc/posts/mathjax/" rel="alternate" type="text/html" title="MathJax Cheat Sheet in LaTeX" />
-    <published>2025-01-27T00:00:00+09:00</published>
-  
-    <updated>2025-01-27T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/mathjax/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/mathjax/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Math" />
-    
-  
-
-  <summary>The basic usage of MathJax using LaTeX syntax. A MathJax Cheat Sheet</summary>
 
   </entry>
 

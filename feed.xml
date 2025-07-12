@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2025-07-10T21:59:27+09:00</updated>
+  <updated>2025-07-12T19:49:44+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Deconstructing the Deep TSK Fuzzy Classifier with Stacked Generalization</title>
+    <link href="https://the0cp.cc/posts/dtsk/" rel="alternate" type="text/html" title="Deconstructing the Deep TSK Fuzzy Classifier with Stacked Generalization" />
+    <published>2025-07-12T00:00:00+09:00</published>
+  
+    <updated>2025-07-12T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/dtsk/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/dtsk/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="ML" />
+    
+  
+
+  <summary>A detailed technical analysis of the Deep Takagi-Sugeno-Kang Fuzzy Classifier (D-TSK-FC), a novel machine learning model designed to achieve both high performance and clear interpretability. This article breaks down the model&amp;#39;s unique stacked architecture, its layer-by-layer training algorithm based on the Least Learning Machine (LLM), and the core principles that guarantee its &amp;quot;triplely concis...</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Explore the Takagi-Sugeno (T-S) fuzzy inference model, a powerful tool for modeling and controlling complex nonlinear systems. This guide covers the structure, mathematical principles, step-by-step implementation, code examples in MATLAB and Python, and real-world applications across industries.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Implement a SkipList based K-V Database in Java</title>
-    <link href="https://the0cp.cc/posts/skiplist-java/" rel="alternate" type="text/html" title="Implement a SkipList based K-V Database in Java" />
-    <published>2025-04-11T00:00:00+09:00</published>
-  
-    <updated>2025-04-11T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/skiplist-java/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/skiplist-java/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Java" />
-    
-  
-
-  <summary>Skiplist is linked list with layers. The implementation of a skiplist is quite easier than trees. It is a K-V Database based on SkipList written in Java.</summary>
 
   </entry>
 

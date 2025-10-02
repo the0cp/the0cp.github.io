@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2025-08-27T21:36:28+09:00</updated>
+  <updated>2025-10-02T21:50:07+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Teach AI to Code Better - A Guide to Sanity and Productivity</title>
+    <link href="https://the0cp.cc/posts/ai-code/" rel="alternate" type="text/html" title="Teach AI to Code Better - A Guide to Sanity and Productivity" />
+    <published>2025-10-02T00:00:00+09:00</published>
+  
+    <updated>2025-10-02T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/ai-code/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/ai-code/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="AI" />
+    
+  
+
+  <summary>This guide provides a comprehensive framework for developers to effectively manage AI programming assistants like Claude, transforming them from unpredictable &amp;quot;chaos agents&amp;quot; to brilliant coding wizards. The key to success lies not in the AI itself, but in the user&amp;#39;s approach.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>A comprehensive guide to the Mamdani-based Fuzzy Neural Network (FNN). Learn its 5-layer architecture, step-by-step fuzzy inference process, and how to train it using the error backpropagation algorithm. Discover how this model blends the interpretability of fuzzy logic with the adaptive power of neural networks.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>A Comprehensive Guide to the Takagi-Sugeno (T-S) Fuzzy Inference Model</title>
-    <link href="https://the0cp.cc/posts/ts-fuzzy/" rel="alternate" type="text/html" title="A Comprehensive Guide to the Takagi-Sugeno (T-S) Fuzzy Inference Model" />
-    <published>2025-07-06T00:00:00+09:00</published>
-  
-    <updated>2025-07-06T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/ts-fuzzy/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/ts-fuzzy/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="AI" />
-    
-  
-
-  <summary>Explore the Takagi-Sugeno (T-S) fuzzy inference model, a powerful tool for modeling and controlling complex nonlinear systems. This guide covers the structure, mathematical principles, step-by-step implementation, code examples in MATLAB and Python, and real-world applications across industries.</summary>
 
   </entry>
 

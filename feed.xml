@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2026-01-09T15:22:33+09:00</updated>
+  <updated>2026-03-24T22:29:15+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Building a Register VM Interpreter - Part 1&amp;#58 Introduction and Architecture</title>
+    <link href="https://the0cp.cc/posts/lang-p1/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 1&amp;amp;#58 Introduction and Architecture" />
+    <published>2026-03-24T00:00:00+09:00</published>
+  
+    <updated>2026-03-24T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/lang-p1/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/lang-p1/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Interpreter" />
+    
+  
+
+  <summary>This guide is about building a register-based VM interpreter from scratch. The first part is the introduction of the project and overall architecture of the interpreter.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Learn the theory and implementation of Fuzzy C-Means (FCM) and Subtractive Clustering. Clustering is a fundamental task in unsupervised machine learning, and Fuzzy C-Means (FCM) clustering stands out as a powerful soft clustering algorithm. Unlike K-Means, which assigns each data point to only one cluster, FCM allows each point to belong to multiple clusters with different degrees of membership...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Mamdani Fuzzy Neural Network - Architecture &amp; Learning Algorithm</title>
-    <link href="https://the0cp.cc/posts/mamdani/" rel="alternate" type="text/html" title="Mamdani Fuzzy Neural Network - Architecture &amp;amp; Learning Algorithm" />
-    <published>2025-07-07T00:00:00+09:00</published>
-  
-    <updated>2025-07-07T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/mamdani/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/mamdani/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="AI" />
-    
-  
-
-  <summary>A comprehensive guide to the Mamdani-based Fuzzy Neural Network (FNN). Learn its 5-layer architecture, step-by-step fuzzy inference process, and how to train it using the error backpropagation algorithm. Discover how this model blends the interpretability of fuzzy logic with the adaptive power of neural networks.</summary>
 
   </entry>
 

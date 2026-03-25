@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2026-03-24T22:29:15+09:00</updated>
+  <updated>2026-03-25T20:19:12+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Building a Register VM Interpreter - Part 2&amp;#58 The Value System</title>
+    <link href="https://the0cp.cc/posts/lang-p2/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 2&amp;amp;#58 The Value System" />
+    <published>2026-03-25T00:00:00+09:00</published>
+  
+    <updated>2026-03-25T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/lang-p2/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/lang-p2/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Interpreter" />
+    
+  
+
+  <summary>This guide is about building a register-based VM interpreter from scratch. The value system is the foundational part to implement a dynamically typed languange.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>This article provides a technical exposition of the LLM algorithm, detailing its architectural premise, mathematical formulation, and the computational strategy that enables its high-speed performance on large-scale data.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Fuzzy C-Means (FCM) Clustering &amp; Subtractive Clustering Overview</title>
-    <link href="https://the0cp.cc/posts/fcm/" rel="alternate" type="text/html" title="Fuzzy C-Means (FCM) Clustering &amp;amp; Subtractive Clustering Overview" />
-    <published>2025-07-08T00:00:00+09:00</published>
-  
-    <updated>2025-07-08T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/fcm/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/fcm/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="AI" />
-    
-  
-
-  <summary>Learn the theory and implementation of Fuzzy C-Means (FCM) and Subtractive Clustering. Clustering is a fundamental task in unsupervised machine learning, and Fuzzy C-Means (FCM) clustering stands out as a powerful soft clustering algorithm. Unlike K-Means, which assigns each data point to only one cluster, FCM allows each point to belong to multiple clusters with different degrees of membership...</summary>
 
   </entry>
 

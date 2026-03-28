@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2026-03-26T15:45:29+09:00</updated>
+  <updated>2026-03-28T17:22:58+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Building a Register VM Interpreter - Part 4&amp;#58 Bytecode and Chunk</title>
+    <link href="https://the0cp.cc/posts/lang-p4/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 4&amp;amp;#58 Bytecode and Chunk" />
+    <published>2026-03-28T00:00:00+09:00</published>
+  
+    <updated>2026-03-28T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/lang-p4/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/lang-p4/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Interpreter" />
+    
+  
+
+  <summary>This guide is about building a register-based VM interpreter from scratch. This part will define set of instructions and build Chunks in VM.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>This guide provides a comprehensive framework for developers to effectively manage AI programming assistants like Claude, transforming them from unpredictable &amp;quot;chaos agents&amp;quot; to brilliant coding wizards. The key to success lies not in the AI itself, but in the user&amp;#39;s approach.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Deconstructing the Deep TSK Fuzzy Classifier with Stacked Generalization</title>
-    <link href="https://the0cp.cc/posts/dtsk/" rel="alternate" type="text/html" title="Deconstructing the Deep TSK Fuzzy Classifier with Stacked Generalization" />
-    <published>2025-07-12T00:00:00+09:00</published>
-  
-    <updated>2025-07-12T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/dtsk/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/dtsk/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="ML" />
-    
-  
-
-  <summary>A detailed technical analysis of the Deep Takagi-Sugeno-Kang Fuzzy Classifier (D-TSK-FC), a novel machine learning model designed to achieve both high performance and clear interpretability. This article breaks down the model&amp;#39;s unique stacked architecture, its layer-by-layer training algorithm based on the Least Learning Machine (LLM), and the core principles that guarantee its &amp;quot;triplely concis...</summary>
 
   </entry>
 

@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2026-03-28T17:39:52+09:00</updated>
+  <updated>2026-03-30T18:53:21+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Building a Register VM Interpreter - Part 5&amp;#58 Disassembler</title>
+    <link href="https://the0cp.cc/posts/lang-p5/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 5&amp;amp;#58 Disassembler" />
+    <published>2026-03-30T00:00:00+09:00</published>
+  
+    <updated>2026-03-30T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/lang-p5/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/lang-p5/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Interpreter" />
+    
+  
+
+  <summary>This guide is about building a register-based VM interpreter from scratch. This part will inplement a Disassembler for easy debugging.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>This guide is about building a register-based VM interpreter from scratch. The first part is the introduction of the project and overall architecture of the interpreter.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Teach AI to Code Better - A Guide to Sanity and Productivity</title>
-    <link href="https://the0cp.cc/posts/ai-code/" rel="alternate" type="text/html" title="Teach AI to Code Better - A Guide to Sanity and Productivity" />
-    <published>2025-10-02T00:00:00+09:00</published>
-  
-    <updated>2025-10-02T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/ai-code/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/ai-code/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="AI" />
-    
-  
-
-  <summary>This guide provides a comprehensive framework for developers to effectively manage AI programming assistants like Claude, transforming them from unpredictable &amp;quot;chaos agents&amp;quot; to brilliant coding wizards. The key to success lies not in the AI itself, but in the user&amp;#39;s approach.</summary>
 
   </entry>
 

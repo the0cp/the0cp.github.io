@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2026-03-30T18:53:21+09:00</updated>
+  <updated>2026-04-02T22:08:36+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Building a Register VM Interpreter - Part 6&amp;#58 Single-Pass Pratt Parsing</title>
+    <link href="https://the0cp.cc/posts/lang-p6/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 6&amp;amp;#58 Single-Pass Pratt Parsing" />
+    <published>2026-04-01T00:00:00+09:00</published>
+  
+    <updated>2026-04-01T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/lang-p6/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/lang-p6/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Interpreter" />
+    
+  
+
+  <summary>This guide is about building a register-based VM interpreter from scratch. In a single-pass architecture, we do not build an AST. There are no intermediate tree nodes sitting in memory. Instead, we read a token, figure out what it means in its context, and emit the bytecode for it right then and there.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>This guide is about building a register-based VM interpreter from scratch. The value system is the foundational part to implement a dynamically typed languange.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Building a Register VM Interpreter - Part 1&amp;#58 Introduction and Architecture</title>
-    <link href="https://the0cp.cc/posts/lang-p1/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 1&amp;amp;#58 Introduction and Architecture" />
-    <published>2026-03-24T00:00:00+09:00</published>
-  
-    <updated>2026-03-24T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/lang-p1/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/lang-p1/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Interpreter" />
-    
-  
-
-  <summary>This guide is about building a register-based VM interpreter from scratch. The first part is the introduction of the project and overall architecture of the interpreter.</summary>
 
   </entry>
 

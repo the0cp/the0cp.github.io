@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2026-04-02T22:08:36+09:00</updated>
+  <updated>2026-04-07T20:09:35+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Building a Register VM Interpreter - Part 7&amp;#58 Expression Descriptor and Register</title>
+    <link href="https://the0cp.cc/posts/lang-p7/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 7&amp;amp;#58 Expression Descriptor and Register" />
+    <published>2026-04-07T00:00:00+09:00</published>
+  
+    <updated>2026-04-07T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/lang-p7/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/lang-p7/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Interpreter" />
+    
+  
+
+  <summary>This guide is about building a register-based VM interpreter from scratch. We need a mechanism to delay emitting bytecode until we know exactly where the data lives. We need a way to describe an expression&amp;#39;s state while it is still in transit.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>This guide is about building a register-based VM interpreter from scratch. It&amp;#39;s time for us to turn to the front-end if the interpreter, transforming raw source code into the executable instructions.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Building a Register VM Interpreter - Part 2&amp;#58 The Value System</title>
-    <link href="https://the0cp.cc/posts/lang-p2/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 2&amp;amp;#58 The Value System" />
-    <published>2026-03-25T00:00:00+09:00</published>
-  
-    <updated>2026-03-25T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/lang-p2/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/lang-p2/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Interpreter" />
-    
-  
-
-  <summary>This guide is about building a register-based VM interpreter from scratch. The value system is the foundational part to implement a dynamically typed languange.</summary>
 
   </entry>
 

@@ -57,6 +57,7 @@
 <meta property="og:site_name" content="the0cp" />
 <meta property="og:type" content="website" />
 <link rel="prev" href="https://the0cp.cc/page3" />
+<link rel="next" href="https://the0cp.cc/page5" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="the0cp" />
 <meta name="twitter:site" content="@T_Ccooper" />
@@ -1013,6 +1014,14 @@
 
       
     
+      
+
+      
+      
+      
+
+      
+    
 
     <!-- take out classes -->
     
@@ -1024,6 +1033,13 @@
 
     
       
+      
+
+      
+
+      <!-- add image placeholder -->
+      
+
     
 
     <!-- lazy-load images -->
@@ -1102,6 +1118,76 @@
 
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
+  
+    <article class="card-wrapper card">
+      <a href="/posts/qtcmd/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+          
+          
+
+          
+
+          
+
+          
+
+          <div class="col-md-5">
+            <div class="preview-img  blur"><img data-src="/assets/img/blog/qt-cmd/qt-logo.png" alt="Preview Image" data-lqip="true" src="/assets/img/placeholder.webp"></div>
+          </div>
+
+          
+        
+
+        <div class="col-md-7">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">Run a command in Qt without displaying the CMD window</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>It&#39;s necessary to execute system commands sometime. system() is the most basic, it&#39;s easy but cannot hide the black command line window, its options are not much enough. Here&#39;re some better ways.</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1624546800"
+  data-df="ll"
+  
+>
+  Jun 25, 2021
+</time>
+
+
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      Qt
+                  </span>
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
   
     <article class="card-wrapper card">
       <a href="/posts/arp-spoofing/" class="post-preview row g-0 flex-md-row-reverse">
@@ -1718,76 +1804,6 @@
       </a>
     </article>
   
-    <article class="card-wrapper card">
-      <a href="/posts/bing-backgrounds/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-          
-          
-
-          
-
-          
-
-          
-
-          <div class="col-md-5">
-            <div class="preview-img  shimmer"><img src="/assets/img/blog/bing-backgrounds/BBG.jpg" alt="Preview Image"  loading="lazy"></div>
-          </div>
-
-          
-        
-
-        <div class="col-md-7">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Windows, C++ - Bing Backgrounds Getter</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>Get Bing Wallpaper. It&#39;s a program written by C++, it will automatically download and set wallpaper for you!</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1606563180"
-  data-df="ll"
-  
->
-  Nov 28, 2020
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Qt
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
 </div>
 <!-- #post-list -->
 
@@ -1837,13 +1853,13 @@
       
 
       
-        <!-- show number -->
-        <li class="page-item ">
-          <a
-            class="page-link"
-            href="/page2"
-          >2</a>
-        </li>
+        <!-- hide number -->
+        
+          <li class="page-item disabled">
+            <span class="page-link">...</span>
+          </li>
+          
+        
       
     
       
@@ -1882,18 +1898,36 @@
         </li>
       
     
+      
+      
+      
+      
+      
+
+      
+
+      
+        <!-- show number -->
+        <li class="page-item ">
+          <a
+            class="page-link"
+            href="/page5"
+          >5</a>
+        </li>
+      
+    
 
     <!-- mobile pagination -->
     <li class="page-index align-middle">
       <span>4</span>
-      <span class="text-muted">/ 4</span>
+      <span class="text-muted">/ 5</span>
     </li>
 
     <!-- right arrow -->
     
 
-    <li class="page-item disabled">
-      <a class="page-link" href="#" aria-label="next-page">
+    <li class="page-item ">
+      <a class="page-link" href="/page5" aria-label="next-page">
         <i class="fas fa-angle-right"></i>
       </a>
     </li>
@@ -1933,6 +1967,13 @@
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/lang-p7/">Building a Register VM Interpreter - Part 7&#58 Expression Descriptor and Register</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/lang-p6/">Building a Register VM Interpreter - Part 6&#58 Single-Pass Pratt Parsing</a>
         </li>
       
@@ -1955,13 +1996,6 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/lang-p3/">Building a Register VM Interpreter - Part 3&#58 Lexical Analysis and Keywords</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/lang-p2/">Building a Register VM Interpreter - Part 2&#58 The Value System</a>
         </li>
       
     </ul>
@@ -2128,6 +2162,76 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2138,28 +2242,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
         
         
 
@@ -2169,58 +2251,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -2847,13 +2877,13 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/cs/">CS</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/interpreter/">Interpreter</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/ai/">AI</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/c-c/">C/C++</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/interpreter/">Interpreter</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/math/">Math</a>
@@ -3081,6 +3111,76 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -3091,28 +3191,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
         
         
 
@@ -3122,58 +3200,6 @@
     
     
       
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
     
   
     
@@ -3800,13 +3826,13 @@
         <a class="post-tag btn btn-outline-primary" href="/tags/cs/">CS</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/interpreter/">Interpreter</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/ai/">AI</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/c-c/">C/C++</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/interpreter/">Interpreter</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/math/">Math</a>

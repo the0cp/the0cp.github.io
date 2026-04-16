@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2026-04-10T12:06:04+09:00</updated>
+  <updated>2026-04-16T19:05:51+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Building a Register VM Interpreter - Part 9&amp;#58 The Control Flow</title>
+    <link href="https://the0cp.cc/posts/lang-p9/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 9&amp;amp;#58 The Control Flow" />
+    <published>2026-04-16T00:00:00+09:00</published>
+  
+    <updated>2026-04-16T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/lang-p9/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/lang-p9/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Interpreter" />
+    
+  
+
+  <summary>This guide is about building a register-based VM interpreter from scratch. We will upgrade the VM to understand Jump instructions, and more importantly, we will teach the single-pass compiler how to calculate exactly where those jumps should land, even when it hasn&amp;#39;t finished compiling the code yet.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>This guide is about building a register-based VM interpreter from scratch. This part will inplement a Disassembler for easy debugging.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Building a Register VM Interpreter - Part 4&amp;#58 Bytecode and Chunk</title>
-    <link href="https://the0cp.cc/posts/lang-p4/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 4&amp;amp;#58 Bytecode and Chunk" />
-    <published>2026-03-28T00:00:00+09:00</published>
-  
-    <updated>2026-03-28T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/lang-p4/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/lang-p4/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Interpreter" />
-    
-  
-
-  <summary>This guide is about building a register-based VM interpreter from scratch. This part will define set of instructions and build Chunks in VM.</summary>
 
   </entry>
 

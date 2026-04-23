@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2026-04-16T19:05:51+09:00</updated>
+  <updated>2026-04-23T11:08:07+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Building a Register VM Interpreter - Part 10&amp;#58 Heap, Strings, and Hash Tables</title>
+    <link href="https://the0cp.cc/posts/lang-p10/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 10&amp;amp;#58 Heap, Strings, and Hash Tables" />
+    <published>2026-04-18T00:00:00+09:00</published>
+  
+    <updated>2026-04-18T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/lang-p10/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/lang-p10/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Interpreter" />
+    
+  
+
+  <summary>This guide is about building a register-based VM interpreter from scratch. To escape this 64-bit limit, we have to look beyond the virtual stack and into the C heap.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>This guide is about building a register-based VM interpreter from scratch. In a single-pass architecture, we do not build an AST. There are no intermediate tree nodes sitting in memory. Instead, we read a token, figure out what it means in its context, and emit the bytecode for it right then and there.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Building a Register VM Interpreter - Part 5&amp;#58 Disassembler</title>
-    <link href="https://the0cp.cc/posts/lang-p5/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 5&amp;amp;#58 Disassembler" />
-    <published>2026-03-30T00:00:00+09:00</published>
-  
-    <updated>2026-03-30T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/lang-p5/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/lang-p5/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Interpreter" />
-    
-  
-
-  <summary>This guide is about building a register-based VM interpreter from scratch. This part will inplement a Disassembler for easy debugging.</summary>
 
   </entry>
 

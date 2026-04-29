@@ -48,7 +48,7 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Building a Register VM Interpreter - Part 5&amp;#58 Disassembler" />
+<meta property="og:title" content="Building a Register VM Interpreter - Ch. 5&amp;#58 Disassembler" />
 <meta name="author" content="Theodore Cooper" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="This guide is about building a register-based VM interpreter from scratch. This part will inplement a Disassembler for easy debugging." />
@@ -61,16 +61,16 @@
 <meta property="article:published_time" content="2026-03-30T00:00:00+09:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://the0cp.cc/assets/img/blog/lang/cover-5.svg" />
-<meta property="twitter:title" content="Building a Register VM Interpreter - Part 5&amp;#58 Disassembler" />
+<meta property="twitter:title" content="Building a Register VM Interpreter - Ch. 5&amp;#58 Disassembler" />
 <meta name="twitter:site" content="@T_Ccooper" />
 <meta name="twitter:creator" content="@T_Ccooper" />
 <meta name="yandex-verification" content="41dbd09c93221b0e" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Theodore Cooper","url":"https://github.com/the0cp/"},"dateModified":"2026-03-30T00:00:00+09:00","datePublished":"2026-03-30T00:00:00+09:00","description":"This guide is about building a register-based VM interpreter from scratch. This part will inplement a Disassembler for easy debugging.","headline":"Building a Register VM Interpreter - Part 5&amp;#58 Disassembler","image":{"lqip":"/assets/img/placeholder.webp","url":"https://the0cp.cc/assets/img/blog/lang/cover-5.svg","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://the0cp.cc/posts/lang-p5/"},"url":"https://the0cp.cc/posts/lang-p5/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Theodore Cooper","url":"https://github.com/the0cp/"},"dateModified":"2026-03-30T00:00:00+09:00","datePublished":"2026-03-30T00:00:00+09:00","description":"This guide is about building a register-based VM interpreter from scratch. This part will inplement a Disassembler for easy debugging.","headline":"Building a Register VM Interpreter - Ch. 5&amp;#58 Disassembler","image":{"lqip":"/assets/img/placeholder.webp","url":"https://the0cp.cc/assets/img/blog/lang/cover-5.svg","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://the0cp.cc/posts/lang-p5/"},"url":"https://the0cp.cc/posts/lang-p5/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Building a Register VM Interpreter - Part 5&#58 Disassembler | the0cp
+  <title>Building a Register VM Interpreter - Ch. 5&#58 Disassembler | the0cp
   </title>
 
   <!--
@@ -338,7 +338,7 @@
         
           
             
-              <span>Building a Register VM Interpreter - Part 5&#58 Disassembler</span>
+              <span>Building a Register VM Interpreter - Ch. 5&#58 Disassembler</span>
             
 
           
@@ -673,7 +673,7 @@
 
 <article class="px-1" data-toc="true">
   <header>
-    <h1 data-toc-skip>Building a Register VM Interpreter - Part 5&#58 Disassembler</h1>
+    <h1 data-toc-skip>Building a Register VM Interpreter - Ch. 5&#58 Disassembler</h1>
     
       <p class="post-desc fw-light mb-4">This guide is about building a register-based VM interpreter from scratch. This part will inplement a Disassembler for easy debugging.
 </p>
@@ -771,7 +771,7 @@
 
   
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">Building a Register VM Interpreter - Part 5&#58 Disassembler</span>
+      <span class="label text-truncate">Building a Register VM Interpreter - Ch. 5&#58 Disassembler</span>
       <button type="button" class="toc-trigger btn me-1">
         <i class="fa-solid fa-list-ul fa-fw"></i>
       </button>
@@ -784,7 +784,7 @@
 
     <dialog id="toc-popup" class="p-0">
       <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">Building a Register VM Interpreter - Part 5&#58 Disassembler</div>
+        <div class="label text-truncate py-2 ms-4">Building a Register VM Interpreter - Ch. 5&#58 Disassembler</div>
         <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
           <i class="fas fa-close"></i>
         </button>
@@ -1108,7 +1108,7 @@
 
 <h2 id="dasm-the-instruction-format"><span class="me-2">DAsm the Instruction Format</span><a href="#dasm-the-instruction-format" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>In Part 4, we designed the Instruction Set Architecture (ISA) specifically to avoid mess. Every single instruction falls into one of three patterns: <code class="language-plaintext highlighter-rouge">iABC</code>, <code class="language-plaintext highlighter-rouge">iABx</code> and <code class="language-plaintext highlighter-rouge">iAsBx</code>. Because all instructions fit these three patterns, the disassembler only needs a handful of decoding functions. Inside the <code class="language-plaintext highlighter-rouge">dasmInstruction</code>, we can use a simple <code class="language-plaintext highlighter-rouge">switch</code> statement to group the opcodes and route to the correct function:</p>
+<p>In Ch. 4, we designed the Instruction Set Architecture (ISA) specifically to avoid mess. Every single instruction falls into one of three patterns: <code class="language-plaintext highlighter-rouge">iABC</code>, <code class="language-plaintext highlighter-rouge">iABx</code> and <code class="language-plaintext highlighter-rouge">iAsBx</code>. Because all instructions fit these three patterns, the disassembler only needs a handful of decoding functions. Inside the <code class="language-plaintext highlighter-rouge">dasmInstruction</code>, we can use a simple <code class="language-plaintext highlighter-rouge">switch</code> statement to group the opcodes and route to the correct function:</p>
 
 <div class="language-c highlighter-rouge"><div class="code-header">
         <span data-label-text="C"><i class="fas fa-code fa-fw small"></i></span>
@@ -1633,28 +1633,28 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Building%20a%20Register%20VM%20Interpreter%20-%20Part%205&#58%20Disassembler%20-%20the0cp&url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Flang-p5%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Building%20a%20Register%20VM%20Interpreter%20-%20Ch.%205&#58%20Disassembler%20-%20the0cp&url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Flang-p5%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Building%20a%20Register%20VM%20Interpreter%20-%20Part%205&#58%20Disassembler%20-%20the0cp&u=https%3A%2F%2Fthe0cp.cc%2Fposts%2Flang-p5%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Building%20a%20Register%20VM%20Interpreter%20-%20Ch.%205&#58%20Disassembler%20-%20the0cp&u=https%3A%2F%2Fthe0cp.cc%2Fposts%2Flang-p5%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Flang-p5%2F&text=Building%20a%20Register%20VM%20Interpreter%20-%20Part%205&#58%20Disassembler%20-%20the0cp" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Flang-p5%2F&text=Building%20a%20Register%20VM%20Interpreter%20-%20Ch.%205&#58%20Disassembler%20-%20the0cp" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
 
       
 
-      <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Flang-p5%2F&title=Building%20a%20Register%20VM%20Interpreter%20-%20Part%205&#58%20Disassembler%20-%20the0cp" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Reddit" aria-label="Reddit">
+      <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fthe0cp.cc%2Fposts%2Flang-p5%2F&title=Building%20a%20Register%20VM%20Interpreter%20-%20Ch.%205&#58%20Disassembler%20-%20the0cp" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Reddit" aria-label="Reddit">
         <i class="fa-fw fa-brands fa-square-reddit"></i>
       </a>
     
@@ -1709,35 +1709,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/lang-p10/">Building a Register VM Interpreter - Part 10&#58 Heap, Strings, and Hash Tables</a>
+          <a href="/posts/lang-p11/">Building a Register VM Interpreter - Ch. 11&#58 Variables and Scoping</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/lang-p9/">Building a Register VM Interpreter - Part 9&#58 The Control Flow</a>
+          <a href="/posts/lang-p10/">Building a Register VM Interpreter - Ch. 10&#58 Heap, Strings, and Hash Tables</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/lang-p8/">Building a Register VM Interpreter - Part 8&#58 The VM Core</a>
+          <a href="/posts/lang-p9/">Building a Register VM Interpreter - Ch. 9&#58 The Control Flow</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/lang-p7/">Building a Register VM Interpreter - Part 7&#58 Expression Descriptor and Register</a>
+          <a href="/posts/lang-p8/">Building a Register VM Interpreter - Ch. 8&#58 The VM Core</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/lang-p6/">Building a Register VM Interpreter - Part 6&#58 Single-Pass Pratt Parsing</a>
+          <a href="/posts/lang-p7/">Building a Register VM Interpreter - Ch. 7&#58 Expression Descriptor and Register</a>
         </li>
       
     </ul>
@@ -1834,8 +1834,6 @@
     
     
     
-    
-      
     
   
     
@@ -2834,6 +2832,18 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -2868,7 +2878,7 @@
   Apr  9, 2026
 </time>
 
-              <h4 class="pt-0 my-2">Building a Register VM Interpreter - Part 8&#58 The VM Core</h4>
+              <h4 class="pt-0 my-2">Building a Register VM Interpreter - Ch. 8&#58 The VM Core</h4>
               <div class="text-muted">
                 <p>This guide is about building a register-based VM interpreter from scratch. We will design the memory structures required to run a program, build the dispatch loop to fetch instructions, and write t...</p>
               </div>
@@ -2896,7 +2906,7 @@
   Apr  7, 2026
 </time>
 
-              <h4 class="pt-0 my-2">Building a Register VM Interpreter - Part 7&#58 Expression Descriptor and Register</h4>
+              <h4 class="pt-0 my-2">Building a Register VM Interpreter - Ch. 7&#58 Expression Descriptor and Register</h4>
               <div class="text-muted">
                 <p>This guide is about building a register-based VM interpreter from scratch. We need a mechanism to delay emitting bytecode until we know exactly where the data lives. We need a way to describe an ex...</p>
               </div>
@@ -2924,7 +2934,7 @@
   Apr  1, 2026
 </time>
 
-              <h4 class="pt-0 my-2">Building a Register VM Interpreter - Part 6&#58 Single-Pass Pratt Parsing</h4>
+              <h4 class="pt-0 my-2">Building a Register VM Interpreter - Ch. 6&#58 Single-Pass Pratt Parsing</h4>
               <div class="text-muted">
                 <p>This guide is about building a register-based VM interpreter from scratch. In a single-pass architecture, we do not build an AST. There are no intermediate tree nodes sitting in memory. Instead, we...</p>
               </div>
@@ -2951,7 +2961,7 @@
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Building a Register VM Interpreter - Part 4&#58 Bytecode and Chunk</p>
+      <p>Building a Register VM Interpreter - Ch. 4&#58 Bytecode and Chunk</p>
     </a>
   
 
@@ -2961,7 +2971,7 @@
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Building a Register VM Interpreter - Part 6&#58 Single-Pass Pratt Parsing</p>
+      <p>Building a Register VM Interpreter - Ch. 6&#58 Single-Pass Pratt Parsing</p>
     </a>
   
 </nav>
@@ -3099,8 +3109,6 @@
     
     
     
-    
-      
     
   
     

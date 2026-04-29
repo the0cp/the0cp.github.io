@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2026-04-23T11:08:07+09:00</updated>
+  <updated>2026-04-29T19:01:00+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -20,8 +20,32 @@
 
   
   <entry>
-    <title>Building a Register VM Interpreter - Part 10&amp;#58 Heap, Strings, and Hash Tables</title>
-    <link href="https://the0cp.cc/posts/lang-p10/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 10&amp;amp;#58 Heap, Strings, and Hash Tables" />
+    <title>Building a Register VM Interpreter - Ch. 11&amp;#58 Variables and Scoping</title>
+    <link href="https://the0cp.cc/posts/lang-p11/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Ch. 11&amp;amp;#58 Variables and Scoping" />
+    <published>2026-04-29T00:00:00+09:00</published>
+  
+    <updated>2026-04-29T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/lang-p11/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/lang-p11/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Interpreter" />
+    
+  
+
+  <summary>This guide is about building a register-based VM interpreter from scratch. In this article, we are going to teach the compiler how to navigate both of these worlds. We will implement global variable routing, introduce the mechanics of Lexical Scoping to track blocks, and finally unleash the full speed of our register allocator.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Building a Register VM Interpreter - Ch. 10&amp;#58 Heap, Strings, and Hash Tables</title>
+    <link href="https://the0cp.cc/posts/lang-p10/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Ch. 10&amp;amp;#58 Heap, Strings, and Hash Tables" />
     <published>2026-04-18T00:00:00+09:00</published>
   
     <updated>2026-04-18T00:00:00+09:00</updated>
@@ -44,8 +68,8 @@
 
   
   <entry>
-    <title>Building a Register VM Interpreter - Part 9&amp;#58 The Control Flow</title>
-    <link href="https://the0cp.cc/posts/lang-p9/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 9&amp;amp;#58 The Control Flow" />
+    <title>Building a Register VM Interpreter - Ch. 9&amp;#58 The Control Flow</title>
+    <link href="https://the0cp.cc/posts/lang-p9/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Ch. 9&amp;amp;#58 The Control Flow" />
     <published>2026-04-16T00:00:00+09:00</published>
   
     <updated>2026-04-16T00:00:00+09:00</updated>
@@ -68,8 +92,8 @@
 
   
   <entry>
-    <title>Building a Register VM Interpreter - Part 8&amp;#58 The VM Core</title>
-    <link href="https://the0cp.cc/posts/lang-p8/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 8&amp;amp;#58 The VM Core" />
+    <title>Building a Register VM Interpreter - Ch. 8&amp;#58 The VM Core</title>
+    <link href="https://the0cp.cc/posts/lang-p8/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Ch. 8&amp;amp;#58 The VM Core" />
     <published>2026-04-09T00:00:00+09:00</published>
   
     <updated>2026-04-09T00:00:00+09:00</updated>
@@ -92,8 +116,8 @@
 
   
   <entry>
-    <title>Building a Register VM Interpreter - Part 7&amp;#58 Expression Descriptor and Register</title>
-    <link href="https://the0cp.cc/posts/lang-p7/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 7&amp;amp;#58 Expression Descriptor and Register" />
+    <title>Building a Register VM Interpreter - Ch. 7&amp;#58 Expression Descriptor and Register</title>
+    <link href="https://the0cp.cc/posts/lang-p7/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Ch. 7&amp;amp;#58 Expression Descriptor and Register" />
     <published>2026-04-07T00:00:00+09:00</published>
   
     <updated>2026-04-07T00:00:00+09:00</updated>
@@ -111,30 +135,6 @@
   
 
   <summary>This guide is about building a register-based VM interpreter from scratch. We need a mechanism to delay emitting bytecode until we know exactly where the data lives. We need a way to describe an expression&amp;#39;s state while it is still in transit.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Building a Register VM Interpreter - Part 6&amp;#58 Single-Pass Pratt Parsing</title>
-    <link href="https://the0cp.cc/posts/lang-p6/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Part 6&amp;amp;#58 Single-Pass Pratt Parsing" />
-    <published>2026-04-01T00:00:00+09:00</published>
-  
-    <updated>2026-04-01T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/lang-p6/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/lang-p6/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Interpreter" />
-    
-  
-
-  <summary>This guide is about building a register-based VM interpreter from scratch. In a single-pass architecture, we do not build an AST. There are no intermediate tree nodes sitting in memory. Instead, we read a token, figure out what it means in its context, and emit the bytecode for it right then and there.</summary>
 
   </entry>
 

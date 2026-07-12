@@ -1,0 +1,13 @@
+# the0cp.github.io generated static site pages
+about/** linguist-generated
+archives/** linguist-generated
+categories/** linguist-generated
+page*/** linguist-generated
+posts/** linguist-generated
+tags/** linguist-generated
+
+# generated root pages
+index.html linguist-generated
+404.html linguist-generated
+feed.xml linguist-generated
+sitemap.xml linguist-generated

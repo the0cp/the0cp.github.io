@@ -4,7 +4,7 @@
   <id>https://the0cp.cc/</id>
   <title>the0cp</title>
   <subtitle>Jigsaw falling into place. So there is nothing to explain.</subtitle>
-  <updated>2026-05-07T23:15:58+09:00</updated>
+  <updated>2026-08-23T15:29:05+09:00</updated>
   <author>
     <name>Theodore Cooper</name>
     <uri>https://the0cp.cc/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Learning Technology Deeply - The Path to Becoming an Expert</title>
+    <link href="https://the0cp.cc/posts/learning/" rel="alternate" type="text/html" title="Learning Technology Deeply - The Path to Becoming an Expert" />
+    <published>2026-08-23T00:00:00+09:00</published>
+  
+    <updated>2026-08-23T00:00:00+09:00</updated>
+  
+    <id>https://the0cp.cc/posts/learning/</id>
+    <content type="text/html" src="https://the0cp.cc/posts/learning/" />
+    <author>
+      <name>the0cp</name>
+    </author>
+
+  
+    
+    <category term="Engineering" />
+    
+  
+
+  <summary>Becoming a technical expert requires more than learning tools, memorizing APIs, or following tutorials. This article explores how deep learning transforms information into mental models, practical abilities, and fundamental principles.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>This guide is about building a register-based VM interpreter from scratch. We will upgrade the VM to understand Jump instructions, and more importantly, we will teach the single-pass compiler how to calculate exactly where those jumps should land, even when it hasn&amp;#39;t finished compiling the code yet.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Building a Register VM Interpreter - Ch. 8&amp;#58 The VM Core</title>
-    <link href="https://the0cp.cc/posts/lang-p8/" rel="alternate" type="text/html" title="Building a Register VM Interpreter - Ch. 8&amp;amp;#58 The VM Core" />
-    <published>2026-04-09T00:00:00+09:00</published>
-  
-    <updated>2026-04-09T00:00:00+09:00</updated>
-  
-    <id>https://the0cp.cc/posts/lang-p8/</id>
-    <content type="text/html" src="https://the0cp.cc/posts/lang-p8/" />
-    <author>
-      <name>the0cp</name>
-    </author>
-
-  
-    
-    <category term="Interpreter" />
-    
-  
-
-  <summary>This guide is about building a register-based VM interpreter from scratch. We will design the memory structures required to run a program, build the dispatch loop to fetch instructions, and write the logic to finally execute the math and logic operations we worked so hard to compile.</summary>
 
   </entry>
 

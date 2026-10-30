@@ -870,7 +870,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="4387 words"
+  title="4396 words"
 >
   <em>24 min</em> read</span>
 
@@ -904,7 +904,11 @@
   
 
   <div class="content">
-    <p>This language suffers a from a massive structural limitation: it is a single, monolithic script. Right now, the compiler reads the entire source file and emits every single instruction into on global <code class="language-plaintext highlighter-rouge">Chunk</code>. If a user writes a usefule piece of math or logic and wants to use it multiple times, they cannot. To evolve from an advanced calculator into a programming language, we must introduce reusable, isolated blocks of code. We need <em>Functions</em>.</p>
+    <blockquote>
+  <p>The complete interpreter source code is available at <a href="https://github.com/the0cp/cieto">the0cp/cieto</a>.</p>
+</blockquote>
+
+<p>This language suffers a from a massive structural limitation: it is a single, monolithic script. Right now, the compiler reads the entire source file and emits every single instruction into on global <code class="language-plaintext highlighter-rouge">Chunk</code>. If a user writes a usefule piece of math or logic and wants to use it multiple times, they cannot. To evolve from an advanced calculator into a programming language, we must introduce reusable, isolated blocks of code. We need <em>Functions</em>.</p>
 
 <p>But in a dynamically typed scripting language, a function is not just a static memory address to jump to (like it is in C). We are building a language with <em>First-Class Functions</em>. This means a function is just another piece of data. It can be assigned to a variable, passed as an argument to another function, returned from a function, and stored in a data structure.</p>
 

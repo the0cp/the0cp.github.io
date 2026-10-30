@@ -859,7 +859,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="3343 words"
+  title="3352 words"
 >
   <em>18 min</em> read</span>
 
@@ -893,7 +893,11 @@
   
 
   <div class="content">
-    <p>In the previous part, we have built a zero-allocation Scanner capable of stripping away noise and translate raw code into a on-demand stream of lexical tokens.</p>
+    <blockquote>
+  <p>The complete interpreter source code is available at <a href="https://github.com/the0cp/cieto">the0cp/cieto</a>.</p>
+</blockquote>
+
+<p>In the previous part, we have built a zero-allocation Scanner capable of stripping away noise and translate raw code into a on-demand stream of lexical tokens.</p>
 
 <p>However, a VM cannot execute tokens. Tokens are just grammatical hint for the compiler. To bridge this gap, the compiler must translate these tokens into a linear sequence of operations known as <em>Bytecode</em>.</p>
 

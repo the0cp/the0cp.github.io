@@ -837,7 +837,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="3759 words"
+  title="3768 words"
 >
   <em>20 min</em> read</span>
 
@@ -871,7 +871,11 @@
   
 
   <div class="content">
-    <p>In the previous parts of this series, a static infrastructure has been constructed. We defined a <code class="language-plaintext highlighter-rouge">Value</code> system to represent dynamic types in memory, built a scanner to tokenize source code, and designed a bytecode format to pack the executable instructions into chunks. A disassembler is also built for better debugging, which gives us a peek into the compiled output and verify the work.</p>
+    <blockquote>
+  <p>The complete interpreter source code is available at <a href="https://github.com/the0cp/cieto">the0cp/cieto</a>.</p>
+</blockquote>
+
+<p>In the previous parts of this series, a static infrastructure has been constructed. We defined a <code class="language-plaintext highlighter-rouge">Value</code> system to represent dynamic types in memory, built a scanner to tokenize source code, and designed a bytecode format to pack the executable instructions into chunks. A disassembler is also built for better debugging, which gives us a peek into the compiled output and verify the work.</p>
 
 <p>However, a massive chasm currently separates our token stream from our bytecode. The interpreter needs an engine to read and consume those tokens, understanding the structure and intent of the program. Then engine then translate the tokens into the correct sequence of 32-bit instructions. This is the job of <em>Parser</em>.</p>
 

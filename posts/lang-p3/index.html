@@ -815,7 +815,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="3176 words"
+  title="3185 words"
 >
   <em>17 min</em> read</span>
 
@@ -849,7 +849,11 @@
   
 
   <div class="content">
-    <p>In the previous parts, we established the foundational architecture of the VM and a memory-efficient way to represent dynamic values using NaN-Boxing. It’s time for us to turn to the front-end if the interpreter: transforming raw source code into the executable instructions.</p>
+    <blockquote>
+  <p>The complete interpreter source code is available at <a href="https://github.com/the0cp/cieto">the0cp/cieto</a>.</p>
+</blockquote>
+
+<p>In the previous parts, we established the foundational architecture of the VM and a memory-efficient way to represent dynamic values using NaN-Boxing. It’s time for us to turn to the front-end if the interpreter: transforming raw source code into the executable instructions.</p>
 
 <p>But for a compiler it cannot understand a raw string of code like <code class="language-plaintext highlighter-rouge">var x = 0;</code>. It needs structed data. The very first step in this part is Lexical Analysis, in short, building a <strong>Scanner</strong>. A scanner groups these raw code into meaningful, atomic uints called <strong>Tokens</strong>.</p>
 

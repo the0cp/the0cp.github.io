@@ -749,7 +749,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1515 words"
+  title="1524 words"
 >
   <em>8 min</em> read</span>
 
@@ -783,7 +783,11 @@
   
 
   <div class="content">
-    <p>When building an interpreter for a dynamically typed language, one of the first basic hurdles is figuring out how to represent variables. In a dynamically typed language, a single variable might hold a numeric value at one moment, a boolean the next, and maybe a string later on.</p>
+    <blockquote>
+  <p>The complete interpreter source code is available at <a href="https://github.com/the0cp/cieto">the0cp/cieto</a>.</p>
+</blockquote>
+
+<p>When building an interpreter for a dynamically typed language, one of the first basic hurdles is figuring out how to represent variables. In a dynamically typed language, a single variable might hold a numeric value at one moment, a boolean the next, and maybe a string later on.</p>
 
 <p>C, however, is a statically typed language. A C <code class="language-plaintext highlighter-rouge">double</code> can only hold a decimal number, and a C pointer points to memory. To bridge this gap, our virtual machine requires a universal, unified data type capable of representing all of the value the language can produce.</p>
 

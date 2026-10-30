@@ -847,7 +847,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="4052 words"
+  title="4061 words"
 >
   <em>22 min</em> read</span>
 
@@ -881,7 +881,11 @@
   
 
   <div class="content">
-    <p>Over the last parts, we have built a preliminary engine. With the addition of control flow jumps, this VM has crossed the threshold into Turing completeness. It can make decisions, repeat tasks, and route execution flawlessly.</p>
+    <blockquote>
+  <p>The complete interpreter source code is available at <a href="https://github.com/the0cp/cieto">the0cp/cieto</a>.</p>
+</blockquote>
+
+<p>Over the last parts, we have built a preliminary engine. With the addition of control flow jumps, this VM has crossed the threshold into Turing completeness. It can make decisions, repeat tasks, and route execution flawlessly.</p>
 
 <p>However, if we look closely at the data this VM is currently pushing through its virtual registers, we will find this language only understands primitive values: numbers, booleans, and null. This is because of the NaN-boxing we built early on. Every piece of data in this VM must fit perfectly inside a single, 64-bit <code class="language-plaintext highlighter-rouge">Value</code> integer.</p>
 

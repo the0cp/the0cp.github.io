@@ -760,7 +760,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2569 words"
+  title="2578 words"
 >
   <em>14 min</em> read</span>
 
@@ -794,7 +794,11 @@
   
 
   <div class="content">
-    <p>In the previous installment, we laid the fundational work for the interpreter’s memory by building the <code class="language-plaintext highlighter-rouge">Chunk</code>. We create a dynamic data structure capable of storing raw bytecode, a constant pool, and an array to track line numbers for debugging.</p>
+    <blockquote>
+  <p>The complete interpreter source code is available at <a href="https://github.com/the0cp/cieto">the0cp/cieto</a>.</p>
+</blockquote>
+
+<p>In the previous installment, we laid the fundational work for the interpreter’s memory by building the <code class="language-plaintext highlighter-rouge">Chunk</code>. We create a dynamic data structure capable of storing raw bytecode, a constant pool, and an array to track line numbers for debugging.</p>
 
 <p>Now, the VM has a place to store code, but it does not actually have a <em>language</em> it can understand. That is why the <em>Instruction Set Architecture</em> (ISA) comes in.</p>
 

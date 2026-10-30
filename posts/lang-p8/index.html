@@ -881,7 +881,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="4401 words"
+  title="4410 words"
 >
   <em>24 min</em> read</span>
 
@@ -915,7 +915,11 @@
   
 
   <div class="content">
-    <p>Over the past few articles, we have spent all the time building the front-end and middle-end of the languange. We built a scanner to tokenize source code, designed a Pratt parser to understand precendence without an AST, and constructed a meticulous register allocator to route data.</p>
+    <blockquote>
+  <p>The complete interpreter source code is available at <a href="https://github.com/the0cp/cieto">the0cp/cieto</a>.</p>
+</blockquote>
+
+<p>Over the past few articles, we have spent all the time building the front-end and middle-end of the languange. We built a scanner to tokenize source code, designed a Pratt parser to understand precendence without an AST, and constructed a meticulous register allocator to route data.</p>
 
 <p>At the end of this pipeline, the compiler’s job is complete. Its output is simple: a <code class="language-plaintext highlighter-rouge">Chunk</code>. But a <code class="language-plaintext highlighter-rouge">Chunk</code> is just static data in memory. It cannot do anything on its own. To bring this data to life, we need a runtime environment. We need a Virtual Machine (VM). In the architecture of our language, the VM acts as a software-simulated CPU. Just like a physical processor (like an x86 or ARM chip) fetches machine code from RAM, decodes the bits, and executes the operations on its hardware registers, our Virtual Machine will fetch our 32-bit instructions from the <code class="language-plaintext highlighter-rouge">Chunk</code>, decode the operands, and execute them on our virtual registers.</p>
 

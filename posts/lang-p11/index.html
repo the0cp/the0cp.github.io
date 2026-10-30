@@ -793,7 +793,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="2661 words"
+  title="2670 words"
 >
   <em>14 min</em> read</span>
 
@@ -827,7 +827,11 @@
   
 
   <div class="content">
-    <p>Previously, we built a highly optimized Robin Hood Hash Table. The most obvious use for a hash table is maitaining an environment. If a user writes <code class="language-plaintext highlighter-rouge">var x = 1</code>, we could theoretically just hash the string <code class="language-plaintext highlighter-rouge">x</code> and store the value <code class="language-plaintext highlighter-rouge">1</code> into a universal hash table. However, if we did this for every variable, the VM would hit a massive performance wall.</p>
+    <blockquote>
+  <p>The complete interpreter source code is available at <a href="https://github.com/the0cp/cieto">the0cp/cieto</a>.</p>
+</blockquote>
+
+<p>Previously, we built a highly optimized Robin Hood Hash Table. The most obvious use for a hash table is maitaining an environment. If a user writes <code class="language-plaintext highlighter-rouge">var x = 1</code>, we could theoretically just hash the string <code class="language-plaintext highlighter-rouge">x</code> and store the value <code class="language-plaintext highlighter-rouge">1</code> into a universal hash table. However, if we did this for every variable, the VM would hit a massive performance wall.</p>
 
 <p>In a high-level scripting language, variables are accessed relentlessly. Imagine a simple <code class="language-plaintext highlighter-rouge">while</code> loop that increments a counter. If the VM is forced to calculate an xxHash, probe a collision array, and resolve a memory pointer on every single iteration just to read and update that counter, the CPU overhead will completely paralyze the execution speed.</p>
 
